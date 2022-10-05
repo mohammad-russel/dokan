@@ -1,0 +1,27 @@
+.update_product {
+    border: 1px solid rgb(181, 202, 230);
+    padding: 5px;
+    margin: 10px;
+    border-radius: 10px;
+    input,
+    select,
+    button {
+      outline: none;
+      background: rgba(0, 0, 0, 0);
+      border: none;
+      padding: 6px;
+      margin: 5px;
+      box-shadow: $boxshadowinsetinput;
+      border-radius: 5px;
+      option {
+      }
+    }
+    button {
+      width: 150px;
+      border: $borderfornewf;
+      box-shadow: $boxshadow;
+      &:active {
+        box-shadow: $boxshadowinsetinput;
+      }
+    }
+  }

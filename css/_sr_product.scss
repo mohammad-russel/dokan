@@ -1,0 +1,93 @@
+.sr_product,.productroom{
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  .card {
+    color: rgb(67, 67, 67);
+    max-width: 166px;
+    text-decoration: none;
+    min-width: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .image {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        margin: auto;
+        width: 100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        border-radius: 5px;
+      }
+    }
+    .price {
+      color: rgb(39, 152, 60);
+      padding:0px 5px;
+      width: 100%;
+      text-align: start;
+      font-weight: 600;
+    }
+    .name {
+      color: rgb(90, 90, 90);
+      padding:0px 5px;
+      width: 100%;
+      text-align: start;
+      font-weight: 600;
+    }
+    .btn {
+      width: 100%;
+      display: flex;
+      input{
+        outline: none;
+        width: 50%;
+      padding: 10px;
+        border: none;
+        color: rgb(40, 40, 40);
+        height: 25px;
+        font-weight: 700;
+      }
+      button {
+        width: 100%;
+
+        border: none;
+        background: rgb(82, 82, 82);
+        color: rgb(255, 255, 255);
+        height: 25px;
+        cursor: pointer;
+        letter-spacing: 1px;
+        &:active {
+          background: rgb(99, 99, 99);
+        }
+      }
+    }
+  }
+}
+// ------------------
+@media only screen and (max-width: 450px) {
+  .sr_product {
+    .card {
+      width: 150px;
+      .image {
+        img {
+        }
+      }
+      .price {
+      }
+      .name {
+      }
+      .btn {
+        button {
+        }
+      }
+    }
+  }
+}

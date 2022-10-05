@@ -1,0 +1,149 @@
+.header {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  .back {
+    text-align: center;
+    margin: 0px 10px;
+    a {
+      position: relative;
+      .count {
+        position: absolute;
+        background: rgb(55, 55, 55);
+        width: 17px;
+        height: 17px;
+        text-align: center;
+        z-index: 1;
+        color: rgb(255, 255, 255);
+        border-radius: 50%;
+        font-size: 0.7rem;
+        font-weight: 100;
+        top: -25px;
+        left: -3px;
+      }
+      ion-icon {
+        color: rgb(74, 74, 74);
+        width: 30px;
+        height: 30px;
+        padding: 5px;
+        box-shadow: $boxshadow;
+        border: $borderfornewf;
+        border-radius: 50%;
+        font-size: 25px;
+        &:active {
+          box-shadow: $boxshadowinsetinput;
+        }
+      }
+    }
+  }
+}
+// ---------------
+.adminproductbox {
+  .insert {
+    border: 1px solid rgb(181, 202, 230);
+    padding: 5px;
+    margin: 10px;
+    border-radius: 10px;
+    input,
+    select,
+    button {
+      outline: none;
+      background: rgba(0, 0, 0, 0);
+      border: none;
+      padding: 6px;
+      margin: 5px;
+      box-shadow: $boxshadowinsetinput;
+      border-radius: 5px;
+      option {
+      }
+    }
+    button {
+      width: 150px;
+      border: $borderfornewf;
+      box-shadow: $boxshadow;
+      &:active {
+        box-shadow: $boxshadowinsetinput;
+      }
+    }
+  }
+}
+// ----------
+.list {
+  .card {
+    color: rgb(82, 82, 82);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 1px solid gray;
+    border-radius: 10px;
+    margin: 10px;
+    .id {
+    }
+    .name {
+    }
+    .image {
+      img {
+        border-radius: 10px;
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+      }
+    }
+    .price {
+    }
+    .sr {
+    }
+    .company {
+    }
+    .category {
+    }
+    .date {
+    }
+    .more {
+      position: relative;
+      .show {
+        ion-icon {
+        }
+      }
+      .box {
+        z-index: 1;
+        background: rgb(63, 63, 63);
+        position: absolute;
+        color: aliceblue;
+        border-radius: 4px;
+        padding: 5px;
+        right: 0;
+        top: 25px;
+        font-size: 15px;
+        .overview {
+          text-align: center;
+          margin: 5px;
+          a {
+            color: aliceblue;
+            text-decoration: none;
+          }
+        }
+        .update {
+          margin: 5px;
+
+          text-align: center;
+          a {
+            color: aliceblue;
+            text-decoration: none;
+          }
+        }
+        .deletebtn {
+          background: rgba(0, 0, 0, 0);
+          color: rgb(255, 255, 255);
+          border: none;
+          width: 90%;
+          margin: 5px;
+          font-size: 17px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,172 @@
+.d_retailer_list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  width: 100%;
+  a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    .card {
+      border: 1px solid black;
+      text-align: center;
+      width: 100%;
+      max-width: 200px;
+      min-width: 150px;
+      padding: 5px;
+      .image {
+        img {
+          width: 100%;
+          aspect-ratio: 1/1;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+      .name {
+        background: rgb(88, 88, 88);
+      }
+      .shop {
+        background: rgb(120, 35, 96);
+      }
+      .order {
+        background: rgb(35, 120, 78);
+      }
+      .baki {
+        background: rgb(120, 35, 35);
+      }
+    }
+  }
+}
+
+.d_overview_retailer {
+  .profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .image {
+      img {
+        width: 120px;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+    .name {
+    }
+    .shop {
+    }
+  }
+  .order,
+  .baki,
+  .complete {
+    margin: 20px 0px;
+    width: 100%;
+    .buttons {
+      background: rgb(52, 52, 52);
+      width: 100%;
+      text-align: center;
+      color: azure;
+      cursor: pointer;
+    }
+    .boxs {
+      .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        .card {
+          margin: 5px 0px;
+          text-align: center;
+          width: 100%;
+          max-width: 160px;
+          min-width: 150px;
+          border: 1px solid black;
+          margin: 5px;
+          padding: 10px;
+          .image {
+            width: 100%;
+            img {
+              width: 30%;
+              aspect-ratio: 1/1;
+              object-fit: cover;
+            }
+          }
+          .name {
+          }
+          .price {
+            background: rgb(86, 118, 97);
+            color: antiquewhite;
+          }
+          .quantity {
+            background: rgb(118, 118, 86);
+            color: antiquewhite;
+          }
+          .tp {
+            background: rgb(86, 105, 118);
+            color: antiquewhite;
+          }
+          .btn {
+            padding: 10px 5px;
+            .bt {
+              margin: 10px 0px;
+              cursor: pointer;
+              background: rgb(10, 128, 46);
+              border-radius: 5px;
+              color: antiquewhite;
+            }
+            .bt:nth-child(2) {
+              background: rgb(203, 98, 0);
+            }
+            .bt:nth-child(3) {
+              background: rgb(171, 1, 1);
+            }
+          }
+        }
+      }
+      .cardinfo {
+        background: rgb(83, 62, 122);
+        display: flex;
+        width: 100%;
+        max-width: 500px;
+        margin: auto;
+        padding: 10px;
+        border-radius: 10px;
+        align-items: center;
+        justify-content: space-between;
+        color: aliceblue;
+        .right,
+        .left {
+          margin: 0px 10px;
+          .btn {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            span {
+              margin: 10px 0px;
+              background: rgb(0, 87, 44);
+              color: rgb(250, 240, 219);
+              padding: 4px 10px;
+              border: 1px solid wheat;
+              text-align: center;
+              width: 100px;
+              border-radius: 4px;
+              a {
+                text-decoration: none;
+                color: rgb(250, 240, 219);
+              }
+            }
+            .baki_op {
+              background: rgb(87, 0, 0);
+            }
+          }
+        }
+        .complete_pop,
+        .baki_pop {
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,114 @@
+<?php
+session_start();
+$sid = $_SESSION['sid'];
+$rid = $_POST['rid'];
+include '../php/config.php';
+$sql = "SELECT *,price*quantity AS total_price FROM cart WHERE rid = $rid AND sr =$sid AND status = 'cart'";
+$result = mysqli_query($con, $sql);
+if ($numrow = mysqli_num_rows($result)) {
+
+    $output = "<div class='cartbox'>";
+
+    while ($row = mysqli_fetch_assoc($result)) {
+        $pid = $row['pid'];
+      
+
+        $sql1 = "SELECT * FROM product WHERE id = $pid ";
+        $result1 = mysqli_query($con, $sql1);
+        if (mysqli_num_rows($result1)) {
+            $row1 = mysqli_fetch_assoc($result1);
+            $output .= " <div class='cart cart{$row["id"]}'>
+                    <div class='image'>
+                        <img src='../image/product/{$row1['pic']}' >
+                    </div>
+                    <div class='name'>{$row1['nam']}</div>
+                    <div class='price'>
+                        <div class='pp'>$ {$row['price']}</div>
+                        <div class='tp'>$ {$row['total_price']}</div>
+                    </div>
+                    <div class='quantity'>
+                        <input type='number' name='quantity' id='quantity{$row['id']}' value='{$row['quantity']}'>
+                    </div>
+                    <div class='btn'>
+                        <div class='update update{$row["id"]} '>Update</div>
+                        <div class='delete delete{$row["id"]} '>Delete</div>
+                    </div>
+                </div>";
+            $output .= " <script>
+                    function load() {
+                        $('.update{$row['id']}').hide();
+                    }
+                    load()
+                    $('#quantity{$row['id']}').click(function() {
+                        $('.update{$row['id']}').show();
+                        $('.delete{$row['id']}').hide();
+                    })
+                    $('.update{$row['id']}').click(function() {
+                        var cid ={$row['id']};
+                        var qua = $('#quantity{$row['id']}').val();
+                        $.ajax({
+                            url: '../php/cart_update.php',
+                            type: 'POST',
+                            data: {
+                                cid: cid,
+                                qua: qua
+                            },
+                            success: function(data) {}
+                        })
+                        load()
+                        $('.delete{$row['id']}').show();
+                        $('.update{$row['id']}').hide();
+                    })
+
+                    $('.delete{$row['id']}').click(function() {
+                        var cid ={$row['id']};
+                        $.ajax({
+                            url: '../php/cart_delete.php',
+                            type: 'POST',
+                            data: {
+                                cid: cid
+                            },
+                            success: function(data) {
+                                $('.cart{$row['id']}').fadeOut();
+                            }
+                        })
+                    })
+                </script>";
+        }
+    }
+
+    $output .= "<div class='cart'>
+            <div class='order_click'>";
+    $sql5 = "SELECT * FROM retailer WHERE id = $rid ";
+    $result5 = mysqli_query($con, $sql5);
+    $row5 = mysqli_fetch_assoc($result5);
+    $village = $row5['village'];
+    $sql4 = "SELECT * FROM delivery WHERE village = '$village' ";
+    $result4 = mysqli_query($con, $sql4);
+    $row4 = mysqli_fetch_assoc($result4);
+    $day = $row4['day'];
+    $output .= "<div class='info'>
+                আপনার এলাকায় ডেলিভারি দেয়া হবে $day <br>
+                    <span>ITEM :  $numrow </span><br>";
+    
+    include "../php/config.php";
+    $sql = "SELECT SUM(price*quantity) AS total FROM cart WHERE rid = $rid AND sr = $sid AND status ='cart' ";
+    $result = mysqli_query($con, $sql);
+    $row = mysqli_fetch_assoc($result);
+    $total =  $row['total'];
+    $output .=  " <span>Total Cost : $ $total </span>
+                </div>
+                <div class='button'>
+                <form action='../php/cart_status_update_sr.php' method='post'>
+                <input type='hidden' name='status' id='status' value='order'>
+                <input type='hidden' name='rid' id='rid' value='$rid'>
+                <input type='hidden' name='sid' id='sid' value='$sid'>
+                <input type='number' name='discount' id='discount' value= '0' >
+                <input type='submit'class='order_btn' name='order' value='order'>
+            </form>
+                </div>
+            </div>
+        </div>";
+    $output .= "</div>";
+    echo  $output;
+}

@@ -1,0 +1,86 @@
+
+.adminmainbox {
+  position: relative;
+
+  width: 100%;
+  margin: auto;
+
+  .buttonbox {
+    padding: 15px;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    flex-wrap: wrap;
+    grid-gap: 20px;
+    a {
+        padding: 5px;
+        display: flex;
+        align-items: center;
+     
+      border-radius: 10px;
+      height: max-content;
+      text-decoration: none;
+      color: black;
+      box-shadow: $boxshadow;
+      border: 2px solid rgb(255, 255, 255);
+      ion-icon{
+        font-size: 35px;
+        color: rgb(49, 49, 49);
+        background: rgba(255, 255, 255, 0.35);
+        padding: 5px 7px;
+        border-radius: 5px;
+      }
+      .btn {width: 90%;
+        border-radius: 10px;
+        padding: 2px 10px;
+        // border: $borderfornewf;
+       
+        h3 {
+          color: rgb(72, 72, 72);
+        }
+        p {
+          font-weight: 600;
+          color: rgb(50, 50, 50);
+        }
+      }
+    }
+    a:nth-child(1) {
+      background: rgb(173, 220, 195);
+    }
+    a:nth-child(2) {
+      background: rgb(224, 214, 164);
+    }
+    a:nth-child(3) {
+      background: rgb(228, 194, 194);
+    }
+    a:nth-child(4) {
+      background: rgb(195, 196, 232);
+    }
+    a:nth-child(5) {
+      background: rgb(221, 186, 229);
+    }
+    a:nth-child(6) {
+      background: rgb(173, 219, 225);
+    }
+    a:nth-child(7) {
+      background: rgb(227, 200, 187);
+    }
+  }
+}
+
+// -------------------------
+@media only screen and (max-width: 550px) {
+  .adminmainbox {
+    .buttonbox {
+      grid-template-columns: 50% 50%;
+      a {
+        .btn {
+          h3 {
+          }
+          p {
+          }
+        }
+      }
+    }
+  }
+}

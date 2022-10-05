@@ -1,0 +1,165 @@
+.userbox {
+  .info {
+    text-align: center;
+    .image {
+      img {
+        width: 130px;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+    .name {
+      font-weight: 600;
+      color: rgb(61, 61, 61);
+      font-size: 19px;
+    }
+    .price {
+    }
+  }
+  .card {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    .box {
+      width: 100%;
+      &:hover {
+        background: rgb(44, 44, 44);
+        color: rgb(180, 180, 180);
+      }
+      margin: 5px 10px;
+      color: rgb(42, 42, 42);
+      border-radius: 5px;
+      padding: 5px 15px;
+      box-shadow: 3px 3px 10px -1px rgb(108, 108, 108);
+
+      h2 {
+        font-size: 16px;
+      }
+      p {
+      }
+    }
+  }
+  .cocb {
+    padding: 0px 10px;
+    .bo{
+      width: 100%;
+      .head{
+        background: rgb(50, 50, 50);
+        color: rgb(220, 220, 220);
+        font-size: 19px;
+      }
+      .box{
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
+        .card{
+      border-radius: 10px;
+          border: 1px solid rgb(255, 255, 255);
+          overflow: hidden;
+          width: 100%;
+          height: max-content;
+          max-width: 160px;
+          min-width: 140px;
+          text-align: center;
+          letter-spacing: 1px;
+          margin: 10px;
+          display: flex;
+          font-weight: 600;
+          flex-direction: column;
+          justify-content: start;
+          
+        
+          .image{
+            width: 100%;
+            img{
+              width: 100%;
+              aspect-ratio: 1/1;
+              object-fit: cover;
+            }
+          }
+          .name{
+          
+            color: rgb(89, 89, 89);
+          }
+          .price{
+            color: rgb(0, 107, 0);
+            background: rgb(188, 224, 206);
+          }
+          .quantity{
+            background: rgb(163, 209, 232);
+            color: rgb(0, 57, 80);
+          }
+          .total{
+            color: rgb(0, 107, 45);
+            background: rgb(170, 219, 194);
+          }
+          .time{
+            background: rgb(190, 210, 235);
+            font-size: 12px;
+            color: rgb(0, 36, 75);
+            letter-spacing: 0.5px;
+            padding: 5px 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+}
+// -----------------
+@media only screen and (max-width: 450px) {
+  .userbox {
+    .info {
+      text-align: center;
+      .image {
+        img {
+         
+        }
+      }
+      .name {
+      
+      }
+      .price {
+      }
+    }
+    .card {
+flex-direction: column;
+      .box {
+  width: 90%;
+  margin: 5px auto;
+        &:hover {
+      
+        }
+      
+        h2 {
+      
+        }
+        p {
+        }
+      }
+    }
+    .cocb {
+      padding: 0px 10px;
+      .bo{
+        .head{}
+        .box{
+          .card{
+          
+            .image{
+              img{}
+            }
+            .name{}
+            .price{}
+            .time{
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

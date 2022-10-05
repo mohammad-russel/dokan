@@ -1,0 +1,198 @@
+.sr_overview {
+  .head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    .edit {
+      ion-icon {
+        padding: 10px;
+        font-size: 20px;
+        border-radius: 50%;
+        box-shadow: $boxshadow;
+        cursor: pointer;
+        color: rgb(19, 90, 11);
+      }
+      .popup {
+        z-index: 1;
+        background: rgb(234, 234, 234);
+        width:100%;
+        margin: auto;
+        height: max-content;
+        top:0%;
+        left:0%;
+        position: absolute;
+        .close {
+          cursor: pointer;
+          text-align: end;
+          padding: 10px;
+          ion-icon {
+            font-size: 30px;
+          }
+        }
+        form {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          padding: 20px;
+          input {
+          font-size: 1.2rem;
+            background: rgba(255, 255, 255, 0);
+            outline: none;
+            border-radius: 3px;
+            width: 100%;
+            max-width: 350px;
+            padding: 10px;
+            border: none;
+            margin: 5px;
+            height: 50px;
+            border: 1px solid rgb(130, 130, 130);
+            border-radius: 5px;
+          }
+          .newretinsert{
+            background: rgb(36, 36, 36);
+            color: azure;
+            font-size: 20px;
+            letter-spacing: 1px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .image {
+      margin: 0px 30px;
+      img {
+        width: 150px;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
+    .delete {
+      ion-icon {
+        padding: 10px;
+        color: rgb(112, 0, 0);
+        font-size: 20px;
+        border-radius: 50%;
+        box-shadow: $boxshadow;
+      }
+    }
+  }
+  .info {
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    .left {
+      width: 100%;
+      max-width: 200px;
+      padding: 10px;
+      .box {
+        background: rgb(161, 214, 212);
+        color: rgb(48, 48, 48);
+        border-radius: 5px;
+        border: $borderfornewf;
+        box-shadow: $boxshadow;
+        margin: 10px;
+        h3 {
+          font-size: 16px;
+        }
+        p {
+          font-size: 1.5rem;
+          font-weight: 600;
+        }
+      }
+    }
+    .middle {
+      padding: 10px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: column;
+      color: rgb(248, 248, 248);
+      .name {
+        background: rgb(180, 43, 43);
+        padding: 3px 10px;
+        margin: 3px 0px;
+        border-radius: 5px;
+      }
+      .number {
+        background: rgb(155, 81, 34);
+        padding: 3px 10px;
+        border-radius: 5px;
+        margin: 3px 0px;
+      }
+      .password {
+        background: rgb(149, 113, 28);
+        border-radius: 5px;
+        margin: 3px 0px;
+        padding: 3px 10px;
+      }
+      .company {
+        background: rgb(30, 116, 64);
+        margin: 3px 0px;
+        border-radius: 5px;
+        padding: 3px 10px;
+      }
+      .deller {
+        background: rgb(105, 19, 102);
+        margin: 3px 0px;
+        border-radius: 5px;
+        padding: 3px 10px;
+      }
+    }
+    .right {
+      width: 100%;
+      max-width: 200px;
+      padding: 10px;
+      .box {
+        background: rgb(214, 161, 214);
+        color: rgb(48, 48, 48);
+        border-radius: 5px;
+        border: $borderfornewf;
+        box-shadow: $boxshadow;
+        margin: 10px;
+        h3 {
+          font-size: 16px;
+        }
+        p {
+          font-size: 1.5rem;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  .product {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .card {
+      color: rgb(78, 78, 78);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: 10px;
+      width: 100%;
+      max-width: 150px;
+    }
+    .image {
+      width: 100%;
+      img {
+        width: 100%;
+        aspect-ratio: 1/1;
+        border-radius: 10px;
+        object-fit: cover;
+      }
+    }
+    .price {
+      font-weight: 900;
+      font-size: 1.3rem;
+    }
+    .name {
+      font-size: 1.1rem;
+    }
+  }
+}

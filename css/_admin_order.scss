@@ -1,0 +1,118 @@
+.order_people {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  a {
+    text-decoration: none;
+    color: aliceblue;
+    margin: 10px;
+    .card {
+      border: 1px solid rgb(255, 255, 255);
+      width: 100%;
+      max-width: 160px;
+      border-radius: 10px;
+      overflow: hidden;
+      .image {
+        width: 100%;
+        img {
+          width: 100%;
+          aspect-ratio: 1/1;
+          object-fit: cover;
+        }
+      }
+      .name {
+        background: rgb(0, 85, 47);
+        padding: 5px;
+        color: rgb(88, 252, 143);
+      }
+      .shop {
+        padding: 5px;
+        color: rgb(123, 156, 255);
+        background: rgb(10, 31, 68);
+      }
+    }
+  }
+}
+// --------------------------------------
+.order_list {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  .card {
+    font-weight: 600;
+    background: rgba(0, 246, 102, 0.133);
+    letter-spacing: 0.5px;
+    font-size: 1.2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: $boxshadow;
+    border: $borderfornewf;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 3px;
+   
+    .box {
+      margin: 15px;
+      color: rgb(50, 50, 50);
+    }
+    .image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 69px;
+        aspect-ratio: 1/1;
+        border-radius: 10px;
+      }
+    }
+    .name {
+    }
+    .price {
+      color: rgb(0, 98, 122);
+    }
+    .quantity {
+    }
+    .tp {
+      color: rgb(0, 122, 49);
+    }
+    .btn {
+      a {
+        padding: 10px 10px;
+        border-radius: 5px;
+        background: rgb(65, 65, 65);
+        color: #e0e0e0;
+        text-decoration: none;
+      }
+    }
+  }
+}
+// -----------------
+@media only screen and (max-width: 608px) {
+  .orderbox {
+    justify-content: center;
+    .card {
+        flex-direction: column;
+      .box {
+      }
+      .image {
+        img {
+        }
+      }
+      .name {
+      }
+      .price {
+      }
+      .quantity {
+      }
+      .tp {
+      }
+      .btn {
+        a {
+        }
+      }
+    }
+  }
+}
