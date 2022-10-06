@@ -1580,7 +1580,95 @@ header .link a ion-icon:active {
 .d_overview_retailer .baki .boxs .cardinfo .baki_pop,
 .d_overview_retailer .complete .boxs .cardinfo .complete_pop,
 .d_overview_retailer .complete .boxs .cardinfo .baki_pop {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgb(255, 255, 255);
+}
+.d_overview_retailer .order .boxs .cardinfo .complete_pop .close_complete,
+.d_overview_retailer .order .boxs .cardinfo .complete_pop .close_baki,
+.d_overview_retailer .order .boxs .cardinfo .baki_pop .close_complete,
+.d_overview_retailer .order .boxs .cardinfo .baki_pop .close_baki,
+.d_overview_retailer .baki .boxs .cardinfo .complete_pop .close_complete,
+.d_overview_retailer .baki .boxs .cardinfo .complete_pop .close_baki,
+.d_overview_retailer .baki .boxs .cardinfo .baki_pop .close_complete,
+.d_overview_retailer .baki .boxs .cardinfo .baki_pop .close_baki,
+.d_overview_retailer .complete .boxs .cardinfo .complete_pop .close_complete,
+.d_overview_retailer .complete .boxs .cardinfo .complete_pop .close_baki,
+.d_overview_retailer .complete .boxs .cardinfo .baki_pop .close_complete,
+.d_overview_retailer .complete .boxs .cardinfo .baki_pop .close_baki {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding: 10px 5px;
+}
+.d_overview_retailer .order .boxs .cardinfo .complete_pop .close_complete ion-icon,
+.d_overview_retailer .order .boxs .cardinfo .complete_pop .close_baki ion-icon,
+.d_overview_retailer .order .boxs .cardinfo .baki_pop .close_complete ion-icon,
+.d_overview_retailer .order .boxs .cardinfo .baki_pop .close_baki ion-icon,
+.d_overview_retailer .baki .boxs .cardinfo .complete_pop .close_complete ion-icon,
+.d_overview_retailer .baki .boxs .cardinfo .complete_pop .close_baki ion-icon,
+.d_overview_retailer .baki .boxs .cardinfo .baki_pop .close_complete ion-icon,
+.d_overview_retailer .baki .boxs .cardinfo .baki_pop .close_baki ion-icon,
+.d_overview_retailer .complete .boxs .cardinfo .complete_pop .close_complete ion-icon,
+.d_overview_retailer .complete .boxs .cardinfo .complete_pop .close_baki ion-icon,
+.d_overview_retailer .complete .boxs .cardinfo .baki_pop .close_complete ion-icon,
+.d_overview_retailer .complete .boxs .cardinfo .baki_pop .close_baki ion-icon {
+  font-size: 30px;
+  color: rgb(239, 239, 239);
+  background: rgb(63, 63, 63);
+  border-radius: 50%;
+  padding: 5px;
+}
+.d_overview_retailer .order .boxs .cardinfo .complete_pop form #signature-pad div,
+.d_overview_retailer .order .boxs .cardinfo .baki_pop form #signature-pad div,
+.d_overview_retailer .baki .boxs .cardinfo .complete_pop form #signature-pad div,
+.d_overview_retailer .baki .boxs .cardinfo .baki_pop form #signature-pad div,
+.d_overview_retailer .complete .boxs .cardinfo .complete_pop form #signature-pad div,
+.d_overview_retailer .complete .boxs .cardinfo .baki_pop form #signature-pad div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.d_overview_retailer .order .boxs .cardinfo .complete_pop form #signature-pad div #note,
+.d_overview_retailer .order .boxs .cardinfo .baki_pop form #signature-pad div #note,
+.d_overview_retailer .baki .boxs .cardinfo .complete_pop form #signature-pad div #note,
+.d_overview_retailer .baki .boxs .cardinfo .baki_pop form #signature-pad div #note,
+.d_overview_retailer .complete .boxs .cardinfo .complete_pop form #signature-pad div #note,
+.d_overview_retailer .complete .boxs .cardinfo .baki_pop form #signature-pad div #note {
   display: none;
+}
+.d_overview_retailer .order .boxs .cardinfo .complete_pop form #signature-pad div canvas,
+.d_overview_retailer .order .boxs .cardinfo .baki_pop form #signature-pad div canvas,
+.d_overview_retailer .baki .boxs .cardinfo .complete_pop form #signature-pad div canvas,
+.d_overview_retailer .baki .boxs .cardinfo .baki_pop form #signature-pad div canvas,
+.d_overview_retailer .complete .boxs .cardinfo .complete_pop form #signature-pad div canvas,
+.d_overview_retailer .complete .boxs .cardinfo .baki_pop form #signature-pad div canvas {
+  border: 1px solid black;
+  margin: auto;
+}
+.d_overview_retailer .order .boxs .cardinfo .complete_pop form .input_box button,
+.d_overview_retailer .order .boxs .cardinfo .baki_pop form .input_box button,
+.d_overview_retailer .baki .boxs .cardinfo .complete_pop form .input_box button,
+.d_overview_retailer .baki .boxs .cardinfo .baki_pop form .input_box button,
+.d_overview_retailer .complete .boxs .cardinfo .complete_pop form .input_box button,
+.d_overview_retailer .complete .boxs .cardinfo .baki_pop form .input_box button {
+  height: 40px;
+  width: 50%;
+  font-size: 20px;
+  background: rgb(155, 18, 18);
+  border: none;
+  color: azure;
+}
+.d_overview_retailer .order .boxs .cardinfo .complete_pop form .input_box button:last-child,
+.d_overview_retailer .order .boxs .cardinfo .baki_pop form .input_box button:last-child,
+.d_overview_retailer .baki .boxs .cardinfo .complete_pop form .input_box button:last-child,
+.d_overview_retailer .baki .boxs .cardinfo .baki_pop form .input_box button:last-child,
+.d_overview_retailer .complete .boxs .cardinfo .complete_pop form .input_box button:last-child,
+.d_overview_retailer .complete .boxs .cardinfo .baki_pop form .input_box button:last-child {
+  background: rgb(13, 87, 56);
 }
 
 .order_people {
@@ -1703,6 +1791,63 @@ header .link a ion-icon:active {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.complete_pop,
+.baki_pop {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgb(255, 255, 255);
+}
+.complete_pop .close_complete,
+.complete_pop .close_baki,
+.baki_pop .close_complete,
+.baki_pop .close_baki {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding: 10px 5px;
+}
+.complete_pop .close_complete ion-icon,
+.complete_pop .close_baki ion-icon,
+.baki_pop .close_complete ion-icon,
+.baki_pop .close_baki ion-icon {
+  font-size: 30px;
+  color: rgb(239, 239, 239);
+  background: rgb(63, 63, 63);
+  border-radius: 50%;
+  padding: 5px;
+}
+.complete_pop form #signature-pad div,
+.baki_pop form #signature-pad div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.complete_pop form #signature-pad div #note,
+.baki_pop form #signature-pad div #note {
+  display: none;
+}
+.complete_pop form #signature-pad div canvas,
+.baki_pop form #signature-pad div canvas {
+  border: 1px solid black;
+  margin: auto;
+}
+.complete_pop form .input_box button,
+.baki_pop form .input_box button {
+  height: 40px;
+  width: 50%;
+  font-size: 20px;
+  background: rgb(155, 18, 18);
+  border: none;
+  color: azure;
+}
+.complete_pop form .input_box button:last-child,
+.baki_pop form .input_box button:last-child {
+  background: rgb(13, 87, 56);
+}
+
 .loadmore {
   text-align: center;
   background: #000;
