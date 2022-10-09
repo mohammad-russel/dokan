@@ -2,9 +2,9 @@
   width: max-content;
   margin: 50px auto;
   border-image-source: linear-gradient(314.02deg,
-  #d6e5f2 4.59%,
-  rgba(255, 255, 255, 0.3) 74.18%);
-font-weight: 700;
+      #d6e5f2 4.59%,
+      rgba(255, 255, 255, 0.3) 74.18%);
+  font-weight: 700;
   padding: 10px;
   border-radius: 10px;
   background: linear-gradient(312.9deg,
@@ -20,7 +20,7 @@ font-weight: 700;
     margin: 10px auto;
     font-size: 20px;
     color: #8F9BB2;
-   
+
   }
 
   .login_form {
@@ -38,9 +38,9 @@ font-weight: 700;
       width: 100%;
       background: rgba(255, 255, 255, 0.461);
       padding: 7px;
-    color: #8F9BB2;
-    outline: none;
-    border-radius: 10px;
+      color: #8F9BB2;
+      outline: none;
+      border-radius: 10px;
       background: linear-gradient(312.9deg,
           rgba(255, 255, 255, 0.3) 4.49%,
           rgba(233, 240, 247, 0.3) 95.45%),
@@ -51,7 +51,7 @@ font-weight: 700;
           #d6e5f2 4.59%,
           rgba(255, 255, 255, 0.3) 74.18%);
       margin: 5px 0px;
-      
+
     }
 
     #login {
@@ -61,8 +61,8 @@ font-weight: 700;
           rgba(255, 255, 255, 0.3) 4.49%,
           rgba(233, 240, 247, 0.3) 95.45%),
         #e9f0f7;
-    color: #8F9BB2;
-    border-image-source: linear-gradient(314.02deg,
+      color: #8F9BB2;
+      border-image-source: linear-gradient(314.02deg,
           #d6e5f2 4.59%,
           rgba(255, 255, 255, 0.3) 74.18%);
       box-shadow: -4px -4px 10px rgb(255 255 255 / 90%),
@@ -75,7 +75,7 @@ font-weight: 700;
           #e9f0f7;
         box-shadow: inset -4px -4px 10px rgb(255 255 255 / 90%),
           inset 4px 4px 10px rgb(138 155 189 / 30%);
-        
+
       }
     }
   }

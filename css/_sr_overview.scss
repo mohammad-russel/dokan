@@ -84,62 +84,73 @@
     padding: 10px;
     display: flex;
     justify-content: center;
+    align-items: center;
     .left {
       width: 100%;
       max-width: 200px;
       padding: 10px;
       .box {
-        background: rgb(161, 214, 212);
-        color: rgb(48, 48, 48);
-        border-radius: 5px;
-        border: $borderfornewf;
-        box-shadow: $boxshadow;
-        margin: 10px;
+       
+      @include shadow;
+        padding: 15px 10px;
+        margin: 20px 0px;
+
         h3 {
-          font-size: 16px;
+      @include text_color;
+      font-size: 16px;
         }
         p {
           font-size: 1rem;
           font-weight: 600;
+          color: rgb(72, 162, 198);
         }
       }
     }
     .middle {
-      padding: 10px;
+      padding: 20px 15px;
       display: flex;
       justify-content: space-around;
       align-items: center;
       flex-direction: column;
+      border: 1px solid rgba(135, 135, 135, 0.267);
       color: rgb(248, 248, 248);
+      border-radius: 20px;
       .name {
-        background: rgb(180, 43, 43);
+      @include text_color;
         padding: 3px 10px;
         margin: 3px 0px;
         border-radius: 5px;
+        text-transform: capitalize;
       }
       .number {
-        background: rgb(155, 81, 34);
+        background: rgba(131, 218, 170, 0.178);
         padding: 3px 10px;
         border-radius: 5px;
-        margin: 3px 0px;
+    color: rgb(113, 113, 113);
+      margin: 3px 0px;
       }
       .password {
-        background: rgb(149, 113, 28);
-        border-radius: 5px;
-        margin: 3px 0px;
+        background: rgba(218, 164, 131, 0.178);
         padding: 3px 10px;
+        border-radius: 5px;
+        color: rgb(113, 113, 113);
+        margin: 3px 0px;
       }
       .company {
-        background: rgb(30, 116, 64);
-        margin: 3px 0px;
-        border-radius: 5px;
+        background: rgba(104, 104, 104, 0.178);
         padding: 3px 10px;
+        border-radius: 5px;
+        color: rgb(113, 113, 113);
+
+      margin: 3px 0px;
       }
       .deller {
-        background: rgb(105, 19, 102);
-        margin: 3px 0px;
-        border-radius: 5px;
+        background: rgba(218, 208, 131, 0.178);
         padding: 3px 10px;
+        border-radius: 5px;
+    color: rgb(113, 113, 113);
+      
+      margin: 3px 0px;
       }
     }
     .right {
@@ -147,19 +158,18 @@
       max-width: 200px;
       padding: 10px;
       .box {
-        background: rgb(214, 161, 214);
-        color: rgb(48, 48, 48);
-        border-radius: 5px;
-        border: $borderfornewf;
-        box-shadow: $boxshadow;
-        margin: 10px;
+      @include shadow;
+        padding: 15px 10px;
+        margin: 20px 0px;
         h3 {
+          @include text_color;
           font-size: 16px;
-        }
-        p {
-          font-size: 1rem;
-          font-weight: 600;
-        }
+            }
+            p {
+              font-size: 1rem;
+              font-weight: 600;
+              color: rgb(186, 138, 217);
+            }
       }
     }
   }
@@ -177,6 +187,7 @@
       margin: 10px;
       width: 100%;
       max-width: 150px;
+      @include shadow;
     }
     .image {
       width: 100%;
@@ -188,11 +199,124 @@
       }
     }
     .price {
-      font-weight: 900;
+      font-weight: 600;
       font-size: 1.3rem;
+      color: rgb(112, 179, 206);
     }
     .name {
-      font-size: 1.1rem;
+      font-size: 1rem;
     }
   }
+}
+// --------------------------------
+@media only screen and (max-width: 450px) {
+  .sr_overview {
+    .head {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      .edit {
+        ion-icon {
+      
+        }
+        .popup {
+    
+          .close {
+          
+            ion-icon {
+              font-size: 30px;
+            }
+          }
+          form {
+           
+            input {
+            font-size: 1.2rem;
+              background: rgba(255, 255, 255, 0);
+         
+            }
+            .newretinsert{
+           
+            }
+          }
+        }
+      }
+      .image {
+        margin: 0px 30px;
+        img {
+         
+        }
+      }
+      .delete {
+        ion-icon {
+        
+        }
+      }
+    }
+    .info {
+    flex-direction: column;
+      .left {
+      
+        .box {
+         
+      
+          h3 {
+      
+          }
+          p {
+         
+          }
+        }
+      }
+      .middle {
+     
+        .name {
+     
+        }
+        .number {
+        
+        }
+        .password {
+        
+        }
+        .company {
+     
+        }
+        .deller {
+       
+        }
+      }
+      .right {
+       
+        .box {
+     
+          h3 {
+   
+              }
+              p {
+              
+              }
+        }
+      }
+    }
+    .product {
+   
+      .card {
+     
+      }
+      .image {
+        width: 100%;
+        img {
+        
+        }
+      }
+      .price {
+        
+      }
+      .name {
+      
+      }
+    }
+  }
+
 }

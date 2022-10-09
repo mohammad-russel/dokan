@@ -35,22 +35,23 @@ $did = ($_SESSION["did"]);
                 <?php
                 while ($row = mysqli_fetch_assoc($result)) {
                 ?>
-                <a href="sr_overview.php?did=<?php echo $row['id'] ?>">
-                    <div class="card">
-                        <div class="image">
-                            <img src="../image/sr/<?php echo $row['srpic'] ?>" alt="">
+                    <a href="sr_overview.php?did=<?php echo $row['id'] ?>">
+                        <div class="card">
+                            <div class="image">
+                                <img src="../image/sr/<?php echo $row['srpic'] ?>" alt="">
+                            </div>
+                            <div class="name"><?php echo $row['nam'] ?></div>
+                            <?php
+                            $sid = $row['srnum'];
+                            $sql1 = "SELECT * FROM product WHERE sr = '$sid' ";
+                            $result1 = mysqli_query($con, $sql1);
+                            $pro = mysqli_num_rows($result1);
+                            ?>
+                            <div class="productlist">Product : <span><?php echo $pro ?></span></div>
                         </div>
-                        <div class="name"><?php echo $row['nam'] ?></div>
-                        <?php
-                        $sid = $row['srnum'];
-                        $sql1 = "SELECT * FROM product WHERE sr = '$sid' ";
-                        $result1 = mysqli_query($con, $sql1);
-                        $pro = mysqli_num_rows($result1);
-                        ?>
-                        <div class="productlist">Product : <?php echo $pro ?></div>
-                    </div>
-                </a>
+                    </a>
                 <?php } ?>
+                
             </div>
         <?php } ?>
     </div>

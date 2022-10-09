@@ -1,28 +1,44 @@
 .deller_sr {
   display: flex;
   justify-content: center;
+
   a {
     text-decoration: none;
     font-weight: 600;
-    color: rgb(57, 57, 57);
+    text-align: center;
+    @include text_color;
+
     .card {
-        width:100%;
-        max-width: 200px;
-        min-width: 150px;
+      width: 100%;
+      max-width: 200px;
+      min-width: 150px;
       margin: 7px;
-      padding: 5px;
-      border: 1px solid rgb(104, 104, 104);
+
+      @include shadow;
+      padding: 20px 10px;
+
       .image {
-          width: 100%;
+        width: 100%;
+
+        text-align: center;
+
         img {
-          width: 100%;
+          border-radius: 10px;
+          width: 70%;
           aspect-ratio: 1/1;
           object-fit: cover;
         }
       }
+
       .name {
+        text-transform: capitalize;
       }
+
       .productlist {
+        span{
+          color: #83a0d6;
+
+        }
       }
     }
   }

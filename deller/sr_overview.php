@@ -54,17 +54,7 @@ if (!isset($_SESSION["did"])) {
                             ?>
                             <p><?php echo $row5 ?></p>
                         </div>
-                        <div class="box">
-                            <h3>RT Open</h3>
-                            <?php
-                            include "../php/config.php";
-                            $sr = $row['id'];
-                            $sql5 = "SELECT * FROM retailer WHERE openersr = $sr";
-                            $result5 = mysqli_query($con, $sql5);
-                            $row5 = mysqli_num_rows($result5);
-                            ?>
-                            <p><?php echo $row5 ?></p>
-                        </div>
+                   
                     </div>
                     <div class="middle">
                         <div class="name"><?php echo $row['nam'] ?></div>

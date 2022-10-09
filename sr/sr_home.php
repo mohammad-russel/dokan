@@ -51,14 +51,14 @@ $sr = $_SESSION["sid"];
             </a>
 
             <a class="dd" href="retailer.php">
-            <div class="box">
-                    <p>Retailer</p>
-                    <?php
-                    $sql1 = "SELECT * FROM retailer WHERE openersr = $sr ";
-                    $result1 = mysqli_query($con, $sql1);
-                    $row1 = mysqli_num_rows($result1);
-                    ?>
-                    <p><?php echo $row1 ?></p>
+                <div class="box">
+                    <h3>Retailer</h1>
+                        <?php
+                        $sql1 = "SELECT * FROM retailer WHERE openersr = $sr ";
+                        $result1 = mysqli_query($con, $sql1);
+                        $row1 = mysqli_num_rows($result1);
+                        ?>
+                        <p><?php echo $row1 ?></p>
                 </div>
             </a>
         </div>

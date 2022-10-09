@@ -3,7 +3,7 @@ session_start();
 if (!isset($_SESSION["did"])) {
     header("location:login.php");
 }
-$did= $_SESSION["did"];
+$did = $_SESSION["did"];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +19,7 @@ $did= $_SESSION["did"];
 <body>
     <div class="container">
         <div class="header">
-        <div class="back">
+            <div class="back">
                 <a href="../index.php">
                     <ion-icon name="arrow-back-outline"></ion-icon>
                 </a>
@@ -31,12 +31,11 @@ $did= $_SESSION["did"];
             </div>
         </div>
         <div class="srmainbox">
-          
-            <div class="box">
-                <a href="sr.php">SR</a>
-            </div>
-      
-
+            <a class="dd" href="sr.php">
+                <div class="box">
+                    <h3>SR</h1>
+                </div>
+            </a>
         </div>
     </div>
 
