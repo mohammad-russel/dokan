@@ -30,20 +30,25 @@
       }
     }
   }
-  .retailerbox{
+  .retailerbox {
     flex-wrap: wrap;
     display: flex;
+    align-items: center;
     justify-content: center;
     .create_ac {
-      border-radius: 10px;
-      min-width: 100px;
-      max-width: 200px;
-      border: 1px solid rgb(0, 145, 113);
-
       margin: 10px;
+      border: 1px solid rgb(255 255 255 / 64%);
       display: flex;
       justify-content: center;
       align-items: center;
+      background: linear-gradient(
+          312.9deg,
+          rgba(255, 255, 255, 0.3) 4.49%,
+          rgba(233, 240, 247, 0.3) 95.45%
+        ),
+        #e9f0f7;
+      box-shadow: -3px -3px 9px rgb(255 255 255 / 90%),
+        3px 3px 9px rgb(138 155 189 / 40%);
       .new {
         cursor: pointer;
         width: 100%;
@@ -52,17 +57,18 @@
         justify-content: center;
         align-items: center;
         font-size: 100px;
-        color: rgb(84, 84, 84);
+        color: rgb(139, 139, 139);
       }
       .popup {
         background: rgb(234, 234, 234);
-        width:100%;
+        width: 100%;
         margin: auto;
         height: max-content;
-        top:0%;
-        left:0%;
+        top: 0%;
+        left: 0%;
         position: absolute;
         .close {
+          background: #ebf3fa;
           cursor: pointer;
           text-align: end;
           padding: 10px;
@@ -75,22 +81,30 @@
           justify-content: center;
           align-items: center;
           flex-direction: column;
+          background: #ebf3fa;
           padding: 20px;
-          input,select {
-            background: rgba(255, 255, 255, 0);
+          input,
+          select {
             outline: none;
-            border-radius: 3px;
             width: 100%;
+            background: linear-gradient(
+                312.9deg,
+                rgba(255, 255, 255, 0.3) 4.49%,
+                rgba(233, 240, 247, 0.3) 95.45%
+              ),
+              #e9f0f7;
+            box-shadow: -3px -3px 9px rgb(255 255 255 / 90%),
+              3px 3px 9px rgb(138 155 189 / 40%);
             max-width: 350px;
             padding: 10px;
-            border: none;
-            margin: 5px;
+            color: #8f9bb2;
+            margin: 12px 6px;
+            border: 1px solid #ffffff80;
             height: 50px;
-            border: 1px solid rgb(130, 130, 130);
-            border-radius: 5px;
+            border-radius: 0.7rem;
           }
-          .newretinsert{
-            background: rgb(36, 36, 36);
+          .newretinsert {
+            background: rgb(29 29 29);
             color: azure;
             font-size: 20px;
             letter-spacing: 1px;
@@ -109,7 +123,14 @@
         padding: 10px;
         border-radius: 10px;
         overflow: hidden;
-        margin: 0px auto;
+        background: linear-gradient(
+            312.9deg,
+            rgba(255, 255, 255, 0.3) 4.49%,
+            rgba(233, 240, 247, 0.3) 95.45%
+          ),
+          #e9f0f7;
+        box-shadow: 4px 4px 16px rgb(138 155 189 / 48%), -5px -5px 18px #ffffff;
+        border-radius: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -135,6 +156,9 @@
           text-align: center;
           padding: 5px;
         }
+      }
+      .card:nth-child(1) {
+        margin-right: 10px;
       }
     }
   }

@@ -99,7 +99,7 @@ $rid = $_SESSION["rid"];
                                     <div class="price">৳<?php echo $row['price'] ?>/-</div>
                                     <div class="quantity">পরিমাণ : <?php echo $row['quantity'] ?></div>
                                     <div class="total">৳<?php echo $row['total'] ?>/-</div>
-                                    <div class="time"><?php echo $row1['time'] ?></div>
+                                    <div class="time"><?php echo $row['time'] ?></div>
                                 </div>
                             <?php } ?>
                         </div>
@@ -130,7 +130,7 @@ $rid = $_SESSION["rid"];
                                     <div class="price">৳<?php echo $row['price'] ?>/-</div>
                                     <div class="quantity">পরিমাণ : <?php echo $row['quantity'] ?></div>
                                     <div class="total">৳<?php echo $row['total'] ?>/-</div>
-                                    <div class="time"><?php echo $row1['time'] ?></div>
+                                    <div class="time"><?php echo $row['time'] ?></div>
                                 </div>
                             <?php } ?>
                         </div>
@@ -160,7 +160,7 @@ $rid = $_SESSION["rid"];
                                     <div class="price">৳<?php echo $row['price'] ?>/-</div>
                                     <div class="quantity">পরিমাণ : <?php echo $row['quantity'] ?></div>
                                     <div class="total">৳<?php echo $row['total'] ?>/-</div>
-                                    <div class="time"><?php echo $row1['time'] ?></div>
+                                    <div class="time"><?php echo $row['time'] ?></div>
                                 </div>
                             <?php } ?>
                         </div>
@@ -190,7 +190,7 @@ $rid = $_SESSION["rid"];
                                     <div class="price">৳<?php echo $row['price'] ?>/-</div>
                                     <div class="quantity">পরিমাণ : <?php echo $row['quantity'] ?></div>
                                     <div class="total">৳<?php echo $row['total'] ?>/-</div>
-                                    <div class="time"><?php echo $row1['time'] ?></div>
+                                    <div class="time"><?php echo $row['time'] ?></div>
                                 </div>
                             <?php } ?>
                         </div>

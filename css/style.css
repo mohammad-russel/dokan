@@ -7,7 +7,7 @@
 }
 
 body {
-  background: #dee0ee;
+  background: #EBF3FA;
 }
 
 .container {
@@ -89,18 +89,22 @@ header .link a .count {
   left: -3px;
 }
 header .link a ion-icon {
-  box-shadow: 3px 3px 6px 0px rgb(165, 165, 165), -3px -3px 6px 0px rgb(255, 255, 255);
-  font-size: 23px;
-  border: 1px solid rgb(208, 216, 235);
+  box-shadow: 3px 3px 6px 0px rgb(189, 189, 189), -3px -3px 6px 0px rgb(255, 255, 255);
+  font-size: 25px;
+  color: rgb(84, 84, 84);
   padding: 5px;
+  transition: all 0.3s;
   border-radius: 50%;
 }
-header .link a ion-icon:active {
-  box-shadow: inset 3px 3px 3px 0px rgb(182, 182, 182), inset -3px -3px 3px 0px rgb(255, 255, 255);
+header .link a ion-icon:hover {
+  background: linear-gradient(45deg, rgb(217, 232, 246) 0%, rgb(255, 255, 255) 100%);
+  box-shadow: -2px -7px 10px #c7d1dc, 4px 6px 10px #e5f4ff, inset -2px -7px 10px #f1f1f1, inset 4px 6px 10px #d4d7da;
+  transform: translate(0%) scale(0.95);
 }
 
 @media only screen and (max-width: 548px) {
   header {
+    border-bottom: 1px solid rgb(231, 231, 231);
     flex-wrap: wrap;
   }
   header .logo {
@@ -112,6 +116,7 @@ header .link a ion-icon:active {
     text-align: center;
   }
   header .link {
+    margin-top: 15px;
     width: 100%;
     text-align: center;
   }
@@ -128,32 +133,18 @@ header .link a ion-icon:active {
 .header .back a {
   position: relative;
 }
-.header .back a .count {
-  position: absolute;
-  background: rgb(55, 55, 55);
-  width: 17px;
-  height: 17px;
-  text-align: center;
-  z-index: 1;
-  color: rgb(255, 255, 255);
-  border-radius: 50%;
-  font-size: 0.7rem;
-  font-weight: 100;
-  top: -25px;
-  left: -3px;
-}
 .header .back a ion-icon {
-  color: rgb(74, 74, 74);
-  width: 30px;
-  height: 30px;
-  padding: 5px;
-  box-shadow: 3px 3px 3px 0px rgb(165, 165, 165), -3px -3px 5px 0px rgb(255, 255, 255);
-  border: 1px solid rgb(208, 216, 235);
-  border-radius: 50%;
+  box-shadow: 3px 3px 6px 0px rgb(189, 189, 189), -3px -3px 6px 0px rgb(255, 255, 255);
   font-size: 25px;
+  color: rgb(84, 84, 84);
+  padding: 5px;
+  transition: all 0.3s;
+  border-radius: 50%;
 }
-.header .back a ion-icon:active {
-  box-shadow: inset 2px 2px 3px 0px rgb(165, 165, 165), inset -2px -2px 3px 0px rgb(255, 255, 255);
+.header .back a ion-icon:hover {
+  background: linear-gradient(45deg, rgb(217, 232, 246) 0%, rgb(255, 255, 255) 100%);
+  box-shadow: -2px -7px 10px #c7d1dc, 4px 6px 10px #e5f4ff, inset -2px -7px 10px #f1f1f1, inset 4px 6px 10px #d4d7da;
+  transform: translate(0%) scale(0.95);
 }
 
 .adminproductbox .insert {
@@ -249,7 +240,7 @@ header .link a ion-icon:active {
   padding: 15px;
   justify-content: center;
   display: grid;
-  grid-template-columns: 20% 20% 20% 20%;
+  grid-template-columns: 20% 20% 20% 0%;
   flex-wrap: wrap;
   grid-gap: 20px;
 }
@@ -262,11 +253,11 @@ header .link a ion-icon:active {
   height: -moz-max-content;
   height: max-content;
   text-decoration: none;
-  color: black;
-  box-shadow: 3px 3px 3px 0px rgb(165, 165, 165), -3px -3px 5px 0px rgb(255, 255, 255);
-  border: 2px solid rgb(255, 255, 255);
+  color: rgb(239, 239, 239);
+  background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #e9f0f7;
+  box-shadow: 4px 4px 16px rgba(138, 155, 189, 0.48), -5px -5px 18px #ffffff;
 }
-.adminmainbox .buttonbox a ion-icon {
+.adminmainbox .buttonbox a bor ion-icon {
   font-size: 35px;
   color: rgb(49, 49, 49);
   background: rgba(255, 255, 255, 0.35);
@@ -279,32 +270,20 @@ header .link a ion-icon:active {
   padding: 2px 10px;
 }
 .adminmainbox .buttonbox a .btn h3 {
-  color: rgb(72, 72, 72);
+  color: rgb(227, 227, 227);
 }
 .adminmainbox .buttonbox a .btn p {
   font-weight: 600;
-  color: rgb(50, 50, 50);
+  color: rgb(241, 241, 241);
 }
 .adminmainbox .buttonbox a:nth-child(1) {
-  background: rgb(173, 220, 195);
+  background: rgba(0, 136, 43, 0.521);
 }
 .adminmainbox .buttonbox a:nth-child(2) {
-  background: rgb(224, 214, 164);
+  background: rgba(0, 47, 135, 0.586);
 }
 .adminmainbox .buttonbox a:nth-child(3) {
-  background: rgb(228, 194, 194);
-}
-.adminmainbox .buttonbox a:nth-child(4) {
-  background: rgb(195, 196, 232);
-}
-.adminmainbox .buttonbox a:nth-child(5) {
-  background: rgb(221, 186, 229);
-}
-.adminmainbox .buttonbox a:nth-child(6) {
-  background: rgb(173, 219, 225);
-}
-.adminmainbox .buttonbox a:nth-child(7) {
-  background: rgb(227, 200, 187);
+  background: rgba(153, 110, 0, 0.491);
 }
 
 @media only screen and (max-width: 550px) {
@@ -317,7 +296,10 @@ header .link a ion-icon:active {
   justify-content: center;
   flex-wrap: wrap;
 }
-.srmainbox .box {
+.srmainbox a {
+  text-decoration: none;
+}
+.srmainbox a .box {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -331,7 +313,7 @@ header .link a ion-icon:active {
   flex-direction: column;
   color: rgb(74, 74, 74);
 }
-.srmainbox .box a {
+.srmainbox a .box a {
   color: rgb(78, 78, 78);
   text-decoration: none;
   display: flex;
@@ -392,17 +374,17 @@ header .link a ion-icon:active {
 .sr_retailer_main_box .retailerbox {
   flex-wrap: wrap;
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 .sr_retailer_main_box .retailerbox .create_ac {
-  border-radius: 10px;
-  min-width: 100px;
-  max-width: 200px;
-  border: 1px solid rgb(0, 145, 113);
   margin: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.64);
   display: flex;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #e9f0f7;
+  box-shadow: -3px -3px 9px rgba(255, 255, 255, 0.9), 3px 3px 9px rgba(138, 155, 189, 0.4);
 }
 .sr_retailer_main_box .retailerbox .create_ac .new {
   cursor: pointer;
@@ -412,7 +394,7 @@ header .link a ion-icon:active {
   justify-content: center;
   align-items: center;
   font-size: 100px;
-  color: rgb(84, 84, 84);
+  color: rgb(139, 139, 139);
 }
 .sr_retailer_main_box .retailerbox .create_ac .popup {
   background: rgb(234, 234, 234);
@@ -426,6 +408,7 @@ header .link a ion-icon:active {
   position: absolute;
 }
 .sr_retailer_main_box .retailerbox .create_ac .popup .close {
+  background: #ebf3fa;
   cursor: pointer;
   text-align: end;
   padding: 10px;
@@ -438,23 +421,25 @@ header .link a ion-icon:active {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background: #ebf3fa;
   padding: 20px;
 }
-.sr_retailer_main_box .retailerbox .create_ac .popup form input, .sr_retailer_main_box .retailerbox .create_ac .popup form select {
-  background: rgba(255, 255, 255, 0);
+.sr_retailer_main_box .retailerbox .create_ac .popup form input,
+.sr_retailer_main_box .retailerbox .create_ac .popup form select {
   outline: none;
-  border-radius: 3px;
   width: 100%;
+  background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #e9f0f7;
+  box-shadow: -3px -3px 9px rgba(255, 255, 255, 0.9), 3px 3px 9px rgba(138, 155, 189, 0.4);
   max-width: 350px;
   padding: 10px;
-  border: none;
-  margin: 5px;
+  color: #8f9bb2;
+  margin: 12px 6px;
+  border: 1px solid rgba(255, 255, 255, 0.5019607843);
   height: 50px;
-  border: 1px solid rgb(130, 130, 130);
-  border-radius: 5px;
+  border-radius: 0.7rem;
 }
 .sr_retailer_main_box .retailerbox .create_ac .popup form .newretinsert {
-  background: rgb(36, 36, 36);
+  background: rgb(29, 29, 29);
   color: azure;
   font-size: 20px;
   letter-spacing: 1px;
@@ -471,7 +456,9 @@ header .link a ion-icon:active {
   padding: 10px;
   border-radius: 10px;
   overflow: hidden;
-  margin: 0px auto;
+  background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #e9f0f7;
+  box-shadow: 4px 4px 16px rgba(138, 155, 189, 0.48), -5px -5px 18px #ffffff;
+  border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -499,6 +486,9 @@ header .link a ion-icon:active {
   text-align: center;
   padding: 5px;
 }
+.sr_retailer_main_box .retailerbox a .card:nth-child(1) {
+  margin-right: 10px;
+}
 
 @media only screen and (max-width: 450px) {
   .sr_retailer_main_box .head .searchbox #search {
@@ -514,12 +504,14 @@ header .link a ion-icon:active {
     width: 150px;
   }
 }
-.sr_product, .productroom {
+.sr_product,
+.productroom {
   flex-wrap: wrap;
   display: flex;
   justify-content: center;
 }
-.sr_product .card, .productroom .card {
+.sr_product .card,
+.productroom .card {
   color: rgb(67, 67, 67);
   max-width: 166px;
   text-decoration: none;
@@ -533,13 +525,15 @@ header .link a ion-icon:active {
   align-items: center;
   flex-direction: column;
 }
-.sr_product .card .image, .productroom .card .image {
+.sr_product .card .image,
+.productroom .card .image {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.sr_product .card .image img, .productroom .card .image img {
+.sr_product .card .image img,
+.productroom .card .image img {
   margin: auto;
   width: 100%;
   aspect-ratio: 1/1;
@@ -547,44 +541,65 @@ header .link a ion-icon:active {
      object-fit: cover;
   border-radius: 5px;
 }
-.sr_product .card .price, .productroom .card .price {
+.sr_product .card .price,
+.productroom .card .price {
   color: rgb(39, 152, 60);
   padding: 0px 5px;
   width: 100%;
   text-align: start;
   font-weight: 600;
 }
-.sr_product .card .name, .productroom .card .name {
+.sr_product .card .name,
+.productroom .card .name {
   color: rgb(90, 90, 90);
   padding: 0px 5px;
   width: 100%;
   text-align: start;
   font-weight: 600;
 }
-.sr_product .card .btn, .productroom .card .btn {
+.sr_product .card .btn,
+.productroom .card .btn {
   width: 100%;
   display: flex;
+  padding: 3px;
+  align-items: center;
+  margin-top: 5px;
+  background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #e9f0f7;
+  box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.9), 4px 4px 10px rgba(138, 155, 189, 0.4);
+  border-radius: 10px;
+  color: #8f9bb2;
 }
-.sr_product .card .btn input, .productroom .card .btn input {
+.sr_product .card .btn input,
+.productroom .card .btn input {
   outline: none;
-  width: 50%;
+  width: 60%;
+  height: 35px;
   padding: 10px;
-  border: none;
-  color: rgb(40, 40, 40);
-  height: 25px;
+  border: 1px solid;
+  border-image-source: linear-gradient(314.02deg, #d6e5f2 4.59%, rgba(255, 255, 255, 0.3) 74.18%);
   font-weight: 700;
+  background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #e9f0f7;
+  box-shadow: inset -4px -4px 10px rgba(255, 255, 255, 0.9), inset 4px 4px 10px rgba(138, 155, 189, 0.3);
+  border-radius: 10px;
+  color: #8F9BB2;
 }
-.sr_product .card .btn button, .productroom .card .btn button {
-  width: 100%;
+.sr_product .card .btn button,
+.productroom .card .btn button {
+  width: 40%;
   border: none;
-  background: rgb(82, 82, 82);
-  color: rgb(255, 255, 255);
+  background: rgba(0, 0, 0, 0);
+  color: #8F9BB2;
   height: 25px;
   cursor: pointer;
+  font-weight: 600;
   letter-spacing: 1px;
+  transition: 0.1s;
+  transform: scale(1);
 }
-.sr_product .card .btn button:active, .productroom .card .btn button:active {
-  background: rgb(99, 99, 99);
+.sr_product .card .btn button:active,
+.productroom .card .btn button:active {
+  transform: scale(1.05);
+  color: #000000;
 }
 
 @media only screen and (max-width: 450px) {
@@ -597,17 +612,19 @@ header .link a ion-icon:active {
   width: -moz-max-content;
   width: max-content;
   margin: 50px auto;
-  box-shadow: 3px 3px 3px 0px rgb(165, 165, 165), -3px -3px 5px 0px rgb(255, 255, 255);
-  border: 1px solid rgb(208, 216, 235);
+  border-image-source: linear-gradient(314.02deg, #d6e5f2 4.59%, rgba(255, 255, 255, 0.3) 74.18%);
+  font-weight: 700;
   padding: 10px;
   border-radius: 10px;
+  background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #e9f0f7;
+  box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.9), 4px 4px 10px rgba(138, 155, 189, 0.4);
 }
 .form .lt {
   text-align: center;
   width: 100%;
   margin: 10px auto;
   font-size: 20px;
-  color: rgb(47, 47, 47);
+  color: #8F9BB2;
 }
 .form .login_form {
   margin: 10px auto;
@@ -617,24 +634,31 @@ header .link a ion-icon:active {
   flex-direction: column;
   width: 100%;
   max-width: 200px;
+  border-radius: 10px;
 }
 .form .login_form input {
   width: 100%;
   background: rgba(255, 255, 255, 0.461);
   padding: 7px;
+  color: #8F9BB2;
+  outline: none;
   border-radius: 10px;
-  border: 1px solid rgb(208, 216, 235);
-  box-shadow: inset 2px 2px 3px 0px rgb(165, 165, 165), inset -2px -2px 3px 0px rgb(255, 255, 255);
+  background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #e9f0f7;
+  box-shadow: inset -4px -4px 10px rgba(255, 255, 255, 0.9), inset 4px 4px 10px rgba(138, 155, 189, 0.3);
+  border-image-source: linear-gradient(314.02deg, #d6e5f2 4.59%, rgba(255, 255, 255, 0.3) 74.18%);
   margin: 5px 0px;
-  color: rgb(53, 53, 53);
 }
 .form .login_form #login {
   padding: 5px;
   cursor: pointer;
-  box-shadow: 3px 3px 3px 0px rgb(165, 165, 165), -3px -3px 5px 0px rgb(255, 255, 255);
+  background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #e9f0f7;
+  color: #8F9BB2;
+  border-image-source: linear-gradient(314.02deg, #d6e5f2 4.59%, rgba(255, 255, 255, 0.3) 74.18%);
+  box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.9), 4px 4px 10px rgba(138, 155, 189, 0.4);
 }
 .form .login_form #login:active {
-  box-shadow: inset 2px 2px 3px 0px rgb(165, 165, 165), inset -2px -2px 3px 0px rgb(255, 255, 255);
+  background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #e9f0f7;
+  box-shadow: inset -4px -4px 10px rgba(255, 255, 255, 0.9), inset 4px 4px 10px rgba(138, 155, 189, 0.3);
 }
 
 @media only screen and (max-width: 550px) {
@@ -938,7 +962,7 @@ header .link a ion-icon:active {
   font-size: 16px;
 }
 .sr_overview .info .left .box p {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 600;
 }
 .sr_overview .info .middle {
@@ -996,7 +1020,7 @@ header .link a ion-icon:active {
   font-size: 16px;
 }
 .sr_overview .info .right .box p {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 600;
 }
 .sr_overview .product {
@@ -1326,46 +1350,23 @@ header .link a ion-icon:active {
 .delivery_days {
   display: flex;
   justify-content: center;
-  padding: 20px;
   flex-wrap: wrap;
 }
 .delivery_days .day {
-  margin: 10px;
   text-decoration: none;
-  color: rgba(20, 20, 20, 0.9843137255);
+  height: 70px;
+  color: #8F9BB2;
   letter-spacing: 0.5px;
-  padding: 10px;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  aspect-ratio: 5/3;
-  border: 1px solid rgb(54, 54, 54);
+  font-size: 1rem;
+  width: 150px;
+  margin: 15px 10px;
+  border: 1px solid rgba(164, 164, 164, 0.168);
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  box-shadow: 4px 4px 7px -2px #757575;
-}
-.delivery_days .day:nth-child(1) {
-  background: rgb(233, 165, 165);
-}
-.delivery_days .day:nth-child(2) {
-  background: rgb(233, 222, 165);
-}
-.delivery_days .day:nth-child(3) {
-  background: rgb(166, 233, 165);
-}
-.delivery_days .day:nth-child(4) {
-  background: rgb(165, 207, 233);
-}
-.delivery_days .day:nth-child(5) {
-  background: rgb(165, 171, 233);
-}
-.delivery_days .day:nth-child(6) {
-  background: rgb(215, 165, 233);
-}
-.delivery_days .day:nth-child(7) {
-  background: rgb(233, 165, 191);
+  background: linear-gradient(315.13deg, rgba(194, 217, 237, 0.3) 5.21%, rgba(255, 255, 255, 0.3) 62.26%), #E9F0F7;
+  box-shadow: 3px 3px 12px rgba(138, 155, 189, 0.4), -3px -3px 15px rgba(255, 255, 255, 0.9);
 }
 
 .d_retailer_list {
@@ -1375,35 +1376,64 @@ header .link a ion-icon:active {
   width: 100%;
 }
 .d_retailer_list a {
+  margin: 15px;
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  color: #8F9BB2;
 }
 .d_retailer_list a .card {
-  border: 1px solid black;
+  background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #e9f0f7;
+  box-shadow: 4px 4px 16px rgba(138, 155, 189, 0.48), -5px -5px 18px #FFFFFF;
   text-align: center;
   width: 100%;
-  max-width: 200px;
+  font-weight: 600;
+  border-radius: 10px;
+  max-width: 150px;
   min-width: 150px;
-  padding: 5px;
+  padding: 15px;
 }
 .d_retailer_list a .card .image img {
-  width: 100%;
+  width: 50%;
   aspect-ratio: 1/1;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.d_retailer_list a .card .name {
-  background: rgb(88, 88, 88);
+.d_retailer_list a .card .name,
+.d_retailer_list a .card .shop,
+.d_retailer_list a .card .order,
+.d_retailer_list a .card .baki {
+  background: rgba(88, 88, 88, 0);
+  padding: 3px;
 }
 .d_retailer_list a .card .shop {
-  background: rgb(120, 35, 96);
+  background: rgba(120, 35, 96, 0);
+  border-top: 1px solid #d8e1f2;
 }
 .d_retailer_list a .card .order {
-  background: rgb(35, 120, 78);
+  background: rgba(0, 63, 146, 0.473);
+  font-weight: 300;
+  color: white;
+  background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
+  box-shadow: -3px -3px 5px rgba(255, 255, 255, 0.4), 3px 3px 5px rgba(138, 155, 189, 0.133);
+  color: #8F9BB2;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.d_retailer_list a .card .order span {
+  color: rgb(94, 178, 111);
+  font-weight: 600;
 }
 .d_retailer_list a .card .baki {
-  background: rgb(120, 35, 35);
+  color: #8F9BB2;
+  background: #8F9BB2;
+  background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
+  box-shadow: -3px -3px 5px rgba(255, 255, 255, 0), 3px 3px 5px rgba(138, 155, 189, 0.134);
+  font-weight: 300;
+  border-radius: 10px;
+}
+.d_retailer_list a .card .baki span {
+  color: rgb(215, 99, 99);
+  font-weight: 600;
 }
 
 .d_overview_retailer .profile {
@@ -1548,6 +1578,7 @@ header .link a ion-icon:active {
 .d_overview_retailer .baki .boxs .cardinfo .left .btn span,
 .d_overview_retailer .complete .boxs .cardinfo .right .btn span,
 .d_overview_retailer .complete .boxs .cardinfo .left .btn span {
+  cursor: pointer;
   margin: 10px 0px;
   background: rgb(0, 87, 44);
   color: rgb(250, 240, 219);
@@ -1668,6 +1699,171 @@ header .link a ion-icon:active {
 .d_overview_retailer .baki .boxs .cardinfo .baki_pop form .input_box button:last-child,
 .d_overview_retailer .complete .boxs .cardinfo .complete_pop form .input_box button:last-child,
 .d_overview_retailer .complete .boxs .cardinfo .baki_pop form .input_box button:last-child {
+  background: rgb(13, 87, 56);
+}
+
+.complete {
+  margin: 20px 0px;
+  width: 100%;
+}
+.complete .buttons {
+  background: rgb(52, 52, 52);
+  width: 100%;
+  text-align: center;
+  color: azure;
+  cursor: pointer;
+}
+.complete .boxs .box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.complete .boxs .box .card {
+  margin: 5px 0px;
+  text-align: center;
+  width: 100%;
+  max-width: 160px;
+  min-width: 150px;
+  border: 1px solid black;
+  margin: 5px;
+  padding: 10px;
+}
+.complete .boxs .box .card .image {
+  width: 100%;
+}
+.complete .boxs .box .card .image img {
+  width: 30%;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.complete .boxs .box .card .price {
+  background: rgb(86, 118, 97);
+  color: antiquewhite;
+}
+.complete .boxs .box .card .quantity {
+  background: rgb(118, 118, 86);
+  color: antiquewhite;
+}
+.complete .boxs .box .card .tp {
+  background: rgb(86, 105, 118);
+  color: antiquewhite;
+}
+.complete .boxs .box .card .btn {
+  padding: 10px 5px;
+}
+.complete .boxs .box .card .btn .bt {
+  margin: 10px 0px;
+  cursor: pointer;
+  background: rgb(10, 128, 46);
+  border-radius: 5px;
+  color: antiquewhite;
+}
+.complete .boxs .box .card .btn .bt:nth-child(2) {
+  background: rgb(203, 98, 0);
+}
+.complete .boxs .box .card .btn .bt:nth-child(3) {
+  background: rgb(171, 1, 1);
+}
+.complete .boxs .cardinfo {
+  background: rgb(83, 62, 122);
+  display: flex;
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  padding: 10px;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: space-between;
+  color: aliceblue;
+}
+.complete .boxs .cardinfo .right,
+.complete .boxs .cardinfo .left {
+  margin: 0px 10px;
+}
+.complete .boxs .cardinfo .right .btn,
+.complete .boxs .cardinfo .left .btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.complete .boxs .cardinfo .right .btn span,
+.complete .boxs .cardinfo .left .btn span {
+  cursor: pointer;
+  margin: 10px 0px;
+  background: rgb(0, 87, 44);
+  color: rgb(250, 240, 219);
+  padding: 4px 10px;
+  border: 1px solid wheat;
+  text-align: center;
+  width: 100px;
+  border-radius: 4px;
+}
+.complete .boxs .cardinfo .right .btn span a,
+.complete .boxs .cardinfo .left .btn span a {
+  text-decoration: none;
+  color: rgb(250, 240, 219);
+}
+.complete .boxs .cardinfo .right .btn .baki_op,
+.complete .boxs .cardinfo .left .btn .baki_op {
+  background: rgb(87, 0, 0);
+}
+.complete .boxs .cardinfo .complete_pop,
+.complete .boxs .cardinfo .baki_pop {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgb(255, 255, 255);
+}
+.complete .boxs .cardinfo .complete_pop .close_complete,
+.complete .boxs .cardinfo .complete_pop .close_baki,
+.complete .boxs .cardinfo .baki_pop .close_complete,
+.complete .boxs .cardinfo .baki_pop .close_baki {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding: 10px 5px;
+}
+.complete .boxs .cardinfo .complete_pop .close_complete ion-icon,
+.complete .boxs .cardinfo .complete_pop .close_baki ion-icon,
+.complete .boxs .cardinfo .baki_pop .close_complete ion-icon,
+.complete .boxs .cardinfo .baki_pop .close_baki ion-icon {
+  font-size: 30px;
+  color: rgb(239, 239, 239);
+  background: rgb(63, 63, 63);
+  border-radius: 50%;
+  padding: 5px;
+}
+.complete .boxs .cardinfo .complete_pop form #signature-pad div,
+.complete .boxs .cardinfo .baki_pop form #signature-pad div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.complete .boxs .cardinfo .complete_pop form #signature-pad div #note,
+.complete .boxs .cardinfo .baki_pop form #signature-pad div #note {
+  display: none;
+}
+.complete .boxs .cardinfo .complete_pop form #signature-pad div canvas,
+.complete .boxs .cardinfo .baki_pop form #signature-pad div canvas {
+  border: 1px solid black;
+  margin: auto;
+}
+.complete .boxs .cardinfo .complete_pop form .input_box button,
+.complete .boxs .cardinfo .baki_pop form .input_box button {
+  height: 40px;
+  width: 50%;
+  font-size: 20px;
+  background: rgb(155, 18, 18);
+  border: none;
+  color: azure;
+}
+.complete .boxs .cardinfo .complete_pop form .input_box button:last-child,
+.complete .boxs .cardinfo .baki_pop form .input_box button:last-child {
   background: rgb(13, 87, 56);
 }
 

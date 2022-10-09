@@ -31,9 +31,9 @@ if (!isset($_SESSION["aid"])) {
             </div>
         </div>
         <div class="adminmainbox">
-        <div class="buttonbox">
+            <div class="buttonbox">
                 <a href="total_earning.php">
-                <ion-icon name="cash-outline"></ion-icon>
+                    <ion-icon name="cash-outline"></ion-icon>
                     <div class="btn">
                         <h3>Total Earning</h3>
                         <?php
@@ -59,10 +59,22 @@ if (!isset($_SESSION["aid"])) {
                         if (mysqli_num_rows($result)) {
                             while ($row = mysqli_fetch_assoc($result)) {
                         ?>
-                                
+
                                 <p>৳ <?php echo $row['total'] ?>/-</p>
                         <?php }
                         } ?>
+                    </div>
+                </a>
+                <a href="day_insert.php">
+                    <div class="btn">
+                        <h3>Set Delivery</h3>
+                        <?php
+                        include "../php/config.php";
+                        $sql = "SELECT * FROM delivery";
+                        $result = mysqli_query($con, $sql);
+                        $hm = mysqli_num_rows($result);
+                        ?>
+                        <p>Village : <?php echo $hm ?></p>
                     </div>
                 </a>
             </div>
@@ -149,33 +161,10 @@ if (!isset($_SESSION["aid"])) {
                         <p><?php echo $hm ?></p>
                     </div>
                 </a>
-                <a href="#">
-                    <ion-icon name="business-outline"></ion-icon>
-                    <div class="btn">
-                        <h3>Companies</h3>
-                        <?php
-                        include "../php/config.php";
-                        $sql = "SELECT DISTINCT company FROM product ";
-                        $result = mysqli_query($con, $sql);
-                        $hm = mysqli_num_rows($result);
-                        ?>
-                        <p><?php echo $hm ?></p>
-                    </div>
-                </a>
-                <a href="deller.php">
-                    <ion-icon name="person-circle-outline"></ion-icon>
-                    <div class="btn">
-                        <h3>Deller</h3>
-                        <?php
-                        include "../php/config.php";
-                        $sql = "SELECT * FROM deller";
-                        $result = mysqli_query($con, $sql);
-                        $hm = mysqli_num_rows($result);
-                        ?>
-                        <p><?php echo $hm ?></p>
-                    </div>
-                </a>
-                <a href="retailer.php">
+                <br>
+            </div>
+            <div class="buttonbox">
+            <a href="retailer.php">
                     <ion-icon name="people-circle-outline"></ion-icon>
                     <div class="btn">
                         <h3>Retailer</h3>
@@ -201,19 +190,19 @@ if (!isset($_SESSION["aid"])) {
                         <p><?php echo $hm ?></p>
                     </div>
                 </a>
-                <a href="day_insert.php">
+                <a href="deller.php">
+                    <ion-icon name="person-circle-outline"></ion-icon>
                     <div class="btn">
-                        <h3>Set Delivery</h3>
+                        <h3>Deller</h3>
                         <?php
                         include "../php/config.php";
-                        $sql = "SELECT * FROM delivery";
+                        $sql = "SELECT * FROM deller";
                         $result = mysqli_query($con, $sql);
                         $hm = mysqli_num_rows($result);
                         ?>
-                        <p>Village : <?php echo $hm ?></p>
+                        <p><?php echo $hm ?></p>
                     </div>
                 </a>
-
             </div>
         </div>
         <!-- ---------- -->

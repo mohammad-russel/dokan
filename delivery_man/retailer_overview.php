@@ -347,6 +347,7 @@ if (!isset($_SESSION["delid"])) {
                                     <div class="price">দামঃ <?php echo $row1['price'] ?></div>
                                     <div class="quantity">পরিমানঃ <?php echo $row1['quantity'] ?></div>
                                     <div class="tp">মোটঃ <?php echo $row1['total'] ?></div>
+                                    <div class="name">সময়<br> <?php echo $row1['time'] ?></div>
 
                                 </div>
                             <?php } ?>

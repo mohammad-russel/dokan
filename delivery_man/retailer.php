@@ -52,13 +52,13 @@ if (!isset($_SESSION["delid"])) {
                                       $result4 = mysqli_query($con, $sql4);
                                      $orders= mysqli_num_rows($result4);
                                     ?>
-                                    <div class="order">Order : <?php echo $orders ?></div>
+                                    <div class="order">Order : <span><?php echo $orders ?> </span></div>
                                     <?php 
                                       $sql5 = "SELECT * FROM cart WHERE status = 'baki' AND rid = $r  ";
                                       $result5 = mysqli_query($con, $sql5);
                                      $baki= mysqli_num_rows($result5);
                                     ?>
-                                    <div class="baki">Baki : <?php echo $baki ?></div>
+                                    <div class="baki">Baki : <span><?php echo $baki ?> </span></div>
                                 </div>
                             </a>
 

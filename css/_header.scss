@@ -3,14 +3,16 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   .logo {
     h1 {
-      a{
+      a {
         text-decoration: none;
         color: rgb(74, 74, 74);
       }
     }
   }
+
   nav {
     ul {
       a {
@@ -22,7 +24,9 @@ header {
       }
     }
   }
+
   .link {
+
     a {
       margin: 0px 5px;
       text-decoration: none;
@@ -30,30 +34,38 @@ header {
       font-weight: 600;
       letter-spacing: 1px;
       position: relative;
+
       .count {
         position: absolute;
         background: rgb(74, 74, 74);
         width: 17px;
         height: 17px;
-      text-align: center;
-      z-index: 1;
-      color: rgb(255, 255, 255);
-      border-radius: 50%;
-      font-size: 0.7rem;
+        text-align: center;
+        z-index: 1;
+        color: rgb(255, 255, 255);
+        border-radius: 50%;
+        font-size: 0.7rem;
         font-weight: 100;
         top: -20px;
         left: -3px;
       }
+
       ion-icon {
-        box-shadow: 3px 3px 6px 0px rgb(165, 165, 165),
+        box-shadow: 3px 3px 6px 0px rgb(189, 189, 189),
           -3px -3px 6px 0px rgb(255, 255, 255);
-        font-size: 23px;
-        border: $borderfornewf;
+        font-size: 25px;
+        color: rgb(84, 84, 84);
         padding: 5px;
+        transition: all .3s;
         border-radius: 50%;
-        &:active {
-          box-shadow: inset 3px 3px 3px 0px rgb(182, 182, 182),
-            inset -3px -3px 3px 0px rgb(255, 255, 255);
+        &:hover {
+          background: linear-gradient(45deg, rgb(217, 232, 246) 0%, rgb(255, 255, 255) 100%);
+          box-shadow:
+            -2px -7px 10px #c7d1dc,
+            4px 6px 10px #e5f4ff,
+            inset -2px -7px 10px #f1f1f1,
+            inset 4px 6px 10px #d4d7da;
+          transform: translate(0%) scale(0.95);
         }
       }
     }
@@ -62,28 +74,33 @@ header {
 
 @media only screen and (max-width: 548px) {
   header {
+    border-bottom: 1px solid rgb(231, 231, 231);
     flex-wrap: wrap;
+
     .logo {
       display: none;
-      h1 {
-      }
+
+      h1 {}
     }
+
     nav {
       width: 100%;
       margin: 5px 0px;
       text-align: center;
+
       ul {
-        a {
-        }
+        a {}
       }
     }
+
     .link {
+      margin-top: 15px;
       width: 100%;
       text-align: center;
+
       a {
         ion-icon {
-          &:active {
-          }
+          &:active {}
         }
       }
     }

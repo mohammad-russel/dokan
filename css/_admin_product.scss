@@ -2,41 +2,36 @@
   padding: 10px;
   display: flex;
   justify-content: center;
+
   .back {
     text-align: center;
     margin: 0px 10px;
+
     a {
       position: relative;
-      .count {
-        position: absolute;
-        background: rgb(55, 55, 55);
-        width: 17px;
-        height: 17px;
-        text-align: center;
-        z-index: 1;
-        color: rgb(255, 255, 255);
-        border-radius: 50%;
-        font-size: 0.7rem;
-        font-weight: 100;
-        top: -25px;
-        left: -3px;
-      }
       ion-icon {
-        color: rgb(74, 74, 74);
-        width: 30px;
-        height: 30px;
-        padding: 5px;
-        box-shadow: $boxshadow;
-        border: $borderfornewf;
-        border-radius: 50%;
+        box-shadow: 3px 3px 6px 0px rgb(189, 189, 189),
+          -3px -3px 6px 0px rgb(255, 255, 255);
         font-size: 25px;
-        &:active {
-          box-shadow: $boxshadowinsetinput;
+        color: rgb(84, 84, 84);
+        padding: 5px;
+        transition: all .3s;
+        border-radius: 50%;
+
+        &:hover {
+          background: linear-gradient(45deg, rgb(217, 232, 246) 0%, rgb(255, 255, 255) 100%);
+          box-shadow:
+            -2px -7px 10px #c7d1dc,
+            4px 6px 10px #e5f4ff,
+            inset -2px -7px 10px #f1f1f1,
+            inset 4px 6px 10px #d4d7da;
+          transform: translate(0%) scale(0.95);
         }
       }
     }
   }
 }
+
 // ---------------
 .adminproductbox {
   .insert {
@@ -44,6 +39,7 @@
     padding: 5px;
     margin: 10px;
     border-radius: 10px;
+
     input,
     select,
     button {
@@ -54,19 +50,22 @@
       margin: 5px;
       box-shadow: $boxshadowinsetinput;
       border-radius: 5px;
-      option {
-      }
+
+      option {}
     }
+
     button {
       width: 150px;
       border: $borderfornewf;
       box-shadow: $boxshadow;
+
       &:active {
         box-shadow: $boxshadowinsetinput;
       }
     }
   }
 }
+
 // ----------
 .list {
   .card {
@@ -79,10 +78,11 @@
     border: 1px solid gray;
     border-radius: 10px;
     margin: 10px;
-    .id {
-    }
-    .name {
-    }
+
+    .id {}
+
+    .name {}
+
     .image {
       img {
         border-radius: 10px;
@@ -91,22 +91,24 @@
         object-fit: cover;
       }
     }
-    .price {
-    }
-    .sr {
-    }
-    .company {
-    }
-    .category {
-    }
-    .date {
-    }
+
+    .price {}
+
+    .sr {}
+
+    .company {}
+
+    .category {}
+
+    .date {}
+
     .more {
       position: relative;
+
       .show {
-        ion-icon {
-        }
+        ion-icon {}
       }
+
       .box {
         z-index: 1;
         background: rgb(63, 63, 63);
@@ -117,23 +119,28 @@
         right: 0;
         top: 25px;
         font-size: 15px;
+
         .overview {
           text-align: center;
           margin: 5px;
+
           a {
             color: aliceblue;
             text-decoration: none;
           }
         }
+
         .update {
           margin: 5px;
 
           text-align: center;
+
           a {
             color: aliceblue;
             text-decoration: none;
           }
         }
+
         .deletebtn {
           background: rgba(0, 0, 0, 0);
           color: rgb(255, 255, 255);

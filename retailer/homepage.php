@@ -19,7 +19,7 @@ $rid = $_SESSION["rid"];
 <body>
     <div class="container">
         <?php include "../components/header.php" ?>
-        <div class="welcome">welcome</div>
+      
         <div class="retailermain">
         </div>
     </div>
@@ -45,7 +45,7 @@ $rid = $_SESSION["rid"];
         }
         load();
         $(document).on("click", ".loadmore", function() {
-            page += 5;
+            page += 20;
             load();
         })
 

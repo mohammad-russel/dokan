@@ -35,7 +35,7 @@ $sr = $_SESSION["sid"];
         <div class="complete">
                 <?php
                 include '../php/config.php';
-                $sql1 = "SELECT *, quantity*price AS total FROM cart WHERE status = 'baki'";
+                $sql1 = "SELECT *, quantity*price AS total FROM cart WHERE status = 'complete'";
                 $result1 = mysqli_query($con, $sql1);
                 if ($list = mysqli_num_rows($result1)) {
                 ?>
@@ -65,16 +65,16 @@ $sr = $_SESSION["sid"];
                         <div class="cardinfo">
                             <?php
                             include '../php/config.php';
-                            $sql1 = "SELECT *, SUM(quantity*price) AS total FROM cart WHERE status = 'baki' ";
+                            $sql1 = "SELECT *, SUM(quantity*price) AS total FROM cart WHERE status = 'complete' ";
                             $result1 = mysqli_query($con, $sql1);
                             $row = mysqli_fetch_assoc($result1);
 
                             // ----------
-                            $sql1 = "SELECT *, quantity*price AS total FROM cart WHERE status = 'baki' ";
+                            $sql1 = "SELECT *, quantity*price AS total FROM cart WHERE status = 'complete' ";
                             $result1 = mysqli_query($con, $sql1);
                             $list4 = mysqli_num_rows($result1);
                             //   ---------
-                            $sql1 = "SELECT DISTINCT discount FROM cart WHERE status = 'baki'  ";
+                            $sql1 = "SELECT DISTINCT discount FROM cart WHERE status = 'complete'  ";
                             $result1 = mysqli_query($con, $sql1);
                             $row2 = mysqli_fetch_assoc($result1);
 

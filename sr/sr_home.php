@@ -37,27 +37,30 @@ $sr = $_SESSION["sid"];
             </div>
         </div>
         <div class="srmainbox">
+            <a href="sr_complete.php?sr=<?php echo $sr ?>">
+                <div class="box">
+                    <h3>Total Sell</h3>
+                    <?php
+                    include "../php/config.php";
+                    $sql = "SELECT * FROM cart WHERE status = 'complete' AND sr = $sr ";
+                    $result = mysqli_query($con, $sql);
+                    $row = mysqli_num_rows($result);
+                    ?>
+                    <p>Item : <?php echo $row ?></p>
+                </div>
+            </a>
+
+            <a class="dd" href="retailer.php">
             <div class="box">
-                <h3>Total Sell</h3>
-                <?php
-                include "../php/config.php";
-                $sql = "SELECT * FROM cart WHERE status = 'complete' AND sr = $sr ";
-                $result = mysqli_query($con, $sql);
-                $row = mysqli_num_rows($result);
-                ?>
-                <p>Item : <?php echo $row ?></p>
-            </div>
-            <div class="box">
-                <a class="dd" href="retailer.php">
                     <p>Retailer</p>
                     <?php
-                     $sql1 = "SELECT * FROM retailer WHERE openersr = $sr ";
-                     $result1 = mysqli_query($con, $sql1);
-                     $row1 = mysqli_num_rows($result1);
+                    $sql1 = "SELECT * FROM retailer WHERE openersr = $sr ";
+                    $result1 = mysqli_query($con, $sql1);
+                    $row1 = mysqli_num_rows($result1);
                     ?>
                     <p><?php echo $row1 ?></p>
-                </a>
-            </div>
+                </div>
+            </a>
         </div>
     </div>
 

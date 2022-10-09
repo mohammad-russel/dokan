@@ -1,73 +1,115 @@
-.form{
-width: max-content;
-margin:50px auto;
-box-shadow: $boxshadow;
-border: $borderfornewf;
-padding: 10px;
-border-radius: 10px;
+.form {
+  width: max-content;
+  margin: 50px auto;
+  border-image-source: linear-gradient(314.02deg,
+  #d6e5f2 4.59%,
+  rgba(255, 255, 255, 0.3) 74.18%);
+font-weight: 700;
+  padding: 10px;
+  border-radius: 10px;
+  background: linear-gradient(312.9deg,
+      rgba(255, 255, 255, 0.3) 4.49%,
+      rgba(233, 240, 247, 0.3) 95.45%),
+    #e9f0f7;
+  box-shadow: -4px -4px 10px rgb(255 255 255 / 90%),
+    4px 4px 10px rgb(138 155 189 / 40%);
+
   .lt {
-  text-align: center;
-  width: 100%;
-  margin: 10px auto;
-  font-size: 20px;
-  color: rgb(47, 47, 47);
-}
-.login_form {
-  margin: 10px auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-  max-width: 200px;
-  input {
+    text-align: center;
     width: 100%;
-    background: rgba(255, 255, 255, 0.461);
-    padding: 7px;
-    border-radius: 10px;
-    border: $borderfornewf;
-    box-shadow: $boxshadowinsetinput;
-    margin: 5px 0px;
-    color: rgb(53, 53, 53);
+    margin: 10px auto;
+    font-size: 20px;
+    color: #8F9BB2;
+   
   }
-  #login {
-    padding: 5px;
-    cursor: pointer;
-    box-shadow: $boxshadow;
-    &:active {
-      box-shadow: $boxshadowinsetinput;
+
+  .login_form {
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 200px;
+
+    border-radius: 10px;
+
+    input {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.461);
+      padding: 7px;
+    color: #8F9BB2;
+    outline: none;
+    border-radius: 10px;
+      background: linear-gradient(312.9deg,
+          rgba(255, 255, 255, 0.3) 4.49%,
+          rgba(233, 240, 247, 0.3) 95.45%),
+        #e9f0f7;
+      box-shadow: inset -4px -4px 10px rgb(255 255 255 / 90%),
+        inset 4px 4px 10px rgb(138 155 189 / 30%);
+      border-image-source: linear-gradient(314.02deg,
+          #d6e5f2 4.59%,
+          rgba(255, 255, 255, 0.3) 74.18%);
+      margin: 5px 0px;
+      
+    }
+
+    #login {
+      padding: 5px;
+      cursor: pointer;
+      background: linear-gradient(312.9deg,
+          rgba(255, 255, 255, 0.3) 4.49%,
+          rgba(233, 240, 247, 0.3) 95.45%),
+        #e9f0f7;
+    color: #8F9BB2;
+    border-image-source: linear-gradient(314.02deg,
+          #d6e5f2 4.59%,
+          rgba(255, 255, 255, 0.3) 74.18%);
+      box-shadow: -4px -4px 10px rgb(255 255 255 / 90%),
+        4px 4px 10px rgb(138 155 189 / 40%);
+
+      &:active {
+        background: linear-gradient(312.9deg,
+            rgba(255, 255, 255, 0.3) 4.49%,
+            rgba(233, 240, 247, 0.3) 95.45%),
+          #e9f0f7;
+        box-shadow: inset -4px -4px 10px rgb(255 255 255 / 90%),
+          inset 4px 4px 10px rgb(138 155 189 / 30%);
+        
+      }
     }
   }
-}
 }
 
 // -------------------------------
 @media only screen and (max-width: 550px) {
-  .form{
+  .form {
     width: 100%;
-margin:50px auto;
-box-shadow: none;
-border: none;
-padding: 5px;
-border-radius:0px;
-height: 100vh;
-     .lt {
-  }
-  .login_form {
-    max-width: 350px;
-    input {
-      height: 60px;
-      font-size: 18px;
-      padding: 15px;
-      margin: 10px 0px;
-    }
-    #login {
-      padding: 0px;
+    margin: 50px auto;
+    box-shadow: none;
+    border: none;
+    padding: 5px;
+    border-radius: 0px;
+    height: 100vh;
 
-      &:active {
+    .lt {}
+
+    .login_form {
+      max-width: 350px;
+
+      input {
+        height: 60px;
+        font-size: 18px;
+        padding: 15px;
+        margin: 10px 0px;
+      }
+
+      #login {
+        padding: 0px;
+
+        &:active {}
       }
     }
   }
-  }
- 
+
 }

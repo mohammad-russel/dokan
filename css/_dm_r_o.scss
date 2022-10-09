@@ -2,37 +2,78 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-
   width: 100%;
+
   a {
+    margin: 15px;
     text-decoration: none;
-    color: rgb(255, 255, 255);
+
+    color: #8F9BB2;
+
+
     .card {
-      border: 1px solid black;
+      background: linear-gradient(312.9deg,
+          rgba(255, 255, 255, 0.3) 4.49%,
+          rgba(233, 240, 247, 0.3) 95.45%),
+        #e9f0f7;
+      box-shadow: 4px 4px 16px rgba(138, 155, 189, 0.48), -5px -5px 18px #FFFFFF;
       text-align: center;
       width: 100%;
-      max-width: 200px;
+      font-weight: 600;
+      border-radius: 10px;
+      max-width: 150px;
       min-width: 150px;
-      padding: 5px;
+      padding: 15px;
+
       .image {
         img {
-          width: 100%;
+          width: 50%;
           aspect-ratio: 1/1;
           border-radius: 50%;
           object-fit: cover;
         }
       }
-      .name {
-        background: rgb(88, 88, 88);
-      }
-      .shop {
-        background: rgb(120, 35, 96);
-      }
-      .order {
-        background: rgb(35, 120, 78);
-      }
+
+      .name,
+      .shop,
+      .order,
       .baki {
-        background: rgb(120, 35, 35);
+        background: rgba(88, 88, 88, 0);
+        padding: 3px;
+      }
+
+      .shop {
+        background: rgba(120, 35, 96, 0);
+        border-top: 1px solid #d8e1f2;
+      }
+
+      .order {
+        background: rgba(0, 63, 146, 0.473);
+        font-weight: 300;
+        color: white;
+        background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
+        box-shadow: -3px -3px 5px rgba(255, 255, 255, 0.4), 3px 3px 5px rgba(138, 155, 189, 0.133);
+        color: #8F9BB2;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        span {
+          color: rgb(94, 178, 111);
+          font-weight: 600;
+        }
+      }
+
+      .baki {
+        color: #8F9BB2;
+        background: #8F9BB2;
+        background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
+        box-shadow: -3px -3px 5px rgba(255, 255, 255, 0), 3px 3px 5px rgba(138, 155, 189, 0.134);
+        font-weight: 300;
+        border-radius: 10px;
+
+        span {
+          color: rgb(215, 99, 99);
+          font-weight: 600;
+        }
       }
     }
   }
@@ -44,6 +85,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     .image {
       img {
         width: 120px;
@@ -52,16 +94,18 @@
         object-fit: cover;
       }
     }
-    .name {
-    }
-    .shop {
-    }
+
+    .name {}
+
+    .shop {}
   }
+
   .order,
   .baki,
   .complete {
     margin: 20px 0px;
     width: 100%;
+
     .buttons {
       background: rgb(52, 52, 52);
       width: 100%;
@@ -69,12 +113,14 @@
       color: azure;
       cursor: pointer;
     }
+
     .boxs {
       .box {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
+
         .card {
           margin: 5px 0px;
           text-align: center;
@@ -84,30 +130,37 @@
           border: 1px solid black;
           margin: 5px;
           padding: 10px;
+
           .image {
             width: 100%;
+
             img {
               width: 30%;
               aspect-ratio: 1/1;
               object-fit: cover;
             }
           }
-          .name {
-          }
+
+          .name {}
+
           .price {
             background: rgb(86, 118, 97);
             color: antiquewhite;
           }
+
           .quantity {
             background: rgb(118, 118, 86);
             color: antiquewhite;
           }
+
           .tp {
             background: rgb(86, 105, 118);
             color: antiquewhite;
           }
+
           .btn {
             padding: 10px 5px;
+
             .bt {
               margin: 10px 0px;
               cursor: pointer;
@@ -115,15 +168,18 @@
               border-radius: 5px;
               color: antiquewhite;
             }
+
             .bt:nth-child(2) {
               background: rgb(203, 98, 0);
             }
+
             .bt:nth-child(3) {
               background: rgb(171, 1, 1);
             }
           }
         }
       }
+
       .cardinfo {
         background: rgb(83, 62, 122);
         display: flex;
@@ -135,15 +191,19 @@
         align-items: center;
         justify-content: space-between;
         color: aliceblue;
+
         .right,
         .left {
           margin: 0px 10px;
+
           .btn {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
+
             span {
+              cursor: pointer;
               margin: 10px 0px;
               background: rgb(0, 87, 44);
               color: rgb(250, 240, 219);
@@ -152,16 +212,19 @@
               text-align: center;
               width: 100px;
               border-radius: 4px;
+
               a {
                 text-decoration: none;
                 color: rgb(250, 240, 219);
               }
             }
+
             .baki_op {
               background: rgb(87, 0, 0);
             }
           }
         }
+
         .complete_pop,
         .baki_pop {
           position: absolute;
@@ -170,12 +233,14 @@
           top: 0;
           left: 0;
           background: rgb(255, 255, 255);
+
           .close_complete,
           .close_baki {
             display: flex;
             justify-content: right;
             align-items: center;
             padding: 10px 5px;
+
             ion-icon {
               font-size: 30px;
               color: rgb(239, 239, 239);
@@ -184,24 +249,28 @@
               padding: 5px;
             }
           }
+
           form {
             #signature-pad {
               div {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+
                 #note {
                   display: none;
                 }
+
                 canvas {
                   border: 1px solid black;
                   margin: auto;
                 }
               }
             }
+
             .input_box {
-              input {
-              }
+              input {}
+
               button {
                 height: 40px;
                 width: 50%;
@@ -210,10 +279,199 @@
                 border: none;
                 color: azure;
               }
-            
-              button:last-child{
+
+              button:last-child {
                 background: rgb(13, 87, 56);
               }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// --------------
+.complete {
+  margin: 20px 0px;
+  width: 100%;
+
+  .buttons {
+    background: rgb(52, 52, 52);
+    width: 100%;
+    text-align: center;
+    color: azure;
+    cursor: pointer;
+  }
+
+  .boxs {
+    .box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+
+      .card {
+        margin: 5px 0px;
+        text-align: center;
+        width: 100%;
+        max-width: 160px;
+        min-width: 150px;
+        border: 1px solid black;
+        margin: 5px;
+        padding: 10px;
+
+        .image {
+          width: 100%;
+
+          img {
+            width: 30%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+          }
+        }
+
+        .name {}
+
+        .price {
+          background: rgb(86, 118, 97);
+          color: antiquewhite;
+        }
+
+        .quantity {
+          background: rgb(118, 118, 86);
+          color: antiquewhite;
+        }
+
+        .tp {
+          background: rgb(86, 105, 118);
+          color: antiquewhite;
+        }
+
+        .btn {
+          padding: 10px 5px;
+
+          .bt {
+            margin: 10px 0px;
+            cursor: pointer;
+            background: rgb(10, 128, 46);
+            border-radius: 5px;
+            color: antiquewhite;
+          }
+
+          .bt:nth-child(2) {
+            background: rgb(203, 98, 0);
+          }
+
+          .bt:nth-child(3) {
+            background: rgb(171, 1, 1);
+          }
+        }
+      }
+    }
+
+    .cardinfo {
+      background: rgb(83, 62, 122);
+      display: flex;
+      width: 100%;
+      max-width: 500px;
+      margin: auto;
+      padding: 10px;
+      border-radius: 10px;
+      align-items: center;
+      justify-content: space-between;
+      color: aliceblue;
+
+      .right,
+      .left {
+        margin: 0px 10px;
+
+        .btn {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+
+          span {
+            cursor: pointer;
+            margin: 10px 0px;
+            background: rgb(0, 87, 44);
+            color: rgb(250, 240, 219);
+            padding: 4px 10px;
+            border: 1px solid wheat;
+            text-align: center;
+            width: 100px;
+            border-radius: 4px;
+
+            a {
+              text-decoration: none;
+              color: rgb(250, 240, 219);
+            }
+          }
+
+          .baki_op {
+            background: rgb(87, 0, 0);
+          }
+        }
+      }
+
+      .complete_pop,
+      .baki_pop {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: rgb(255, 255, 255);
+
+        .close_complete,
+        .close_baki {
+          display: flex;
+          justify-content: right;
+          align-items: center;
+          padding: 10px 5px;
+
+          ion-icon {
+            font-size: 30px;
+            color: rgb(239, 239, 239);
+            background: rgb(63, 63, 63);
+            border-radius: 50%;
+            padding: 5px;
+          }
+        }
+
+        form {
+          #signature-pad {
+            div {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              #note {
+                display: none;
+              }
+
+              canvas {
+                border: 1px solid black;
+                margin: auto;
+              }
+            }
+          }
+
+          .input_box {
+            input {}
+
+            button {
+              height: 40px;
+              width: 50%;
+              font-size: 20px;
+              background: rgb(155, 18, 18);
+              border: none;
+              color: azure;
+            }
+
+            button:last-child {
+              background: rgb(13, 87, 56);
             }
           }
         }
