@@ -1,11 +1,13 @@
 .head {
   margin: 10px 0px;
   text-align: center;
+
   .searchbox {
     padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
+
     #search {
       padding: 7px;
       outline: none;
@@ -15,6 +17,7 @@
       border-bottom-left-radius: 10px;
       border-top-left-radius: 10px;
     }
+
     .search_submit {
       border-bottom-right-radius: 10px;
       border-top-right-radius: 10px;
@@ -30,132 +33,151 @@
   }
 }
 
-.adminsrbox{
-    flex-wrap: wrap;
+.adminsrbox {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+
+  .create_ac {
+    border-radius: 10px;
+    min-width: 100px;
+    max-width: 200px;
+ @include shadow;
+
+    margin: 10px;
     display: flex;
     justify-content: center;
-    .create_ac {
-      border-radius: 10px;
-      min-width: 100px;
-      max-width: 200px;
-      border: 1px solid rgb(0, 145, 113);
+    align-items: center;
 
-      margin: 10px;
+    .newsr {
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
-      .newsr {
-        cursor: pointer;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 100px;
-        color: rgb(84, 84, 84);
-      }
-      .popup {
-        background: rgb(234, 234, 234);
-        width:100%;
-        margin: auto;
-        height: max-content;
-        top:0%;
-        left:0%;
-        position: absolute;
-        .close {
-          cursor: pointer;
-          text-align: end;
-          padding: 10px;
-          ion-icon {
-            font-size: 30px;
-          }
-        }
-        form {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-          padding: 20px;
-          input,select{
-            background: rgba(255, 255, 255, 0);
-            outline: none;
-            border-radius: 3px;
-            width: 100%;
-            max-width: 350px;
-            padding: 10px;
-            border: none;
-            margin: 5px;
-            height: 50px;
-            border: 1px solid rgb(130, 130, 130);
-            border-radius: 5px;
-          }
-          .newretinsert{
-            background: rgb(36, 36, 36);
-            color: azure;
-            font-size: 20px;
-            letter-spacing: 1px;
-            cursor: pointer;
-          }
-        }
-      }
+      font-size: 100px;
+      color: rgb(84, 84, 84);
     }
-    a {
-      color: rgb(67, 67, 67);
-      text-decoration: none;
-      margin: 10px;
-      .card {
-        min-width: 100px;
-        max-width: 200px;
+
+    .popup {
+  background: #EBF3FA;
+     
+      width: 100%;
+      margin: auto;
+      height: max-content;
+      top: 0%;
+      left: 0%;
+      position: absolute;
+
+      .close {
+        cursor: pointer;
+        text-align: end;
         padding: 10px;
-        border-radius: 10px;
-        overflow: hidden;
-        margin: 0px auto;
+
+        ion-icon {
+          font-size: 30px;
+        }
+      }
+
+      form {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        .image {
-          width: 80%;
-          img {
-            padding: 10px;
-            width: 100%;
-            aspect-ratio: 1/1;
-            object-fit: cover;
-            border-radius: 50%;
-          }
+        padding: 20px;
+
+        input,
+        select {
+        margin: 10px 0px;
+          outline: none;
+          border-radius: 3px;
+          width: 100%;
+          max-width: 350px;
+          padding: 10px;
+          border: none;
+          @include text_color;
+          height: 50px;
+ @include shadow;
+      
+          border-radius: 5px;
         }
-        .name {
-          font-weight: 600;
-          padding: 5px;
-          text-align: center;
-        }
-        .shop {
-          border-top: 1px solid gray;
-          font-weight: 600;
-          text-align: center;
-          padding: 5px;
+
+        .newretinsert {
+          background: rgb(36, 36, 36);
+          color: azure;
+          font-size: 20px;
+          letter-spacing: 1px;
+          cursor: pointer;
         }
       }
     }
   }
+
+  a {
+    color: rgb(67, 67, 67);
+    text-decoration: none;
+    margin: 10px;
+
+    .card {
+ @include shadow;
+
+      min-width: 100px;
+      max-width: 200px;
+      padding: 10px;
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 0px auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      .image {
+        width: 80%;
+
+        img {
+          padding: 10px;
+          width: 100%;
+          aspect-ratio: 1/1;
+          object-fit: cover;
+          border-radius: 50%;
+        }
+      }
+
+      .name {
+        font-weight: 600;
+        padding: 5px;
+        text-align: center;
+      }
+
+      .shop {
+        border-top: 1px solid gray;
+        font-weight: 600;
+        text-align: center;
+        padding: 5px;
+      }
+    }
+  }
+}
 
 // -----------------------------
 @media only screen and (max-width: 450px) {
-    .adminsrbox{
-      flex-wrap: wrap;
-      a {
-        .card {
-          width: 150px;
-          .image {
-            img {
-            }
-          }
-          .name {
-          }
-          .shop {
-          }
+  .adminsrbox {
+    flex-wrap: wrap;
+
+    a {
+      .card {
+        width: 150px;
+
+        .image {
+          img {}
         }
+
+        .name {}
+
+        .shop {}
       }
     }
   }
-
+}

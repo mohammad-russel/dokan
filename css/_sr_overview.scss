@@ -4,18 +4,20 @@
     justify-content: center;
     align-items: center;
     padding: 20px;
-    .edit {
+    .edit,.delete {
       ion-icon {
         padding: 10px;
         font-size: 20px;
         border-radius: 50%;
-        box-shadow: $boxshadow;
+       @include shadow;
         cursor: pointer;
-        color: rgb(19, 90, 11);
+        color: rgb(31, 120, 21);
+
       }
       .popup {
         z-index: 1;
-        background: rgb(234, 234, 234);
+        background: #EBF3FA;
+
         width:100%;
         margin: auto;
         height: max-content;
@@ -38,21 +40,21 @@
           padding: 20px;
           input {
           font-size: 1.2rem;
-            background: rgba(255, 255, 255, 0);
+          @include text_color;
             outline: none;
-            border-radius: 3px;
+            border-radius: .8rem;
             width: 100%;
             max-width: 350px;
             padding: 10px;
             border: none;
-            margin: 5px;
+            margin: 10px  0px;
             height: 50px;
-            border: 1px solid rgb(130, 130, 130);
-            border-radius: 5px;
+        @include shadow;
+           
           }
           .newretinsert{
-            background: rgb(36, 36, 36);
-            color: azure;
+         border: 1px solid rgb(220, 220, 220);
+            color: rgb(77, 77, 77);
             font-size: 20px;
             letter-spacing: 1px;
             cursor: pointer;
@@ -71,11 +73,9 @@
     }
     .delete {
       ion-icon {
-        padding: 10px;
-        color: rgb(112, 0, 0);
-        font-size: 20px;
-        border-radius: 50%;
-        box-shadow: $boxshadow;
+        
+        color: rgb(201, 38, 38);
+       
       }
     }
   }

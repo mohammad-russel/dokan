@@ -9,6 +9,7 @@
 
     a {
       position: relative;
+
       ion-icon {
         box-shadow: 3px 3px 6px 0px rgb(189, 189, 189),
           -3px -3px 6px 0px rgb(255, 255, 255);
@@ -40,27 +41,43 @@
     margin: 10px;
     border-radius: 10px;
 
-    input,
-    select,
-    button {
-      outline: none;
-      background: rgba(0, 0, 0, 0);
-      border: none;
-      padding: 6px;
-      margin: 5px;
-      box-shadow: $boxshadowinsetinput;
-      border-radius: 5px;
 
-      option {}
-    }
+    form {
+      display: flex;
+      flex-direction: column;
 
-    button {
-      width: 150px;
-      border: $borderfornewf;
-      box-shadow: $boxshadow;
+      input,
+      select,
+      button {
+        width: 90%;
+        outline: none;
+        background: rgba(0, 0, 0, 0);
+        border: none;
+        padding: 15px;
+       font-size: 1.1rem;
+        @include shadow;
+        border-radius: .7rem;
+        margin: 10px auto;
+@include text-color;
+        option {}
+      }
 
-      &:active {
-        box-shadow: $boxshadowinsetinput;
+      button {
+
+        cursor: pointer;
+        width: 130px;
+        height: 50px;
+        @include shadow;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+transition: all .5s;
+
+        &:hover {
+          font-size: 1.2em;
+          color: black;
+          font-weight: bold;
+        }
       }
     }
   }
@@ -68,18 +85,36 @@
 
 // ----------
 .list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
   .card {
+    text-align: center;
+    width: 250px;
     color: rgb(82, 82, 82);
     padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    flex-direction: column;
     border: 1px solid gray;
     border-radius: 10px;
     margin: 10px;
 
-    .id {}
+    .name,
+    .price,
+    .sr,
+    .date,
+    .company,
+    .category {
+      margin: 5px;
+      border-bottom: 1px solid rgba(128, 128, 128, 0.204);
+      width: 100%;
+      padding: 10px 0px;
+    }
 
     .name {}
 
@@ -152,5 +187,114 @@
         }
       }
     }
+  }
+}
+
+// --------------------------------
+@media only screen and (max-width: 450px) {
+  .list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .card {
+      text-align: center;
+      width: 100%;
+      color: rgb(82, 82, 82);
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      flex-direction: column;
+      border: 1px solid gray;
+      border-radius: 10px;
+      margin: 10px;
+
+      .name,
+      .price,
+      .sr,
+      .date,
+      .company,
+      .category {
+        margin: 5px;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.204);
+        width: 100%;
+      }
+
+      .name {}
+
+      .image {
+        img {
+          border-radius: 10px;
+          width: 50px;
+          height: 50px;
+          object-fit: cover;
+        }
+      }
+
+      .price {}
+
+      .sr {}
+
+      .company {}
+
+      .category {}
+
+      .date {}
+
+      .more {
+        position: relative;
+
+        .show {
+          ion-icon {}
+        }
+
+        .box {
+          z-index: 1;
+          background: rgb(63, 63, 63);
+          position: absolute;
+          color: aliceblue;
+          border-radius: 4px;
+          padding: 5px;
+          right: 0;
+          top: 25px;
+          font-size: 15px;
+
+          .overview {
+            text-align: center;
+            margin: 5px;
+
+            a {
+              color: aliceblue;
+              text-decoration: none;
+            }
+          }
+
+          .update {
+            margin: 5px;
+
+            text-align: center;
+
+            a {
+              color: aliceblue;
+              text-decoration: none;
+            }
+          }
+
+          .deletebtn {
+            background: rgba(0, 0, 0, 0);
+            color: rgb(255, 255, 255);
+            border: none;
+            width: 90%;
+            margin: 5px;
+            font-size: 17px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
   }
 }

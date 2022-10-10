@@ -82,14 +82,14 @@ if (!isset($_SESSION["aid"])) {
                     while ($row = mysqli_fetch_assoc($query)) {
                     ?>
                         <div class="card card<?php echo $row['id']; ?>">
-                            <div class="id"><?php echo $row['id']; ?></div>
+                            <div class="id">ID : <?php echo $row['id']; ?></div>
                             <div class="image"><img src="../image/product/<?php echo $row['pic']; ?>" alt=""></div>
-                            <div class="name"><?php echo $row['nam']; ?></div>
-                            <div class="price">$<?php echo $row['price']; ?></div>
-                            <div class="sr"><?php echo $row['sr']; ?></div>
-                            <div class="company"><?php echo $row['company']; ?></div>
-                            <div class="category"><?php echo $row['category']; ?></div>
-                            <div class="date stock"><?php echo $row['stock']; ?></div>
+                            <div class="name">Name : <?php echo $row['nam']; ?></div>
+                            <div class="price">Price : $<?php echo $row['price']; ?></div>
+                            <div class="sr"> SR : <?php echo $row['sr']; ?></div>
+                            <div class="company">Company : <?php echo $row['company']; ?></div>
+                            <div class="category">Category : <?php echo $row['category']; ?></div>
+                            <div class="date stock">Stock : <?php echo $row['stock']; ?></div>
                             <div class="more">
                                 <div class="show  show<?php echo $row['id']; ?>">
                                     <ion-icon name="ellipsis-horizontal-outline"></ion-icon>

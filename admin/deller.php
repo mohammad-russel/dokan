@@ -25,12 +25,12 @@ if (!isset($_SESSION["aid"])) {
             </div>
         </div>
         <!-- --------- -->
-        <div class="head">
-                <div class="searchbox">
-                    <input type="search" name="search" id="search">
-                    <input type="submit" class="search_submit" value="Search" id="submit">
-                </div>
+        <!-- <div class="head">
+            <div class="searchbox">
+                <input type="search" name="search" id="search">
+                <input type="submit" class="search_submit" value="Search" id="submit">
             </div>
+        </div> -->
         <div class="adminsrbox">
             <div class="create_ac">
                 <div class="newsr">+</div>
@@ -38,7 +38,7 @@ if (!isset($_SESSION["aid"])) {
                     <div class="close">
                         <ion-icon name="close-outline"></ion-icon>
                     </div>
-                    <?php 
+                    <?php
                     date_default_timezone_set('Asia/Dhaka');
                     $time = date("Y/m/d || h/i/s");
                     ?>
@@ -90,4 +90,5 @@ if (!isset($_SESSION["aid"])) {
         })
     })
 </script>
+
 </html>
