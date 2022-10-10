@@ -130,7 +130,7 @@ if (!isset($_SESSION["aid"])) {
                                 <div class="image">
                                     <img src="../image/product/<?php echo $row1['pic'] ?>" alt="">
                                 </div>
-                                <div class="price">$ <?php echo $row1['price'] ?></div>
+                                <div class="price">৳ <?php echo $row1['price'] ?></div>
                                 <div class="name"><?php echo $row1['nam'] ?></div>
                             </div>
                         <?php } ?>

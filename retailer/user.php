@@ -96,9 +96,9 @@ $rid = $_SESSION["rid"];
                                         <img src="../image/product/<?php echo $row1['pic'] ?>" alt="">
                                     </div>
                                     <div class="name"><?php echo $row1['nam'] ?></div>
-                                    <div class="price">৳<?php echo $row['price'] ?>/-</div>
+                                    <div class="price">৳<?php echo $row['price'] ?></div>
                                     <div class="quantity">পরিমাণ : <?php echo $row['quantity'] ?></div>
-                                    <div class="total">৳<?php echo $row['total'] ?>/-</div>
+                                    <div class="total">মোট : ৳<?php echo $row['total'] ?></div>
                                     <div class="time"><?php echo $row['time'] ?></div>
                                 </div>
                             <?php } ?>
@@ -127,9 +127,9 @@ $rid = $_SESSION["rid"];
                                         <img src="../image/product/<?php echo $row1['pic'] ?>" alt="">
                                     </div>
                                     <div class="name"><?php echo $row1['nam'] ?></div>
-                                    <div class="price">৳<?php echo $row['price'] ?>/-</div>
+                                    <div class="price">৳<?php echo $row['price'] ?></div>
                                     <div class="quantity">পরিমাণ : <?php echo $row['quantity'] ?></div>
-                                    <div class="total">৳<?php echo $row['total'] ?>/-</div>
+                                    <div class="total">মোট : ৳<?php echo $row['total'] ?></div>
                                     <div class="time"><?php echo $row['time'] ?></div>
                                 </div>
                             <?php } ?>
@@ -157,9 +157,9 @@ $rid = $_SESSION["rid"];
                                         <img src="../image/product/<?php echo $row1['pic'] ?>" alt="">
                                     </div>
                                     <div class="name"><?php echo $row1['nam'] ?></div>
-                                    <div class="price">৳<?php echo $row['price'] ?>/-</div>
+                                    <div class="price">৳<?php echo $row['price'] ?></div>
                                     <div class="quantity">পরিমাণ : <?php echo $row['quantity'] ?></div>
-                                    <div class="total">৳<?php echo $row['total'] ?>/-</div>
+                                    <div class="total">মোট : ৳<?php echo $row['total'] ?></div>
                                     <div class="time"><?php echo $row['time'] ?></div>
                                 </div>
                             <?php } ?>
@@ -187,9 +187,9 @@ $rid = $_SESSION["rid"];
                                         <img src="../image/product/<?php echo $row1['pic'] ?>" alt="">
                                     </div>
                                     <div class="name"><?php echo $row1['nam'] ?></div>
-                                    <div class="price">৳<?php echo $row['price'] ?>/-</div>
+                                    <div class="price">৳<?php echo $row['price'] ?></div>
                                     <div class="quantity">পরিমাণ : <?php echo $row['quantity'] ?></div>
-                                    <div class="total">৳<?php echo $row['total'] ?>/-</div>
+                                    <div class="total">মোট : ৳<?php echo $row['total'] ?></div>
                                     <div class="time"><?php echo $row['time'] ?></div>
                                 </div>
                             <?php } ?>

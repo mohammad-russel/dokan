@@ -23,8 +23,8 @@ if ($numrow = mysqli_num_rows($result)) {
                     </div>
                     <div class='name'>{$row1['nam']}</div>
                     <div class='price'>
-                        <div class='pp'>$ {$row['price']}</div>
-                        <div class='tp'>$ {$row['total_price']}</div>
+                        <div class='pp'>৳ {$row['price']}</div>
+                        <div class='tp'>৳ {$row['total_price']}</div>
                     </div>
                     <div class='quantity'>
                         <input type='number' name='quantity' id='quantity{$row['id']}' value='{$row['quantity']}'>
@@ -96,7 +96,7 @@ if ($numrow = mysqli_num_rows($result)) {
     $result = mysqli_query($con, $sql);
     $row = mysqli_fetch_assoc($result);
     $total =  $row['total'];
-    $output .=  " <span>Total Cost : $ $total </span>
+    $output .=  " <span>Total Cost : ৳ $total </span>
                 </div>
                 <div class='button'>
                 <form action='../php/cart_status_update_sr.php' method='post'>

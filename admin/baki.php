@@ -83,7 +83,7 @@ $sr = $_SESSION["sid"];
                             ?>
                             <div class="left">
                                 <div class="item">ITEM : <?php echo $list4 ?></div>
-                                <div class="ff">FULL PRICE : $<?php echo $row['total'] ?>/-</div>
+                                <div class="ff">FULL PRICE : ৳<?php echo $row['total'] ?>/-</div>
                             </div>
                         </div>
                     </div>

@@ -5,6 +5,7 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+
   .cart {
     height: max-content;
     border: 1px solid rgb(159, 159, 159);
@@ -15,25 +16,34 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include shadow;
+    background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
+    box-shadow: 4px 4px 16px rgba(138, 155, 189, 0.48), -5px -5px 18px #FFFFFF;
+    border-radius: 10px;
+
     .order_click {
       width: 100%;
       display: flex;
       justify-content: space-around;
       align-items: center;
+
       .info {
-    margin: 10px;  font-weight: 600;
-    color: rgb(99, 99, 99);
-    letter-spacing: 1px;
-    border-radius: 7px;
+        margin: 10px;
+        font-weight: 600;
+        @include text_color;
+        letter-spacing: 1px;
+        border-radius: 7px;
         padding: 7px 10px;
-        box-shadow:$boxshadow ;
+        box-shadow: $boxshadow ;
         border: $borderfornewf;
-        span{
+
+        span {
           font-weight: 600;
           color: rgb(99, 99, 99);
           letter-spacing: 1px;
         }
       }
+
       .button {
         .order_btn {
           border: none;
@@ -46,12 +56,14 @@
         }
       }
     }
+
     .image {
       width: 20%;
       display: flex;
       justify-content: center;
       align-items: center;
       padding: 5px;
+
       img {
         width: 60px;
         aspect-ratio: 1/1;
@@ -59,28 +71,37 @@
         border-radius: 10px;
       }
     }
+
     .name {
       width: 20%;
       padding: 5px;
+      color: gray;
     }
+
     .price {
       width: 20%;
+      color: gray;
       padding: 5px;
-      .pp {
-      }
-      .tp {
-      }
+
+      .pp {}
+
+      .tp {}
     }
+
     .quantity {
       width: 20%;
+
       input {
         text-align: center;
         width: 60px;
         padding: 5px;
         border-radius: 5px;
-        border: none;
+        border: none;background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
+        box-shadow: inset -4px -4px 10px rgba(255, 255, 255, 0.9), inset 4px 4px 10px rgba(138, 155, 189, 0.3);
+        border-radius: 60px;
       }
     }
+
     .btn {
       width: 20%;
       height: 100%;
@@ -90,18 +111,24 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      color: rgb(206, 206, 206);
+      @include text_color;
+
       .update,
       .delete {
         width: 100%;
-        background: rgb(37, 99, 157);
         padding: 4px;
         margin: 3px;
         border-radius: 5px;
+        color: rgb(96, 164, 183);
         cursor: pointer;
+        @include shadow;
+        background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
+box-shadow: -3px -3px 5px rgba(255, 255, 255, 0.4), 3px 3px 5px rgba(138, 155, 189, 0.2);
+border-radius: 60px;
       }
+
       .delete {
-        background: rgb(187, 57, 57);
+        color: rgb(183, 96, 96);
       }
     }
   }

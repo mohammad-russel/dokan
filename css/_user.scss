@@ -1,6 +1,7 @@
 .userbox {
   .info {
     text-align: center;
+margin-top: 20px;
     .image {
       img {
         width: 130px;
@@ -9,54 +10,69 @@
         object-fit: cover;
       }
     }
+
     .name {
       font-weight: 600;
       color: rgb(61, 61, 61);
       font-size: 19px;
     }
-    .price {
-    }
+
+    .price {}
   }
+
   .card {
     width: 100%;
 
     display: flex;
     justify-content: center;
+
     .box {
       width: 100%;
-      &:hover {
-        background: rgb(44, 44, 44);
-        color: rgb(180, 180, 180);
-      }
-      margin: 5px 10px;
-      color: rgb(42, 42, 42);
+      margin: 10px 10px;
+    @include text_color;
       border-radius: 5px;
       padding: 5px 15px;
       box-shadow: 3px 3px 10px -1px rgb(108, 108, 108);
+      @include shadow;
+      cursor: pointer;
+      &:hover {
+      
+        color: rgb(52, 52, 52);
+      }
 
       h2 {
         font-size: 16px;
       }
-      p {
-      }
+
+      p {}
     }
   }
+
   .cocb {
     padding: 0px 10px;
-    .bo{
+
+    .bo {
       width: 100%;
-      .head{
-        background: rgb(50, 50, 50);
-        color: rgb(220, 220, 220);
+
+      .head {
+    border: 1px solid rgba(155, 155, 155, 0.34);
+       text-transform: capitalize;
+       @include text_color;
         font-size: 19px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        border-radius: 40px;
       }
-      .box{
+
+      .box {
         flex-wrap: wrap;
         display: flex;
         justify-content: center;
-        .card{
-      border-radius: 10px;
-          border: 1px solid rgb(255, 255, 255);
+
+        .card {
+          border-radius: 10px;
+    border: 1px solid rgba(155, 155, 155, 0.202);
+         
           overflow: hidden;
           width: 100%;
           height: max-content;
@@ -69,34 +85,35 @@
           font-weight: 600;
           flex-direction: column;
           justify-content: start;
-          
-        
-          .image{
+          .image {
             width: 100%;
-            img{
+
+            img {
               width: 100%;
               aspect-ratio: 1/1;
               object-fit: cover;
             }
           }
-          .name{
+
+          .name , .price,.quantity,.total{
+            @include text_color;
           
-            color: rgb(89, 89, 89);
           }
-          .price{
-            color: rgb(0, 107, 0);
-            background: rgb(188, 224, 206);
+
+          .price {
+           
           }
-          .quantity{
-            background: rgb(163, 209, 232);
-            color: rgb(0, 57, 80);
+
+          .quantity {
+           
           }
-          .total{
-            color: rgb(0, 107, 45);
-            background: rgb(170, 219, 194);
+
+          .total {
+           
           }
-          .time{
-            background: rgb(190, 210, 235);
+
+          .time {
+            background: rgb(177, 194, 215);
             font-size: 12px;
             color: rgb(0, 36, 75);
             letter-spacing: 0.5px;
@@ -110,51 +127,55 @@
     }
   }
 }
+
 // -----------------
 @media only screen and (max-width: 450px) {
   .userbox {
     .info {
       text-align: center;
+
       .image {
-        img {
-         
-        }
+        img {}
       }
-      .name {
-      
-      }
-      .price {
-      }
+
+      .name {}
+
+      .price {}
     }
+
     .card {
-flex-direction: column;
+      flex-direction: column;
+
       .box {
-  width: 90%;
-  margin: 5px auto;
-        &:hover {
-      
-        }
-      
-        h2 {
-      
-        }
-        p {
-        }
+        width: 90%;
+        margin: 8px auto;
+
+        &:hover {}
+
+        h2 {}
+
+        p {}
       }
     }
+
     .cocb {
       padding: 0px 10px;
-      .bo{
-        .head{}
-        .box{
-          .card{
-          
-            .image{
-              img{}
+
+      .bo {
+        .head {}
+
+        .box {
+          .card {
+
+            .image {
+              img {}
             }
-            .name{}
-            .price{}
-            .time{
+
+            .name {}
+
+            .price {}
+
+            .time {
               font-size: 12px;
             }
           }

@@ -5,59 +5,42 @@
   margin: auto;
 
   .buttonbox {
-    padding: 15px;
+
+    margin: 10px 5px;
+    display: flex;
     justify-content: center;
-    display: grid;
-    grid-template-columns: 20% 20% 20% 0%;
     flex-wrap: wrap;
-    grid-gap: 20px;
+    align-items: center;
+    padding: 10px;
+
     a {
-     
-      padding: 5px;
+      margin: 10px 10px;
       display: flex;
       align-items: center;
-      border-radius: 10px;
-      height: max-content;
       text-decoration: none;
-      color: rgb(239, 239, 239);
-      background: linear-gradient(
-          312.9deg,
-          rgba(255, 255, 255, 0.3) 4.49%,
-          rgba(233, 240, 247, 0.3) 95.45%
-        ),
-        #e9f0f7;
-      box-shadow: 4px 4px 16px rgba(138, 155, 189, 0.48), -5px -5px 18px #ffffff;
-      bor ion-icon {
-        font-size: 35px;
-        color: rgb(49, 49, 49);
-        background: rgba(255, 255, 255, 0.35);
-        padding: 5px 7px;
-        border-radius: 5px;
-      }
-      .btn {
-        width: 90%;
-        border-radius: 10px;
-        padding: 2px 10px;
-        // border: $borderfornewf;
+  
+      padding: 5px;
+      border-radius: 10px;
+      @include text-color ;
+      @include shadow;
+      min-width: 200px;
 
-        h3 {
-          color: rgb(227, 227, 227);
-        }
-        p {
-          font-weight: 600;
-          color: rgb(241, 241, 241);
-        }
+      ion-icon {
+        margin: 0px 10px;
+        padding: 10px;
+        box-shadow: inset 2px 2px 5px #b2b8c9, inset -3px -3px 10px #f0f8ff;
+border-radius: 10px;
+font-size: 1.4rem;
+
+      }
+
+      .btn {
+        h3 {}
+
+        p {}
       }
     }
-    a:nth-child(1) {
-      background: rgba(0, 136, 43, 0.521);
-    }
-    a:nth-child(2) {
-      background: rgba(0, 47, 135, 0.586);
-    }
-    a:nth-child(3) {
-      background: rgba(153, 110, 0, 0.491);
-    }
+
   }
 }
 
@@ -65,13 +48,12 @@
 @media only screen and (max-width: 550px) {
   .adminmainbox {
     .buttonbox {
-      grid-template-columns: 50% 50%;
+
       a {
         .btn {
-          h3 {
-          }
-          p {
-          }
+          h3 {}
+
+          p {}
         }
       }
     }

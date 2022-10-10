@@ -239,59 +239,34 @@ header .link a ion-icon:hover {
   margin: auto;
 }
 .adminmainbox .buttonbox {
-  padding: 15px;
+  margin: 10px 5px;
+  display: flex;
   justify-content: center;
-  display: grid;
-  grid-template-columns: 20% 20% 20% 0%;
   flex-wrap: wrap;
-  grid-gap: 20px;
+  align-items: center;
+  padding: 10px;
 }
 .adminmainbox .buttonbox a {
-  padding: 5px;
+  margin: 10px 10px;
   display: flex;
   align-items: center;
-  border-radius: 10px;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
   text-decoration: none;
-  color: rgb(239, 239, 239);
-  background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #e9f0f7;
-  box-shadow: 4px 4px 16px rgba(138, 155, 189, 0.48), -5px -5px 18px #ffffff;
-}
-.adminmainbox .buttonbox a bor ion-icon {
-  font-size: 35px;
-  color: rgb(49, 49, 49);
-  background: rgba(255, 255, 255, 0.35);
-  padding: 5px 7px;
-  border-radius: 5px;
-}
-.adminmainbox .buttonbox a .btn {
-  width: 90%;
+  padding: 5px;
   border-radius: 10px;
-  padding: 2px 10px;
+  color: #8F9BB2;
+  background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
+  box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.9), 4px 4px 10px rgba(138, 155, 189, 0.4);
+  border-radius: 10px;
+  border: 1px solid;
+  border-image-source: linear-gradient(134.47deg, rgba(255, 255, 255, 0.25) 75.67%, #E9F0F7 4.99%);
+  min-width: 200px;
 }
-.adminmainbox .buttonbox a .btn h3 {
-  color: rgb(227, 227, 227);
-}
-.adminmainbox .buttonbox a .btn p {
-  font-weight: 600;
-  color: rgb(241, 241, 241);
-}
-.adminmainbox .buttonbox a:nth-child(1) {
-  background: rgba(0, 136, 43, 0.521);
-}
-.adminmainbox .buttonbox a:nth-child(2) {
-  background: rgba(0, 47, 135, 0.586);
-}
-.adminmainbox .buttonbox a:nth-child(3) {
-  background: rgba(153, 110, 0, 0.491);
-}
-
-@media only screen and (max-width: 550px) {
-  .adminmainbox .buttonbox {
-    grid-template-columns: 50% 50%;
-  }
+.adminmainbox .buttonbox a ion-icon {
+  margin: 0px 10px;
+  padding: 10px;
+  box-shadow: inset 2px 2px 5px #b2b8c9, inset -3px -3px 10px #f0f8ff;
+  border-radius: 10px;
+  font-size: 1.4rem;
 }
 .srmainbox {
   display: flex;
@@ -527,7 +502,7 @@ header .link a ion-icon:hover {
 }
 .sr_product .card .price,
 .productroom .card .price {
-  color: rgb(39, 152, 60);
+  color: rgb(113, 175, 203);
   padding: 0px 5px;
   width: 100%;
   text-align: start;
@@ -1105,6 +1080,14 @@ header .link a ion-icon:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
+  box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.9), 4px 4px 10px rgba(138, 155, 189, 0.4);
+  border-radius: 10px;
+  border: 1px solid;
+  border-image-source: linear-gradient(134.47deg, rgba(255, 255, 255, 0.25) 75.67%, #E9F0F7 4.99%);
+  background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
+  box-shadow: 4px 4px 16px rgba(138, 155, 189, 0.48), -5px -5px 18px #FFFFFF;
+  border-radius: 10px;
 }
 .cartbox .cart .order_click {
   width: 100%;
@@ -1115,7 +1098,7 @@ header .link a ion-icon:hover {
 .cartbox .cart .order_click .info {
   margin: 10px;
   font-weight: 600;
-  color: rgb(99, 99, 99);
+  color: #8F9BB2;
   letter-spacing: 1px;
   border-radius: 7px;
   padding: 7px 10px;
@@ -1153,9 +1136,11 @@ header .link a ion-icon:hover {
 .cartbox .cart .name {
   width: 20%;
   padding: 5px;
+  color: gray;
 }
 .cartbox .cart .price {
   width: 20%;
+  color: gray;
   padding: 5px;
 }
 .cartbox .cart .quantity {
@@ -1167,6 +1152,9 @@ header .link a ion-icon:hover {
   padding: 5px;
   border-radius: 5px;
   border: none;
+  background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
+  box-shadow: inset -4px -4px 10px rgba(255, 255, 255, 0.9), inset 4px 4px 10px rgba(138, 155, 189, 0.3);
+  border-radius: 60px;
 }
 .cartbox .cart .btn {
   width: 20%;
@@ -1176,23 +1164,32 @@ header .link a ion-icon:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: rgb(206, 206, 206);
+  color: #8F9BB2;
 }
 .cartbox .cart .btn .update,
 .cartbox .cart .btn .delete {
   width: 100%;
-  background: rgb(37, 99, 157);
   padding: 4px;
   margin: 3px;
   border-radius: 5px;
+  color: rgb(96, 164, 183);
   cursor: pointer;
+  background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
+  box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.9), 4px 4px 10px rgba(138, 155, 189, 0.4);
+  border-radius: 10px;
+  border: 1px solid;
+  border-image-source: linear-gradient(134.47deg, rgba(255, 255, 255, 0.25) 75.67%, #E9F0F7 4.99%);
+  background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
+  box-shadow: -3px -3px 5px rgba(255, 255, 255, 0.4), 3px 3px 5px rgba(138, 155, 189, 0.2);
+  border-radius: 60px;
 }
 .cartbox .cart .btn .delete {
-  background: rgb(187, 57, 57);
+  color: rgb(183, 96, 96);
 }
 
 .userbox .info {
   text-align: center;
+  margin-top: 20px;
 }
 .userbox .info .image img {
   width: 130px;
@@ -1213,15 +1210,20 @@ header .link a ion-icon:hover {
 }
 .userbox .card .box {
   width: 100%;
-  margin: 5px 10px;
-  color: rgb(42, 42, 42);
+  margin: 10px 10px;
+  color: #8F9BB2;
   border-radius: 5px;
   padding: 5px 15px;
   box-shadow: 3px 3px 10px -1px rgb(108, 108, 108);
+  background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
+  box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.9), 4px 4px 10px rgba(138, 155, 189, 0.4);
+  border-radius: 10px;
+  border: 1px solid;
+  border-image-source: linear-gradient(134.47deg, rgba(255, 255, 255, 0.25) 75.67%, #E9F0F7 4.99%);
+  cursor: pointer;
 }
 .userbox .card .box:hover {
-  background: rgb(44, 44, 44);
-  color: rgb(180, 180, 180);
+  color: rgb(52, 52, 52);
 }
 .userbox .card .box h2 {
   font-size: 16px;
@@ -1233,9 +1235,13 @@ header .link a ion-icon:hover {
   width: 100%;
 }
 .userbox .cocb .bo .head {
-  background: rgb(50, 50, 50);
-  color: rgb(220, 220, 220);
+  border: 1px solid rgba(155, 155, 155, 0.34);
+  text-transform: capitalize;
+  color: #8F9BB2;
   font-size: 19px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 40px;
 }
 .userbox .cocb .bo .box {
   flex-wrap: wrap;
@@ -1244,7 +1250,7 @@ header .link a ion-icon:hover {
 }
 .userbox .cocb .bo .box .card {
   border-radius: 10px;
-  border: 1px solid rgb(255, 255, 255);
+  border: 1px solid rgba(155, 155, 155, 0.202);
   overflow: hidden;
   width: 100%;
   height: -webkit-max-content;
@@ -1269,23 +1275,11 @@ header .link a ion-icon:hover {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.userbox .cocb .bo .box .card .name {
-  color: rgb(89, 89, 89);
-}
-.userbox .cocb .bo .box .card .price {
-  color: rgb(0, 107, 0);
-  background: rgb(188, 224, 206);
-}
-.userbox .cocb .bo .box .card .quantity {
-  background: rgb(163, 209, 232);
-  color: rgb(0, 57, 80);
-}
-.userbox .cocb .bo .box .card .total {
-  color: rgb(0, 107, 45);
-  background: rgb(170, 219, 194);
+.userbox .cocb .bo .box .card .name, .userbox .cocb .bo .box .card .price, .userbox .cocb .bo .box .card .quantity, .userbox .cocb .bo .box .card .total {
+  color: #8F9BB2;
 }
 .userbox .cocb .bo .box .card .time {
-  background: rgb(190, 210, 235);
+  background: rgb(177, 194, 215);
   font-size: 12px;
   color: rgb(0, 36, 75);
   letter-spacing: 0.5px;
@@ -1304,7 +1298,7 @@ header .link a ion-icon:hover {
   }
   .userbox .card .box {
     width: 90%;
-    margin: 5px auto;
+    margin: 8px auto;
   }
   .userbox .cocb {
     padding: 0px 10px;
@@ -2087,10 +2081,16 @@ header .link a ion-icon:hover {
 }
 
 .loadmore {
+  width: 90%;
+  margin: auto;
   text-align: center;
-  background: #000;
-  color: #dee0ee;
-  padding: 10px;
+  border: 1px solid rgba(155, 155, 155, 0.34);
+  text-transform: capitalize;
+  color: #7f899a;
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 40px;
   cursor: pointer;
 }
 

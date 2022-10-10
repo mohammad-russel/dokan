@@ -25,12 +25,12 @@ if (!isset($_SESSION["aid"])) {
             </div>
         </div>
         <!-- --------- -->
-        <div class="head">
-                <div class="searchbox">
-                    <input type="search" name="search" id="search">
-                    <input type="submit" class="search_submit" value="Search" id="submit">
-                </div>
+        <!-- <div class="head">
+            <div class="searchbox">
+                <input type="search" name="search" id="search">
+                <input type="submit" class="search_submit" value="Search" id="submit">
             </div>
+        </div> -->
         <div class="adminsrbox">
             <?php
             include "../php/config.php";
@@ -68,4 +68,5 @@ if (!isset($_SESSION["aid"])) {
         })
     })
 </script>
+
 </html>

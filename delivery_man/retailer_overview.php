@@ -150,9 +150,9 @@ if (!isset($_SESSION["delid"])) {
                             ?>
                             <div class="left">
                                 <div class="item">ITEM : <?php echo $list40 ?></div>
-                                <div class="ff">FULL PRICE : $<?php echo $row['total'] ?>/-</div>
-                                <div class="dis">DISCOUNT : $<?php echo $row2['discount'] ?>/-</div>
-                                <div class="tp">SUB TOTAL : $<?php echo $sub_total ?>/-</div>
+                                <div class="ff">FULL PRICE : ৳<?php echo $row['total'] ?>/-</div>
+                                <div class="dis">DISCOUNT : ৳<?php echo $row2['discount'] ?>/-</div>
+                                <div class="tp">SUB TOTAL : ৳<?php echo $sub_total ?>/-</div>
                             </div>
                             <div class="right">
                                 <div class="btn">
@@ -308,9 +308,9 @@ if (!isset($_SESSION["delid"])) {
                             ?>
                             <div class="left">
                                 <div class="item">ITEM : <?php echo $list4 ?></div>
-                                <div class="ff">FULL PRICE : $<?php echo $row['total'] ?>/-</div>
-                                <div class="dis">DISCOUNT : $<?php echo $row2['discount'] ?>/-</div>
-                                <div class="tp">SUB TOTAL : $<?php echo $sub_total ?>/-</div>
+                                <div class="ff">FULL PRICE : ৳<?php echo $row['total'] ?>/-</div>
+                                <div class="dis">DISCOUNT : ৳<?php echo $row2['discount'] ?>/-</div>
+                                <div class="tp">SUB TOTAL : ৳<?php echo $sub_total ?>/-</div>
                             </div>
                             <div class="right">
                                 <div class="btn">
@@ -373,7 +373,7 @@ if (!isset($_SESSION["delid"])) {
                             ?>
                             <div class="left">
                                 <div class="item">ITEM : <?php echo $list4 ?></div>
-                                <div class="ff">FULL PRICE : $<?php echo $row['total'] ?>/-</div>
+                                <div class="ff">FULL PRICE : ৳<?php echo $row['total'] ?>/-</div>
                             </div>
                         </div>
                     </div>
