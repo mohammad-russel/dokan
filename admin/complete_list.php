@@ -29,28 +29,23 @@ if (!isset($_SESSION["aid"])) {
      <?php
                 include "../php/config.php";
                 $id = $_GET['id'];
-                $sql = "SELECT *, price*quantity AS total FROM cart WHERE status = 'complete' AND rid = $id";
+                $sql = "SELECT *, total-discount AS stotal FROM order WHERE status = 'complete' AND retailer = $id";
                 $result = mysqli_query($con, $sql);
                 if (mysqli_num_rows($result)) {
                 ?>
             <div class="order_list">
                 <?php while ($row = mysqli_fetch_assoc($result)) {
-                        $pid = $row['pid'];
-                        $sql1 = "SELECT * FROM product WHERE id = $pid";
-                        $result1 = mysqli_query($con, $sql1);
-                        $row1 = mysqli_fetch_assoc($result1);
                 ?>
                     <div class="card">
-                        <div class="box image">
-                            <img src="../image/product/<?php echo $row1['pic'] ?>" alt="">
-                        </div>
-                        <div class="box name"><?php echo $row1['nam'] ?></div>
-                        <div class="box price">মূল্য : ৳ <?php echo $row['price'] ?></div>
-                        <div class="box quantity">পরিমান : <?php echo $row['quantity'] ?></div>
-                        <div class="box tp">মোট : ৳ <?php echo $row['total'] ?></div>
-                        <div class="box btn">
-                            <a href="retailer_overview.php?retailer=<?php echo $row['rid'] ?>" class="retailer">দোকানদার</a>
-                        </div>
+                       <div class="item"><?php echo $row['item'] ?></div>
+                       <div class="total"></div>
+                       <div class="discount"></div>
+                       <div class="subtotal"></div>
+                       <div class="product"></div>
+                       <div class="time"></div>
+                       <div class="signature">
+                        <img src="../image/signature/" alt="">
+                       </div>
                     </div>
                 <?php } ?>
             </div>

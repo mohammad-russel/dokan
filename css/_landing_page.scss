@@ -1,0 +1,178 @@
+.landing_page {
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        height: 70px;
+
+        .logo {
+            height: 100%;
+
+            img {
+                height: 90%;
+            }
+        }
+
+        .link {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            a {
+                margin: 0px 10px;
+                text-decoration: none;
+                @include shadow;
+                @include text-color;
+                padding: 5px;
+                text-align: center;
+                width: 100px;
+            }
+        }
+    }
+
+    .main {
+        .slogan {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 250px;
+
+            img {
+                height: 100%;
+            }
+        }
+
+        .box_room {
+            margin: auto;
+            max-width: 350px;
+            aspect-ratio: 1/1;
+            box-shadow: inset 10px 10px 20px -10px rgb(206, 206, 206), inset -10px -10px 20px -10px rgb(255, 255, 255);
+            overflow: hidden;
+            display: flex;
+            border-radius: 10px;
+
+            .box {
+                min-width: 90%;
+
+                height: 80%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                margin: auto 25px;
+                border: 1px solid rgb(206, 206, 206);
+                border-radius: 10px;
+                @include text-color;
+                position: relative;
+                animation: anime 9s;
+                animation-iteration-count: infinite;
+                animation-duration: alternate;
+                animation-play-state: running;
+
+                .icon {
+
+                    width: 100%;
+                    height: 50%;
+                    text-align: center;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    ion-icon {
+                        font-size: 100px;
+                    }
+                }
+
+                .text {
+                    width: 100%;
+                    height: 50%;
+
+                    text-align: center;
+                    font-size: 1.4em;
+
+                }
+            }
+
+            @keyframes anime {
+                0% {
+                    right: 0%;
+                }
+
+                10% {
+                    right: 0%;
+                }
+
+                20% {
+                    right: 370px;
+                }
+
+                30% {
+                    right: 370px;
+                }
+
+                40% {
+                    right: 740px;
+                }
+
+                50% {
+                    right: 740px;
+                }
+
+                60% {
+                    right: 370px;
+
+                }
+
+                80% {
+                    right: 370px;
+
+                }
+
+                90% {
+                    right: 0%;
+                }
+
+                100% {
+                    right: 0%;
+                }
+            }
+        }
+
+        .title {}
+
+        .link_box {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+
+            a {
+                text-decoration: none;
+                @include text-color;
+                margin: 10px;
+
+                .box {
+                    width: 100px;
+                    aspect-ratio: 1/1;
+                    @include shadow;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+
+                    .icon {
+                        ion-icon {
+                            font-size: 1.5rem;
+                        }
+                    }
+
+                    .name {}
+                }
+            }
+        }
+    }
+
+}
