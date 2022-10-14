@@ -28,6 +28,7 @@
                 <div class="slogan">
                     <img src="logo/Be happy Stay happy (1).png" alt="">
                 </div>
+           
                 <div class="box_room">
                     <div class="box">
                         <div class="icon">
@@ -48,9 +49,10 @@
                         <div class="text">save more money</div>
                     </div>
                 </div>
+
                 <div class="title"></div>
                 <div class="link_box">
-                    <a href="#">
+                    <a href="deller/deller_home.php">
                         <div class="box">
                             <div class="icon">
                                 <ion-icon name="person-circle-outline"></ion-icon>
@@ -60,7 +62,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href="#">
+                    <a href="sr/sr_home.php">
                         <div class="box">
                             <div class="icon">
                                 <ion-icon name="people-circle-outline"></ion-icon>
@@ -70,7 +72,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href="#">
+                    <a href="retailer/homepage.php">
                         <div class="box">
                             <div class="icon">
                                 <ion-icon name="person-outline"></ion-icon>
@@ -80,7 +82,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href="#">
+                    <a href="admin/admin_home.php">
                         <div class="box">
                             <div class="icon">
                                 <ion-icon name="settings-outline"></ion-icon>
@@ -90,7 +92,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href="#">
+                    <a href="delivery_man/d_home.php">
                         <div class="box">
                             <div class="icon">
                                 <ion-icon name="create-outline"></ion-icon>
@@ -116,5 +118,10 @@
     </div> -->
     </div>
 </body>
+<script>
+    $(document).ready(function() {
+
+    })
+</script>
 
 </html>

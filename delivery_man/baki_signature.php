@@ -81,7 +81,7 @@ if (!isset($_SESSION["delid"])) {
                                                                                             $sql2 = "SELECT * FROM product WHERE id = $pid ";
                                                                                             $result2 = mysqli_query($con, $sql2);
                                                                                             $row2 = mysqli_fetch_assoc($result2);
-                                                                                            echo "(<span>{$row2['nam']}||price: {$row1['price']} || Quantity: {$row1['quantity']} ||Total:{$row1['total']}</span><br>)";
+                                                                                            echo "<span>{$row2['nam']}||price: {$row1['price']} || Quantity: {$row1['quantity']} ||Total:{$row1['total']}</span><br>";
                                                                                         }
                                                                                     }
                                                                                     ?>">

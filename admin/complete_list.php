@@ -25,32 +25,42 @@ if (!isset($_SESSION["aid"])) {
                 </a>
             </div>
         </div>
-     <!-- ------------------- -->
-     <?php
-                include "../php/config.php";
-                $id = $_GET['id'];
-                $sql = "SELECT *, total-discount AS stotal FROM order WHERE status = 'complete' AND retailer = $id";
-                $result = mysqli_query($con, $sql);
-                if (mysqli_num_rows($result)) {
-                ?>
+        <!-- ------------------- -->
+        <?php
+        include "../php/config.php";
+        $id = $_GET['id'];
+        $sql = "SELECT *,total-discount AS tata FROM `order` WHERE status = 'complete' AND retailer = $id ";
+        $result = mysqli_query($con, $sql);
+        if (mysqli_num_rows($result)) {
+        ?>
             <div class="order_list">
                 <?php while ($row = mysqli_fetch_assoc($result)) {
                 ?>
                     <div class="card">
-                       <div class="item"><?php echo $row['item'] ?></div>
-                       <div class="total"></div>
-                       <div class="discount"></div>
-                       <div class="subtotal"></div>
-                       <div class="product"></div>
-                       <div class="time"></div>
-                       <div class="signature">
-                        <img src="../image/signature/" alt="">
-                       </div>
+                        <div class="item">Item : <?php echo $row['item'] ?></div>
+                        <div class="total">Total : <?php echo $row['total'] ?></div>
+                        <div class="discount">Discount : <?php echo $row['discount'] ?></div>
+                        <div class="subtotal">Subtotal : <?php echo $row['tata'] ?></div>
+                        <div class="product"><?php echo $row['products'] ?></div>
+                        <div class="time"> Time : <?php echo $row['time'] ?></div>
+                        <div class="signature">
+                            <img width="100px" height="50px" src="../image/signature/<?php echo $row['signature'] ?>" alt="">
+                        </div>
                     </div>
                 <?php } ?>
             </div>
         <?php } ?>
-     </div>
+        <!-- <span>লিবু ড্রিংক||price: 54 || Quantity: 1 ||Total:54</span>
+        <br>
+        <span>লিবু ড্রিংক||price: 54 || Quantity: 1 ||Total:54</span>
+        <br>
+        <span>লিবু ড্রিংক||price: 54 || Quantity: 1 ||Total:54</span>
+        <br>
+        <span>লিবু ড্রিংক||price: 54 || Quantity: 1 ||Total:54</span>
+        <br>
+        <span>লিবু ড্রিংক||price: 54 || Quantity: 1 ||Total:54</span>
+        <br> -->
+    </div>
     </div>
 
 </body>

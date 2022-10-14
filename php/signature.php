@@ -10,7 +10,7 @@ $time = $_POST['time'];
 $products = $_POST['products'];
 $sql = "INSERT INTO `order`(`signature`,`item`,`total`,`discount`,`products`,`time`,`retailer`,`status`) VALUES ('$sig',$item,$st,$discount,'$products','$time',$rid,'complete')";
 $result = mysqli_query($con, $sql);
-$nama_file = "../image/signature/signature_" . date("his") . ".png";
+$nama_file = "../image/signature/$sig";
 file_put_contents($nama_file, file_get_contents($sig_string));
 if (file_exists($nama_file)) {
   echo "<p>File Signature berhasil disimpan - " . $nama_file . "</p>";

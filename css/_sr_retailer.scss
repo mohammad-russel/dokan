@@ -36,10 +36,12 @@
     align-items: center;
     justify-content: center;
     .create_ac {
-      margin: 10px;
+    margin-right: 50px;
       border: 1px solid rgb(255 255 255 / 64%);
       display: flex;
       justify-content: center;
+
+      border-radius: 10px;
       align-items: center;
       background: linear-gradient(
           312.9deg,

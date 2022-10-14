@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Raleway:wght@700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -457,10 +459,11 @@ header .link a ion-icon:hover {
   justify-content: center;
 }
 .sr_retailer_main_box .retailerbox .create_ac {
-  margin: 10px;
+  margin-right: 50px;
   border: 1px solid rgba(255, 255, 255, 0.64);
   display: flex;
   justify-content: center;
+  border-radius: 10px;
   align-items: center;
   background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #e9f0f7;
   box-shadow: -3px -3px 9px rgba(255, 255, 255, 0.9), 3px 3px 9px rgba(138, 155, 189, 0.4);
@@ -2248,7 +2251,14 @@ header .link a ion-icon:hover {
   height: 100%;
 }
 .landing_page .header .logo img {
+  background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
+  box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.9), 4px 4px 10px rgba(138, 155, 189, 0.4);
+  border-radius: 10px;
+  border: 1px solid;
+  border-image-source: linear-gradient(134.47deg, rgba(255, 255, 255, 0.25) 75.67%, #E9F0F7 4.99%);
   height: 90%;
+  padding: 10px;
+  opacity: 0.8;
 }
 .landing_page .header .link {
   height: 100%;
@@ -2280,27 +2290,27 @@ header .link a ion-icon:hover {
 }
 .landing_page .main .box_room {
   margin: auto;
-  max-width: 350px;
-  aspect-ratio: 1/1;
-  box-shadow: inset 10px 10px 20px -10px rgb(206, 206, 206), inset -10px -10px 20px -10px rgb(255, 255, 255);
+  width: 80%;
+  max-width: 900px;
+  height: 400px;
+  border: 1px solid rgb(223, 219, 231);
   overflow: hidden;
+  align-items: center;
   display: flex;
   border-radius: 10px;
 }
 .landing_page .main .box_room .box {
-  min-width: 90%;
-  height: 80%;
+  min-width: 100%;
+  height: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: auto 25px;
-  border: 1px solid rgb(206, 206, 206);
   border-radius: 10px;
   color: #8F9BB2;
   position: relative;
-  -webkit-animation: anime 9s;
-          animation: anime 9s;
+  -webkit-animation: anime 15s;
+          animation: anime 15s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   -webkit-animation-duration: alternate;
@@ -2322,8 +2332,12 @@ header .link a ion-icon:hover {
 .landing_page .main .box_room .box .text {
   width: 100%;
   height: 50%;
+  text-transform: uppercase;
   text-align: center;
-  font-size: 1.4em;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-family: "Raleway", sans-serif;
 }
 @-webkit-keyframes anime {
   0% {
@@ -2333,22 +2347,22 @@ header .link a ion-icon:hover {
     right: 0%;
   }
   20% {
-    right: 370px;
+    right: 100%;
   }
   30% {
-    right: 370px;
+    right: 100%;
   }
   40% {
-    right: 740px;
+    right: 200%;
   }
   50% {
-    right: 740px;
+    right: 200%;
   }
   60% {
-    right: 370px;
+    right: 100%;
   }
   80% {
-    right: 370px;
+    right: 100%;
   }
   90% {
     right: 0%;
@@ -2365,22 +2379,22 @@ header .link a ion-icon:hover {
     right: 0%;
   }
   20% {
-    right: 370px;
+    right: 100%;
   }
   30% {
-    right: 370px;
+    right: 100%;
   }
   40% {
-    right: 740px;
+    right: 200%;
   }
   50% {
-    right: 740px;
+    right: 200%;
   }
   60% {
-    right: 370px;
+    right: 100%;
   }
   80% {
-    right: 370px;
+    right: 100%;
   }
   90% {
     right: 0%;
@@ -2399,7 +2413,7 @@ header .link a ion-icon:hover {
 .landing_page .main .link_box a {
   text-decoration: none;
   color: #8F9BB2;
-  margin: 10px;
+  margin: 20px;
 }
 .landing_page .main .link_box a .box {
   width: 100px;
@@ -2413,10 +2427,19 @@ header .link a ion-icon:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  transition: 0.5s;
 }
 .landing_page .main .link_box a .box .icon ion-icon {
   font-size: 1.5rem;
 }
+.landing_page .main .link_box a .box:hover {
+  transform: scale(0.97);
+  box-shadow: none;
+  background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(189, 211, 233, 0.3) 95.45%), #E9F0F7;
+  border: none;
+  box-shadow: -5px -5px 20px -10px rgba(189, 211, 233, 0.3), 5px 5px 0px -10px rgb(255, 255, 255);
+}
+
 .loadmore {
   width: 90%;
   margin: auto;

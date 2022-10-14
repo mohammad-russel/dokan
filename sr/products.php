@@ -15,6 +15,23 @@ $rid = $_GET['rid'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php include "../components/head2.php"; ?>
     <title>SR product</title>
+    <style>
+        .back a {
+            text-decoration: none;
+        }
+
+        .count {
+            position: relative;
+            background: #484848;
+            color: white;
+            padding: 0px 6px;
+            font-size: 13px;
+            border-radius: 50%;
+            top: -20px;
+            z-index: 1;
+            left: 20px;
+        }
+    </style>
 </head>
 
 <body>
@@ -26,7 +43,7 @@ $rid = $_GET['rid'];
                 </a>
             </div>
             <div class="back">
-                <a href="cart.php?rid=<?php echo $rid?>">
+                <a href="cart.php?rid=<?php echo $rid ?>">
                     <span class="count"></span>
                     <ion-icon name="cart-outline"></ion-icon>
                 </a>
@@ -52,9 +69,9 @@ $rid = $_GET['rid'];
                             <img src="../image/product/<?php echo $row['pic'] ?>" alt="">
                         </div>
                         <?php
-                date_default_timezone_set('Asia/Dhaka');
-                $time = date("Y/m/d || h/i/s");
-                ?>
+                        date_default_timezone_set('Asia/Dhaka');
+                        $time = date("Y/m/d || h/i/s");
+                        ?>
                         <div class="price">$ <?php echo $row['price'] ?></div>
                         <div class="name"><?php echo $row['nam'] ?></div>
                         <div class="btn">
@@ -68,32 +85,32 @@ $rid = $_GET['rid'];
                             <button class="addcart addcart<?php echo $row['id'] ?>" name="add">ADD</button>
                         </div>
                         <script>
-                    $(".addcart<?php echo $row['id'] ?>").click(function() {
-                        var rid = $("#rid<?php echo $row['id'] ?>").val()
-                        var pid = $("#pid<?php echo $row['id'] ?>").val()
-                        var sid = $("#sid<?php echo $row['id'] ?>").val()
-                        var pp = $("#pp<?php echo $row['id'] ?>").val()
-                        var time = $("#time<?php echo $row['id'] ?>").val()
-                        var status = $("#status<?php echo $row['id'] ?>").val()
-                        var quantity = $("#quantity<?php echo $row['id'] ?>").val()
-                        $.ajax({
-                            url: "../php/add_cart_sr.php",
-                            type: "POST",
-                            data: {
-                                rid: rid,
-                                pid: pid,
-                                sid: sid,
-                                pp: pp,
-                                time: time,
-                                status: status,
-                                quantity: quantity
-                            },
-                            success: function(data) {
-                              
-                            }
-                        })
-                    })
-                </script>
+                            $(".addcart<?php echo $row['id'] ?>").click(function() {
+                                var rid = $("#rid<?php echo $row['id'] ?>").val()
+                                var pid = $("#pid<?php echo $row['id'] ?>").val()
+                                var sid = $("#sid<?php echo $row['id'] ?>").val()
+                                var pp = $("#pp<?php echo $row['id'] ?>").val()
+                                var time = $("#time<?php echo $row['id'] ?>").val()
+                                var status = $("#status<?php echo $row['id'] ?>").val()
+                                var quantity = $("#quantity<?php echo $row['id'] ?>").val()
+                                $.ajax({
+                                    url: "../php/add_cart_sr.php",
+                                    type: "POST",
+                                    data: {
+                                        rid: rid,
+                                        pid: pid,
+                                        sid: sid,
+                                        pp: pp,
+                                        time: time,
+                                        status: status,
+                                        quantity: quantity
+                                    },
+                                    success: function(data) {
+
+                                    }
+                                })
+                            })
+                        </script>
                     </div>
 
             <?php  }
