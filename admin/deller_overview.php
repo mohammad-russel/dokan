@@ -74,10 +74,10 @@ if (!isset($_SESSION["aid"])) {
                         </div>
                     </div>
                     <div class="middle">
-                        <div class="name"><?php echo $row['nam'] ?></div>
-                        <div class="number"><?php echo $row['num'] ?></div>
-                        <div class="password"><?php echo $row['pass'] ?></div>
-                        <div class="company"><?php echo $row['company'] ?></div>
+                        <div class="name">Name : <?php echo $row['nam'] ?></div>
+                        <div class="number">Number : <?php echo $row['num'] ?></div>
+                        <div class="password">Password : <?php echo $row['pass'] ?></div>
+                        <div class="company">Company : <?php echo $row['company'] ?></div>
                     </div>
                     <div class="right">
                      

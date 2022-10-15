@@ -33,16 +33,18 @@ if (!isset($_SESSION["aid"])) {
         $result = mysqli_query($con, $sql);
         if (mysqli_num_rows($result)) {
         ?>
-            <div class="order_list">
+            <div class="o_l">
                 <?php while ($row = mysqli_fetch_assoc($result)) {
                 ?>
                     <div class="card">
-                        <div class="item">Item : <?php echo $row['item'] ?></div>
-                        <div class="total">Total : <?php echo $row['total'] ?></div>
-                        <div class="discount">Discount : <?php echo $row['discount'] ?></div>
-                        <div class="subtotal">Subtotal : <?php echo $row['tata'] ?></div>
+                        <div class="box">
+                            <div class="item">Item : <?php echo $row['item'] ?></div>
+                            <div class="total">Total : <?php echo $row['total'] ?></div>
+                            <div class="discount">Discount : <?php echo $row['discount'] ?></div>
+                            <div class="subtotal">Subtotal : <?php echo $row['tata'] ?></div>
+                            <div class="time"> Time : <?php echo $row['time'] ?></div>
+                        </div>
                         <div class="product"><?php echo $row['products'] ?></div>
-                        <div class="time"> Time : <?php echo $row['time'] ?></div>
                         <div class="signature">
                             <img width="100px" height="50px" src="../image/signature/<?php echo $row['signature'] ?>" alt="">
                         </div>
@@ -64,5 +66,39 @@ if (!isset($_SESSION["aid"])) {
     </div>
 
 </body>
+<script>
+    $(document).ready(function() {
+        $(".signature").click(function() {
+            $(this).css({
+                "position": "absolute",
+                "width": "100%",
+                "height": "100%",
+                "right": "0",
+                "top": "0",
+                "background": "rgb(255, 255, 255)"
+            })
+        })
+        $(".signature").click(function() {
+            if ($(this).css({
+                    "position": "absolute",
+                    "width": "100%",
+                    "height": "100%",
+                    "right": "0",
+                    "top": "0",
+                    "background": "rgb(255, 255, 255)"
+                })) {
+                $(this).css({
+                    "position": "relative",
+                    "width": "30%",
+                    "height": "max-content",
+                    "right": "0",
+                    "top": "0",
+                    "background": "rgb(255, 255, 255)"
+                })
+            }
+
+        })
+    })
+</script>
 
 </html>

@@ -1,0 +1,118 @@
+.o_l {
+
+    padding: 15px;
+
+    .card {
+        width: 100%;
+        margin: 23px 0px;
+        border: 1px solid rgb(192, 192, 192);
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+
+        .box,
+        .product,
+        .signature {
+            width: 30%;
+            padding: 10px;
+            height: max-content;
+            color: #8F9BB2;
+            margin: 10px;
+
+        }
+
+        .box {
+            @include shadow;
+            display: flex;
+            flex-wrap: wrap;
+
+            .item,
+            .total,
+            .discount,
+            .subtotal,
+            .time {
+                @include shadow;
+                margin: 10px;
+                padding: 10px 15px;
+                height: max-content;
+                color: #8F9BB2;
+
+            }
+        }
+
+        .product {
+            @include shadow;
+
+
+            display: flex;
+            flex-direction: column;
+
+
+            span {
+                margin: 3px 0px;
+                border-bottom: 1px solid rgb(186, 186, 186);
+            }
+
+            br {
+
+                display: none;
+            }
+        }
+
+        .signature {
+            @include shadow;
+
+            display: flex;
+            justify-content: center;
+
+
+            img {
+                margin: auto;
+                width: 150px;
+                height: 300px;
+                transition: .3s;
+
+            }
+        }
+    }
+}
+
+// --------------------------------
+
+@media only screen and (max-width: 550px) {
+    .o_l {
+
+
+        .card {
+            flex-direction: column;
+
+            .box,
+            .product,
+            .signature {
+
+                width: 100%;
+            }
+
+            .box {
+
+                .item,
+                .total,
+                .discount,
+                .subtotal,
+                .time {}
+            }
+
+            .product {
+                span {}
+
+                br {}
+            }
+
+            .signature {
+                img {}
+            }
+        }
+    }
+}

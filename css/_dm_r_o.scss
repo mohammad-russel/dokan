@@ -226,14 +226,15 @@
           }
         }
 
-        .complete_pop,
-        .baki_pop {
+        .complete_pop
+        {
           position: absolute;
           height: 100%;
           width: 100%;
           top: 0;
           left: 0;
-          background: rgb(255, 255, 255);
+          background: #EBF3FA;
+
 
           .close_complete,
           .close_baki {
@@ -244,10 +245,17 @@
 
             ion-icon {
               font-size: 30px;
-              color: rgb(239, 239, 239);
-              background: rgb(63, 63, 63);
+              color: rgb(75, 75, 75);
+              @include shadow;
               border-radius: 50%;
               padding: 5px;
+              cursor: pointer;
+
+              &:hover {
+                background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
+                box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 0.995), inset 2px 2px 6px rgba(138, 155, 189, 0.2);
+                border-radius: 60px;
+              }
             }
           }
 
@@ -263,26 +271,38 @@
                 }
 
                 canvas {
-                  border: 1px solid black;
+                  border: 1px solid rgb(144, 144, 144);
                   margin: auto;
+                  border-radius: 4px;
                 }
               }
             }
 
             .input_box {
-              input {}
+
 
               button {
-                height: 40px;
+                text-transform: capitalize;
                 width: 50%;
+                max-width: 200px;
                 font-size: 20px;
-                background: rgb(155, 18, 18);
-                border: none;
-                color: azure;
+                color: #f25c6f;
+                border: 1px solid rgba(164, 164, 164, 0.168);
+                background: linear-gradient(315.13deg, rgba(194, 217, 237, 0.3) 5.21%, rgba(255, 255, 255, 0.3) 62.26%), #E9F0F7;
+                box-shadow: 3px 3px 12px rgba(138, 155, 189, 0.4), -3px -3px 15px rgba(255, 255, 255, 0.9);
+
+                padding: 30px 0px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 10px;
+                font-weight: 600;
+                letter-spacing: 1px;
               }
 
               button:last-child {
-                background: rgb(13, 87, 56);
+
+                color: #01927c;
               }
             }
           }
@@ -293,195 +313,4 @@
 }
 
 // --------------
-.complete {
-  margin: 20px 0px;
-  width: 100%;
 
-  .buttons {
-    background: rgb(52, 52, 52);
-    width: 100%;
-    text-align: center;
-    color: azure;
-    cursor: pointer;
-  }
-
-  .boxs {
-    .box {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      margin-top: 20px;
-
-      .card {
-        margin: 5px 0px;
-        text-align: center;
-        width: 100%;
-        max-width: 160px;
-        min-width: 150px;
-        @include shadow;
-        margin: 13px;
-        padding: 10px;
-
-        .image {
-          width: 100%;
-
-          img {
-            width: 30%;
-            aspect-ratio: 1/1;
-            object-fit: cover;
-          }
-        }
-
-        .name {}
-
-        .price {
-          border-top: 1px solid rgba(72, 72, 72, 0.253);
-          border-left: 1px solid  rgba(72, 72, 72, 0.253);
-          border-right: 1px solid  rgba(72, 72, 72, 0.253);
-          
-        }
-
-        .quantity {
-          border-right: 1px solid  rgba(72, 72, 72, 0.253);
-          border-left: 1px solid  rgba(72, 72, 72, 0.253);
-          color: rgb(78, 78, 78);
-        }
-        .tp {
-          border-left: 1px solid  rgba(72, 72, 72, 0.253);
-          border-right: 1px solid  rgba(72, 72, 72, 0.253);
-          border-bottom: 1px solid  rgba(72, 72, 72, 0.253);
-          color: rgb(80, 80, 80);
-        }
-
-        .btn {
-          padding: 10px 5px;
-
-          .bt {
-            margin: 10px 0px;
-            cursor: pointer;
-            background: rgb(10, 128, 46);
-            border-radius: 5px;
-            color: antiquewhite;
-          }
-
-          .bt:nth-child(2) {
-            background: rgb(203, 98, 0);
-          }
-
-          .bt:nth-child(3) {
-            background: rgb(171, 1, 1);
-          }
-        }
-      }
-    }
-
-    .cardinfo {
-      background: rgb(83, 62, 122);
-      display: flex;
-      width: 100%;
-      max-width: 500px;
-      margin: auto;
-      padding: 10px;
-      border-radius: 10px;
-      align-items: center;
-      justify-content: space-between;
-      color: aliceblue;
-
-      .right,
-      .left {
-        margin: 0px 10px;
-
-        .btn {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          align-items: center;
-
-          span {
-            cursor: pointer;
-            margin: 10px 0px;
-            background: rgb(0, 87, 44);
-            color: rgb(250, 240, 219);
-            padding: 4px 10px;
-            border: 1px solid wheat;
-            text-align: center;
-            width: 100px;
-            border-radius: 4px;
-
-            a {
-              text-decoration: none;
-              color: rgb(250, 240, 219);
-            }
-          }
-
-          .baki_op {
-            background: rgb(87, 0, 0);
-          }
-        }
-      }
-
-      .complete_pop,
-      .baki_pop {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        top: 0;
-        left: 0;
-        background: rgb(255, 255, 255);
-
-        .close_complete,
-        .close_baki {
-          display: flex;
-          justify-content: right;
-          align-items: center;
-          padding: 10px 5px;
-
-          ion-icon {
-            font-size: 30px;
-            color: rgb(239, 239, 239);
-            background: rgb(63, 63, 63);
-            border-radius: 50%;
-            padding: 5px;
-          }
-        }
-
-        form {
-          #signature-pad {
-            div {
-              display: flex;
-              justify-content: center;
-              align-items: center;
-
-              #note {
-                display: none;
-              }
-
-              canvas {
-                border: 1px solid black;
-                margin: auto;
-              }
-            }
-          }
-
-          .input_box {
-            input {}
-
-            button {
-              height: 40px;
-              width: 50%;
-              font-size: 20px;
-              background: rgb(155, 18, 18);
-              border: none;
-              color: azure;
-            }
-
-            button:last-child {
-              background: rgb(13, 87, 56);
-            }
-          }
-        }
-      }
-    }
-  }
-}

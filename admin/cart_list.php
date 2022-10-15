@@ -47,7 +47,7 @@ if (!isset($_SESSION["aid"])) {
                         <div class="box name"><?php echo $row1['nam'] ?></div>
                         <div class="box price">মূল্য : ৳ <?php echo $row['price'] ?></div>
                         <div class="box quantity">পরিমান : <?php echo $row['quantity'] ?></div>
-                        <div class="box tp">মোট : <?php echo $row['total'] ?></div>
+                        <div class="box tp">মোট : ৳ <?php echo $row['total'] ?></div>
                         <div class="box btn">
                             <a href="retailer_overview.php?retailer=<?php echo $row['rid'] ?>" class="retailer">দোকানদার</a>
                         </div>

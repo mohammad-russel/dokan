@@ -32,7 +32,7 @@ if (!isset($_SESSION["aid"])) {
         </div>
         <div class="adminmainbox">
             <div class="buttonbox">
-                <a href="total_earning.php">
+                <a href="#">
                     <ion-icon name="cash-outline"></ion-icon>
                     <div class="btn">
                         <h3>Total Earning</h3>
@@ -48,7 +48,7 @@ if (!isset($_SESSION["aid"])) {
                         } ?>
                     </div>
                 </a>
-                <a href="baki.php">
+                <a href="#">
                     <ion-icon name="podium-outline"></ion-icon>
                     <div class="btn">
                         <h3>Baki Taka</h3>

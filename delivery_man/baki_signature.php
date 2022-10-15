@@ -44,10 +44,10 @@ if (!isset($_SESSION["delid"])) {
     $sub_total = $row['total'] - $row2['discount'];
    
     ?>
-    <div class="container">
+    <div class="container" >
         <!-- __________________ -->
 
-        <div class="complete_pop">
+        <div class="baki_pop">
             <div class="close_complete">
                 <a href="http://localhost/dokan/delivery_man/retailer_overview.php?rid=<?php echo $rid ?>">
                     <ion-icon name="close-outline"></ion-icon>
@@ -57,9 +57,9 @@ if (!isset($_SESSION["delid"])) {
                 <?php
                 date_default_timezone_set('Asia/Dhaka');
                 $time = date("Y/m/d || h/i/s"); ?>
-                <div id="signature-pad">
+                <div id="signature-pad" class="sp">
                     <div>
-                        <div id="note" onmouseover="my_function();"></div>
+                        <div id="note" class="note" onmouseover="my_function();"></div>
                         <canvas id="the_canvas" width="350px" height="600px"></canvas>
                     </div>
                     <div style="margin:10px;" class="input_box">
@@ -81,7 +81,7 @@ if (!isset($_SESSION["delid"])) {
                                                                                             $sql2 = "SELECT * FROM product WHERE id = $pid ";
                                                                                             $result2 = mysqli_query($con, $sql2);
                                                                                             $row2 = mysqli_fetch_assoc($result2);
-                                                                                            echo "<span>{$row2['nam']}||price: {$row1['price']} || Quantity: {$row1['quantity']} ||Total:{$row1['total']}</span><br>";
+                                                                                            echo "<span>{$row2['nam']} || price: {$row1['price']} || Quantity: {$row1['quantity']} || Total:{$row1['total']} </span><br>";
                                                                                         }
                                                                                     }
                                                                                     ?>">

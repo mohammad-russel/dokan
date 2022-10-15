@@ -30,66 +30,65 @@ $sr = $_SESSION["sid"];
                     <ion-icon name="arrow-back-outline"></ion-icon>
                 </a>
             </div>
-         
+
         </div>
         <div class="complete">
-                <?php
-                include '../php/config.php';
-                $sr = $_GET['sr'];
-                $sql1 = "SELECT *, quantity*price AS total FROM cart WHERE status = 'complete' AND sr = $sr ";
-                $result1 = mysqli_query($con, $sql1);
-                if ($list = mysqli_num_rows($result1)) {
-                ?>
-                    <div class="button_complete buttons">Complete <?php echo $list ?></div>
-                    <div class="box_complete boxs">
-                        <div class="box">
-                            <?php
-                            while ($row1 = mysqli_fetch_assoc($result1)) {
-                                $pid = $row1['pid'];
-                                $sql2 = "SELECT * FROM product WHERE id = $pid ";
-                                $result2 = mysqli_query($con, $sql2);
-                                $row2 = mysqli_fetch_assoc($result2);
-                            ?>
-                                <div class="card">
-                                    <div class="image">
-                                        <img src="../image/product/<?php echo $row2['pic'] ?>" alt="">
-                                    </div>
-                                    <div class="name"><?php echo $row2['nam'] ?></div>
-                                    <div class="price">দামঃ <?php echo $row1['price'] ?></div>
-                                    <div class="quantity">পরিমানঃ <?php echo $row1['quantity'] ?></div>
-                                    <div class="tp">মোটঃ <?php echo $row1['total'] ?></div>
-                                    <div class="name">সময়<br> <?php echo $row1['time'] ?></div>
-
+            <?php
+            include '../php/config.php';
+            $sql1 = "SELECT *, quantity*price AS total FROM cart WHERE status = 'complete' AND sr= $sr ";
+            $result1 = mysqli_query($con, $sql1);
+            if ($list = mysqli_num_rows($result1)) {
+            ?>
+                <div class="button_complete buttons">Complete <?php echo $list ?></div>
+                <div class="box_complete boxs">
+                    <div class="box">
+                        <?php
+                        while ($row1 = mysqli_fetch_assoc($result1)) {
+                            $pid = $row1['pid'];
+                            $sql2 = "SELECT * FROM product WHERE id = $pid ";
+                            $result2 = mysqli_query($con, $sql2);
+                            $row2 = mysqli_fetch_assoc($result2);
+                        ?>
+                            <div class="card">
+                                <div class="image">
+                                    <img src="../image/product/<?php echo $row2['pic'] ?>" alt="">
                                 </div>
-                            <?php } ?>
-                        </div>
-                        <div class="cardinfo">
-                            <?php
-                            include '../php/config.php';
-                            $sql1 = "SELECT *, SUM(quantity*price) AS total FROM cart WHERE status = 'complete' AND sr = $sr ";
-                            $result1 = mysqli_query($con, $sql1);
-                            $row = mysqli_fetch_assoc($result1);
+                                <div class="name"><?php echo $row2['nam'] ?></div>
+                                <div class="price">দামঃ <?php echo $row1['price'] ?></div>
+                                <div class="quantity">পরিমানঃ <?php echo $row1['quantity'] ?></div>
+                                <div class="tp">মোটঃ <?php echo $row1['total'] ?></div>
+                                <div class="name">সময়<br> <?php echo $row1['time'] ?></div>
 
-                            // ----------
-                            $sql1 = "SELECT *, quantity*price AS total FROM cart WHERE status = 'complete' AND sr = $sr ";
-                            $result1 = mysqli_query($con, $sql1);
-                            $list4 = mysqli_num_rows($result1);
-                            //   ---------
-                            $sql1 = "SELECT DISTINCT discount FROM cart WHERE status = 'complete' AND sr = $sr ";
-                            $result1 = mysqli_query($con, $sql1);
-                            $row2 = mysqli_fetch_assoc($result1);
-
-
-
-                            ?>
-                            <div class="left">
-                                <div class="item">ITEM : <?php echo $list4 ?></div>
-                                <div class="ff">FULL PRICE : ৳<?php echo $row['total'] ?>/-</div>
                             </div>
+                        <?php } ?>
+                    </div>
+                    <div class="cardinfo">
+                        <?php
+                        include '../php/config.php';
+                        $sql1 = "SELECT *, SUM(quantity*price) AS total FROM cart WHERE status = 'complete' AND sr = $sr ";
+                        $result1 = mysqli_query($con, $sql1);
+                        $row = mysqli_fetch_assoc($result1);
+
+                        // ----------
+                        $sql1 = "SELECT *, quantity*price AS total FROM cart WHERE status = 'complete' AND  sr = $sr  ";
+                        $result1 = mysqli_query($con, $sql1);
+                        $list4 = mysqli_num_rows($result1);
+                        //   ---------
+                        $sql1 = "SELECT DISTINCT discount FROM cart WHERE status = 'complete' AND  sr = $sr ";
+                        $result1 = mysqli_query($con, $sql1);
+                        $row2 = mysqli_fetch_assoc($result1);
+
+
+
+                        ?>
+                        <div class="left">
+                            <div class="item">ITEM : <?php echo $list4 ?></div>
+                            <div class="ff">FULL PRICE : ৳<?php echo $row['total'] ?></div>
                         </div>
                     </div>
-                <?php } ?>
-            </div>
+                </div>
+            <?php } ?>
+        </div>
     </div>
 
 </body>

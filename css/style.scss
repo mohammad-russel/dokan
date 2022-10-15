@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Raleway:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -31,7 +32,7 @@ $boxshadow: 3px 3px 3px 0px rgb(165, 165, 165),
   -3px -3px 5px 0px rgb(255, 255, 255);
 $boxshadowinset: inset 5px 5px 8px 0px rgb(165, 165, 165),
   inset -4px -4px 8px 0px rgb(255, 255, 255);
-$boxshadowinsetinput: inset 2px 2px 3px 0px rgb(165, 165, 165),
+$boxshadowinsetinput: inset 2px 2px 3px 0px rgb(125, 125, 125),
   inset -2px -2px 3px 0px rgb(255, 255, 255);
 $borderfornewf: 1px solid rgb(208, 216, 235);
 // -------------------------
@@ -124,6 +125,7 @@ body {
 @import "deller_sr";
 @import "baki_page";
 @import "landing_page";
+@import "order";
 
 
 // -------------------------other----------------

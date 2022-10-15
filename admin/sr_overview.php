@@ -17,13 +17,13 @@ if (!isset($_SESSION["aid"])) {
 
 <body>
     <div class="container">
-        <div class="header">
+        <!-- <div class="header">
             <div class="back">
                 <a href="sr.php">
                     <ion-icon name="arrow-back-outline"></ion-icon>
                 </a>
             </div>
-        </div>
+        </div> -->
         <?php
         include "../php/config.php";
 
