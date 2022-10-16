@@ -108,10 +108,17 @@
     width: 100%;
 
     .buttons {
-      background: rgb(52, 52, 52);
-      width: 100%;
+      margin: auto;
+      border: 1px solid rgb(159, 159, 159);
+      width: 90%;
+      text-transform: capitalize;
+      font-family: 'Montserrat', sans-serif;
       text-align: center;
-      color: azure;
+      border-radius: 10px;
+      font-weight: 600;
+      color: rgb(108, 108, 108);
+      padding: 10px 0px;
+      letter-spacing: 1px;
       cursor: pointer;
     }
 
@@ -121,16 +128,17 @@
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-
+        padding: 10px;
         .card {
           margin: 5px 0px;
           text-align: center;
           width: 100%;
           max-width: 160px;
           min-width: 150px;
-          border: 1px solid black;
+          border: 1px solid rgb(154, 154, 154);
           margin: 5px;
           padding: 10px;
+          border-radius: 10px;
 
           .image {
             width: 100%;
@@ -226,8 +234,7 @@
           }
         }
 
-        .complete_pop
-        {
+        .complete_pop {
           position: absolute;
           height: 100%;
           width: 100%;
@@ -313,4 +320,3 @@
 }
 
 // --------------
-

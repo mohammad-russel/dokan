@@ -1216,7 +1216,7 @@ header .link a ion-icon:hover {
   border: 1px solid rgb(159, 159, 159);
   margin: 10px auto;
   border-radius: 3px;
-  padding: 5px 5px;
+  padding: 5px 10px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -1235,6 +1235,8 @@ header .link a ion-icon:hover {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 15px;
 }
 .cartbox .cart .order_click .info {
   margin: 10px;
@@ -1243,20 +1245,48 @@ header .link a ion-icon:hover {
   letter-spacing: 1px;
   border-radius: 7px;
   padding: 7px 10px;
-  box-shadow: 3px 3px 3px 0px rgb(165, 165, 165), -3px -3px 5px 0px rgb(255, 255, 255);
-  border: 1px solid rgb(208, 216, 235);
 }
 .cartbox .cart .order_click .info span {
   font-weight: 600;
   color: rgb(99, 99, 99);
   letter-spacing: 1px;
 }
-.cartbox .cart .order_click .button .order_btn {
+.cartbox .cart .order_click .button form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cartbox .cart .order_click .button form input {
+  width: 100px;
+  padding: 2px;
+  margin: 0px 5px;
+  border-radius: 5px;
+  border: none;
+  background: rgba(0, 0, 0, 0);
+  border: 1px solid rgb(211, 211, 211);
+  text-align: center;
+  color: rgb(169, 185, 180);
+  font-size: 1.2em;
+  background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
+  box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.9), 4px 4px 10px rgba(138, 155, 189, 0.4);
+  border-radius: 10px;
+  border: 1px solid;
+  border-image-source: linear-gradient(134.47deg, rgba(255, 255, 255, 0.25) 75.67%, #E9F0F7 4.99%);
+  outline: none;
+}
+.cartbox .cart .order_click .button form .order_btn {
   border: none;
   padding: 4px 15px;
   font-size: 1.2rem;
-  color: rgb(255, 255, 255);
-  background: rgb(0, 141, 66);
+  text-transform: capitalize;
+  color: rgba(0, 157, 105, 0.844);
+  font-family: "Montserrat", sans-serif;
+  background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
+  box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.9), 4px 4px 10px rgba(138, 155, 189, 0.4);
+  border-radius: 10px;
+  border: 1px solid;
+  border-image-source: linear-gradient(134.47deg, rgba(255, 255, 255, 0.25) 75.67%, #E9F0F7 4.99%);
+  font-weight: 600;
   border-radius: 4px;
   cursor: pointer;
 }
@@ -1291,10 +1321,8 @@ header .link a ion-icon:hover {
   text-align: center;
   width: 60px;
   padding: 5px;
-  border-radius: 5px;
-  border: none;
-  background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
-  box-shadow: inset -4px -4px 10px rgba(255, 255, 255, 0.9), inset 4px 4px 10px rgba(138, 155, 189, 0.3);
+  border: 1px solid rgb(221, 221, 221);
+  background: rgba(0, 0, 0, 0);
   border-radius: 60px;
 }
 .cartbox .cart .btn {
@@ -1467,15 +1495,19 @@ header .link a ion-icon:hover {
 .daybox form {
   margin: 20px auto;
   padding: 10px;
-  background: rgb(41, 41, 41);
   border-radius: 10px;
   width: 80%;
   display: flex;
   flex-direction: column;
+  background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
+  box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.9), 4px 4px 10px rgba(138, 155, 189, 0.4);
+  border-radius: 10px;
+  border: 1px solid;
+  border-image-source: linear-gradient(134.47deg, rgba(255, 255, 255, 0.25) 75.67%, #E9F0F7 4.99%);
 }
 .daybox form input,
 .daybox form select {
-  background: rgb(232, 232, 232);
+  background: rgba(232, 232, 232, 0);
   margin: 7px auto;
   width: 100%;
   max-width: 300px;
@@ -1483,21 +1515,35 @@ header .link a ion-icon:hover {
   outline: none;
   border: none;
   border-radius: 5px;
+  color: #8F9BB2;
+  background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
+  box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.9), 4px 4px 10px rgba(138, 155, 189, 0.4);
+  border-radius: 10px;
+  border: 1px solid;
+  border-image-source: linear-gradient(134.47deg, rgba(255, 255, 255, 0.25) 75.67%, #E9F0F7 4.99%);
 }
 .daybox form .add {
-  background: rgb(0, 69, 114);
+  border: 1px solid rgb(164, 164, 164);
   color: aliceblue;
   font-size: 1.2rem;
+  color: rgb(86, 86, 86);
   letter-spacing: 2px;
+  font-weight: 600;
+  box-shadow: none;
+  cursor: pointer;
 }
 .daybox table {
+  padding: 15px;
   margin: auto;
   width: 80%;
-  border: 1px solid rgb(99, 99, 99);
+  background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
+  box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.9), 4px 4px 10px rgba(138, 155, 189, 0.4);
+  border-radius: 10px;
+  border: 1px solid;
+  border-image-source: linear-gradient(134.47deg, rgba(255, 255, 255, 0.25) 75.67%, #E9F0F7 4.99%);
 }
 .daybox table tr th {
   color: rgb(21, 53, 41);
-  border-bottom: 1px solid rgb(117, 117, 117);
 }
 .daybox table tr td {
   padding: 10px;
@@ -1621,10 +1667,17 @@ header .link a ion-icon:hover {
 .d_overview_retailer .order .buttons,
 .d_overview_retailer .baki .buttons,
 .d_overview_retailer .complete .buttons {
-  background: rgb(52, 52, 52);
-  width: 100%;
+  margin: auto;
+  border: 1px solid rgb(159, 159, 159);
+  width: 90%;
+  text-transform: capitalize;
+  font-family: "Montserrat", sans-serif;
   text-align: center;
-  color: azure;
+  border-radius: 10px;
+  font-weight: 600;
+  color: rgb(108, 108, 108);
+  padding: 10px 0px;
+  letter-spacing: 1px;
   cursor: pointer;
 }
 .d_overview_retailer .order .boxs .box,
@@ -1634,6 +1687,7 @@ header .link a ion-icon:hover {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  padding: 10px;
 }
 .d_overview_retailer .order .boxs .box .card,
 .d_overview_retailer .baki .boxs .box .card,
@@ -1643,9 +1697,10 @@ header .link a ion-icon:hover {
   width: 100%;
   max-width: 160px;
   min-width: 150px;
-  border: 1px solid black;
+  border: 1px solid rgb(154, 154, 154);
   margin: 5px;
   padding: 10px;
+  border-radius: 10px;
 }
 .d_overview_retailer .order .boxs .box .card .image,
 .d_overview_retailer .baki .boxs .box .card .image,
@@ -1919,19 +1974,22 @@ header .link a ion-icon:hover {
 .order_list .card {
   width: 100%;
   font-weight: 600;
-  background: rgba(0, 246, 102, 0.133);
   letter-spacing: 0.5px;
   font-size: 1.2rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 10px;
+  margin: 15px 10px;
   border-radius: 10px;
   padding: 3px;
+  background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
+  box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.9), 4px 4px 10px rgba(138, 155, 189, 0.4);
+  border-radius: 10px;
+  border: 1px solid;
+  border-image-source: linear-gradient(134.47deg, rgba(255, 255, 255, 0.25) 75.67%, #E9F0F7 4.99%);
 }
 .order_list .card .box {
   margin: 15px;
-  color: rgb(50, 50, 50);
 }
 .order_list .card .image {
   display: flex;
@@ -1943,18 +2001,28 @@ header .link a ion-icon:hover {
   aspect-ratio: 1/1;
   border-radius: 10px;
 }
+.order_list .card .name {
+  color: #8F9BB2;
+}
 .order_list .card .price {
-  color: rgb(0, 98, 122);
+  color: rgba(0, 98, 122, 0.617);
+}
+.order_list .card .quantity {
+  color: #8F9BB2;
 }
 .order_list .card .tp {
-  color: rgb(0, 122, 49);
+  color: rgba(0, 122, 49, 0.662);
 }
 .order_list .card .btn a {
   padding: 10px 10px;
   border-radius: 5px;
-  background: rgb(65, 65, 65);
-  color: #e0e0e0;
+  color: #8F9BB2;
   text-decoration: none;
+  background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
+  box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.9), 4px 4px 10px rgba(138, 155, 189, 0.4);
+  border-radius: 10px;
+  border: 1px solid;
+  border-image-source: linear-gradient(134.47deg, rgba(255, 255, 255, 0.25) 75.67%, #E9F0F7 4.99%);
 }
 
 @media only screen and (max-width: 608px) {

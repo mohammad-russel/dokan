@@ -60,20 +60,19 @@
   .card {
     width: 100%;
     font-weight: 600;
-    background: rgba(0, 246, 102, 0.133);
     letter-spacing: 0.5px;
     font-size: 1.2rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
-
-    margin: 10px;
+    margin: 15px 10px;
     border-radius: 10px;
     padding: 3px;
+    @include shadow;
 
     .box {
       margin: 15px;
-      color: rgb(50, 50, 50);
+      
     }
 
     .image {
@@ -88,25 +87,30 @@
       }
     }
 
-    .name {}
+    .name {
+      @include text_color;
 
-    .price {
-      color: rgb(0, 98, 122);
     }
 
-    .quantity {}
+    .price {
+      color: rgba(0, 98, 122, 0.617);
+    }
+
+    .quantity {
+      @include text_color;
+    }
 
     .tp {
-      color: rgb(0, 122, 49);
+      color: rgba(0, 122, 49, 0.662);
     }
 
     .btn {
       a {
         padding: 10px 10px;
         border-radius: 5px;
-        background: rgb(65, 65, 65);
-        color: #e0e0e0;
+      @include text_color;
         text-decoration: none;
+@include shadow;
       }
     }
   }
