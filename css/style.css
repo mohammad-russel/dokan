@@ -9,6 +9,17 @@
   box-sizing: border-box;
 }
 
+.logoh {
+  background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
+  box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.9), 4px 4px 10px rgba(138, 155, 189, 0.4);
+  border-radius: 10px;
+  border: 1px solid;
+  border-image-source: linear-gradient(134.47deg, rgba(255, 255, 255, 0.25) 75.67%, #E9F0F7 4.99%);
+  height: 70px;
+  padding: 10px;
+  opacity: 0.8;
+}
+
 body {
   background: #EBF3FA;
 }

@@ -4,7 +4,9 @@ $rid = $_SESSION["rid"];
 <header>
     <div class="logo">
         <h1>
-            <a href="homepage.php">Dokan</a>
+            <a href="homepage.php">
+            <img class="logoh" src="../logo/file.png" alt="">
+            </a>
         </h1>
     </div>
     <nav>

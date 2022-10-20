@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Raleway:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -19,7 +20,7 @@
   box-shadow: -4px -4px 10px rgb(255 255 255 / 90%), 4px 4px 10px rgb(138 155 189 / 40%);
   border-radius: 10px;
   border: 1px solid;
-  border-image-source: linear-gradient(134.47deg,  rgba(255, 255, 255, 0.25) 75.67%,#E9F0F7 4.99%);
+  border-image-source: linear-gradient(134.47deg, rgba(255, 255, 255, 0.25) 75.67%, #E9F0F7 4.99%);
 }
 
 @mixin text_color {
@@ -48,7 +49,12 @@ $b_nmf :linear-gradient(314.02deg,
 
 
 
-
+.logoh {
+  @include shadow;
+  height: 70px;
+  padding: 10px;
+  opacity: .8;
+}
 
 
 
@@ -135,11 +141,11 @@ body {
   text-align: center;
   border: 1px solid rgba(155, 155, 155, 0.34);
   text-transform: capitalize;
-color: #7f899a;
-   font-size: 19px;
-   font-weight: 600;
-   letter-spacing: 1px;
-   border-radius: 40px;
+  color: #7f899a;
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 40px;
   cursor: pointer;
 }
 

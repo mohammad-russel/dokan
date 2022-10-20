@@ -64,7 +64,7 @@ if (!isset($_SESSION["aid"])) {
                         } ?>
                     </select>
                     <input type="number" name="price" id="price" placeholder="Price" required>
-                    <input type="number" name="stock" id="stock" placeholder="Stock" required>
+                    <!-- <input type="number" name="stock" id="stock" placeholder="Stock" required> -->
                     <input type="text" name="discription" id="discription" placeholder="Discription" required>
                     <button class="addproduct" name="addproduct" id="addproduct">ADD</button>
                 </form>
@@ -89,7 +89,7 @@ if (!isset($_SESSION["aid"])) {
                             <div class="sr"> SR : <?php echo $row['sr']; ?></div>
                             <div class="company">Company : <?php echo $row['company']; ?></div>
                             <div class="category">Category : <?php echo $row['category']; ?></div>
-                            <div class="date stock">Stock : <?php echo $row['stock']; ?></div>
+                            <!-- <div class="date stock">Stock : <?php echo $row['stock']; ?></div> -->
                             <div class="more">
                                 <div class="show  show<?php echo $row['id']; ?>">
                                     <ion-icon name="ellipsis-horizontal-outline"></ion-icon>

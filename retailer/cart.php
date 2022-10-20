@@ -14,7 +14,9 @@ $rid = $_SESSION["rid"];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php include "../components/head2.php"; ?>
     <title>SR Homepage</title>
-
+<style>
+  
+</style>
 </head>
 
 <body>
@@ -22,7 +24,9 @@ $rid = $_SESSION["rid"];
         <header>
             <div class="logo">
                 <h1>
-            <a href="homepage.php">Dokan</a>
+            <a href="homepage.php">
+                <img class="logoh" src="../logo/file.png" alt="">
+            </a>
                 </h1>
             </div>
             <nav>
