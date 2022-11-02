@@ -7,12 +7,12 @@ $category = $con -> real_escape_string($_POST['category']);
 $sr = $con -> real_escape_string($_POST['sr']);
 $company = $con -> real_escape_string($_POST['company']);
 $price = $con -> real_escape_string($_POST['price']);
-$stock = $con -> real_escape_string($_POST['stock']);
+
 $discription = $con -> real_escape_string($_POST['discription']);
 $picname =$con -> real_escape_string ($_FILES['pic']['name']);
 $pictmpname = $_FILES['pic']['tmp_name'];
 
-$sql = "INSERT INTO product(nam,category,time,company,sr,price,stock,discription,pic) VALUES ('$name','$category','$time','$company','$sr',$price,$stock,'$discription','$picname')";
+$sql = "INSERT INTO product(nam,category,time,company,sr,price,discription,pic) VALUES ('$name','$category','$time','$company','$sr',$price,'$discription','$picname')";
 }
 
 move_uploaded_file($pictmpname, "../image/product/" . $picname);

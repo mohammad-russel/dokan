@@ -50,7 +50,7 @@ if (!isset($_SESSION["aid"])) {
                         <select name="deller" id="deller">
                             <?php
                             include "../php/config.php";
-                            $sql2 = "SELECT * FROM Deller";
+                            $sql2 = "SELECT * FROM deller";
                             $result2 = mysqli_query($con, $sql2);
                             if (mysqli_num_rows($result2)) {
                                 while ($row2 = mysqli_fetch_assoc($result2)) {

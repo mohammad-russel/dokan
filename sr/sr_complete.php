@@ -30,7 +30,9 @@ $sr = $_SESSION["sid"];
                     <ion-icon name="arrow-back-outline"></ion-icon>
                 </a>
             </div>
-
+<style>
+   
+</style>
         </div>
         <div class="complete">
             <?php

@@ -49,7 +49,7 @@ if (!isset($_SESSION["delid"])) {
 
         <div class="baki_pop">
             <div class="close_complete">
-                <a href="http://localhost/dokan/delivery_man/retailer_overview.php?rid=<?php echo $rid ?>">
+                <a href="https://happybd.online/delivery_man/retailer_overview.php?rid=<?php echo $rid ?>">
                     <ion-icon name="close-outline"></ion-icon>
                 </a>
             </div>

@@ -20,4 +20,4 @@ if (file_exists($nama_file)) {
 
 $sql = "UPDATE cart SET status = 'baki' WHERE rid = $rid  AND status = 'order'";
 $result = mysqli_query($con, $sql);
-header("location:http://localhost/dokan/delivery_man/retailer_overview.php?rid=$rid");
+header("location:https://happybd.online/delivery_man/retailer_overview.php?rid=$rid");

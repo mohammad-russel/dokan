@@ -18,14 +18,15 @@ if (!isset($_SESSION["aid"])) {
 
 <body>
     <div class="container">
-        <!-- <div class="header">
+        <div class="header">
             <div class="back">
                 <a href="../admin_home.php">
                     <ion-icon name="arrow-back-outline"></ion-icon>
                 </a>
             </div>
-        </div> -->
-        <!-- <div class="adminmainbox">
+        
+        </div>
+        <div class="adminmainbox">
             <div class="buttonbox">
                 <a href="#">
                     <ion-icon name="cash-outline"></ion-icon>
@@ -73,7 +74,7 @@ if (!isset($_SESSION["aid"])) {
                     </div>
                 </a>
             </div>
-           
+            <!-- ------------- -->
             <div class="buttonbox">
                 <a href="complete.php">
                     <ion-icon name="basket-outline"></ion-icon>
@@ -115,7 +116,7 @@ if (!isset($_SESSION["aid"])) {
                     </div>
                 </a>
             </div>
-      
+            <!-- ---------- -->
             <div class="buttonbox">
                 <a href="cart.php">
                     <ion-icon name="cart-outline"></ion-icon>
@@ -159,7 +160,7 @@ if (!isset($_SESSION["aid"])) {
                 <br>
             </div>
             <div class="buttonbox">
-                <a href="retailer.php">
+            <a href="retailer.php">
                     <ion-icon name="people-circle-outline"></ion-icon>
                     <div class="btn">
                         <h3>Retailer</h3>
@@ -199,125 +200,11 @@ if (!isset($_SESSION["aid"])) {
                     </div>
                 </a>
             </div>
-        </div> -->
-
-        <!-- -----------------------------
-    -----------------------------
-    ----------------------------- -->
-        <div class="admin">
-            <div class="toggle">
-
-            </div>
-            <div class="slider">
-                <?php include "../components/slider.php"; ?>
-            </div>
-            <div class="cb cb_dashboard">
-                <div class="short_box">
-                    <div class="box">
-                        <div class="text">
-                            <div class="title">Total Earning</div>
-                            <div class="number">5000৳</div>
-                        </div>
-                        <div class="icon">
-                            <span>
-                                <p>৳</p>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="text">
-                            <div class="title">Baki</div>
-                            <div class="number">600৳</div>
-                        </div>
-                        <div class="icon">
-                            <span>
-                                <ion-icon name="logo-usd"></ion-icon>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="text">
-                            <div class="title">Baki</div>
-                            <div class="number">600৳</div>
-                        </div>
-                        <div class="icon">
-                            <span>
-                                <ion-icon name="cart-outline"></ion-icon>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="text">
-                            <div class="title">Baki</div>
-                            <div class="number">600৳</div>
-                        </div>
-                        <div class="icon">
-                            <span>
-                                <ion-icon name="bag-add-outline"></ion-icon>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="pr">
-                    <div class="product_box">
-                        <div class="box">
-                            <div class="subbox">
-                                <div class="image">
-                                    <img src="../image/product/112-1122699_coca-cola-png-picture-soda-clipart-transparent-background.png" alt="">
-                                </div>
-                                <div class="name_price">
-                                    <div class="name">Pran Jush</div>
-                                    <div class="price">34৳</div>
-                                </div>
-                            </div>
-
-
-                        </div>
-                        <div class="box">
-                            <div class="subbox">
-                                <div class="image">
-                                    <img src="../image/product/112-1122699_coca-cola-png-picture-soda-clipart-transparent-background.png" alt="">
-                                </div>
-                                <div class="name_price">
-                                    <div class="name">Pran Jush</div>
-                                    <div class="price">34৳</div>
-                                </div>
-                            </div>
-
-
-                        </div>
-                    </div>
-                    <div class="retailer_box">
-                        <div class="box">
-                            <div class="image">
-                                <img src="" alt="">
-                            </div>
-                            <div class="info">
-                                <div class="name">Mohammad Russell</div>
-                                <div class="shop_name">Bhai Bhai Expo</div>
-                            </div>
-                            <div class="buy_info">
-                                <div class="total">466৳</div>
-                                <div class="percent">35.3%</div>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="image">
-                                <img src="" alt="">
-                            </div>
-                            <div class="info">
-                                <div class="name">Mohammad Russell</div>
-                                <div class="shop_name">Bhai Bhai Expo</div>
-                            </div>
-                            <div class="buy_info">
-                                <div class="total">466৳</div>
-                                <div class="percent">35.3%</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
+        <!-- ---------- -->
+
+    </div>
+
 </body>
 
 </html>
