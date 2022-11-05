@@ -1,0 +1,143 @@
+.slider {
+    height: 100vh;
+    color: aliceblue;
+    width: 20%;
+    min-width: 200px;
+    padding: 5px;
+    background: rgba(32, 32, 32, 0.995);
+
+    .header {
+        height: 20%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid rgba(245, 222, 179, 0.116);
+
+        img {
+            width: 70px;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+        }
+
+        .title {
+            margin: 5px 0px;
+            letter-spacing: 1px;
+        }
+    }
+
+    .box {
+        height: 70%;
+        padding: 10px;
+
+        ul {
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+            a {
+                width: 90%;
+                text-align: center;
+                font-size: 1.2rem;
+                margin: 10px 0px;
+                text-decoration: none;
+                color: aliceblue;
+                border-bottom: 1px solid rgba(95, 158, 160, 0);
+                padding: 5px;
+                transition: 1s;
+
+                &:hover {
+                    width: 100%;
+
+                    transition: 0.2s;
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.393);
+
+                }
+            }
+
+        }
+    }
+
+    .footer {
+        height: 9%;
+
+
+        a {
+            width: 100%;
+            padding: 7px;
+            font-size: 1.2rem;
+            margin: 10px 0px;
+            text-decoration: none;
+            color: rgba(240, 248, 255, 0.79);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid rgba(255, 235, 205, 0.166);
+            border-radius: 20px;
+
+            ion-icon {
+                font-size: 1.5rem;
+                margin: 0px 3px;
+            }
+
+            .title {}
+        }
+
+    }
+}
+// --------------------------------
+@media only screen and (max-width: 780px) {
+    .slider {
+      width: 50%;
+    display: none;
+    position: absolute;
+    z-index: 1;
+        .header {
+        
+    
+            img {
+            
+            }
+    
+            .title {
+              
+            }
+        }
+    
+        .box {
+        
+    
+            ul {
+        
+    
+                a {
+               
+    
+                    &:hover {
+                  
+    
+                    }
+                }
+    
+            }
+        }
+    
+        .footer {
+            height: 9%;
+    
+    
+            a {
+             
+    
+                ion-icon {
+                   
+                }
+    
+                .title {}
+            }
+    
+        }
+    }
+}

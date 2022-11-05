@@ -1,0 +1,81 @@
+.tity {
+    width: 100%;
+    text-align: center;
+
+    h1 {
+        text-align: center;
+        color: rgb(62, 62, 62);
+    }
+}
+
+.cb_order {
+    .order_box {
+        .box {}
+
+        .text {
+            .t {}
+
+            .n {}
+        }
+
+        .icon {
+            ion-icon {}
+        }
+    }
+    .list{
+        table{
+            tr{
+                th{}
+            }
+            tr{
+                td{
+                    img{}
+                    a{}
+                }
+            }
+        }
+    }
+}
+
+// -------------------------------------
+
+@media only screen and (max-width: 780px) {
+    .tity {
+        width: 100%;
+        text-align: center;
+    
+        h1 {
+            text-align: center;
+            color: rgb(62, 62, 62);
+        }
+    }
+    
+    .cb_order {
+        .order_box {
+            .box {}
+    
+            .text {
+                .t {}
+    
+                .n {}
+            }
+    
+            .icon {
+                ion-icon {}
+            }
+        }
+        .list{
+            table{
+                tr{
+                    th{}
+                }
+                tr{
+                    td{
+                        img{}
+                        a{}
+                    }
+                }
+            }
+        }
+    }
+}

@@ -19,7 +19,7 @@ if (!isset($_SESSION["aid"])) {
     <div class="container">
         <div class="header">
             <div class="back">
-                <a href="admin_home.php">
+                <a href="staffs.php">
                     <ion-icon name="arrow-back-outline"></ion-icon>
                 </a>
             </div>

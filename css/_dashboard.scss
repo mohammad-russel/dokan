@@ -1,0 +1,380 @@
+.acc {
+    max-width: 2500px;
+
+}
+
+.admin {
+    display: flex;
+
+    .toggle {
+        display: none;
+
+        .show,
+        .hide {
+            ion-icon {}
+        }
+    }
+
+    .cb {
+        padding: 20px;
+        height: 100vh;
+        width: 80%;
+        overflow: auto;
+
+        .short_box {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            .box {
+                width: 250px;
+                margin: 5px 10px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background: rgb(11, 46, 174);
+                padding: 10px;
+                border-radius: 10px;
+                color: aliceblue;
+
+                .text {
+                    .title {
+                        font-size: 0.8rem;
+                    }
+
+                    .number {
+                        font-size: 1.3rem;
+                    }
+                }
+
+                .icon {
+                    border: 1px solid rgb(230, 230, 230);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 10px;
+
+
+                    span {
+                        color: rgb(230, 230, 230);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        p {
+                            font-size: 1.5rem;
+                        }
+
+                        ion-icon {
+                            font-size: 1.6em;
+                        }
+                    }
+                }
+            }
+        }
+
+        .pr {
+
+            display: flex;
+
+            .product_box {
+                margin: 10px;
+                width: 60%;
+                padding: 8px;
+                background: rgb(137, 0, 91);
+                display: flex;
+                flex-direction: column;
+                border-radius: 10px;
+                color: rgb(224, 224, 224);
+                font-size: 0.8rem;
+
+                letter-spacing: 1px;
+                height: max-content;
+
+                .box {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin: 15px 0px;
+                    padding: 0px 10px;
+                    border-radius: 10px;
+
+                    .subbox {
+                        display: flex;
+                        align-items: center;
+
+                        .image {
+                            margin: 0px 5px;
+
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            img {
+                                border-radius: 10px;
+                                width: 50px;
+                                aspect-ratio: 1/1;
+                                object-fit: cover;
+                            }
+                        }
+
+                        .name_price {
+
+
+                            .name {}
+
+                            .price {}
+                        }
+                    }
+
+                    .statics {
+                        margin: 0px 10px;
+                        width: 50%;
+                        display: flex;
+                        align-items: center;
+
+                        .boxs {
+
+                            width: 90%;
+                            height: 10px;
+                            border-radius: 10px;
+
+                            .color {
+                                height: 100%;
+                                border-bottom-right-radius: 10px;
+                                border-top-right-radius: 10px;
+                                background: rgb(240, 229, 27);
+                            }
+                        }
+
+                        .percent {}
+                    }
+                }
+            }
+
+            .retailer_box {
+                margin: 10px;
+                width: 40%;
+                padding: 8px 15px;
+                background: rgb(31, 31, 31);
+                display: flex;
+                flex-direction: column;
+                border-radius: 10px;
+                color: rgb(224, 224, 224);
+
+                .box {
+
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin: 10px 0px;
+
+                    .subbox {
+                        display: flex;
+                        align-items: center;
+
+                        .image {
+                            margin: 0px 5px;
+
+                            img {
+                                border-radius: 50%;
+                                width: 40px;
+                                aspect-ratio: 1/1;
+                                object-fit: cover;
+                            }
+                        }
+
+                        .info {
+                            
+                            color: rgb(224, 224, 224);
+
+                            .name {
+                                font-size: 0.8rem;
+                                font-weight: 600;
+                                letter-spacing: 1px;
+                            }
+
+                            .shop_name {
+                                font-size: 0.8rem;
+
+
+                            }
+                        }
+                    }
+
+                    .buy_info {
+                      
+
+                        .total {
+                            font-size: 0.9rem;
+                            font-weight: 600;
+                            letter-spacing: 1px;
+                        }
+
+                        .percent {
+                            font-size: 0.9rem;
+                            font-weight: 600;
+                            letter-spacing: 1px;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+// ----------------------------
+
+@media only screen and (max-width: 780px) {
+    .acc {
+        max-width: 2500px;
+
+    }
+
+    .admin {
+
+        .toggle {
+            position: absolute;
+            z-index: 2;
+            display: block;
+            color: rgb(255, 255, 255);
+
+            .show,
+            .hide {
+                ion-icon {
+                  background: rgb(33, 33, 33);
+                    font-size: 1.5rem;
+                    margin: 5px;
+                    padding: 5px;
+                    cursor: pointer;
+                    border-radius: 10px;
+                }
+            }
+            .hide{
+                ion-icon{
+                  background: rgb(235, 235, 235);
+color: rgb(34, 34, 34);
+                }
+            }
+        }
+
+        .cb {
+       
+            width: 100%;
+padding: 10px;
+            .short_box {
+                display: flex;
+                justify-content: center;
+
+                .box {
+                    width: 250px;
+
+                    .text {
+                        .title {}
+
+                        .number {}
+                    }
+
+                    .icon {
+
+
+
+                        span {
+
+
+                            p {}
+
+                            ion-icon {}
+                        }
+                    }
+                }
+            }
+
+            .pr {
+                flex-direction: column;
+                width: 100%;
+
+                .product_box {
+                    width: 100%;
+margin: 10px 0px;
+                    .box {
+
+                        .subbox {
+
+
+                            .image {
+
+
+                                img {}
+                            }
+
+                            .name_price {
+
+
+                                .name {}
+
+                                .price {}
+                            }
+                        }
+
+                        .statics {
+
+
+                            .boxs {
+
+
+                                .color {}
+                            }
+
+                            .percent {}
+                        }
+                    }
+                }
+
+                .retailer_box {
+                    width: 100%;
+
+
+                    margin: 10px 0px;
+                    .box {
+
+
+                        .subbox {
+
+
+                            .image {
+                                margin: 0px 3px;
+
+                                img {}
+                            }
+
+                            .info {
+                             
+
+                                .name {}
+
+                                .shop_name {
+                                    font-size: 0.8rem;
+
+
+                                }
+                            }
+                        }
+
+                        .buy_info {
+
+
+                            .total {}
+
+                            .percent {}
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}

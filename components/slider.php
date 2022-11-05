@@ -1,20 +1,23 @@
 <div class="header">
-    <img src="../logo/fav.png" alt="">
-    <span class="title">ADMIN</span>
+    <a href="../index.php"><img src="../logo/fav.png" alt=""></a>
+    <span class="title"><a href="#">ADMIN</a></span>
 </div>
 <div class="box">
     <ul>
-        <a href="#">Dashboard</a>
-        <a href="#">Orders</a>
-        <a href="#">Staffs</a>
-        <a href="#">Products</a>
-        <a href="#">Set Days</a>
-        <a href="#">Categories</a>
+        <a href="admin_home.php">Dashboard</a>
+        <a href="manage_order.php">Orders</a>
+        <a href="staffs.php">Staffs</a>
+        <a href="admin_product.php">Products</a>
+        <a href="admin_setday.php">Set Days</a>
+        <a href="admin_categories.php">Categories</a>
     </ul>
 </div>
 <div class="footer">
     <span class="logout">
-        <ion-icon name="log-out-outline"></ion-icon>
-        <span class="title">Logout</span>
+        <a href="#">
+            <ion-icon name="log-out-outline"></ion-icon>
+            <span class="title">Logout</span>
+        </a>
+
     </span>
 </div>

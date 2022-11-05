@@ -1,0 +1,140 @@
+.cb_staffs {
+    padding: 10px;
+
+    .staffs_house {
+        .room {
+
+            margin: 10px;
+            padding: 10px;
+
+            .title {
+                font-size: 1.2rem;
+                letter-spacing: 1px;
+                border-bottom: 1px solid rgb(123, 123, 123);
+                border-top: 1px solid rgb(123, 123, 123);
+                margin-bottom: 10px;
+                color: rgb(41, 41, 41);
+                font-weight: 600;
+            }
+
+            .box {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+
+                .card {
+                    width: 150px;
+                    height: 300px;
+
+                    margin: 0px 5px;
+                    overflow: hidden;
+                    border-radius: 10px;
+
+                    a {
+                        width: 100%;
+                        height: 100%;
+                        text-decoration: none;
+                        color: rgb(33, 33, 33);
+
+                        .image {
+                            width: 100%;
+
+                            img {
+                                width: 100%;
+                                aspect-ratio: 1/1;
+                                object-fit: cover;
+                            }
+                        }
+
+                        .name {
+                            font-weight: 600;
+                            font-size: 1.1rem;
+                            letter-spacing: 0.5px;
+                            padding: 3px;
+                            color: rgb(43, 43, 43);
+                        }
+
+                        .company {
+                            padding: 3px;
+
+                        }
+
+                        .deller {
+                            padding: 3px;
+
+                        }
+
+                        .shop {
+                            padding: 3px;
+
+                        }
+
+                    }
+                }
+
+                .more {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background: rgb(86, 26, 131);
+
+                    a {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: rgb(255, 255, 255);
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// -------------------------------
+
+@media only screen and (max-width: 780px) {
+    .cb_staffs {
+padding: 10px;
+        .staffs_house {
+            .room {
+
+
+                .title {}
+
+                .box {
+
+                    .card {
+
+
+                        a {
+
+
+                            .image {
+
+
+                                img {}
+                            }
+
+                            .name {}
+
+                            .company {}
+
+                            .deller {}
+
+                            .shop {}
+
+                        }
+                    }
+
+                    .more {
+
+
+                        a {}
+                    }
+                }
+            }
+        }
+    }
+}

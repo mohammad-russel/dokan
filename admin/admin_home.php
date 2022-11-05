@@ -17,7 +17,7 @@ if (!isset($_SESSION["aid"])) {
 </head>
 
 <body>
-    <div class="container">
+    <div class="container acc">
         <!-- <div class="header">
             <div class="back">
                 <a href="../admin_home.php">
@@ -206,7 +206,12 @@ if (!isset($_SESSION["aid"])) {
     ----------------------------- -->
         <div class="admin">
             <div class="toggle">
-
+                <div class="show">
+                    <ion-icon name="layers-outline"></ion-icon>
+                </div>
+                <div class="hide">
+                    <ion-icon name="close-outline"></ion-icon>
+                </div>
             </div>
             <div class="slider">
                 <?php include "../components/slider.php"; ?>
@@ -270,7 +275,12 @@ if (!isset($_SESSION["aid"])) {
                                     <div class="price">34৳</div>
                                 </div>
                             </div>
-
+                            <div class="statics">
+                                <div class="boxs">
+                                    <div class="color" style="width:50%;"></div>
+                                </div>
+                                <div class="percent">50%</div>
+                            </div>
 
                         </div>
                         <div class="box">
@@ -283,32 +293,132 @@ if (!isset($_SESSION["aid"])) {
                                     <div class="price">34৳</div>
                                 </div>
                             </div>
+                            <div class="statics">
+                                <div class="boxs">
+                                    <div class="color" style="width:50%;"></div>
+                                </div>
+                                <div class="percent">50%</div>
+                            </div>
 
+                        </div>
+                        <div class="box">
+                            <div class="subbox">
+                                <div class="image">
+                                    <img src="../image/product/112-1122699_coca-cola-png-picture-soda-clipart-transparent-background.png" alt="">
+                                </div>
+                                <div class="name_price">
+                                    <div class="name">Pran Jush</div>
+                                    <div class="price">34৳</div>
+                                </div>
+                            </div>
+                            <div class="statics">
+                                <div class="boxs">
+                                    <div class="color" style="width:50%;"></div>
+                                </div>
+                                <div class="percent">50%</div>
+                            </div>
+
+                        </div>
+                        <div class="box">
+                            <div class="subbox">
+                                <div class="image">
+                                    <img src="../image/product/112-1122699_coca-cola-png-picture-soda-clipart-transparent-background.png" alt="">
+                                </div>
+                                <div class="name_price">
+                                    <div class="name">Pran Jush</div>
+                                    <div class="price">34৳</div>
+                                </div>
+                            </div>
+                            <div class="statics">
+                                <div class="boxs">
+                                    <div class="color" style="width:50%;"></div>
+                                </div>
+                                <div class="percent">50%</div>
+                            </div>
 
                         </div>
                     </div>
                     <div class="retailer_box">
                         <div class="box">
-                            <div class="image">
-                                <img src="" alt="">
+                            <div class="subbox">
+                                <div class="image">
+                                    <img src="../image/retailer/IMG20210306170213.jpg" alt="">
+                                </div>
+                                <div class="info">
+                                    <div class="name">Mohammad Russell</div>
+                                    <div class="shop_name">Bhai Bhai Expo</div>
+                                </div>
                             </div>
-                            <div class="info">
-                                <div class="name">Mohammad Russell</div>
-                                <div class="shop_name">Bhai Bhai Expo</div>
-                            </div>
+
+
                             <div class="buy_info">
                                 <div class="total">466৳</div>
                                 <div class="percent">35.3%</div>
                             </div>
                         </div>
                         <div class="box">
-                            <div class="image">
-                                <img src="" alt="">
+                            <div class="subbox">
+                                <div class="image">
+                                    <img src="../image/retailer/IMG20210306170213.jpg" alt="">
+                                </div>
+                                <div class="info">
+                                    <div class="name">Mohammad Russell</div>
+                                    <div class="shop_name">Bhai Bhai Expo</div>
+                                </div>
                             </div>
-                            <div class="info">
-                                <div class="name">Mohammad Russell</div>
-                                <div class="shop_name">Bhai Bhai Expo</div>
+
+
+                            <div class="buy_info">
+                                <div class="total">466৳</div>
+                                <div class="percent">35.3%</div>
                             </div>
+                        </div>
+                        <div class="box">
+                            <div class="subbox">
+                                <div class="image">
+                                    <img src="../image/retailer/IMG20210306170213.jpg" alt="">
+                                </div>
+                                <div class="info">
+                                    <div class="name">Mohammad Russell</div>
+                                    <div class="shop_name">Bhai Bhai Expo</div>
+                                </div>
+                            </div>
+
+
+                            <div class="buy_info">
+                                <div class="total">466৳</div>
+                                <div class="percent">35.3%</div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="subbox">
+                                <div class="image">
+                                    <img src="../image/retailer/IMG20210306170213.jpg" alt="">
+                                </div>
+                                <div class="info">
+                                    <div class="name">Mohammad Russell</div>
+                                    <div class="shop_name">Bhai Bhai Expo</div>
+                                </div>
+                            </div>
+
+
+                            <div class="buy_info">
+                                <div class="total">466৳</div>
+                                <div class="percent">35.3%</div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="subbox">
+                                <div class="image">
+                                    <img src="../image/retailer/IMG20210306170213.jpg" alt="">
+                                </div>
+                                <div class="info">
+                                    <div class="name">Mohammad Russell</div>
+                                    <div class="shop_name">Bhai Bhai Expo</div>
+                                </div>
+                            </div>
+
+
                             <div class="buy_info">
                                 <div class="total">466৳</div>
                                 <div class="percent">35.3%</div>
@@ -319,5 +429,6 @@ if (!isset($_SESSION["aid"])) {
             </div>
         </div>
 </body>
+<?php include "../components/script.php"; ?>
 
 </html>
