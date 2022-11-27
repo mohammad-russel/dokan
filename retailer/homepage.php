@@ -18,10 +18,41 @@ $rid = $_SESSION["rid"];
 
 <body>
     <div class="container">
-        <?php include "../components/header.php" ?>
-      
-        <div class="retailermain">
+        <div class="admin rt">
+            <div class="togglee">
+                <div class="show">
+                <ion-icon name="filter-outline"></ion-icon>
+                </div>
+                <div class="hide">
+                    <ion-icon name="close-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="slider">
+                <?php include "../components/slider1.php"; ?>
+            </div>
+            <div class="box">
+                <div class="retailer-header">
+                    <div class="space"></div>
+                    <div class="search">
+                        <input type="search" name="search" id="search" placeholder="Search product">
+                    </div>
+                    <div class="cart">
+                        <a href="cart.php">
+                            <span class="count"></span>
+                            <ion-icon name="cart-outline"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+                <div class="ads">
+                    <img src="https://www.fotor.com/blog/wp-content/uploads/2019/07/3-solid-background.png" alt="">
+                </div>
+                <div class="retailermain">
+                </div>
+            </div>
         </div>
+
+
+
     </div>
 </body>
 <script>
@@ -71,5 +102,6 @@ $rid = $_SESSION["rid"];
 
     })
 </script>
+<?php include "../components/script.php"; ?>
 
 </html>

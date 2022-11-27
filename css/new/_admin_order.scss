@@ -1,36 +1,132 @@
 .tity {
-    width: 100%;
+    width: 50%;
     text-align: center;
 
     h1 {
+        margin: auto;
+        width: 70%;
         text-align: center;
         color: rgb(62, 62, 62);
+
     }
 }
 
 .cb_order {
     .order_box {
-        .box {}
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .box {
+            width: 45%;
+            background: rgb(53, 53, 53);
+            margin: 6px;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: azure;
+            border-radius: 10px;
+            cursor: pointer;
+        }
 
         .text {
-            .t {}
+            .t {
+                font-size: 0.9rem;
+            }
 
-            .n {}
+            .n {
+                font-size: 1.5rem;
+
+            }
         }
 
         .icon {
-            ion-icon {}
+            border: 1px solid azure;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 6px;
+            border-radius: 5px;
+
+            ion-icon {
+                font-size: 1.8rem;
+            }
         }
     }
-    .list{
-        table{
-            tr{
-                th{}
+
+    .list {
+        .box {
+            width: 100%;
+
+            .title {
+                margin: 20px 0px;
+                border-bottom: 1px solid rgb(108, 108, 108);
+                border-top: 1px solid rgb(99, 99, 99);
+
+                h1 {
+                    text-align: center;
+                    color: rgb(69, 69, 69);
+                }
             }
-            tr{
-                td{
-                    img{}
-                    a{}
+
+            .column {
+
+                width: 100%;
+
+                .row {
+                    @include shadow;
+                    padding: 10px;
+                    border-radius: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+margin: 15px 10px;
+                    .image {
+                        img {
+                            width: 50px;
+                            height: 50px;
+                            object-fit: cover;
+                        }
+                    }
+
+                    .name,
+                    .quantity,
+                    .total,
+                    .retailer,
+                    .time {
+                        font-size: 0.8rem;
+                        color: rgb(107, 107, 107);
+                        font-weight: 600;
+                        margin: 2px 0px;
+
+                        span {
+                            font-size: 1.1rem;
+                            font-weight: 100;
+
+                            a {
+                                text-decoration: none;
+                                color: rgb(243, 243, 243);
+
+                                padding: 1px 10px;
+                                background: rgb(61, 61, 61);
+                                border-radius: 10px;
+                                font-size: 1rem;
+
+                            }
+                        }
+                    }
+
+                    .quantity {}
+
+                    .total {}
+
+                    .retailer {
+                        padding: 5px 0px;
+                    }
+
+                    .time {}
                 }
             }
         }
@@ -41,38 +137,88 @@
 
 @media only screen and (max-width: 780px) {
     .tity {
-        width: 100%;
-        text-align: center;
-    
-        h1 {
-            text-align: center;
-            color: rgb(62, 62, 62);
-        }
+
+
+        h1 {}
     }
-    
+
     .cb_order {
         .order_box {
             .box {}
-    
+
             .text {
                 .t {}
-    
+
                 .n {}
             }
-    
+
             .icon {
                 ion-icon {}
             }
         }
-        .list{
-            table{
-                tr{
-                    th{}
+
+        .list {
+
+
+            .box {
+                .title {
+                    h1 {}
                 }
-                tr{
-                    td{
-                        img{}
-                        a{}
+
+                .column {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    .row {
+                        width: 22%;
+                        min-width: 130px;
+                        flex-direction: column;
+                        text-align: start;
+                        text-align: center;
+
+
+                        .image,
+                        .name,
+                        .quantity,
+                        .total,
+                        .retailer,
+                        .time {
+                            width: 100%;
+                        }
+
+                        .image {
+                            text-align: center;
+
+                            img {}
+                        }
+
+                        .name,
+                        .quantity,
+                        .total,
+                        .retailer,
+                        .time {
+
+                            border-bottom: 1px solid rgb(223, 223, 223);
+
+                            span {
+
+
+                                a {}
+                            }
+                        }
+
+                        .name {}
+
+                        .quantity {}
+
+                        .total {}
+
+                        .retailer {
+
+                            a {}
+                        }
+
+                        .time {}
                     }
                 }
             }

@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
     $(document).ready(function() {
         $(".hide").hide();
         $(".show").click(function() {
@@ -15,4 +15,4 @@
 
         })
     })
-</script>
+</script> -->

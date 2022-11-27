@@ -36,10 +36,30 @@ if (!isset($_SESSION["aid"])) {
         ?>
             <div class="sr_overview">
                 <div class="head">
+                    <div class="edit">
+                        <ion-icon class="editsr" name="create-outline"></ion-icon>
+                        <div class="popup">
+                            <div class="close">
+                                <ion-icon name="close-outline"></ion-icon>
+                            </div>
+                            <form action="../php/update_retailer.php" method="post" enctype="multipart/form-data">
+                                <input type="hidden" name="id" id="id" value="<?php echo $row['id'] ?>">
+                                <input type="text" name="name" id="name" placeholder="Name" value="<?php echo $row['nam'] ?>">
+                                <input type="text" name="shop" id="shop" placeholder="Shop Name" value="<?php echo $row['shopname'] ?>">
+                                <input type="number" name="number" id="number" placeholder="Number" value="<?php echo $row['num'] ?>">
+                                <input type="text" name="area" id="area" placeholder="area" value="<?php echo $row['area'] ?>">
+                                <input type="submit" name="update" class="newretinsert" value="UPDATE">
+                            </form>
+                        </div>
+                    </div>
                     <div class="image">
                         <img style="width:100px ;" src="../image/retailer/<?php echo $row['retailerpic'] ?>" alt="">
                     </div>
-
+                    <div class="delete">
+                        <a href="../php/delete_retailer.php?id=<?php echo $row['id'] ?>">
+                            <ion-icon name="trash-outline"></ion-icon>
+                        </a>
+                    </div>
                 </div>
                 <div class="info">
                     <div class="left">
@@ -57,18 +77,28 @@ if (!isset($_SESSION["aid"])) {
                         <div class="box">
                             <h3>Opener</h3>
                             <?php
-                           $sr = $row['openersr'];
-                           $sql2 = "SELECT * FROM sr WHERE id = $sr";
-                           $query2 = mysqli_query($con, $sql2);
-                           $row2 = mysqli_fetch_assoc($query2);
-                           ?>
-                          <p><?php echo $row2['srnum'];?></p>
+                            $sr = $row['openersr'];
+                            $sql2 = "SELECT * FROM sr WHERE id = $sr";
+                            $query2 = mysqli_query($con, $sql2);
+                            $row2 = mysqli_fetch_assoc($query2);
+                            if (mysqli_num_rows($query2)) {
+                                $e = "<p>  {$row2['srnum']} </p>";
+                                echo $e;
+                            } else {
+                                echo "<p class='sd'>SR deleted</p>";
+                            }
+                            ?>
+
                         </div>
                     </div>
                     <div class="middle">
                         <div class="name"><?php echo $row['nam'] ?></div>
+                        <div class="shop"><?php echo $row['shopname'] ?></div>
                         <div class="number">Number : <?php echo $row['num'] ?></div>
                         <div class="password">Password : <?php echo $row['pass'] ?></div>
+                        <div class="zila">Zila : <?php echo $row['zila'] ?></div>
+                        <div class="village">Village : <?php echo $row['village'] ?></div>
+                        <div class="area">area : <?php echo $row['area'] ?></div>
 
                     </div>
                     <div class="right">
@@ -104,5 +134,19 @@ if (!isset($_SESSION["aid"])) {
     </div>
 
 </body>
+<script>
+    $(document).ready(function() {
+        function load() {
+            $(".popup").hide();
+        }
+        load()
+        $(".editsr").click(function() {
+            $(".popup").fadeIn();
+        })
+        $(".close").click(function() {
+            $(".popup").fadeOut();
+        })
+    })
+</script>
 
 </html>

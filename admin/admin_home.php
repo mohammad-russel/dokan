@@ -221,7 +221,17 @@ if (!isset($_SESSION["aid"])) {
                     <div class="box">
                         <div class="text">
                             <div class="title">Total Earning</div>
-                            <div class="number">5000৳</div>
+                            <div class="number"> <?php
+                                                    include "../php/config.php";
+                                                    $sql = "SELECT *,SUM(quantity*price) AS total FROM cart WHERE status = 'complete'";
+                                                    $result = mysqli_query($con, $sql);
+                                                    if (mysqli_num_rows($result)) {
+                                                        while ($row = mysqli_fetch_assoc($result)) {
+                                                    ?>
+                                        <p>৳<?php echo $row['total'] ?>/-</p>
+                                <?php }
+                                                    } ?>
+                            </div>
                         </div>
                         <div class="icon">
                             <span>
@@ -232,7 +242,18 @@ if (!isset($_SESSION["aid"])) {
                     <div class="box">
                         <div class="text">
                             <div class="title">Baki</div>
-                            <div class="number">600৳</div>
+                            <div class="number">
+                                <?php
+                                include "../php/config.php";
+                                $sql = "SELECT *,SUM(quantity*price) AS total FROM cart WHERE status = 'baki'";
+                                $result = mysqli_query($con, $sql);
+                                if (mysqli_num_rows($result)) {
+                                    while ($row = mysqli_fetch_assoc($result)) {
+                                ?>
+                                        <p>৳<?php echo $row['total'] ?>/-</p>
+                                <?php }
+                                } ?>
+                            </div>
                         </div>
                         <div class="icon">
                             <span>
@@ -242,101 +263,93 @@ if (!isset($_SESSION["aid"])) {
                     </div>
                     <div class="box">
                         <div class="text">
-                            <div class="title">Baki</div>
-                            <div class="number">600৳</div>
+                            <div class="title">Retailers</div>
+                            <div class="number"> <?php
+                                                    include "../php/config.php";
+                                                    $sql = "SELECT * FROM retailer";
+                                                    $result = mysqli_query($con, $sql);
+                                                    $hm = mysqli_num_rows($result);
+                                                    ?>
+                                <p><?php echo $hm ?></p>
+                            </div>
                         </div>
                         <div class="icon">
                             <span>
-                                <ion-icon name="cart-outline"></ion-icon>
+                                <ion-icon name="person-circle-outline"></ion-icon>
                             </span>
                         </div>
                     </div>
                     <div class="box">
                         <div class="text">
-                            <div class="title">Baki</div>
-                            <div class="number">600৳</div>
+                            <div class="title">Products</div>
+                            <div class="number"> <?php
+                                                    include "../php/config.php";
+                                                    $sql = "SELECT * FROM product";
+                                                    $result = mysqli_query($con, $sql);
+                                                    $hm = mysqli_num_rows($result);
+                                                    ?>
+                                <p><?php echo $hm ?></p>
+                            </div>
                         </div>
                         <div class="icon">
                             <span>
-                                <ion-icon name="bag-add-outline"></ion-icon>
+                                <ion-icon name="basket-outline"></ion-icon>
                             </span>
                         </div>
                     </div>
                 </div>
                 <div class="pr">
                     <div class="product_box">
-                        <div class="box">
-                            <div class="subbox">
-                                <div class="image">
-                                    <img src="../image/product/112-1122699_coca-cola-png-picture-soda-clipart-transparent-background.png" alt="">
-                                </div>
-                                <div class="name_price">
-                                    <div class="name">Pran Jush</div>
-                                    <div class="price">34৳</div>
-                                </div>
-                            </div>
-                            <div class="statics">
-                                <div class="boxs">
-                                    <div class="color" style="width:50%;"></div>
-                                </div>
-                                <div class="percent">50%</div>
-                            </div>
+                        <?php
+                        @include "../php/config.php";
+                        $sql = "SELECT DISTINCT pid FROM cart WHERE `status` = 'complete' ";
+                        $result = mysqli_query($con, $sql);
+                        if (mysqli_num_rows($result)) {
+                            while ($row = mysqli_fetch_assoc($result)) {
+                        ?>
+                                <div class="box">
+                                    <div class="subbox">
+                                        <div class="image">
+                                            <?php
+                                            @include "../php/config.php";
+                                            $pid = $row['pid'];
+                                            $sql1 = "SELECT * FROM product WHERE id = $pid ";
+                                            $result1 = mysqli_query($con, $sql1);
+                                            $row1 = mysqli_fetch_assoc($result1);
+                                            ?>
+                                            <img src="../image/product/<?php echo $row1['pic'] ?>" alt="">
+                                        </div>
+                                        <div class="name_price">
+                                            <div class="name"><?php echo $row1['nam'] ?></div>
+                                            <div class="price"><?php echo $row1['price'] ?>৳</div>
+                                        </div>
+                                    </div>
+                                    <?php
+                                    @include "../php/config.php";
+                                    $sql2 = "SELECT SUM(quantity) AS tq FROM cart WHERE `status` = 'complete' AND pid =$pid ";
+                                    $result2 = mysqli_query($con, $sql2);
+                                    $row2 = mysqli_fetch_assoc($result2);
+                                    $t_quantity = $row2['tq'];
+                                    $price = $row1['price'];
+                                    $total_per = $t_quantity * $price;
 
-                        </div>
-                        <div class="box">
-                            <div class="subbox">
-                                <div class="image">
-                                    <img src="../image/product/112-1122699_coca-cola-png-picture-soda-clipart-transparent-background.png" alt="">
-                                </div>
-                                <div class="name_price">
-                                    <div class="name">Pran Jush</div>
-                                    <div class="price">34৳</div>
-                                </div>
-                            </div>
-                            <div class="statics">
-                                <div class="boxs">
-                                    <div class="color" style="width:50%;"></div>
-                                </div>
-                                <div class="percent">50%</div>
-                            </div>
+                                    include "../php/config.php";
+                                    $sql3 = "SELECT *,SUM(quantity*price) AS total FROM cart WHERE status = 'complete'";
+                                    $result3 = mysqli_query($con, $sql3);
+                                    $row3 = mysqli_fetch_assoc($result3);
+                                    $full_total = $row3['total'];
+                                    $percent = $total_per * 100 / $full_total;
+                                    ?>
+                                    <div class="statics">
+                                        <div class="boxs">
+                                            <div class="color" style="width:<?php echo $percent ?>%;"></div>
+                                        </div>
+                                        <div class="percent"><?php echo number_format($percent, 1)  ?>%</div>
+                                    </div>
 
-                        </div>
-                        <div class="box">
-                            <div class="subbox">
-                                <div class="image">
-                                    <img src="../image/product/112-1122699_coca-cola-png-picture-soda-clipart-transparent-background.png" alt="">
                                 </div>
-                                <div class="name_price">
-                                    <div class="name">Pran Jush</div>
-                                    <div class="price">34৳</div>
-                                </div>
-                            </div>
-                            <div class="statics">
-                                <div class="boxs">
-                                    <div class="color" style="width:50%;"></div>
-                                </div>
-                                <div class="percent">50%</div>
-                            </div>
-
-                        </div>
-                        <div class="box">
-                            <div class="subbox">
-                                <div class="image">
-                                    <img src="../image/product/112-1122699_coca-cola-png-picture-soda-clipart-transparent-background.png" alt="">
-                                </div>
-                                <div class="name_price">
-                                    <div class="name">Pran Jush</div>
-                                    <div class="price">34৳</div>
-                                </div>
-                            </div>
-                            <div class="statics">
-                                <div class="boxs">
-                                    <div class="color" style="width:50%;"></div>
-                                </div>
-                                <div class="percent">50%</div>
-                            </div>
-
-                        </div>
+                        <?php }
+                        } ?>
                     </div>
                     <div class="retailer_box">
                         <div class="box">
@@ -429,6 +442,23 @@ if (!isset($_SESSION["aid"])) {
             </div>
         </div>
 </body>
-<?php include "../components/script.php"; ?>
+<script>
+    $(document).ready(function() {
+        $(".hide").hide();
+        $(".show").click(function() {
+            $(".hide").fadeIn();
+            $(".show").slideUp();
+          
+            $(".slider").slideDown()
+            
+        })
+        $(".hide").click(function() {
+            $(".hide").fadeOut();
+            $(".show").slideDown();
+            $(".slider").slideUp()
+
+        })
+    })
+</script>
 
 </html>

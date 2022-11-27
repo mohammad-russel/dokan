@@ -1,0 +1,55 @@
+.pro-popup {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.133);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .box-more {
+        width: 200px;
+        height: max-content;
+        padding: 30px 10px;
+        background: rgb(55, 55, 55);
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+
+        .close-box {
+            width: 100%;
+            text-align: right;
+            position: absolute;
+            top: 0;
+            right: 0;
+            color: rgb(40, 40, 40);
+
+            ion-icon {
+                padding: 5px;
+                background: rgb(225, 225, 225);
+            }
+        }
+
+        .update,
+        .overview,
+        .delete {
+            margin: 25px 2px;
+            width: 100%;
+
+            a {
+                width: 100%;
+                background: rgb(220, 220, 220);
+                border-radius: 5px;
+                padding: 5px 15px;
+                text-decoration: none;
+                color: black;
+            }
+        }
+
+
+    }
+}

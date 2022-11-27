@@ -14,44 +14,35 @@ $rid = $_SESSION["rid"];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php include "../components/head2.php"; ?>
     <title>SR Homepage</title>
-<style>
-  
-</style>
+    <style>
+
+    </style>
 </head>
 
 <body>
     <div class="container">
-        <header>
-            <div class="logo">
-                <h1>
-            <a href="homepage.php">
-                <img class="logoh" src="../logo/file.png" alt="">
-            </a>
-                </h1>
+        <div class="admin rt">
+            <div class="togglee">
+                <div class="show">
+                    <ion-icon name="layers-outline"></ion-icon>
+                </div>
+                <div class="hide">
+                    <ion-icon name="close-outline"></ion-icon>
+                </div>
             </div>
-            <nav>
-                <ul>
-                    <a href="homepage.php">Home</a>
-                    <a href="contact.php">Contact</a>
-                    <a href="shop.php">Shop</a>
-                </ul>
-            </nav>
-            <div class="link">
-                <a href="../php/retailer_logout.php">
-                    <ion-icon name="log-out-outline"></ion-icon>
-                </a>
-                <a href="user.php">
-                    <ion-icon name="person-outline"></ion-icon>
-                </a>
-
+            <div class="slider">
+                <?php include "../components/slider1.php"; ?>
             </div>
-        </header>
-        <div class="cart_room">
-            <form action="../php/cart_status_update.php" method="post">
-                <input type="hidden" name="status" id="status" value="order">
-                <input type="submit"  name="order" value="order">
-            </form>
+            <div class="box">
+                <div class="cart_room">
+                    <form action="../php/cart_status_update.php" method="post">
+                        <input type="hidden" name="status" id="status" value="order">
+                        <input type="submit" name="order" value="order">
+                    </form>
+                </div>
+            </div>
         </div>
+
     </div>
 </body>
 <script>
@@ -71,5 +62,6 @@ $rid = $_SESSION["rid"];
 
     })
 </script>
+<?php include "../components/script.php"; ?>
 
 </html>

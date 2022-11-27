@@ -32,13 +32,21 @@ if (!isset($_SESSION["aid"])) {
             </div>
             <!-- --------------------------- -->
             <div class="cb cb_order">
-            <span class="tity"><h1>Orders, Bakis, Completes & Carts</h1></span>
+                <span class="tity">
+                    <h1>Orders, Bakis, Completes & Carts</h1>
+                </span>
 
                 <div class="order_box">
                     <div class="box box_order">
                         <div class="text">
                             <div class="t">Orders</div>
-                            <div class="n">40</div>
+                            <?php
+                            include "../php/config.php";
+                            $sql = "SELECT * FROM cart WHERE status = 'order'";
+                            $result = mysqli_query($con, $sql);
+                            $order = mysqli_num_rows($result);
+                            ?>
+                            <div class="n"><?php echo $order ?></div>
                         </div>
                         <div class="icon">
                             <ion-icon name="bicycle-outline"></ion-icon>
@@ -47,7 +55,13 @@ if (!isset($_SESSION["aid"])) {
                     <div class="box box_baki">
                         <div class="text">
                             <div class="t">Baki</div>
-                            <div class="n">23</div>
+                            <?php
+                            include "../php/config.php";
+                            $sql = "SELECT * FROM cart WHERE status = 'baki'";
+                            $result = mysqli_query($con, $sql);
+                            $order = mysqli_num_rows($result);
+                            ?>
+                            <div class="n"><?php echo $order ?></div>
                         </div>
                         <div class="icon">
                             <ion-icon name="time-outline"></ion-icon>
@@ -56,7 +70,13 @@ if (!isset($_SESSION["aid"])) {
                     <div class="box box_complete">
                         <div class="text">
                             <div class="t">Complete</div>
-                            <div class="n">32</div>
+                            <?php
+                            include "../php/config.php";
+                            $sql = "SELECT * FROM cart WHERE status = 'complete'";
+                            $result = mysqli_query($con, $sql);
+                            $complete = mysqli_num_rows($result);
+                            ?>
+                            <div class="n"><?php echo $complete ?></div>
                         </div>
                         <div class="icon">
                             <ion-icon name="bag-check-outline"></ion-icon>
@@ -65,7 +85,13 @@ if (!isset($_SESSION["aid"])) {
                     <div class="box box_cart">
                         <div class="text">
                             <div class="t">Cart</div>
-                            <div class="n">57</div>
+                            <?php
+                            include "../php/config.php";
+                            $sql = "SELECT * FROM cart WHERE status = 'cart'";
+                            $result = mysqli_query($con, $sql);
+                            $cart = mysqli_num_rows($result);
+                            ?>
+                            <div class="n"><?php echo $cart ?></div>
                         </div>
                         <div class="icon">
                             <ion-icon name="cart-outline"></ion-icon>
@@ -73,88 +99,208 @@ if (!isset($_SESSION["aid"])) {
                     </div>
                 </div>
                 <div class="list list_order">
-                    <table>
-                        <tr>
-                            <th>Image</th>
-                            <th>Name/Price</th>
-                            <th>Quantity</th>
-                            <th>Total</th>
-                            <th>Retailer</th>
-                            <th>Time</th>
-                        </tr>
-                        <tr>
-                            <td><img src="../image/product/olive-garden-italian-dressing.jpg" alt=""></td>
-                            <td>Cup Of Coffe <br> 124৳</td>
-                            <td>5</td>
-                            <td>473৳</td>
-                            <td><a href="">Mina Khan</a></td>
-                            <td>02.04.05||01.14.32</td>
-                        </tr>
+                    <div class="box">
+                        <div class="title">
+                            <h1>Order</h1>
+                        </div>
+                        <div class="column">
+                            <?php
+                            include "../php/config.php";
+                            $sql = "SELECT *, price*quantity AS total FROM cart WHERE `status` = 'order' ";
+                            $result = mysqli_query($con, $sql);
+                            if (mysqli_num_rows($result)) {
+                                while ($row = mysqli_fetch_assoc($result)) {
 
-                    </table>
+                            ?>
+                                    <div class="row">
+                                        <?php
+                                        $id = $row['pid'];
+                                        $sql1 = " SELECT * FROM product WHERE id = $id";
+                                        $result1 = mysqli_query($con, $sql1);
+                                        $row1 = mysqli_fetch_assoc($result1);
+                                        ?>
+                                        <div class="image">
+                                            <img src="../image/product/<?php echo $row1['pic'] ?>" alt="ww">
+                                        </div>
+                                        <div class="name">
+                                            <?php echo $row1['nam'] ?> <br> <span><?php echo $row1['price'] ?></span>
+                                        </div>
+                                        <div class="quantity">
+                                            Quantity <br> <span><?php echo $row['quantity'] ?></span>
+                                        </div>
+                                        <div class="total">
+                                            Total <br> <span><?php echo $row['total'] ?>৳</span>
+                                        </div>
+                                        <div class="retailer">
+                                            <?php
+                                            $rid = $row['rid'];
+                                            $sql2 = " SELECT * FROM retailer WHERE id = $rid";
+                                            $result2 = mysqli_query($con, $sql2);
+                                            $row2 = mysqli_fetch_assoc($result2);
+                                            ?>
+                                            Retailer <br> <span><a href="#"><?php echo $row2['nam'] ?></a></span>
+                                        </div>
+                                        <div class="time">
+                                            Time <br> <span><?php echo $row['time'] ?></span>
+                                        </div>
+                                    </div>
+                            <?php }
+                            } ?>
+                        </div>
+                    </div>
                 </div>
                 <div class="list list_baki">
-                    <table>
-                        <tr>
-                            <th>Image</th>
-                            <th>Name/Price</th>
-                            <th>Quantity</th>
-                            <th>Total</th>
-                            <th>Retailer</th>
-                            <th>Time</th>
-                        </tr>
-                        <tr>
-                            <td><img src="../image/product/IMG_20190512_212238-removebg.png" alt=""></td>
-                            <td>Cup Of Coffe <br> 124৳</td>
-                            <td>5</td>
-                            <td>473৳</td>
-                            <td><a href="">Mina Khan</a></td>
-                            <td>02.04.05||01.14.32</td>
-                        </tr>
+                    <div class="box">
+                        <div class="title">
+                            <h1>Baki</h1>
+                        </div>
+                        <div class="column">
+                            <?php
+                            include "../php/config.php";
+                            $sql = "SELECT *, price*quantity AS total FROM cart WHERE `status` = 'baki' ";
+                            $result = mysqli_query($con, $sql);
+                            if (mysqli_num_rows($result)) {
+                                while ($row = mysqli_fetch_assoc($result)) {
 
-                    </table>
+                            ?>
+                                    <div class="row">
+                                        <?php
+                                        $id = $row['pid'];
+                                        $sql1 = " SELECT * FROM product WHERE id = $id";
+                                        $result1 = mysqli_query($con, $sql1);
+                                        $row1 = mysqli_fetch_assoc($result1);
+                                        ?>
+                                        <div class="image">
+                                            <img src="../image/product/<?php echo $row1['pic'] ?>" alt="ww">
+                                        </div>
+                                        <div class="name">
+                                            <?php echo $row1['nam'] ?> <br> <span><?php echo $row1['price'] ?></span>
+                                        </div>
+                                        <div class="quantity">
+                                            Quantity <br> <span><?php echo $row['quantity'] ?></span>
+                                        </div>
+                                        <div class="total">
+                                            Total <br> <span><?php echo $row['total'] ?>৳</span>
+                                        </div>
+                                        <div class="retailer">
+                                            <?php
+                                            $rid = $row['rid'];
+                                            $sql2 = " SELECT * FROM retailer WHERE id = $rid";
+                                            $result2 = mysqli_query($con, $sql2);
+                                            $row2 = mysqli_fetch_assoc($result2);
+                                            ?>
+                                            Retailer <br> <span><a href="#"><?php echo $row2['nam'] ?></a></span>
+                                        </div>
+                                        <div class="time">
+                                            Time <br> <span><?php echo $row['time'] ?></span>
+                                        </div>
+                                    </div>
+                            <?php }
+                            } ?>
+                        </div>
+                    </div>
                 </div>
                 <div class="list list_complete">
-                    <table>
-                        <tr>
-                            <th>Image</th>
-                            <th>Name/Price</th>
-                            <th>Quantity</th>
-                            <th>Total</th>
-                            <th>Retailer</th>
-                            <th>Time</th>
-                        </tr>
-                        <tr>
-                            <td><img src="../image/product/IKIGAI1_1024x1024.jpg" alt=""></td>
-                            <td>Cup Of Coffe <br> 124৳</td>
-                            <td>5</td>
-                            <td>473৳</td>
-                            <td><a href="">Mina Khan</a></td>
-                            <td>02.04.05||01.14.32</td>
-                        </tr>
+                    <div class="box">
+                        <div class="title">
+                            <h1>Complete</h1>
+                        </div>
+                        <div class="column">
+                            <?php
+                            include "../php/config.php";
+                            $sql = "SELECT *, price*quantity AS total FROM cart WHERE `status` = 'complete' ";
+                            $result = mysqli_query($con, $sql);
+                            if (mysqli_num_rows($result)) {
+                                while ($row = mysqli_fetch_assoc($result)) {
 
-                    </table>
+                            ?>
+                                    <div class="row">
+                                        <?php
+                                        $id = $row['pid'];
+                                        $sql1 = " SELECT * FROM product WHERE id = $id";
+                                        $result1 = mysqli_query($con, $sql1);
+                                        $row1 = mysqli_fetch_assoc($result1);
+                                        ?>
+                                        <div class="image">
+                                            <img src="../image/product/<?php echo $row1['pic'] ?>" alt="ww">
+                                        </div>
+                                        <div class="name">
+                                            <?php echo $row1['nam'] ?> <br> <span><?php echo $row1['price'] ?></span>
+                                        </div>
+                                        <div class="quantity">
+                                            Quantity <br> <span><?php echo $row['quantity'] ?></span>
+                                        </div>
+                                        <div class="total">
+                                            Total <br> <span><?php echo $row['total'] ?>৳</span>
+                                        </div>
+                                        <div class="retailer">
+                                            <?php
+                                            $rid = $row['rid'];
+                                            $sql2 = " SELECT * FROM retailer WHERE id = $rid";
+                                            $result2 = mysqli_query($con, $sql2);
+                                            $row2 = mysqli_fetch_assoc($result2);
+                                            ?>
+                                            Retailer <br> <span><a href="#"><?php echo $row2['nam'] ?></a></span>
+                                        </div>
+                                        <div class="time">
+                                            Time <br> <span><?php echo $row['time'] ?></span>
+                                        </div>
+                                    </div>
+                            <?php }
+                            } ?>
+                        </div>
+                    </div>
                 </div>
                 <div class="list list_cart">
-                    <table>
-                        <tr>
-                            <th>Image</th>
-                            <th>Name/Price</th>
-                            <th>Quantity</th>
-                            <th>Total</th>
-                            <th>Retailer</th>
-                            <th>Time</th>
-                        </tr>
-                        <tr>
-                            <td><img src="../image/product/71cw9tyLmPL._SX425_.jpg" alt=""></td>
-                            <td>Cup Of Coffe <br> 124৳</td>
-                            <td>5</td>
-                            <td>473৳</td>
-                            <td><a href="">Mina Khan</a></td>
-                            <td>02.04.05||01.14.32</td>
-                        </tr>
+                    <div class="box">
+                        <div class="title">
+                            <h1>Cart</h1>
+                        </div>
+                        <div class="column">
+                            <?php
+                            include "../php/config.php";
+                            $sql = "SELECT *, price*quantity AS total FROM cart WHERE `status` = 'cart' ";
+                            $result = mysqli_query($con, $sql);
+                            if (mysqli_num_rows($result)) {
+                                while ($row = mysqli_fetch_assoc($result)) {
 
-                    </table>
+                            ?>
+                                    <div class="row">
+                                        <?php
+                                        $id = $row['pid'];
+                                        $sql1 = " SELECT * FROM product WHERE id = $id";
+                                        $result1 = mysqli_query($con, $sql1);
+                                        $row1 = mysqli_fetch_assoc($result1);
+                                        ?>
+                                        <div class="image">
+                                            <img src="../image/product/<?php echo $row1['pic'] ?>" alt="ww">
+                                        </div>
+                                        <div class="name">
+                                            <?php echo $row1['nam'] ?> <br> <span><?php echo $row1['price'] ?></span>
+                                        </div>
+                                        <div class="quantity">
+                                            Quantity <br> <span><?php echo $row['quantity'] ?></span>
+                                        </div>
+                                        <div class="total">
+                                            Total <br> <span><?php echo $row['total'] ?>৳</span>
+                                        </div>
+                                        <div class="retailer">
+                                            <?php
+                                            $rid = $row['rid'];
+                                            $sql2 = " SELECT * FROM retailer WHERE id = $rid";
+                                            $result2 = mysqli_query($con, $sql2);
+                                            $row2 = mysqli_fetch_assoc($result2);
+                                            ?>
+                                            Retailer <br> <span><a href="#"><?php echo $row2['nam'] ?></a></span>
+                                        </div>
+                                        <div class="time">
+                                            Time <br> <span><?php echo $row['time'] ?></span>
+                                        </div>
+                                    </div>
+                            <?php }
+                            } ?>
+                        </div>
+                    </div>
                 </div>
 
             </div>

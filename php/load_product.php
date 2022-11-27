@@ -21,7 +21,7 @@ if (mysqli_num_rows($result)) { ?>
                 </div>
                 <?php
                 date_default_timezone_set('Asia/Dhaka');
-                $time = date("Y/m/d || h/i/s");
+                $time = date("Y.m.d || h.i.s");
                 ?>
                 <div class="price">$ <?php echo $row['price'] ?></div>
                 <div class="name"><?php echo $row['nam'] ?></div>

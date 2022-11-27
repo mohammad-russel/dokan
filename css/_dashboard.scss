@@ -5,6 +5,7 @@
 
 .admin {
     display: flex;
+    height: 96vh;
 
     .toggle {
         display: none;
@@ -25,14 +26,15 @@
             display: flex;
 
             flex-wrap: wrap;
+            justify-content: center;
 
             .box {
-                width: 250px;
+                width: 43%;
                 margin: 5px 10px;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                background: rgb(11, 46, 174);
+                background: rgba(31, 0, 98, 0.697);
                 padding: 10px;
                 border-radius: 10px;
                 color: aliceblue;
@@ -83,7 +85,7 @@
                 margin: 10px;
                 width: 60%;
                 padding: 8px;
-                background: rgb(137, 0, 91);
+                background: rgba(137, 0, 91, 0.698);
                 display: flex;
                 flex-direction: column;
                 border-radius: 10px;
@@ -140,12 +142,12 @@
                             width: 90%;
                             height: 10px;
                             border-radius: 10px;
-
+margin: 0px 10px;
                             .color {
                                 height: 100%;
                                 border-bottom-right-radius: 10px;
                                 border-top-right-radius: 10px;
-                                background: rgb(240, 229, 27);
+                                background: rgb(218, 210, 75);
                             }
                         }
 
@@ -158,11 +160,11 @@
                 margin: 10px;
                 width: 40%;
                 padding: 8px 15px;
-                background: rgb(31, 31, 31);
+              
                 display: flex;
                 flex-direction: column;
                 border-radius: 10px;
-                color: rgb(224, 224, 224);
+            @include text-color;
 
                 .box {
 
@@ -187,9 +189,10 @@
                         }
 
                         .info {
-                            
-                            color: rgb(224, 224, 224);
 
+                            @include text-color;
+
+margin: 0px 10px;
                             .name {
                                 font-size: 0.8rem;
                                 font-weight: 600;
@@ -205,7 +208,7 @@
                     }
 
                     .buy_info {
-                      
+
 
                         .total {
                             font-size: 0.9rem;
@@ -236,6 +239,7 @@
 
     .admin {
 
+
         .toggle {
             position: absolute;
             z-index: 2;
@@ -245,32 +249,34 @@
             .show,
             .hide {
                 ion-icon {
-                  background: rgb(33, 33, 33);
+                    background: rgb(255, 255, 255);
                     font-size: 1.5rem;
-                    margin: 5px;
+                    color: black;
                     padding: 5px;
                     cursor: pointer;
-                    border-radius: 10px;
+
                 }
             }
-            .hide{
-                ion-icon{
-                  background: rgb(235, 235, 235);
-color: rgb(34, 34, 34);
+
+            .hide {
+                ion-icon {
+                    background: rgb(40, 40, 40);
+                    color: rgb(225, 225, 225);
                 }
             }
         }
 
         .cb {
-       
+
             width: 100%;
-padding: 10px;
+            padding: 10px;
+
             .short_box {
                 display: flex;
                 justify-content: center;
 
                 .box {
-                    width: 250px;
+
 
                     .text {
                         .title {}
@@ -299,7 +305,8 @@ padding: 10px;
 
                 .product_box {
                     width: 100%;
-margin: 10px 0px;
+                    margin: 10px 0px;
+
                     .box {
 
                         .subbox {
@@ -339,6 +346,7 @@ margin: 10px 0px;
 
 
                     margin: 10px 0px;
+
                     .box {
 
 
@@ -352,7 +360,7 @@ margin: 10px 0px;
                             }
 
                             .info {
-                             
+
 
                                 .name {}
 

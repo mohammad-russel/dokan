@@ -37,17 +37,17 @@ if (!isset($_SESSION["aid"])) {
                     <input type="file" name="pic" id="pic" required>
                     <input type="text" name="name" id="name" placeholder="Product Name" required>
                     <select name="category" id="category">
-                    <option value="">Category</option>
-                                <?php
-                                include "../php/config.php";
-                                $sql2 = "SELECT * FROM category";
-                                $result2 = mysqli_query($con, $sql2);
-                                if (mysqli_num_rows($result2)) {
-                                    while ($row2 = mysqli_fetch_assoc($result2)) {
-                                ?>
-                                        <option value="<?php echo $row2['cat'] ?>"><?php echo $row2['cat'] ?></option>
-                                <?php }
-                                } ?>
+                        <option value="">Category</option>
+                        <?php
+                        include "../php/config.php";
+                        $sql2 = "SELECT * FROM category";
+                        $result2 = mysqli_query($con, $sql2);
+                        if (mysqli_num_rows($result2)) {
+                            while ($row2 = mysqli_fetch_assoc($result2)) {
+                        ?>
+                                <option value="<?php echo $row2['cat'] ?>"><?php echo $row2['cat'] ?></option>
+                        <?php }
+                        } ?>
                     </select>
                     <input type="text" name="company" id="company" placeholder="Company Name" required>
                     <select name="sr" id="sr">
@@ -90,8 +90,8 @@ if (!isset($_SESSION["aid"])) {
                             <div class="company">Company : <?php echo $row['company']; ?></div>
                             <div class="category">Category : <?php echo $row['category']; ?></div>
                             <!-- <div class="date stock">Stock : <?php echo $row['stock']; ?></div> -->
-                            <div class="more">
-                                <div class="show  show<?php echo $row['id']; ?>">
+                            <div class="moree">
+                                <div class="more-show show<?php echo $row['id']; ?>">
                                     <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
                                 </div>
                                 <div class="box pmb<?php echo $row['id']; ?>">
@@ -107,31 +107,7 @@ if (!isset($_SESSION["aid"])) {
                         <script>
                             $(document).ready(function() {
                                 // --------------------
-                                function load() {
-                                    $(".pmb<?php echo $row['id']; ?>").hide();
-                                }
-                                load()
-                                $(".show<?php echo $row['id']; ?>").click(function() {
-                                    $(".pmb<?php echo $row['id']; ?>").toggle();
-                                })
-                                // ----------ajax-----------
-                                $(document).on("click", ".deletebtn<?php echo $row['id']; ?>", function() {
-                                    var id = $(this).data("id");
-                                    $.ajax({
-                                        url: "../php/deleteproduct.php",
-                                        type: "POST",
-                                        data: {
-                                            id: id
-                                        },
-                                        success: function(data) {
-                                            if (data == 1) {
-                                                $(".card<?php echo $row['id']; ?>").fadeOut()
-                                            } else {
-                                                alert("ok");
-                                            }
-                                        }
-                                    })
-                                })
+                              
 
                             })
                         </script>

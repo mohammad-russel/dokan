@@ -40,7 +40,7 @@ $srid = ($_SESSION["sid"]);
                         </div>
                         <?php
                         date_default_timezone_set('Asia/Dhaka');
-                        $time = date("Y/m/d || h/m/s");
+                        $time = date("Y.m.d || h.m.s");
                         ?>
                         <form action="../php/retailer_registation.php" method="post" enctype="multipart/form-data">
                             <input type="hidden" name="time" id="time" value="<?php echo $time ?> ">

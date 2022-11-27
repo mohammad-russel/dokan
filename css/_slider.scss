@@ -1,29 +1,65 @@
+.togglee {
+    position: absolute;
+    z-index: 2;
+    display: none;
+    color: rgb(255, 255, 255);
+
+    .show,
+    .hide {
+        ion-icon {
+            background: rgb(255, 255, 255);
+            font-size: 1.5rem;
+            padding: 5px;
+            cursor: pointer;
+            color: #000;
+
+        }
+    }
+
+    .hide {
+        ion-icon {
+            background: rgb(235, 235, 235);
+            color: rgb(34, 34, 34);
+        }
+    }
+}
+
 .slider {
     height: 100vh;
-    color: aliceblue;
+    @include text-color;
     width: 20%;
     min-width: 200px;
     padding: 5px;
-    background: rgba(32, 32, 32, 0.995);
+    background: rgba(255, 255, 255, 0.995);
+
 
     .header {
-        height: 20%;
+        min-height: 20%;
         align-items: center;
         justify-content: center;
         display: flex;
         flex-direction: column;
-        border-bottom: 1px solid rgba(245, 222, 179, 0.116);
+        border-bottom: 1px solid rgba(45, 45, 45, 0.116);
 
-        img {
-            width: 70px;
-            aspect-ratio: 1/1;
-            object-fit: cover;
+        a {
+
+            img {
+                width: 70px;
+                aspect-ratio: 1/1;
+                object-fit: cover;
+            }
         }
 
-        .title {
-            margin: 5px 0px;
-            letter-spacing: 1px;
+        a {
+            text-decoration: none;
+            @include text-color;
+
+            .title {
+                margin: 5px 0px;
+                letter-spacing: 1px;
+            }
         }
+
     }
 
     .box {
@@ -43,7 +79,8 @@
                 font-size: 1.2rem;
                 margin: 10px 0px;
                 text-decoration: none;
-                color: aliceblue;
+                @include text-color;
+
                 border-bottom: 1px solid rgba(95, 158, 160, 0);
                 padding: 5px;
                 transition: 1s;
@@ -52,7 +89,7 @@
                     width: 100%;
 
                     transition: 0.2s;
-                    border-bottom: 1px solid rgba(255, 255, 255, 0.393);
+                    border-bottom: 1px solid rgba(3, 3, 3, 0.126);
 
                 }
             }
@@ -63,18 +100,17 @@
     .footer {
         height: 9%;
 
-
         a {
             width: 100%;
             padding: 7px;
             font-size: 1.2rem;
             margin: 10px 0px;
             text-decoration: none;
-            color: rgba(240, 248, 255, 0.79);
+            @include text-color;
             display: flex;
             justify-content: center;
             align-items: center;
-            border: 1px solid rgba(255, 235, 205, 0.166);
+            border: 1px solid rgba(43, 43, 43, 0.166);
             border-radius: 20px;
 
             ion-icon {
@@ -87,57 +123,80 @@
 
     }
 }
+
 // --------------------------------
 @media only screen and (max-width: 780px) {
+    .togglee {
+        z-index: 2;
+        display: block;
+        color: rgb(255, 255, 255);
+        position: fixed;
+
+        .show,
+        
+        .hide {
+            margin: 5px 5px;
+
+            ion-icon {
+
+                font-size: 1.5rem;
+                padding: 5px;
+                cursor: pointer;
+                background: linear-gradient(315.13deg, rgba(194, 217, 237, 0.3) 5.21%, rgba(255, 255, 255, 0.3) 62.26%), #E9F0F7;
+                box-shadow: 4px 4px 12px rgba(138, 155, 189, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.9);
+
+            }
+        }
+
+        .hide {
+            ion-icon {
+                background: rgb(235, 235, 235);
+                color: rgb(34, 34, 34);
+            }
+        }
+    }
+
     .slider {
-      width: 50%;
-    display: none;
-    position: absolute;
-    z-index: 1;
+        width: 50%;
+        display: none;
+        position: fixed;
+        z-index: 1;
+
         .header {
-        
-    
-            img {
-            
-            }
-    
-            .title {
-              
-            }
+
+
+            img {}
+
+            .title {}
         }
-    
+
         .box {
-        
-    
+
+
             ul {
-        
-    
+
+
                 a {
-               
-    
-                    &:hover {
-                  
-    
-                    }
+
+
+                    &:hover {}
                 }
-    
+
             }
         }
-    
+
         .footer {
             height: 9%;
-    
-    
+
+
             a {
-             
-    
-                ion-icon {
-                   
-                }
-    
+
+
+                ion-icon {}
+
                 .title {}
             }
-    
+
         }
     }
 }

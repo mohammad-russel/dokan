@@ -1,11 +1,16 @@
+.log {
+  height: 90vh;
+}
+
 .form {
+
   width: max-content;
   margin: 50px auto;
   border-image-source: linear-gradient(314.02deg,
       #d6e5f2 4.59%,
       rgba(255, 255, 255, 0.3) 74.18%);
   font-weight: 700;
-  padding: 10px;
+  padding: 50px;
   border-radius: 10px;
   background: linear-gradient(312.9deg,
       rgba(255, 255, 255, 0.3) 4.49%,
@@ -13,14 +18,21 @@
     #e9f0f7;
   box-shadow: -4px -4px 10px rgb(255 255 255 / 90%),
     4px 4px 10px rgb(138 155 189 / 40%);
+  height: 60%;
 
   .lt {
-    text-align: center;
+
     width: 100%;
     margin: 10px auto;
     font-size: 20px;
     color: #8F9BB2;
 
+
+  }
+
+  p {
+    @include text-color;
+    font-size: 0.6rem;
   }
 
   .login_form {
@@ -36,72 +48,138 @@
 
     input {
       width: 100%;
-      background: rgba(255, 255, 255, 0.461);
-      padding: 7px;
       color: #8F9BB2;
       outline: none;
-      border-radius: 10px;
-      background: linear-gradient(312.9deg,
-          rgba(255, 255, 255, 0.3) 4.49%,
-          rgba(233, 240, 247, 0.3) 95.45%),
-        #e9f0f7;
-      box-shadow: inset -4px -4px 10px rgb(255 255 255 / 90%),
-        inset 4px 4px 10px rgb(138 155 189 / 30%);
-      border-image-source: linear-gradient(314.02deg,
-          #d6e5f2 4.59%,
-          rgba(255, 255, 255, 0.3) 74.18%);
+      padding: 5px 0px;
+      background: transparent;
+      border: none;
       margin: 5px 0px;
+      border-bottom: 1px solid #e0e1e1;
+
 
     }
 
-    #login {
-      padding: 5px;
+    input::placeholder {
+      font-size: 0.6rem;
+      color: #a0adb9;
+    }
+
+    a {
+      font-size: 0.6rem;
+      color: #adb8c3;
+      text-decoration: none;
+      text-align: left;
+      width: 100%;
+      margin: 10px 0px;
+    }
+
+    .btn {
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding:0px 15px;
       cursor: pointer;
-      background: linear-gradient(312.9deg,
-          rgba(255, 255, 255, 0.3) 4.49%,
-          rgba(233, 240, 247, 0.3) 95.45%),
-        #e9f0f7;
+      background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #e9f0f7;
       color: #8F9BB2;
-      border-image-source: linear-gradient(314.02deg,
-          #d6e5f2 4.59%,
-          rgba(255, 255, 255, 0.3) 74.18%);
-      box-shadow: -4px -4px 10px rgb(255 255 255 / 90%),
-        4px 4px 10px rgb(138 155 189 / 40%);
+      border-image-source: linear-gradient(314.02deg, #d6e5f2 4.59%, rgba(255, 255, 255, 0.3) 74.18%);
+      box-shadow: -4px -4px 10px rgb(255 255 255 / 90%), 4px 4px 10px rgb(190 196 208 / 40%);
+      margin: 10px 0px;
+      border-radius: 0.7rem;
+height: 30px;
+      &:hover {
+        // background: linear-gradient(312.9deg,
+        //     rgba(255, 255, 255, 0.3) 4.49%,
+        //     rgba(233, 240, 247, 0.3) 95.45%),
+        //   #e9f0f7;
+        // box-shadow: inset -4px -4px 10px rgb(255 255 255 / 90%),
+        //   inset 4px 4px 10px rgb(138 155 189 / 30%);
 
-      &:active {
-        background: linear-gradient(312.9deg,
-            rgba(255, 255, 255, 0.3) 4.49%,
-            rgba(233, 240, 247, 0.3) 95.45%),
-          #e9f0f7;
-        box-shadow: inset -4px -4px 10px rgb(255 255 255 / 90%),
-          inset 4px 4px 10px rgb(138 155 189 / 30%);
+        color: rgb(33, 33, 33);
+      }
 
+      ion-icon {
+        margin: 0px 3px;
+        font-size: 1.1rem;
+      }
+
+      #login {
+        border: none;
+        cursor: pointer;
+        font-weight: 600;
+      
+        &:hover {
+          // background: linear-gradient(312.9deg,
+          //     rgba(255, 255, 255, 0.3) 4.49%,
+          //     rgba(233, 240, 247, 0.3) 95.45%),
+          //   #e9f0f7;
+          // box-shadow: inset -4px -4px 10px rgb(255 255 255 / 90%),
+          //   inset 4px 4px 10px rgb(138 155 189 / 30%);
+  
+          color: rgb(72, 72, 72);
+          font-weight: 600;
+        }
       }
     }
   }
 }
 
+.svg {
+  width: 100%;
+
+  height: 33%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  text-align: left;
+
+  svg {
+
+    position: relative;
+    opacity: 0.7;
+    width: 25%;
+    height: max-content;
+  }
+
+}
+
 // -------------------------------
 @media only screen and (max-width: 550px) {
+  .log {
+
+    height: 90vh;
+  }
+
   .form {
     width: 100%;
-    margin: 50px auto;
+
     box-shadow: none;
     border: none;
     padding: 5px;
     border-radius: 0px;
-    height: 100vh;
+    height: 50%;
+    margin: 0px;
 
-    .lt {}
+    .lt {
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+    }
 
     .login_form {
       max-width: 350px;
 
       input {
-        height: 60px;
+
         font-size: 18px;
-        padding: 15px;
+        padding: 5px 10px;
         margin: 10px 0px;
+      }
+
+      a {
+        text-align: center;
       }
 
       #login {
@@ -112,4 +190,20 @@
     }
   }
 
+  .svg {
+    width: 100%;
+
+    height: 61%;
+    text-align: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+
+    svg {
+
+      width: 70%;
+      height: max-content;
+    }
+
+  }
 }

@@ -14,7 +14,7 @@
 </div>
 <div class="footer">
     <span class="logout">
-        <a href="#">
+        <a href="../php/admin_logout.php">
             <ion-icon name="log-out-outline"></ion-icon>
             <span class="title">Logout</span>
         </a>

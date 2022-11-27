@@ -4,56 +4,64 @@
     justify-content: center;
     align-items: center;
     padding: 20px;
-    .edit,.delete {
+
+    .edit,
+    .delete {
       ion-icon {
         padding: 10px;
         font-size: 20px;
         border-radius: 50%;
-       @include shadow;
+        @include shadow;
         cursor: pointer;
         color: rgb(31, 120, 21);
 
       }
+
       .popup {
         z-index: 1;
         background: #EBF3FA;
 
-        width:100%;
+        width: 100%;
         margin: auto;
         height: max-content;
-        top:0%;
-        left:0%;
+        top: 0%;
+        left: 0%;
         position: absolute;
+
         .close {
           cursor: pointer;
           text-align: end;
           padding: 10px;
+
           ion-icon {
             font-size: 30px;
           }
         }
+
         form {
           display: flex;
           justify-content: center;
           align-items: center;
           flex-direction: column;
           padding: 20px;
+
           input {
-          font-size: 1.2rem;
-          @include text_color;
+            font-size: 1.2rem;
+            @include text_color;
             outline: none;
             border-radius: .8rem;
             width: 100%;
             max-width: 350px;
             padding: 10px;
             border: none;
-            margin: 10px  0px;
+            margin: 10px 0px;
             height: 50px;
-        @include shadow;
-           
+            @include shadow;
+
           }
-          .newretinsert{
-         border: 1px solid rgb(220, 220, 220);
+
+          .newretinsert {
+            border: 1px solid rgb(220, 220, 220);
             color: rgb(77, 77, 77);
             font-size: 20px;
             letter-spacing: 1px;
@@ -62,8 +70,10 @@
         }
       }
     }
+
     .image {
       margin: 0px 30px;
+
       img {
         width: 150px;
         aspect-ratio: 1/1;
@@ -71,41 +81,51 @@
         border-radius: 50%;
       }
     }
+
     .delete {
       ion-icon {
-        
+
         color: rgb(201, 38, 38);
-       
+
       }
     }
   }
+
   .info {
     text-align: center;
     padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+
     .left {
       width: 100%;
       max-width: 200px;
       padding: 10px;
+
       .box {
-       
-      @include shadow;
+
+        @include shadow;
         padding: 15px 10px;
         margin: 20px 0px;
 
         h3 {
-      @include text_color;
-      font-size: 16px;
+          @include text_color;
+          font-size: 16px;
         }
+
         p {
           font-size: 1rem;
           font-weight: 600;
           color: rgb(72, 162, 198);
         }
+
+        .sd {
+          color: rgb(250, 74, 74);
+        }
       }
     }
+
     .middle {
       padding: 20px 15px;
       display: flex;
@@ -115,8 +135,16 @@
       border: 1px solid rgba(135, 135, 135, 0.267);
       color: rgb(248, 248, 248);
       border-radius: 20px;
+
       .name {
-      @include text_color;
+        @include text_color;
+        padding: 3px 10px;
+        margin: 3px 0px;
+        border-radius: 5px;
+        text-transform: capitalize;
+      }
+      .shop {
+        @include text_color;
         padding: 3px 10px;
         margin: 3px 0px;
         border-radius: 5px;
@@ -126,9 +154,10 @@
         background: rgba(131, 218, 170, 0.178);
         padding: 3px 10px;
         border-radius: 5px;
-    color: rgb(113, 113, 113);
-      margin: 3px 0px;
+        color: rgb(113, 113, 113);
+        margin: 3px 0px;
       }
+
       .password {
         background: rgba(218, 164, 131, 0.178);
         padding: 3px 10px;
@@ -136,48 +165,64 @@
         color: rgb(113, 113, 113);
         margin: 3px 0px;
       }
-      .company {
+
+      .company,.village {
         background: rgba(104, 104, 104, 0.178);
         padding: 3px 10px;
         border-radius: 5px;
         color: rgb(113, 113, 113);
 
-      margin: 3px 0px;
+        margin: 3px 0px;
       }
-      .deller {
+
+      .deller,.area {
         background: rgba(218, 208, 131, 0.178);
         padding: 3px 10px;
         border-radius: 5px;
-    color: rgb(113, 113, 113);
-      
-      margin: 3px 0px;
+        color: rgb(113, 113, 113);
+
+        margin: 3px 0px;
+      }
+      .zila{
+        background: rgba(218, 131, 190, 0.178);
+        padding: 3px 10px;
+        border-radius: 5px;
+        color: rgb(113, 113, 113);
+
+        margin: 3px 0px;
       }
     }
+
     .right {
       width: 100%;
       max-width: 200px;
       padding: 10px;
+
       .box {
-      @include shadow;
+        @include shadow;
         padding: 15px 10px;
         margin: 20px 0px;
+
         h3 {
           @include text_color;
           font-size: 16px;
-            }
-            p {
-              font-size: 1rem;
-              font-weight: 600;
-              color: rgb(186, 138, 217);
-            }
+        }
+
+        p {
+          font-size: 1rem;
+          font-weight: 600;
+          color: rgb(186, 138, 217);
+        }
       }
     }
   }
+
   .product {
     padding: 10px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+
     .card {
       color: rgb(78, 78, 78);
       display: flex;
@@ -189,8 +234,10 @@
       max-width: 150px;
       @include shadow;
     }
+
     .image {
       width: 100%;
+
       img {
         width: 100%;
         aspect-ratio: 1/1;
@@ -198,16 +245,19 @@
         object-fit: cover;
       }
     }
+
     .price {
       font-weight: 600;
       font-size: 1.3rem;
       color: rgb(112, 179, 206);
     }
+
     .name {
       font-size: 1rem;
     }
   }
 }
+
 // --------------------------------
 @media only screen and (max-width: 450px) {
   .sr_overview {
@@ -216,106 +266,94 @@
       justify-content: center;
       align-items: center;
       padding: 20px;
+
       .edit {
-        ion-icon {
-      
-        }
+        ion-icon {}
+
         .popup {
-    
+
           .close {
-          
+
             ion-icon {
               font-size: 30px;
             }
           }
+
           form {
-           
+
             input {
-            font-size: 1.2rem;
+              font-size: 1.2rem;
               background: rgba(255, 255, 255, 0);
-         
+
             }
-            .newretinsert{
-           
-            }
+
+            .newretinsert {}
           }
         }
       }
+
       .image {
         margin: 0px 30px;
-        img {
-         
-        }
+
+        img {}
       }
+
       .delete {
-        ion-icon {
-        
-        }
+        ion-icon {}
       }
     }
+
     .info {
-    flex-direction: column;
+      flex-direction: column;
+
       .left {
-      
+
         .box {
-         
-      
-          h3 {
-      
-          }
-          p {
-         
-          }
+
+
+          h3 {}
+
+          p {}
         }
       }
+
       .middle {
-     
-        .name {
-     
-        }
-        .number {
-        
-        }
-        .password {
-        
-        }
-        .company {
-     
-        }
-        .deller {
-       
-        }
+
+        .name {}
+
+        .number {}
+
+        .password {}
+
+        .company {}
+
+        .deller {}
       }
+
       .right {
-       
+
         .box {
-     
-          h3 {
-   
-              }
-              p {
-              
-              }
+
+          h3 {}
+
+          p {}
         }
       }
     }
+
     .product {
-   
-      .card {
-     
-      }
+
+      .card {}
+
       .image {
         width: 100%;
-        img {
-        
-        }
+
+        img {}
       }
-      .price {
-        
-      }
-      .name {
-      
-      }
+
+      .price {}
+
+      .name {}
     }
   }
 

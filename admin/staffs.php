@@ -31,24 +31,35 @@ if (!isset($_SESSION["aid"])) {
                 <?php include "../components/slider.php"; ?>
             </div>
             <!-- --------------------------- -->
-            
+
             <div class="cb cb_staffs">
-                <span class="tity"><h1>Orders</h1></span>
+                <span class="tity">
+                    <h1>Staffs</h1>
+                </span>
                 <div class="staffs_house">
                     <div class="room deller">
                         <div class="title">Deller 5</div>
                         <div class="box">
-                            <div class="card">
-                                <a href="deller_overview.php?deller=3">
-                                    <div class="image">
-                                        <img src="../image/deller/images (9).jpeg" alt="">
+                            <?php
+                            include "../php/config.php";
+                            $sql = "SELECT * FROM deller limit 3";
+                            $result = mysqli_query($con, $sql);
+                            if (mysqli_num_rows($result)) {
+                                while ($row = mysqli_fetch_assoc($result)) {
+                            ?>
+                                    <div class="card">
+                                        <a href="deller_overview.php?deller=<?php echo $row['id'] ?>">
+                                            <div class="image">
+                                                <img src="../image/deller/<?php echo $row['deller_pic'] ?>" alt="">
+                                            </div>
+                                            <div class="name"><?php echo $row['nam'] ?></div>
+                                            <div class="company"><?php echo $row['company'] ?></div>
+                                        </a>
                                     </div>
-                                    <div class="name">Rasel khan</div>
-                                    <div class="company">bombai</div>
-                                </a>
-                            </div>
+                            <?php }
+                            } ?>
                             <div class="card more">
-                            <a href="deller.php">More & Add</a>
+                                <a href="deller.php">More & Add</a>
 
                             </div>
                         </div>
@@ -56,18 +67,26 @@ if (!isset($_SESSION["aid"])) {
                     <div class="room sr">
                         <div class="title">SR 5</div>
                         <div class="box">
+                        <?php
+                            include "../php/config.php";
+                            $sql = "SELECT * FROM sr limit 3";
+                            $result = mysqli_query($con, $sql);
+                            if (mysqli_num_rows($result)) {
+                                while ($row = mysqli_fetch_assoc($result)) {
+                            ?>
                             <div class="card">
-                                <a href="deller_overview.php?deller=3">
+                                <a href="sr_overview.php?sr=<?php echo $row['id'] ?>">
                                     <div class="image">
-                                        <img src="../image/sr/images (6).jpeg" alt="">
+                                        <img src="../image/sr/<?php echo $row['srpic'] ?>" alt="">
                                     </div>
-                                    <div class="name">Mohit khan</div>
-                                    <div class="deller">robin ali</div>
-                                    <div class="company">pran</div>
+                                    <div class="name"><?php echo $row['nam'] ?></div>
+                                    <div class="deller"><?php echo $row['deller'] ?></div>
+                                    <div class="company"><?php echo $row['company'] ?></div>
                                 </a>
                             </div>
+                            <?php } } ?>
                             <div class="card more">
-                            <a href="sr.php">More & Add</a>
+                                <a href="sr.php">More & Add</a>
 
                             </div>
                         </div>
@@ -75,21 +94,29 @@ if (!isset($_SESSION["aid"])) {
                     <div class="room retailer">
                         <div class="title">Retailer 5</div>
                         <div class="box">
+                        <?php
+                            include "../php/config.php";
+                            $sql = "SELECT * FROM retailer limit 3";
+                            $result = mysqli_query($con, $sql);
+                            if (mysqli_num_rows($result)) {
+                                while ($row = mysqli_fetch_assoc($result)) {
+                            ?>
                             <div class="card">
-                                <a href="deller_overview.php?deller=3">
+                                <a href="retailer_overview.php?retailer=<?php echo $row['id'] ?>">
                                     <div class="image">
-                                        <img src="../image/retailer/IMG20210306170213.jpg" alt="">
+                                        <img src="../image/retailer/<?php echo $row['retailerpic'] ?>" alt="">
                                     </div>
-                                    <div class="name">suhana khan</div>
-                                    <div class="shop">Bhai Bhai Store</div>
+                                    <div class="name"><?php echo $row['nam'] ?></div>
+                                    <div class="shop"><?php echo $row['shopname'] ?></div>
                                 </a>
                             </div>
+                            <?php } } ?>
                             <div class="card more">
                                 <a href="retailer.php">More & Add</a>
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
         </div>

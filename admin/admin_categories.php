@@ -76,7 +76,23 @@ if (!isset($_SESSION["aid"])) {
             </div>
         </div>
 </body>
-<?php include "../components/script.php"; ?>
-f
+<script>
+    $(document).ready(function() {
+        $(".hide").hide();
+        $(".show").click(function() {
+            $(".hide").fadeIn();
+            $(".show").slideUp();
+          
+            $(".slider").slideDown()
+            
+        })
+        $(".hide").click(function() {
+            $(".hide").fadeOut();
+            $(".show").slideDown();
+            $(".slider").slideUp()
+
+        })
+    })
+</script>
 
 </html>
