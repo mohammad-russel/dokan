@@ -3939,6 +3939,12 @@ header .link a ion-icon:hover {
   background: rgb(255, 255, 255);
 }
 
+.box_other {
+  padding: 10px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}
 .loadmore {
   width: 90%;
   margin: auto;
