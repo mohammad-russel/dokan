@@ -9,5 +9,5 @@ $sid =  $_POST['sid'];
 $status = $_POST['status'];
 $quantity = $_POST['quantity'];
 
-$sql = "INSERT INTO cart(sr,rid,pid,price,quantity,time,status) VALUES ($sid,$rid,$pid,$pp,$quantity,'$time','$status')";
+$sql = "INSERT INTO cart(sr,rid,pid,price,quantity,`time`,`status`) VALUES ($sid,$rid,$pid,$pp,$quantity,'$time','$status')";
 $result = mysqli_query($con, $sql);

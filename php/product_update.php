@@ -7,10 +7,9 @@ if (isset($_POST['addproduct'])) {
     $sr = $con->real_escape_string($_POST['sr']);
     $company = $con->real_escape_string($_POST['company']);
     $price = $con->real_escape_string($_POST['price']);
-    $stock = $con->real_escape_string($_POST['stock']);
     $discription = $con->real_escape_string($_POST['discription']);
-    $sql = "UPDATE product SET nam='$name',category='$category',sr='$sr',company='$company',discription='$discription',price=$price,stock=$stock WHERE id=$id";
+    $sql = "UPDATE product SET nam='$name',category='$category',sr='$sr',company='$company',discription='$discription',price=$price WHERE id=$id";
     $query = mysqli_query($con, $sql);
 }
 
-header("location:../admin/product.php");
+header("location:../admin/admin_product.php");

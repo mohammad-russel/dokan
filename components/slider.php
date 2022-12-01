@@ -10,6 +10,8 @@
         <a href="admin_product.php">Products</a>
         <a href="admin_setday.php">Set Days</a>
         <a href="admin_categories.php">Categories</a>
+        <a href="admin_signature.php">Signature</a>
+        <a href="admin_other.php">Other</a>
     </ul>
 </div>
 <div class="footer">

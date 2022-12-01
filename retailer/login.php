@@ -25,9 +25,12 @@ if (isset($_SESSION["rid"])) {
                 <input type="number" name="number" id="number" placeholder="number" required>
                 <input type="password" name="password" id="password" placeholder="password" required>
                 <a href="">
-                Forget Password?
-            </a>
-                <input type="submit" id="login" name="login" value="Login">
+                    Forget Password?
+                </a>
+                <div class="btn">
+                    <ion-icon name="lock-open-outline"></ion-icon>
+                    <input type="submit" id="login" name="login" value="Login">
+                </div>
             </form>
         </div>
         <div class="svg">

@@ -26,7 +26,6 @@ if (mysqli_num_rows($result)) { ?>
                 <div class="price">$ <?php echo $row['price'] ?></div>
                 <div class="name"><?php echo $row['nam'] ?></div>
                 <div class="btn">
-
                     <input type="hidden" name="rid" id="rid<?php echo $row['id'] ?>" value="<?php echo $rid ?>">
                     <input type="hidden" name="pid" id="pid<?php echo $row['id'] ?>" value="<?php echo $row['id'] ?>">
                     <input type="hidden" name="pp" id="pp<?php echo $row['id'] ?>" value="<?php echo $row['price'] ?>">

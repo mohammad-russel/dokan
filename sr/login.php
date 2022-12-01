@@ -27,7 +27,10 @@ if (isset($_SESSION["sid"])) {
                 <a href="">
                 Forget Password?
             </a>
-                <input type="submit" id="login" name="login" value="Login">
+            <div class="btn">
+                    <ion-icon name="lock-open-outline"></ion-icon>
+                    <input type="submit" id="login" name="login" value="Login">
+                </div>
             </form>
         </div>
         <div class="svg">

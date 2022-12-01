@@ -3,25 +3,41 @@
     padding: 5px;
     margin: 10px;
     border-radius: 10px;
+   form{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     input,
     select,
     button {
+      width: 100%;
+      max-width: 500px;
       outline: none;
       background: rgba(0, 0, 0, 0);
       border: none;
-      padding: 6px;
-      margin: 5px;
-      box-shadow: $boxshadowinsetinput;
-      border-radius: 5px;
-      option {
+      padding: 15px;
+      font-size: 1.1rem;
+      @include shadow;
+      border-radius: .7rem;
+      margin: 10px auto;
+      @include text-color;  option {
       }
     }
     button {
-      width: 150px;
-      border: $borderfornewf;
-      box-shadow: $boxshadow;
+      cursor: pointer;
+      width: 130px;
+      height: 50px;
+      @include shadow;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all .5s;
+  
       &:active {
-        box-shadow: $boxshadowinsetinput;
+        font-size: 1.2em;
+        color: black;
+        font-weight: bold;
       }
-    }
+    }}
   }

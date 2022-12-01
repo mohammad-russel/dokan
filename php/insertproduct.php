@@ -18,5 +18,5 @@ $sql = "INSERT INTO product(nam,category,time,company,sr,price,discription,pic) 
 move_uploaded_file($pictmpname, "../image/product/" . $picname);
 
 $query = mysqli_query($con, $sql);
-header("location:../admin/product.php");
+header("location:../admin/admin_product.php");
 ?>

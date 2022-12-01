@@ -48,6 +48,7 @@ if (!isset($_SESSION["aid"])) {
                         <input type="file" name="rpic" id="rpic">
                         <input type="text" name="name" id="name" placeholder="Name" required>
                         <select name="deller" id="deller">
+                        <option value="no deller">No Deller</option>
                             <?php
                             include "../php/config.php";
                             $sql2 = "SELECT * FROM deller";

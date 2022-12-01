@@ -21,7 +21,7 @@ $rid = $_SESSION["rid"];
         <div class="admin rt">
             <div class="togglee">
                 <div class="show">
-                <ion-icon name="filter-outline"></ion-icon>
+                    <ion-icon name="filter-outline"></ion-icon>
                 </div>
                 <div class="hide">
                     <ion-icon name="close-outline"></ion-icon>
@@ -98,7 +98,7 @@ $rid = $_SESSION["rid"];
         $(document).on("click", ".addcart", function() {
             cartload();
         })
-        // ---------
+
 
     })
 </script>

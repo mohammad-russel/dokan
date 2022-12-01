@@ -12,7 +12,7 @@ if (!isset($_SESSION["aid"])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin</title>
+    <title>Admin Product</title>
     <?php include "../components/head2.php"; ?>
 </head>
 
@@ -98,7 +98,7 @@ if (!isset($_SESSION["aid"])) {
                             </select>
                             <input type="text" name="company" id="company" placeholder="Company Name" required>
                             <select name="sr" id="sr">
-                                <option value="">Select SR</option>
+                                <option value="NO SR">No SR</option>
                                 <?php
                                 include "../php/config.php";
                                 $sql2 = "SELECT * FROM sr";
@@ -132,7 +132,7 @@ if (!isset($_SESSION["aid"])) {
                                     <div class="id">ID : <?php echo $row['id']; ?></div>
                                     <div class="image"><img src="../image/product/<?php echo $row['pic']; ?>" alt=""></div>
                                     <div class="name">Name : <?php echo $row['nam']; ?></div>
-                                    <div class="price">Price : $<?php echo $row['price']; ?></div>
+                                    <div class="price">Price : ৳<?php echo $row['price']; ?></div>
                                     <div class="sr"> SR : <?php echo $row['sr']; ?></div>
                                     <div class="company">Company : <?php echo $row['company']; ?></div>
                                     <div class="category">Category : <?php echo $row['category']; ?></div>
