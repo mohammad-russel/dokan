@@ -94,11 +94,13 @@
     // -----------open--------------
     .open {
         width: 100%;
+       
 
         .slogan {
             width: 100%;
             display: flex;
             justify-content: center;
+            height: 100vh;
 
             img {
                 width: 100%;
@@ -109,7 +111,7 @@
         .box-room {
             margin: auto;
             width: 100%;
-            height: 300px;
+            height: 100vh;
             box-shadow: inset rgb(207, 207, 207) 0px 10px 15px 1px;
             overflow: hidden;
 
@@ -135,11 +137,13 @@
                 .icon {
                     width: 100%;
                     margin: 10px 0px;
-h1{
-    font-size:3rem;
-    color: rgb(24, 24, 24);
-    font-weight: 400;
-}
+
+                    h1 {
+                        font-size: 3rem;
+                        color: rgb(24, 24, 24);
+                        font-weight: 400;
+                    }
+
                     ion-icon {
                         font-size: 3rem;
                     }
@@ -167,8 +171,11 @@ h1{
 
     // -----------FAQ--------------
     .faqs {
-        margin: 10px 0px;
-
+        height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
         h1 {
             margin: auto;
             text-align: center;
@@ -180,14 +187,16 @@ h1{
 
         .faq {
             @include text-color;
-            margin-top: 20px;
+            margin-top: 0px;
         }
     }
 
     // -----------About--------------
     .about {
-        margin: 20px 0px;
 
+        height: 100vh;
+        display: flex;
+        align-items: center;
 
         .box {
 
@@ -211,13 +220,18 @@ h1{
 
     // -----------Contact--------------
     .contact {
-        margin: 20px 0px;
+
         display: flex;
+        margin-bottom: 50px;
+        padding-bottom: 100px;
+
+        height: 100vh;
 
         .contact-box {
             width: 50%;
             display: flex;
             justify-content: center;
+            align-items: center;
 
             form {
                 width: 100%;
@@ -228,6 +242,7 @@ h1{
                 border: 1px solid rgb(226, 235, 240);
                 padding: 20px;
                 border-radius: 15px;
+                height: max-content;
 
                 input {
                     border-radius: 5px;
@@ -252,16 +267,16 @@ h1{
                     margin: 5px;
                     border-radius: 5px;
                     @include text-color;
-            
+
                     height: 30px;
                     outline: none;
                     width: 100%;
                     height: 70px;
                     border: 1px solid rgb(223, 231, 243);
                 }
-                
+
                 button {
-                 
+
                     margin: 3px;
                     width: 100px;
                     // @include text-color;
@@ -277,7 +292,7 @@ h1{
         }
 
         .social-link {
-        
+
             width: 50%;
             display: flex;
             justify-content: center;

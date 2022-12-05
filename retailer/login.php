@@ -16,7 +16,7 @@ if (isset($_SESSION["rid"])) {
 </head>
 
 <body>
-    <div class="container log">
+    <!-- <div class="container log">
         <div class="form">
             <h4 class="lt">Retailer Login</h4>
             <p>Enter your number & password</p>
@@ -93,8 +93,33 @@ if (isset($_SESSION["rid"])) {
             </svg>
 
         </div>
-    </div>
+    </div> -->
+    <div class="container fnew">
+        <div class="form_new">
+            <div class="logo_box">
+                <img src="../logo/file.png" alt="">
+            </div>
+            <div class="login_box">
+                <form action="../php/retailer_login.php" method="post">
+                    <h1>Retailer Login</h1>
+                    <p>Enter your phone number & password</p>
+                    <input type="number" name="number" id="number" placeholder="Number" required>
+                    <input type="password" name="password" id="password" placeholder="Password" required>
+                    <a href="">
+                        Forget Password?
+                    </a>
+                    <div class="btn_box">
+                        <button type="submit" id="login" name="login">
+                            <ion-icon name="lock-open-outline"></ion-icon>
+                            <span class="txt">Login</span>
+                        </button>
+                    </div>
 
+                </form>
+
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

@@ -2,8 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Raleway:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-
-* {
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+* {@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
@@ -63,12 +65,14 @@ $b_nmf :linear-gradient(314.02deg,
 // -------------------------------
 body {
   background: #EBF3FA;
+  height: 100vh;
 }
 
 .container {
   width: 100%;
   max-width: 1200px;
   margin: auto;
+  height: 100%;
 
 }
 
@@ -143,6 +147,7 @@ body {
 @import "new/update_product";
 @import "new/admin_signature";
 @import "new/other";
+@import "new/new_login";
 
 
 // -------------------------other----------------

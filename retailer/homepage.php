@@ -44,7 +44,13 @@ $rid = $_SESSION["rid"];
                     </div>
                 </div>
                 <div class="ads">
-                    <img src="https://www.fotor.com/blog/wp-content/uploads/2019/07/3-solid-background.png" alt="">
+                    <?php
+                    @include "../php/config.php";
+                    $sql = "SELECT * FROM ads WHERE id = 1";
+                    $result = mysqli_query($con, $sql);
+                    $row = mysqli_fetch_assoc($result);
+                    ?>
+                <img src="../image/ads/<?php echo $row['adss'] ?>" alt="">
                 </div>
                 <div class="retailermain">
                 </div>

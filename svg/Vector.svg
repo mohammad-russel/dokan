@@ -1,0 +1,24 @@
+<svg width="1542" height="478" viewBox="0 0 1542 478" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_dd_205_26)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 12C74.9167 64.6528 134.636 204.748 242.602 284.039C350.142 363.019 636.044 291.242 734.849 363.019C786.011 400.185 1004.42 435.014 1116.78 392.442C1488.74 251.519 1513.06 458 1522 458C1459.08 458 1270.33 458 1144.5 458C1018.67 458 892.833 458 767 458C641.167 458 515.333 458 389.5 458C263.667 458 137.833 458 74.9167 458H12V12Z" fill="#EBF3FA"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 12C74.9167 64.6528 134.636 204.748 242.602 284.039C350.142 363.019 636.044 291.242 734.849 363.019C786.011 400.185 1004.42 435.014 1116.78 392.442C1488.74 251.519 1513.06 458 1522 458C1459.08 458 1270.33 458 1144.5 458C1018.67 458 892.833 458 767 458C641.167 458 515.333 458 389.5 458C263.667 458 137.833 458 74.9167 458H12V12Z" stroke="black"/>
+</g>
+<defs>
+<filter id="filter0_dd_205_26" x="0" y="0" width="1542" height="478" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="4" dy="4"/>
+<feGaussianBlur stdDeviation="8"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.541176 0 0 0 0 0.607843 0 0 0 0 0.741176 0 0 0 0.46 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_205_26"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_205_26" result="effect2_dropShadow_205_26"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_205_26" result="shape"/>
+</filter>
+</defs>
+</svg>

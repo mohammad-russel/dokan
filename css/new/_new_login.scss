@@ -1,0 +1,223 @@
+.fnew {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+
+    .form_new {
+
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        max-width: 621.2px;
+        padding: 30px;
+        border-radius: 20px;
+        align-items: center;
+        height: 100%;
+        max-height: 392.62px;
+        background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
+        box-shadow: 4px 4px 16px rgba(138, 155, 189, 0.48), -5px -5px 18px #FFFFFF;
+
+        .logo_box {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-right: 1px solid rgb(206, 206, 206);
+            height: 200px;
+
+            img {
+                width: 140px;
+            }
+            .pc{}
+            .phn{
+                display: none;
+            }
+        }
+
+        .login_box {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            height: 100%;
+
+            form {
+                width: 100%;
+
+                display: flex;
+                flex-direction: column;
+                padding-left: 50px;
+                height: 70%;
+
+                h1 {
+                    font-size: 18px;
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: bold;
+                    color: rgba(0, 0, 0, 0.587);
+
+                }
+
+                p {
+                    font-size: 10px;
+                    font-family: 'Open Sans', sans-serif;
+                    font-weight: 600;
+                    margin-bottom: 10px;
+                    color: #8F9BB2;
+                }
+
+                input {
+                    margin: 10px 0px;
+                    border: none;
+                    border-bottom: 1px solid rgb(230 230 230);
+                    background: rgba(0, 0, 0, 0);
+                    outline: none;
+                    font-size: 0.6rem;
+                    padding-top: 7px;
+                    padding-bottom: 2px;
+                    font-family: 'Open Sans', sans-serif;
+                    color: #8F9BB2;
+                    font-weight: 600;
+                }
+
+                input::placeholder {
+                    color: #8F9BB2;
+                }
+
+                a {
+                    font-family: 'Open Sans', sans-serif;
+
+                    margin-bottom: 25px;
+                    font-size: 9px;
+                    text-decoration: none;
+
+                    color: #6F84AD;
+                    text-align: right;
+                    margin-top: -10px;
+                    text-decoration: underline;
+                }
+
+                .btn_box {
+                    margin-top: 10px;
+                    display: flex;
+                    text-align: center;
+                    width: 100%;
+                    font-family: 'Open Sans', sans-serif;
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    button {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        cursor: pointer;
+                        padding: 5px 20px;
+
+                        border-radius: 25px;
+                        background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
+                        box-shadow: -3px -3px 10px rgba(255, 255, 255, 0.7), 3px 3px 10px rgba(138, 155, 189, 0.48);
+                        border: none;
+
+                        ion-icon {
+                            margin: 0px 2px;
+                            font-size: 0.7rem;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            color: #6F84AD;
+                        }
+
+                        .txt {
+
+                            margin: 0px 2px;
+                            font-size: 1.1rem;
+                            font-weight: 700;
+                            color: #9098a7;
+
+                            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                            margin-top: -3px;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+
+// -------------------------
+
+@media only screen and (max-width: 550px) {
+    .fnew {
+
+        .form_new {
+            flex-direction: column;
+            height: max-content;
+box-shadow: none;
+            .logo_box {
+               border: none;
+
+                img {
+                    background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
+                    box-shadow: -3px -3px 10px rgba(255, 255, 255, 0.7), 3px 3px 10px rgba(138, 155, 189, 0.48);
+               border-radius: 50%;
+               padding: 2px;
+               width: 80.97px;
+               height: 80.66px;
+                }
+                .pc{
+                    display: none;
+                }
+                .phn{
+                    display: block;
+                }
+            }
+
+            .login_box {
+width: 100%;
+                form {
+
+padding: 0px;
+margin: auto;
+max-width: 300px;
+                    h1 {
+                        text-align: center;
+                        margin-bottom: 5px;
+                        text-transform: uppercase;
+                        font-weight: 900;
+                        font-family: Arial, Helvetica, sans-serif;
+
+                    }
+
+                    p {
+                        text-align: center;
+
+                    }
+
+                    input {
+                        padding-left:5px ;
+                    }
+
+                    input::placeholder {}
+
+                    a {}
+
+                    .btn_box {
+
+                        button {
+
+                            ion-icon {}
+
+                            .txt {}
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}

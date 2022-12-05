@@ -19,7 +19,6 @@ $rid = $_GET['rid'];
         .back a {
             text-decoration: none;
         }
-
         .count {
             position: relative;
             background: #484848;
@@ -53,12 +52,12 @@ $rid = $_GET['rid'];
         <div class="sr_product">
             <?php
             $id = $_SESSION["sid"];
-            include "../php/config.php";
+            @include "../php/config.php";
             $sql1 = "SELECT * FROM sr WHERE id = $id ";
             $result1 = mysqli_query($con, $sql1);
             $row1 = mysqli_fetch_assoc($result1);
             $srid = $row1['srnum'];
-            include "../php/config.php";
+            @include "../php/config.php";
             $sql = "SELECT * FROM product WHERE sr='$srid'";
             $result = mysqli_query($con, $sql);
             if (mysqli_num_rows($result)) {

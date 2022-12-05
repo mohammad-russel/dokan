@@ -2,7 +2,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Raleway:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 * {
+  @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
@@ -22,12 +26,14 @@
 
 body {
   background: #EBF3FA;
+  height: 100vh;
 }
 
 .container {
   width: 100%;
   max-width: 1200px;
   margin: auto;
+  height: 100%;
 }
 
 .lp {
@@ -3496,6 +3502,7 @@ header .link a ion-icon:hover {
   width: 100%;
   display: flex;
   justify-content: center;
+  height: 100vh;
 }
 .landing-page-new .open .slogan img {
   width: 100%;
@@ -3504,7 +3511,7 @@ header .link a ion-icon:hover {
 .landing-page-new .open .box-room {
   margin: auto;
   width: 100%;
-  height: 300px;
+  height: 100vh;
   box-shadow: inset rgb(207, 207, 207) 0px 10px 15px 1px;
   overflow: hidden;
 }
@@ -3548,7 +3555,11 @@ header .link a ion-icon:hover {
   }
 }
 .landing-page-new .faqs {
-  margin: 10px 0px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .landing-page-new .faqs h1 {
   margin: auto;
@@ -3562,10 +3573,12 @@ header .link a ion-icon:hover {
 }
 .landing-page-new .faqs .faq {
   color: #8F9BB2;
-  margin-top: 20px;
+  margin-top: 0px;
 }
 .landing-page-new .about {
-  margin: 20px 0px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
 }
 .landing-page-new .about .box {
   text-align: center;
@@ -3584,13 +3597,16 @@ header .link a ion-icon:hover {
   font-size: 1rem;
 }
 .landing-page-new .contact {
-  margin: 20px 0px;
   display: flex;
+  margin-bottom: 50px;
+  padding-bottom: 100px;
+  height: 100vh;
 }
 .landing-page-new .contact .contact-box {
   width: 50%;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .landing-page-new .contact .contact-box form {
   width: 100%;
@@ -3601,6 +3617,9 @@ header .link a ion-icon:hover {
   border: 1px solid rgb(226, 235, 240);
   padding: 20px;
   border-radius: 15px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
 }
 .landing-page-new .contact .contact-box form input {
   border-radius: 5px;
@@ -3941,9 +3960,224 @@ header .link a ion-icon:hover {
 
 .box_other {
   padding: 10px;
-  border: 1px solid black;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.box_other .now {
+  padding: 5px;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  height: 200px;
+}
+.box_other .now img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.box_other .new {
+  margin: 10px 0px;
+  padding: 5px;
+  width: 100%;
+  max-width: 300px;
+}
+.box_other .new form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.box_other .new form input {
+  padding: 10px;
+  margin: 10px 0px;
+  width: 100%;
+  font-size: 1.2rem;
+  box-shadow: 5px 5px 10px -1px rgb(195, 202, 202), -5px -5px 10px 1px rgb(255, 255, 255);
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.fnew {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Open Sans", sans-serif;
+}
+.fnew .form_new {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 621.2px;
+  padding: 30px;
+  border-radius: 20px;
+  align-items: center;
+  height: 100%;
+  max-height: 392.62px;
+  background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
+  box-shadow: 4px 4px 16px rgba(138, 155, 189, 0.48), -5px -5px 18px #FFFFFF;
+}
+.fnew .form_new .logo_box {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid rgb(206, 206, 206);
+  height: 200px;
+}
+.fnew .form_new .logo_box img {
+  width: 140px;
+}
+.fnew .form_new .logo_box .phn {
+  display: none;
+}
+.fnew .form_new .login_box {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.fnew .form_new .login_box form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 50px;
+  height: 70%;
+}
+.fnew .form_new .login_box form h1 {
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.587);
+}
+.fnew .form_new .login_box form p {
+  font-size: 10px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #8F9BB2;
+}
+.fnew .form_new .login_box form input {
+  margin: 10px 0px;
+  border: none;
+  border-bottom: 1px solid rgb(230, 230, 230);
+  background: rgba(0, 0, 0, 0);
+  outline: none;
+  font-size: 0.6rem;
+  padding-top: 7px;
+  padding-bottom: 2px;
+  font-family: "Open Sans", sans-serif;
+  color: #8F9BB2;
+  font-weight: 600;
+}
+.fnew .form_new .login_box form input::-moz-placeholder {
+  color: #8F9BB2;
+}
+.fnew .form_new .login_box form input:-ms-input-placeholder {
+  color: #8F9BB2;
+}
+.fnew .form_new .login_box form input::placeholder {
+  color: #8F9BB2;
+}
+.fnew .form_new .login_box form a {
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 25px;
+  font-size: 9px;
+  text-decoration: none;
+  color: #6F84AD;
+  text-align: right;
+  margin-top: -10px;
+  text-decoration: underline;
+}
+.fnew .form_new .login_box form .btn_box {
+  margin-top: 10px;
+  display: flex;
+  text-align: center;
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fnew .form_new .login_box form .btn_box button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 5px 20px;
+  border-radius: 25px;
+  background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
+  box-shadow: -3px -3px 10px rgba(255, 255, 255, 0.7), 3px 3px 10px rgba(138, 155, 189, 0.48);
+  border: none;
+}
+.fnew .form_new .login_box form .btn_box button ion-icon {
+  margin: 0px 2px;
+  font-size: 0.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #6F84AD;
+}
+.fnew .form_new .login_box form .btn_box button .txt {
+  margin: 0px 2px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #9098a7;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin-top: -3px;
+}
+
+@media only screen and (max-width: 550px) {
+  .fnew .form_new {
+    flex-direction: column;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    box-shadow: none;
+  }
+  .fnew .form_new .logo_box {
+    border: none;
+  }
+  .fnew .form_new .logo_box img {
+    background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
+    box-shadow: -3px -3px 10px rgba(255, 255, 255, 0.7), 3px 3px 10px rgba(138, 155, 189, 0.48);
+    border-radius: 50%;
+    padding: 2px;
+    width: 80.97px;
+    height: 80.66px;
+  }
+  .fnew .form_new .logo_box .pc {
+    display: none;
+  }
+  .fnew .form_new .logo_box .phn {
+    display: block;
+  }
+  .fnew .form_new .login_box {
+    width: 100%;
+  }
+  .fnew .form_new .login_box form {
+    padding: 0px;
+    margin: auto;
+    max-width: 300px;
+  }
+  .fnew .form_new .login_box form h1 {
+    text-align: center;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .fnew .form_new .login_box form p {
+    text-align: center;
+  }
+  .fnew .form_new .login_box form input {
+    padding-left: 5px;
+  }
 }
 .loadmore {
   width: 90%;
