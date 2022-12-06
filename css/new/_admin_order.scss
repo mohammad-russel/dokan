@@ -82,7 +82,8 @@
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
-margin: 15px 10px;
+                    margin: 15px 10px;
+
                     .image {
                         img {
                             width: 50px;
@@ -92,6 +93,8 @@ margin: 15px 10px;
                     }
 
                     .name,
+                    .item,
+                    .discount,
                     .quantity,
                     .total,
                     .retailer,
@@ -108,9 +111,8 @@ margin: 15px 10px;
                             a {
                                 text-decoration: none;
                                 color: rgb(243, 243, 243);
-
                                 padding: 1px 10px;
-                                background: rgb(61, 61, 61);
+                                background: rgb(75, 75, 75);
                                 border-radius: 10px;
                                 font-size: 1rem;
 
@@ -135,7 +137,7 @@ margin: 15px 10px;
 
 // -------------------------------------
 
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 900px) {
     .tity {
 
 
@@ -169,8 +171,9 @@ margin: 15px 10px;
                     display: flex;
                     flex-wrap: wrap;
                     justify-content: center;
+
                     .row {
-                        width: 22%;
+                        width: 25%;
                         min-width: 130px;
                         flex-direction: column;
                         text-align: start;
@@ -184,6 +187,12 @@ margin: 15px 10px;
                         .retailer,
                         .time {
                             width: 100%;
+                            span{
+                                a{
+                                    width: 400px;
+                                    
+                                }
+                            }
                         }
 
                         .image {

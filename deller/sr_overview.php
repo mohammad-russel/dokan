@@ -35,11 +35,11 @@ if (!isset($_SESSION["did"])) {
         ?>
             <div class="sr_overview">
                 <div class="head">
-                   
+
                     <div class="image">
                         <img style="width:100px ;" src="../image/sr/<?php echo $row['srpic'] ?>" alt="">
                     </div>
-                    
+
                 </div>
                 <div class="info">
                     <div class="left">
@@ -54,7 +54,7 @@ if (!isset($_SESSION["did"])) {
                             ?>
                             <p><?php echo $row5 ?></p>
                         </div>
-                   
+
                     </div>
                     <div class="middle">
                         <div class="name"><?php echo $row['nam'] ?></div>
@@ -63,17 +63,20 @@ if (!isset($_SESSION["did"])) {
                         <div class="deller">Deller ID : <?php echo $row['deller'] ?></div>
                     </div>
                     <div class="right">
-                        <div class="box">
-                            <h3>Sell</h3>
-                            <?php
-                            include "../php/config.php";
-                            $sr = $row['id'];
-                            $sql5 = "SELECT * FROM cart WHERE sr = $sr AND status ='complete'";
-                            $result5 = mysqli_query($con, $sql5);
-                            $row5 = mysqli_num_rows($result5);
-                            ?>
-                            <p><?php echo $row5 ?></p>
-                        </div>
+                        <a href="deller_see_pro.php?id=<?php echo $row['id'] ?>">
+                            <div class="box">
+                                <h3>Sell</h3>
+                                <?php
+                                include "../php/config.php";
+                                $sr = $row['id'];
+                                $sql5 = "SELECT * FROM cart WHERE sr = $sr AND status ='complete'";
+                                $result5 = mysqli_query($con, $sql5);
+                                $row5 = mysqli_num_rows($result5);
+                                ?>
+                                <p><?php echo $row5 ?></p>
+                            </div>
+                        </a>
+
                         <div class="box">
                             <h3>Order</h3>
                             <?php
@@ -113,7 +116,7 @@ if (!isset($_SESSION["did"])) {
 
 </body>
 <script>
- 
+
 </script>
 
 </html>

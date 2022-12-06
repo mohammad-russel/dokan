@@ -29,8 +29,10 @@
             img {
                 width: 140px;
             }
-            .pc{}
-            .phn{
+
+            .pc {}
+
+            .phn {
                 display: none;
             }
         }
@@ -157,33 +159,43 @@
         .form_new {
             flex-direction: column;
             height: max-content;
-box-shadow: none;
+            box-shadow: none;
             .logo_box {
-               border: none;
+                border: none;
+                height: max-content;
+                width: max-content;
+                padding: 7px;
+                border-radius: 50%;
+               margin-bottom: 10px;
+                box-shadow: -3px -3px 10px rgba(255, 255, 255, 0.7), 3px 3px 10px rgba(138, 155, 189, 0.48);
 
                 img {
-                    background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
-                    box-shadow: -3px -3px 10px rgba(255, 255, 255, 0.7), 3px 3px 10px rgba(138, 155, 189, 0.48);
-               border-radius: 50%;
-               padding: 2px;
-               width: 80.97px;
-               height: 80.66px;
+                    position: relative;
+                    top: 7px;
+                    width: 50px;
+                    height: 50px;
+                
+                    object-fit: contain;
                 }
-                .pc{
+
+                .pc {
                     display: none;
                 }
-                .phn{
+
+                .phn {
                     display: block;
                 }
             }
 
             .login_box {
-width: 100%;
+                width: 100%;
+
                 form {
 
-padding: 0px;
-margin: auto;
-max-width: 300px;
+                    padding: 0px;
+                    margin: auto;
+                    max-width: 300px;
+
                     h1 {
                         text-align: center;
                         margin-bottom: 5px;
@@ -199,7 +211,7 @@ max-width: 300px;
                     }
 
                     input {
-                        padding-left:5px ;
+                        padding-left: 5px;
                     }
 
                     input::placeholder {}

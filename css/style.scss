@@ -66,6 +66,7 @@ $b_nmf :linear-gradient(314.02deg,
 body {
   background: #EBF3FA;
   height: 100vh;
+  overflow-x: hidden;
 }
 
 .container {
@@ -73,7 +74,14 @@ body {
   max-width: 1200px;
   margin: auto;
   height: 100%;
+  overflow-x: hidden;
 
+}
+.container::-webkit-scrollbar{
+  width: 10px;
+}
+.container::-webkit-scrollbar-thumb{
+  background: rgb(82, 82, 82);
 }
 
 // -------------------

@@ -123,7 +123,7 @@ if (!isset($_SESSION["aid"])) {
                                             <img src="../image/product/<?php echo $row1['pic'] ?>" alt="ww">
                                         </div>
                                         <div class="name">
-                                            <?php echo $row1['nam'] ?> <br> <span><?php echo $row1['price'] ?></span>
+                                            <?php echo $row1['nam'] ?> <br>Price : <span><?php echo $row1['price'] ?></span>
                                         </div>
                                         <div class="quantity">
                                             Quantity <br> <span><?php echo $row['quantity'] ?></span>
@@ -174,7 +174,7 @@ if (!isset($_SESSION["aid"])) {
                                             <img src="../image/product/<?php echo $row1['pic'] ?>" alt="ww">
                                         </div>
                                         <div class="name">
-                                            <?php echo $row1['nam'] ?> <br> <span><?php echo $row1['price'] ?></span>
+                                            <?php echo $row1['nam'] ?> <br>Price :  <span><?php echo $row1['price'] ?></span>
                                         </div>
                                         <div class="quantity">
                                             Quantity <br> <span><?php echo $row['quantity'] ?></span>
@@ -225,7 +225,7 @@ if (!isset($_SESSION["aid"])) {
                                             <img src="../image/product/<?php echo $row1['pic'] ?>" alt="ww">
                                         </div>
                                         <div class="name">
-                                            <?php echo $row1['nam'] ?> <br> <span><?php echo $row1['price'] ?></span>
+                                            <?php echo $row1['nam'] ?> <br>Price : <span><?php echo $row1['price'] ?></span>
                                         </div>
                                         <div class="quantity">
                                             Quantity <br> <span><?php echo $row['quantity'] ?></span>
@@ -276,7 +276,7 @@ if (!isset($_SESSION["aid"])) {
                                             <img src="../image/product/<?php echo $row1['pic'] ?>" alt="ww">
                                         </div>
                                         <div class="name">
-                                            <?php echo $row1['nam'] ?> <br> <span><?php echo $row1['price'] ?></span>
+                                            <?php echo $row1['nam'] ?> <br> Price : <span><?php echo $row1['price'] ?></span>
                                         </div>
                                         <div class="quantity">
                                             Quantity <br> <span><?php echo $row['quantity'] ?></span>

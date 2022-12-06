@@ -1,199 +1,199 @@
-.landing_page {
-    .header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px;
-        height: 70px;
+// .landing_page {
+//     .header {
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: center;
+//         padding: 10px;
+//         height: 70px;
 
-        .logo {
-            height: 100%;
+//         .logo {
+//             height: 100%;
 
-            img {
-                @include shadow;
-                height: 90%;
-                padding: 10px;
-                opacity: .8;
-            }
-        }
+//             img {
+//                 @include shadow;
+//                 height: 90%;
+//                 padding: 10px;
+//                 opacity: .8;
+//             }
+//         }
 
-        .link {
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+//         .link {
+//             height: 100%;
+//             display: flex;
+//             justify-content: center;
+//             align-items: center;
 
-            a {
-                margin: 0px 10px;
-                text-decoration: none;
-                @include shadow;
-                @include text-color;
-                padding: 5px;
-                text-align: center;
-                width: 100px;
-            }
-        }
-    }
+//             a {
+//                 margin: 0px 10px;
+//                 text-decoration: none;
+//                 @include shadow;
+//                 @include text-color;
+//                 padding: 5px;
+//                 text-align: center;
+//                 width: 100px;
+//             }
+//         }
+//     }
 
-    .main {
-        .slogan {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 250px;
+//     .main {
+//         .slogan {
+//             display: flex;
+//             justify-content: center;
+//             align-items: center;
+//             height: 250px;
 
-            img {
-                height: 100%;
-            }
-        }
+//             img {
+//                 height: 100%;
+//             }
+//         }
 
-        .box_room {
+//         .box_room {
 
-            margin: auto;
-            width: 80%;
-            max-width: 900px;
-            height: 400px;
-            // box-shadow: inset 10px 10px 20px -10px rgb(206, 206, 206), inset -10px -10px 20px -10px rgb(255, 255, 255);
-            border: 1px solid rgb(223 219 231);
-            overflow: hidden;
-            align-items: center;
-            display: flex;
-            border-radius: 10px;
+//             margin: auto;
+//             width: 80%;
+//             max-width: 900px;
+//             height: 400px;
+//             // box-shadow: inset 10px 10px 20px -10px rgb(206, 206, 206), inset -10px -10px 20px -10px rgb(255, 255, 255);
+//             border: 1px solid rgb(223 219 231);
+//             overflow: hidden;
+//             align-items: center;
+//             display: flex;
+//             border-radius: 10px;
 
-            .box {
-                min-width: 100%;
-                height: 90%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-                border-radius: 10px;
-                @include text-color;
-                position: relative;
-                animation: anime 15s;
-                animation-iteration-count: infinite;
-                animation-duration: alternate;
-                animation-play-state: running;
+//             .box {
+//                 min-width: 100%;
+//                 height: 90%;
+//                 display: flex;
+//                 justify-content: center;
+//                 align-items: center;
+//                 flex-direction: column;
+//                 border-radius: 10px;
+//                 @include text-color;
+//                 position: relative;
+//                 animation: anime 15s;
+//                 animation-iteration-count: infinite;
+//                 animation-duration: alternate;
+//                 animation-play-state: running;
 
-                .icon {
+//                 .icon {
 
-                    width: 100%;
-                    height: 50%;
-                    text-align: center;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+//                     width: 100%;
+//                     height: 50%;
+//                     text-align: center;
+//                     display: flex;
+//                     justify-content: center;
+//                     align-items: center;
 
-                    ion-icon {
-                        font-size: 100px;
-                    }
-                }
+//                     ion-icon {
+//                         font-size: 100px;
+//                     }
+//                 }
 
-                .text {
-                    width: 100%;
-                    height: 50%;
-                    text-transform: uppercase;
-                    text-align: center;
-                    font-size: 1.5rem;
-                    letter-spacing: 1px;
-                    font-weight: 600;
-                  
-                    font-family: 'Raleway', sans-serif;
+//                 .text {
+//                     width: 100%;
+//                     height: 50%;
+//                     text-transform: uppercase;
+//                     text-align: center;
+//                     font-size: 1.5rem;
+//                     letter-spacing: 1px;
+//                     font-weight: 600;
 
-                }
-            }
+//                     font-family: 'Raleway', sans-serif;
 
-            @keyframes anime {
-                0% {
-                    right: 0%;
-                }
+//                 }
+//             }
 
-                10% {
-                    right: 0%;
-                }
+//             @keyframes anime {
+//                 0% {
+//                     right: 0%;
+//                 }
 
-                20% {
-                    right: 100%;
-                }
+//                 10% {
+//                     right: 0%;
+//                 }
 
-                30% {
-                    right: 100%;
-                }
+//                 20% {
+//                     right: 100%;
+//                 }
 
-                40% {
-                    right: 200%;
+//                 30% {
+//                     right: 100%;
+//                 }
 
-                }
+//                 40% {
+//                     right: 200%;
 
-                50% {
-                    right: 200%;
+//                 }
 
-                }
+//                 50% {
+//                     right: 200%;
 
-                60% {
-                    right: 100%;
+//                 }
 
-
-                }
-
-                80% {
-                    right: 100%;
+//                 60% {
+//                     right: 100%;
 
 
-                }
+//                 }
 
-                90% {
-                    right: 0%;
-                }
+//                 80% {
+//                     right: 100%;
 
-                100% {
-                    right: 0%;
-                }
-            }
-        }
 
-        .title {}
+//                 }
 
-        .link_box {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
+//                 90% {
+//                     right: 0%;
+//                 }
 
-            a {
-                text-decoration: none;
-                @include text-color;
-                margin: 20px;
+//                 100% {
+//                     right: 0%;
+//                 }
+//             }
+//         }
 
-                .box {
-                    width: 100px;
-                    aspect-ratio: 1/1;
-                    @include shadow;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    flex-direction: column;
-                    transition: .5s;
+//         .title {}
 
-                    .icon {
-                        ion-icon {
-                            font-size: 1.5rem;
-                        }
-                    }
+//         .link_box {
+//             margin-top: 20px;
+//             display: flex;
+//             justify-content: center;
+//             align-items: center;
+//             flex-wrap: wrap;
 
-                    .name {}
+//             a {
+//                 text-decoration: none;
+//                 @include text-color;
+//                 margin: 20px;
 
-                    &:hover {
-                        transform: scale(.97);
-                        box-shadow: none;
-                        background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(189, 211, 233, 0.3) 95.45%), #E9F0F7;
-                        border: none;
-                        box-shadow: -5px -5px 20px -10px rgba(189, 211, 233, 0.3), 5px 5px 0px -10px rgb(255, 255, 255);
-                    }
-                }
-            }
-        }
-    }
+//                 .box {
+//                     width: 100px;
+//                     aspect-ratio: 1/1;
+//                     @include shadow;
+//                     display: flex;
+//                     justify-content: center;
+//                     align-items: center;
+//                     flex-direction: column;
+//                     transition: .5s;
 
-}
+//                     .icon {
+//                         ion-icon {
+//                             font-size: 1.5rem;
+//                         }
+//                     }
+
+//                     .name {}
+
+//                     &:hover {
+//                         transform: scale(.97);
+//                         box-shadow: none;
+//                         background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(189, 211, 233, 0.3) 95.45%), #E9F0F7;
+//                         border: none;
+//                         box-shadow: -5px -5px 20px -10px rgba(189, 211, 233, 0.3), 5px 5px 0px -10px rgb(255, 255, 255);
+//                     }
+//                 }
+//             }
+//         }
+//     }
+
+// }

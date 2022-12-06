@@ -352,91 +352,57 @@ if (!isset($_SESSION["aid"])) {
                         } ?>
                     </div>
                     <div class="retailer_box">
-                        <div class="box">
-                            <div class="subbox">
-                                <div class="image">
-                                    <img src="../image/retailer/IMG20210306170213.jpg" alt="">
-                                </div>
-                                <div class="info">
-                                    <div class="name">Mohammad Russell</div>
-                                    <div class="shop_name">Bhai Bhai Expo</div>
-                                </div>
-                            </div>
+                        <?php
+                        @include "../php/config.php";
+                        $sql = "SELECT DISTINCT rid FROM cart WHERE `status` = 'complete' ";
+                        $result = mysqli_query($con, $sql);
+                        if (mysqli_num_rows($result)) {
+                            while ($row = mysqli_fetch_assoc($result)) {
+                        ?>
+                                <div class="box">
+                                    <div class="subbox">
+                                        <div class="image">
+                                            <?php
+                                            @include "../php/config.php";
+                                            $rid = $row['rid'];
+                                            $sql1 = "SELECT * FROM retailer WHERE id = $rid ";
+                                            $result1 = mysqli_query($con, $sql1);
+                                            $row1 = mysqli_fetch_assoc($result1);
+                                            ?>
+                                            <img src="../image/retailer/<?php echo $row1['retailerpic'] ?>" alt="">
+                                        </div>
+                                        <div class="info">
+                                            <div class="name"><?php echo $row1['nam'] ?></div>
+                                            <div class="shop_name"><?php echo $row1['shopname'] ?></div>
+                                        </div>
+                                    </div>
+                                    <?php
+                                    @include "../php/config.php";
+                                    $sql21 = "SELECT * FROM cart WHERE `status` = 'complete' AND rid = $rid ";
+                                    $result21 = mysqli_query($con, $sql21);
+                                    $row21 = mysqli_fetch_assoc($result21);
 
+                                    $sql2 = "SELECT SUM(quantity) AS tq FROM cart WHERE `status` = 'complete' AND rid = $rid ";
+                                    $result2 = mysqli_query($con, $sql2);
+                                    $row2 = mysqli_fetch_assoc($result2);
+                                    $t_quantity = $row2['tq'];
+                                    $price = $row21['price'];
+                                    $total_per = $t_quantity * $price;
 
-                            <div class="buy_info">
-                                <div class="total">466৳</div>
-                                <div class="percent">35.3%</div>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="subbox">
-                                <div class="image">
-                                    <img src="../image/retailer/IMG20210306170213.jpg" alt="">
+                                    include "../php/config.php";
+                                    $sql3 = "SELECT *,SUM(quantity*price) AS total FROM cart WHERE status = 'complete'";
+                                    $result3 = mysqli_query($con, $sql3);
+                                    $row3 = mysqli_fetch_assoc($result3);
+                                    $full_total = $row3['total'];
+                                    $percent = $total_per * 100 / $full_total;
+                                    ?>
+                                    <div class="buy_info">
+                                        <div class="total"><?php echo $full_total ?>৳</div>
+                                        <div class="percent"><?php echo number_format($percent, 1)?>%</div>
+                                    </div>
                                 </div>
-                                <div class="info">
-                                    <div class="name">Mohammad Russell</div>
-                                    <div class="shop_name">Bhai Bhai Expo</div>
-                                </div>
-                            </div>
-
-
-                            <div class="buy_info">
-                                <div class="total">466৳</div>
-                                <div class="percent">35.3%</div>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="subbox">
-                                <div class="image">
-                                    <img src="../image/retailer/IMG20210306170213.jpg" alt="">
-                                </div>
-                                <div class="info">
-                                    <div class="name">Mohammad Russell</div>
-                                    <div class="shop_name">Bhai Bhai Expo</div>
-                                </div>
-                            </div>
-
-
-                            <div class="buy_info">
-                                <div class="total">466৳</div>
-                                <div class="percent">35.3%</div>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="subbox">
-                                <div class="image">
-                                    <img src="../image/retailer/IMG20210306170213.jpg" alt="">
-                                </div>
-                                <div class="info">
-                                    <div class="name">Mohammad Russell</div>
-                                    <div class="shop_name">Bhai Bhai Expo</div>
-                                </div>
-                            </div>
-
-
-                            <div class="buy_info">
-                                <div class="total">466৳</div>
-                                <div class="percent">35.3%</div>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="subbox">
-                                <div class="image">
-                                    <img src="../image/retailer/IMG20210306170213.jpg" alt="">
-                                </div>
-                                <div class="info">
-                                    <div class="name">Mohammad Russell</div>
-                                    <div class="shop_name">Bhai Bhai Expo</div>
-                                </div>
-                            </div>
-
-
-                            <div class="buy_info">
-                                <div class="total">466৳</div>
-                                <div class="percent">35.3%</div>
-                            </div>
-                        </div>
+                        <?php }
+                        } ?>
                     </div>
                 </div>
             </div>
@@ -448,9 +414,9 @@ if (!isset($_SESSION["aid"])) {
         $(".show").click(function() {
             $(".hide").fadeIn();
             $(".show").slideUp();
-          
+
             $(".slider").slideDown()
-            
+
         })
         $(".hide").click(function() {
             $(".hide").fadeOut();

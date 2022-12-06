@@ -28,7 +28,7 @@
                 <div class="slogan">
                     <img src="logo/Be happy Stay happy (1).png" alt="">
                 </div>
-           
+
                 <div class="box_room">
                     <div class="box">
                         <div class="icon">
