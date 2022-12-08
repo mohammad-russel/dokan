@@ -19,6 +19,7 @@ $rid = $_GET['rid'];
         .back a {
             text-decoration: none;
         }
+
         .count {
             position: relative;
             background: #484848;
@@ -71,8 +72,8 @@ $rid = $_GET['rid'];
                         date_default_timezone_set('Asia/Dhaka');
                         $time = date("Y.m.d || h.i.s");
                         ?>
-                        <div class="price">$ <?php echo $row['price'] ?></div>
                         <div class="name"><?php echo $row['nam'] ?></div>
+                        <div class="price">৳ <?php echo $row['price'] ?></div>
                         <div class="btn">
                             <input type="hidden" name="rid" id="rid<?php echo $row['id'] ?>" value="<?php echo $rid ?>">
                             <input type="hidden" name="pid" id="pid<?php echo $row['id'] ?>" value="<?php echo $row['id'] ?>">
@@ -81,7 +82,7 @@ $rid = $_GET['rid'];
                             <input type="hidden" name="time" id="time<?php echo $row['id'] ?>" value="<?php echo $time ?>">
                             <input type="hidden" name="status" id="status<?php echo $row['id'] ?>" value="cart">
                             <input type="number" name="quantity" id="quantity<?php echo $row['id'] ?>" value="1">
-                            <button class="addcart addcart<?php echo $row['id'] ?>" name="add">ADD</button>
+                            <button class="addcart addcart<?php echo $row['id'] ?>" name="add"><ion-icon name="add-outline"></ion-icon></button>
                         </div>
                         <script>
                             $(".addcart<?php echo $row['id'] ?>").click(function() {

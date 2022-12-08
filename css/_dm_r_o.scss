@@ -40,39 +40,45 @@
       .baki {
         background: rgba(88, 88, 88, 0);
         padding: 3px;
+        color: #323537;
+        text-transform: capitalize;
       }
 
       .shop {
         background: rgba(120, 35, 96, 0);
-        border-top: 1px solid #d8e1f2;
+        font-size: 0.64rem;
+        color: #3E5467;
+        margin-top: -6px;
+        margin-bottom: 10px;
       }
 
       .order {
-        background: rgba(0, 63, 146, 0.473);
+        color: #3E5467;
+
         font-weight: 300;
-        color: white;
-        background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
-        box-shadow: -3px -3px 5px rgba(255, 255, 255, 0.4), 3px 3px 5px rgba(138, 155, 189, 0.133);
-        color: #8F9BB2;
-        border-radius: 10px;
+
+
+        font-weight: 600;
+        border-radius: 50px;
         margin-bottom: 10px;
+        background: rgba(0, 0, 0, 0.033);
 
         span {
-          color: rgb(94, 178, 111);
+          color: rgba(100, 140, 108, 0.941);
           font-weight: 600;
         }
       }
 
       .baki {
-        color: #8F9BB2;
-        background: #8F9BB2;
-        background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
-        box-shadow: -3px -3px 5px rgba(255, 255, 255, 0), 3px 3px 5px rgba(138, 155, 189, 0.134);
-        font-weight: 300;
-        border-radius: 10px;
+
+        background: rgba(0, 0, 0, 0.033);
+        color: #3E5467;
+
+        border-radius: 50px;
+        font-weight: 600;
 
         span {
-          color: rgb(215, 99, 99);
+          color: rgb(209, 70, 70);
           font-weight: 600;
         }
       }
@@ -81,11 +87,13 @@
 }
 
 .d_overview_retailer {
+
   .profile {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-transform: capitalize;
 
     .image {
       img {
@@ -96,9 +104,17 @@
       }
     }
 
-    .name {}
+    .name {
+      font-weight: 600;
+      color: #323537;
 
-    .shop {}
+    }
+
+    .shop {
+      font-weight: 600;
+      color: #323537;
+      font-size: 0.8rem;
+    }
   }
 
   .order,
@@ -109,12 +125,13 @@
 
     .buttons {
       margin: auto;
-      border: 1px solid rgb(159, 159, 159);
+      background: rgba(0, 0, 0, 0.033);
       width: 90%;
+      max-width: 200px;
       text-transform: capitalize;
       font-family: 'Montserrat', sans-serif;
       text-align: center;
-      border-radius: 10px;
+      border-radius: 40px;
       font-weight: 600;
       color: rgb(108, 108, 108);
       padding: 10px 0px;
@@ -129,19 +146,20 @@
         align-items: center;
         flex-wrap: wrap;
         padding: 10px;
+
         .card {
           margin: 5px 0px;
-          text-align: center;
           width: 100%;
           max-width: 160px;
           min-width: 150px;
-          border: 1px solid rgb(154, 154, 154);
           margin: 5px;
-          padding: 10px;
+          padding: 10px 20px;
           border-radius: 10px;
+          background: rgba(189, 201, 211, 0.15);
 
           .image {
             width: 100%;
+            text-align: center;
 
             img {
               width: 30%;
@@ -150,32 +168,45 @@
             }
           }
 
-          .name {}
+          .name {
 
-          .price {
-            background: rgb(86, 118, 97);
-            color: antiquewhite;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: capitalize;
+            color: #3E5467;
           }
 
-          .quantity {
-            background: rgb(118, 118, 86);
-            color: antiquewhite;
-          }
-
+          .price,
+          .quantity,
           .tp {
-            background: rgb(86, 105, 118);
-            color: antiquewhite;
+            font-size: 14px;
+            color: #323537;
+            margin: 3px 0px;
+            font-weight: 600;
           }
+
+          // .quantity {
+          //   background: rgb(118, 118, 86);
+          //   color: antiquewhite;
+          // }
+
+          // .tp {
+          //   background: rgb(86, 105, 118);
+          //   color: antiquewhite;
+          // }
 
           .btn {
             padding: 10px 5px;
 
             .bt {
+              text-align: center;
               margin: 10px 0px;
               cursor: pointer;
-              background: rgb(10, 128, 46);
-              border-radius: 5px;
-              color: antiquewhite;
+              font-weight: 600;
+              padding: 4px 10px;
+              border-radius: 40px;
+              color: rgb(77, 77, 77);
+              box-shadow: 4px 4px 16px rgba(138, 155, 189, 0.48), -5px -5px 18px #FFFFFF;
             }
 
             .bt:nth-child(2) {
@@ -190,7 +221,7 @@
       }
 
       .cardinfo {
-        background: rgb(83, 62, 122);
+        background: rgba(189, 201, 211, 0.15);
         display: flex;
         width: 100%;
         max-width: 500px;
@@ -199,7 +230,23 @@
         border-radius: 10px;
         align-items: center;
         justify-content: space-between;
-        color: aliceblue;
+        color: #3E5467;
+        box-shadow: 4px 4px 16px rgba(138, 155, 189, 0.48), -5px -5px 18px #FFFFFF;
+        font-weight: 600;
+
+        .left {
+          width: 100%;
+
+          .itema {
+            border-bottom: 1px dashed #3E5467;
+            padding: 10px 0px;
+          }
+
+          .ffa {
+            padding: 10px 0px;
+
+          }
+        }
 
         .right,
         .left {
@@ -214,23 +261,24 @@
             span {
               cursor: pointer;
               margin: 10px 0px;
-              background: rgb(0, 87, 44);
-              color: rgb(250, 240, 219);
-              padding: 4px 10px;
-              border: 1px solid wheat;
+              box-shadow: 4px 4px 16px rgba(138, 155, 189, 0.48), -5px -5px 18px #FFFFFF;
+              color: #3E5467;
+              font-weight: 600;
+              border-radius: 20px;
+              padding: 5px 10px;
+
               text-align: center;
               width: 100px;
-              border-radius: 4px;
+
 
               a {
                 text-decoration: none;
-                color: rgb(250, 240, 219);
+                color: #3E5467;
+
               }
             }
 
-            .baki_op {
-              background: rgb(87, 0, 0);
-            }
+            .baki_op {}
           }
         }
 
@@ -326,12 +374,14 @@
 
   .buttons {
     margin: auto;
-    border: 1px solid rgb(159, 159, 159);
+    background: rgba(0, 0, 0, 0.033);
+
     width: 90%;
     text-transform: capitalize;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 40px;
+
     font-weight: 600;
     color: rgb(108, 108, 108);
     padding: 10px 0px;
@@ -346,13 +396,15 @@
       align-items: center;
       flex-wrap: wrap;
       padding: 10px;
+
       .card {
         margin: 5px 0px;
-        text-align: center;
+
         width: 100%;
         max-width: 160px;
         min-width: 150px;
-        border: 1px solid rgb(154, 154, 154);
+        background: rgba(189, 201, 211, 0.15);
+
         margin: 5px;
         padding: 10px;
         border-radius: 10px;
@@ -369,20 +421,19 @@
 
         .name {}
 
-        .price {
-          background: rgb(86, 118, 97);
-          color: antiquewhite;
+        .price {}
+
+        .quantity {}
+
+        .timea {
+          font-weight: 600;
+          border-top: 1px dashed #3E5467;
+          color: #3E5467;
+          margin: 10px 0px;
+          padding: 5px 0px;
         }
 
-        .quantity {
-          background: rgb(118, 118, 86);
-          color: antiquewhite;
-        }
-
-        .tp {
-          background: rgb(86, 105, 118);
-          color: antiquewhite;
-        }
+        .tp {}
 
         .btn {
           padding: 10px 5px;
@@ -407,7 +458,7 @@
     }
 
     .cardinfo {
-      background: rgb(83, 62, 122);
+
       display: flex;
       width: 100%;
       max-width: 500px;

@@ -35,11 +35,9 @@ if (!isset($_SESSION["did"])) {
         ?>
             <div class="sr_overview">
                 <div class="head">
-
                     <div class="image">
                         <img style="width:100px ;" src="../image/sr/<?php echo $row['srpic'] ?>" alt="">
                     </div>
-
                 </div>
                 <div class="info">
                     <div class="left">

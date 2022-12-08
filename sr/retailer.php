@@ -33,7 +33,7 @@ $srid = ($_SESSION["sid"]);
             </div>
             <div class="retailerbox">
                 <div class="create_ac">
-                    <div class="new">+</div>
+                    <div class="new"><span class="adda">+</span></div>
                     <div class="popup">
                         <div class="close">
                             <ion-icon name="close-outline"></ion-icon>

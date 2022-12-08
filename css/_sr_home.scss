@@ -11,18 +11,23 @@
     .box {
       display: flex;
       justify-content: center;
-      width: 300px;
+      width: 200px;
       aspect-ratio: 1/1;
-      font-size: 1.5rem;
       border-radius: 10%;
       align-items: center;
       margin: 10px;
-      border: 1px solid #e3e3e3;
-      background: linear-gradient(314.02deg, #d6e5f2 4.59%, rgba(255, 255, 255, 0.3) 74.18%);
-      box-shadow: -4px -4px 10px rgb(255 255 255 / 90%), 4px 4px 10px rgb(138 155 189 / 40%);
+      box-shadow: 3px 3px 10px -1px rgb(223, 223, 223), -4px -4px 10px 0px white;
       flex-direction: column;
-      a {
 
+      ion-icon {
+        color: #323537;
+        font-size: 40px;
+      }
+
+      color: #323537;
+      font-size: 20px;
+
+      a {
         text-decoration: none;
         display: flex;
         justify-content: center;

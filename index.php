@@ -20,12 +20,12 @@
                 </div>
                 <div class="menu">
                     <div class="box">
-                        <a href="admin/admin_home.php">
+                        <!-- <a href="admin/admin_home.php">
                             <ion-icon name="person-circle"></ion-icon>
                             <span>Admin</span>
-                        </a>
+                        </a> -->
                         <a href="deller/deller_home.php">
-                            <ion-icon name="thumbs-up"></ion-icon>
+                        <ion-icon name="id-card"></ion-icon>
                             <span>Deller</span>
                         </a>
                         <a href="retailer/homepage.php">

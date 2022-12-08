@@ -52,6 +52,7 @@ $sr = $_SESSION["sid"];
 
             <a class="dd" href="retailer.php">
                 <div class="box">
+                    <ion-icon name="storefront"></ion-icon>
                     <h3>Retailer</h1>
                         <?php
                         $sql1 = "SELECT * FROM retailer WHERE openersr = $sr ";

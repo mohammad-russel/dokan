@@ -347,7 +347,7 @@ if (!isset($_SESSION["delid"])) {
                                     <div class="price">দামঃ <?php echo $row1['price'] ?></div>
                                     <div class="quantity">পরিমানঃ <?php echo $row1['quantity'] ?></div>
                                     <div class="tp">মোটঃ <?php echo $row1['total'] ?></div>
-                                    <div class="name">সময়<br> <?php echo $row1['time'] ?></div>
+                                    <div class="timea">সময়<br> <?php echo $row1['time'] ?></div>
 
                                 </div>
                             <?php } ?>
@@ -368,12 +368,10 @@ if (!isset($_SESSION["delid"])) {
                             $result1 = mysqli_query($con, $sql1);
                             $row2 = mysqli_fetch_assoc($result1);
 
-
-
                             ?>
                             <div class="left">
-                                <div class="item">ITEM : <?php echo $list4 ?></div>
-                                <div class="ff">FULL PRICE : ৳<?php echo $row['total'] ?>/-</div>
+                                <div class="itema">ITEM : <?php echo $list4 ?></div>
+                                <div class="ffa">FULL PRICE : ৳<?php echo $row['total'] ?>/-</div>
                             </div>
                         </div>
                     </div>

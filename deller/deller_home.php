@@ -33,6 +33,7 @@ $did = $_SESSION["did"];
         <div class="srmainbox">
             <a class="dd" href="sr.php">
                 <div class="box">
+                    <ion-icon name="people"></ion-icon>
                     <h3>SR</h1>
                 </div>
             </a>

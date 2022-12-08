@@ -4,12 +4,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 * {
-  @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
   margin: 0;
   padding: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
 }
 
@@ -32,7 +32,7 @@ body {
 
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
   height: 100%;
   overflow-x: hidden;
@@ -443,16 +443,19 @@ header .link a ion-icon:hover {
 .srmainbox a .box {
   display: flex;
   justify-content: center;
-  width: 300px;
+  width: 200px;
   aspect-ratio: 1/1;
-  font-size: 1.5rem;
   border-radius: 10%;
   align-items: center;
   margin: 10px;
-  border: 1px solid #e3e3e3;
-  background: linear-gradient(314.02deg, #d6e5f2 4.59%, rgba(255, 255, 255, 0.3) 74.18%);
-  box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.9), 4px 4px 10px rgba(138, 155, 189, 0.4);
+  box-shadow: 3px 3px 10px -1px rgb(223, 223, 223), -4px -4px 10px 0px white;
   flex-direction: column;
+  color: #323537;
+  font-size: 20px;
+}
+.srmainbox a .box ion-icon {
+  color: #323537;
+  font-size: 40px;
 }
 .srmainbox a .box a {
   text-decoration: none;
@@ -473,13 +476,13 @@ header .link a ion-icon:hover {
   justify-content: center;
 }
 .sr_retailer_main_box .head .searchbox #search {
-  padding: 7px;
+  padding: 8px;
   outline: none;
   width: 300px;
   height: 35px;
   border: none;
-  border-bottom-left-radius: 10px;
-  border-top-left-radius: 10px;
+  border-radius: 7px;
+  background: rgba(189, 201, 211, 0.15);
 }
 .sr_retailer_main_box .head .searchbox .search_submit {
   border-bottom-right-radius: 10px;
@@ -490,7 +493,6 @@ header .link a ion-icon:hover {
   font-size: 19px;
   color: rgb(86, 86, 86);
   font-weight: 600;
-  background: rgb(173, 226, 223);
 }
 .sr_retailer_main_box .retailerbox {
   flex-wrap: wrap;
@@ -499,14 +501,26 @@ header .link a ion-icon:hover {
   justify-content: center;
 }
 .sr_retailer_main_box .retailerbox .create_ac {
-  margin-right: 50px;
+  width: 120px;
+  margin-right: 20px;
+  height: 180px;
   border: 1px solid rgba(255, 255, 255, 0.64);
   display: flex;
   justify-content: center;
   border-radius: 10px;
   align-items: center;
-  background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #e9f0f7;
   box-shadow: -3px -3px 9px rgba(255, 255, 255, 0.9), 3px 3px 9px rgba(138, 155, 189, 0.4);
+}
+.sr_retailer_main_box .retailerbox .create_ac span {
+  background: rgba(189, 201, 211, 0.15);
+  padding: 10px;
+  font-size: 90px;
+  border-radius: 50%;
+  height: 90px;
+  width: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .sr_retailer_main_box .retailerbox .create_ac .new {
   cursor: pointer;
@@ -516,7 +530,7 @@ header .link a ion-icon:hover {
   justify-content: center;
   align-items: center;
   font-size: 100px;
-  color: rgb(139, 139, 139);
+  color: #323537;
 }
 .sr_retailer_main_box .retailerbox .create_ac .popup {
   background: rgb(234, 234, 234);
@@ -641,15 +655,18 @@ header .link a ion-icon:hover {
   padding: 10px;
   border-radius: 5px;
   overflow: hidden;
+  width: 100%;
   margin: 5px;
   display: flex;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
   flex-direction: column;
+  text-transform: capitalize;
 }
 .sr_product .card .image,
 .productroom .card .image {
   width: 100%;
+  height: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -665,18 +682,20 @@ header .link a ion-icon:hover {
 }
 .sr_product .card .price,
 .productroom .card .price {
-  color: rgb(113, 175, 203);
-  padding: 0px 5px;
-  width: 100%;
-  text-align: start;
-  font-weight: 600;
-}
-.sr_product .card .name,
-.productroom .card .name {
   color: rgb(90, 90, 90);
   padding: 0px 5px;
   width: 100%;
-  text-align: start;
+  text-align: center;
+  font-weight: 600;
+  color: #3E5467;
+  padding: 7px 0px;
+}
+.sr_product .card .name,
+.productroom .card .name {
+  color: #3E5467;
+  width: 100%;
+  font-size: 0.8rem;
+  text-align: center;
   font-weight: 600;
 }
 .sr_product .card .btn,
@@ -688,7 +707,7 @@ header .link a ion-icon:hover {
   margin-top: 5px;
   background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #e9f0f7;
   box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.9), 4px 4px 10px rgba(138, 155, 189, 0.4);
-  border-radius: 10px;
+  border-radius: 50px;
   color: #8f9bb2;
 }
 .sr_product .card .btn input,
@@ -702,7 +721,7 @@ header .link a ion-icon:hover {
   font-weight: 700;
   background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #e9f0f7;
   box-shadow: inset -4px -4px 10px rgba(255, 255, 255, 0.9), inset 4px 4px 10px rgba(138, 155, 189, 0.3);
-  border-radius: 10px;
+  border-radius: 50px;
   color: #8F9BB2;
 }
 .sr_product .card .btn button,
@@ -717,6 +736,13 @@ header .link a ion-icon:hover {
   letter-spacing: 1px;
   transition: 0.1s;
   transform: scale(1);
+}
+.sr_product .card .btn button ion-icon,
+.productroom .card .btn button ion-icon {
+  font-size: 1.5rem;
+  border-radius: 60px;
+  background: rgba(189, 201, 211, 0.15);
+  font-weight: 900;
 }
 .sr_product .card .btn button:active,
 .productroom .card .btn button:active {
@@ -1218,13 +1244,15 @@ header .link a ion-icon:hover {
   margin: 20px 0px;
 }
 .sr_overview .info .left .box h3 {
-  color: #8F9BB2;
+  color: #323537;
   font-size: 16px;
 }
 .sr_overview .info .left .box p {
   font-size: 1rem;
   font-weight: 600;
-  color: rgb(72, 162, 198);
+  color: #000000;
+  background: rgba(189, 201, 211, 0.15);
+  border-radius: 30px;
 }
 .sr_overview .info .left .box .sd {
   color: rgb(250, 74, 74);
@@ -1240,7 +1268,8 @@ header .link a ion-icon:hover {
   border-radius: 20px;
 }
 .sr_overview .info .middle .name {
-  color: #8F9BB2;
+  color: #323537;
+  font-weight: 900;
   padding: 3px 10px;
   margin: 3px 0px;
   border-radius: 5px;
@@ -1249,41 +1278,54 @@ header .link a ion-icon:hover {
 .sr_overview .info .middle .shop {
   color: #8F9BB2;
   padding: 3px 10px;
+  font-weight: 900;
   margin: 3px 0px;
   border-radius: 5px;
   text-transform: capitalize;
 }
 .sr_overview .info .middle .number {
-  background: rgba(131, 218, 170, 0.178);
+  background: rgba(189, 201, 211, 0.15);
+  width: 100%;
+  font-weight: 900;
   padding: 3px 10px;
   border-radius: 5px;
   color: rgb(113, 113, 113);
   margin: 3px 0px;
 }
 .sr_overview .info .middle .password {
-  background: rgba(218, 164, 131, 0.178);
+  background: rgba(189, 201, 211, 0.15);
+  width: 100%;
   padding: 3px 10px;
+  font-weight: 900;
   border-radius: 5px;
   color: rgb(113, 113, 113);
   margin: 3px 0px;
 }
-.sr_overview .info .middle .company, .sr_overview .info .middle .village {
-  background: rgba(104, 104, 104, 0.178);
+.sr_overview .info .middle .company,
+.sr_overview .info .middle .village {
+  background: rgba(189, 201, 211, 0.15);
+  width: 100%;
   padding: 3px 10px;
+  font-weight: 900;
   border-radius: 5px;
   color: rgb(113, 113, 113);
   margin: 3px 0px;
 }
-.sr_overview .info .middle .deller, .sr_overview .info .middle .area {
-  background: rgba(218, 208, 131, 0.178);
+.sr_overview .info .middle .deller,
+.sr_overview .info .middle .area {
+  background: rgba(189, 201, 211, 0.15);
+  width: 100%;
+  font-weight: 900;
   padding: 3px 10px;
   border-radius: 5px;
   color: rgb(113, 113, 113);
   margin: 3px 0px;
 }
 .sr_overview .info .middle .zila {
-  background: rgba(218, 131, 190, 0.178);
+  background: rgba(189, 201, 211, 0.15);
+  width: 100%;
   padding: 3px 10px;
+  font-weight: 900;
   border-radius: 5px;
   color: rgb(113, 113, 113);
   margin: 3px 0px;
@@ -1306,13 +1348,15 @@ header .link a ion-icon:hover {
   margin: 20px 0px;
 }
 .sr_overview .info .right .box h3 {
-  color: #8F9BB2;
+  color: #323537;
   font-size: 16px;
 }
 .sr_overview .info .right .box p {
   font-size: 1rem;
   font-weight: 600;
-  color: rgb(186, 138, 217);
+  color: #000000;
+  border-radius: 30px;
+  background: rgba(189, 201, 211, 0.15);
 }
 .sr_overview .product {
   padding: 10px;
@@ -1329,6 +1373,7 @@ header .link a ion-icon:hover {
   margin: 10px;
   width: 100%;
   max-width: 150px;
+  padding: 10px 30px;
   background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
   box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.9), 4px 4px 10px rgba(138, 155, 189, 0.4);
   border-radius: 10px;
@@ -1348,10 +1393,18 @@ header .link a ion-icon:hover {
 .sr_overview .product .price {
   font-weight: 600;
   font-size: 1.3rem;
-  color: rgb(112, 179, 206);
+  color: rgb(11, 11, 11);
+  background: rgba(189, 201, 211, 0.15);
+  width: 100%;
+  text-align: center;
+  border-radius: 30px;
 }
 .sr_overview .product .name {
+  padding: 5px;
   font-size: 1rem;
+  color: rgb(11, 11, 11);
+  text-transform: capitalize;
+  text-align: center;
 }
 
 @media only screen and (max-width: 450px) {
@@ -1739,20 +1792,22 @@ header .link a ion-icon:hover {
   flex-wrap: wrap;
 }
 .delivery_days .day {
+  font-weight: 500;
   text-decoration: none;
   height: 70px;
-  color: #8F9BB2;
+  color: #3E5467;
   letter-spacing: 0.5px;
   font-size: 1rem;
+  font-weight: 600;
   width: 150px;
   margin: 15px 10px;
-  border: 1px solid rgba(164, 164, 164, 0.168);
   display: flex;
   justify-content: center;
   align-items: center;
+  text-transform: capitalize;
   border-radius: 10px;
-  background: linear-gradient(315.13deg, rgba(194, 217, 237, 0.3) 5.21%, rgba(255, 255, 255, 0.3) 62.26%), #E9F0F7;
-  box-shadow: 3px 3px 12px rgba(138, 155, 189, 0.4), -3px -3px 15px rgba(255, 255, 255, 0.9);
+  box-shadow: 4px 4px 16px rgba(166, 180, 209, 0.48), -5px -5px 18px #FFFFFF;
+  border-radius: 10px;
 }
 
 .d_retailer_list {
@@ -1790,35 +1845,36 @@ header .link a ion-icon:hover {
 .d_retailer_list a .card .baki {
   background: rgba(88, 88, 88, 0);
   padding: 3px;
+  color: #323537;
+  text-transform: capitalize;
 }
 .d_retailer_list a .card .shop {
   background: rgba(120, 35, 96, 0);
-  border-top: 1px solid #d8e1f2;
-}
-.d_retailer_list a .card .order {
-  background: rgba(0, 63, 146, 0.473);
-  font-weight: 300;
-  color: white;
-  background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
-  box-shadow: -3px -3px 5px rgba(255, 255, 255, 0.4), 3px 3px 5px rgba(138, 155, 189, 0.133);
-  color: #8F9BB2;
-  border-radius: 10px;
+  font-size: 0.64rem;
+  color: #3E5467;
+  margin-top: -6px;
   margin-bottom: 10px;
 }
+.d_retailer_list a .card .order {
+  color: #3E5467;
+  font-weight: 300;
+  font-weight: 600;
+  border-radius: 50px;
+  margin-bottom: 10px;
+  background: rgba(0, 0, 0, 0.033);
+}
 .d_retailer_list a .card .order span {
-  color: rgb(94, 178, 111);
+  color: rgba(100, 140, 108, 0.941);
   font-weight: 600;
 }
 .d_retailer_list a .card .baki {
-  color: #8F9BB2;
-  background: #8F9BB2;
-  background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
-  box-shadow: -3px -3px 5px rgba(255, 255, 255, 0), 3px 3px 5px rgba(138, 155, 189, 0.134);
-  font-weight: 300;
-  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.033);
+  color: #3E5467;
+  border-radius: 50px;
+  font-weight: 600;
 }
 .d_retailer_list a .card .baki span {
-  color: rgb(215, 99, 99);
+  color: rgb(209, 70, 70);
   font-weight: 600;
 }
 
@@ -1827,6 +1883,7 @@ header .link a ion-icon:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-transform: capitalize;
 }
 .d_overview_retailer .profile .image img {
   width: 120px;
@@ -1834,6 +1891,15 @@ header .link a ion-icon:hover {
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.d_overview_retailer .profile .name {
+  font-weight: 600;
+  color: #323537;
+}
+.d_overview_retailer .profile .shop {
+  font-weight: 600;
+  color: #323537;
+  font-size: 0.8rem;
 }
 .d_overview_retailer .order,
 .d_overview_retailer .baki,
@@ -1845,12 +1911,13 @@ header .link a ion-icon:hover {
 .d_overview_retailer .baki .buttons,
 .d_overview_retailer .complete .buttons {
   margin: auto;
-  border: 1px solid rgb(159, 159, 159);
+  background: rgba(0, 0, 0, 0.033);
   width: 90%;
+  max-width: 200px;
   text-transform: capitalize;
   font-family: "Montserrat", sans-serif;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 40px;
   font-weight: 600;
   color: rgb(108, 108, 108);
   padding: 10px 0px;
@@ -1870,19 +1937,19 @@ header .link a ion-icon:hover {
 .d_overview_retailer .baki .boxs .box .card,
 .d_overview_retailer .complete .boxs .box .card {
   margin: 5px 0px;
-  text-align: center;
   width: 100%;
   max-width: 160px;
   min-width: 150px;
-  border: 1px solid rgb(154, 154, 154);
   margin: 5px;
-  padding: 10px;
+  padding: 10px 20px;
   border-radius: 10px;
+  background: rgba(189, 201, 211, 0.15);
 }
 .d_overview_retailer .order .boxs .box .card .image,
 .d_overview_retailer .baki .boxs .box .card .image,
 .d_overview_retailer .complete .boxs .box .card .image {
   width: 100%;
+  text-align: center;
 }
 .d_overview_retailer .order .boxs .box .card .image img,
 .d_overview_retailer .baki .boxs .box .card .image img,
@@ -1892,23 +1959,27 @@ header .link a ion-icon:hover {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.d_overview_retailer .order .boxs .box .card .name,
+.d_overview_retailer .baki .boxs .box .card .name,
+.d_overview_retailer .complete .boxs .box .card .name {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: #3E5467;
+}
 .d_overview_retailer .order .boxs .box .card .price,
-.d_overview_retailer .baki .boxs .box .card .price,
-.d_overview_retailer .complete .boxs .box .card .price {
-  background: rgb(86, 118, 97);
-  color: antiquewhite;
-}
 .d_overview_retailer .order .boxs .box .card .quantity,
-.d_overview_retailer .baki .boxs .box .card .quantity,
-.d_overview_retailer .complete .boxs .box .card .quantity {
-  background: rgb(118, 118, 86);
-  color: antiquewhite;
-}
 .d_overview_retailer .order .boxs .box .card .tp,
+.d_overview_retailer .baki .boxs .box .card .price,
+.d_overview_retailer .baki .boxs .box .card .quantity,
 .d_overview_retailer .baki .boxs .box .card .tp,
+.d_overview_retailer .complete .boxs .box .card .price,
+.d_overview_retailer .complete .boxs .box .card .quantity,
 .d_overview_retailer .complete .boxs .box .card .tp {
-  background: rgb(86, 105, 118);
-  color: antiquewhite;
+  font-size: 14px;
+  color: #323537;
+  margin: 3px 0px;
+  font-weight: 600;
 }
 .d_overview_retailer .order .boxs .box .card .btn,
 .d_overview_retailer .baki .boxs .box .card .btn,
@@ -1918,11 +1989,14 @@ header .link a ion-icon:hover {
 .d_overview_retailer .order .boxs .box .card .btn .bt,
 .d_overview_retailer .baki .boxs .box .card .btn .bt,
 .d_overview_retailer .complete .boxs .box .card .btn .bt {
+  text-align: center;
   margin: 10px 0px;
   cursor: pointer;
-  background: rgb(10, 128, 46);
-  border-radius: 5px;
-  color: antiquewhite;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 40px;
+  color: rgb(77, 77, 77);
+  box-shadow: 4px 4px 16px rgba(138, 155, 189, 0.48), -5px -5px 18px #FFFFFF;
 }
 .d_overview_retailer .order .boxs .box .card .btn .bt:nth-child(2),
 .d_overview_retailer .baki .boxs .box .card .btn .bt:nth-child(2),
@@ -1937,7 +2011,7 @@ header .link a ion-icon:hover {
 .d_overview_retailer .order .boxs .cardinfo,
 .d_overview_retailer .baki .boxs .cardinfo,
 .d_overview_retailer .complete .boxs .cardinfo {
-  background: rgb(83, 62, 122);
+  background: rgba(189, 201, 211, 0.15);
   display: flex;
   width: 100%;
   max-width: 500px;
@@ -1946,7 +2020,25 @@ header .link a ion-icon:hover {
   border-radius: 10px;
   align-items: center;
   justify-content: space-between;
-  color: aliceblue;
+  color: #3E5467;
+  box-shadow: 4px 4px 16px rgba(138, 155, 189, 0.48), -5px -5px 18px #FFFFFF;
+  font-weight: 600;
+}
+.d_overview_retailer .order .boxs .cardinfo .left,
+.d_overview_retailer .baki .boxs .cardinfo .left,
+.d_overview_retailer .complete .boxs .cardinfo .left {
+  width: 100%;
+}
+.d_overview_retailer .order .boxs .cardinfo .left .itema,
+.d_overview_retailer .baki .boxs .cardinfo .left .itema,
+.d_overview_retailer .complete .boxs .cardinfo .left .itema {
+  border-bottom: 1px dashed #3E5467;
+  padding: 10px 0px;
+}
+.d_overview_retailer .order .boxs .cardinfo .left .ffa,
+.d_overview_retailer .baki .boxs .cardinfo .left .ffa,
+.d_overview_retailer .complete .boxs .cardinfo .left .ffa {
+  padding: 10px 0px;
 }
 .d_overview_retailer .order .boxs .cardinfo .right,
 .d_overview_retailer .order .boxs .cardinfo .left,
@@ -1975,13 +2067,13 @@ header .link a ion-icon:hover {
 .d_overview_retailer .complete .boxs .cardinfo .left .btn span {
   cursor: pointer;
   margin: 10px 0px;
-  background: rgb(0, 87, 44);
-  color: rgb(250, 240, 219);
-  padding: 4px 10px;
-  border: 1px solid wheat;
+  box-shadow: 4px 4px 16px rgba(138, 155, 189, 0.48), -5px -5px 18px #FFFFFF;
+  color: #3E5467;
+  font-weight: 600;
+  border-radius: 20px;
+  padding: 5px 10px;
   text-align: center;
   width: 100px;
-  border-radius: 4px;
 }
 .d_overview_retailer .order .boxs .cardinfo .right .btn span a,
 .d_overview_retailer .order .boxs .cardinfo .left .btn span a,
@@ -1990,15 +2082,7 @@ header .link a ion-icon:hover {
 .d_overview_retailer .complete .boxs .cardinfo .right .btn span a,
 .d_overview_retailer .complete .boxs .cardinfo .left .btn span a {
   text-decoration: none;
-  color: rgb(250, 240, 219);
-}
-.d_overview_retailer .order .boxs .cardinfo .right .btn .baki_op,
-.d_overview_retailer .order .boxs .cardinfo .left .btn .baki_op,
-.d_overview_retailer .baki .boxs .cardinfo .right .btn .baki_op,
-.d_overview_retailer .baki .boxs .cardinfo .left .btn .baki_op,
-.d_overview_retailer .complete .boxs .cardinfo .right .btn .baki_op,
-.d_overview_retailer .complete .boxs .cardinfo .left .btn .baki_op {
-  background: rgb(87, 0, 0);
+  color: #3E5467;
 }
 .d_overview_retailer .order .boxs .cardinfo .complete_pop,
 .d_overview_retailer .baki .boxs .cardinfo .complete_pop,
@@ -2098,12 +2182,12 @@ header .link a ion-icon:hover {
 }
 .complete .buttons {
   margin: auto;
-  border: 1px solid rgb(159, 159, 159);
+  background: rgba(0, 0, 0, 0.033);
   width: 90%;
   text-transform: capitalize;
   font-family: "Montserrat", sans-serif;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 40px;
   font-weight: 600;
   color: rgb(108, 108, 108);
   padding: 10px 0px;
@@ -2119,11 +2203,10 @@ header .link a ion-icon:hover {
 }
 .complete .boxs .box .card {
   margin: 5px 0px;
-  text-align: center;
   width: 100%;
   max-width: 160px;
   min-width: 150px;
-  border: 1px solid rgb(154, 154, 154);
+  background: rgba(189, 201, 211, 0.15);
   margin: 5px;
   padding: 10px;
   border-radius: 10px;
@@ -2137,17 +2220,12 @@ header .link a ion-icon:hover {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.complete .boxs .box .card .price {
-  background: rgb(86, 118, 97);
-  color: antiquewhite;
-}
-.complete .boxs .box .card .quantity {
-  background: rgb(118, 118, 86);
-  color: antiquewhite;
-}
-.complete .boxs .box .card .tp {
-  background: rgb(86, 105, 118);
-  color: antiquewhite;
+.complete .boxs .box .card .timea {
+  font-weight: 600;
+  border-top: 1px dashed #3E5467;
+  color: #3E5467;
+  margin: 10px 0px;
+  padding: 5px 0px;
 }
 .complete .boxs .box .card .btn {
   padding: 10px 5px;
@@ -2166,7 +2244,6 @@ header .link a ion-icon:hover {
   background: rgb(171, 1, 1);
 }
 .complete .boxs .cardinfo {
-  background: rgb(83, 62, 122);
   display: flex;
   width: 100%;
   max-width: 500px;
@@ -2420,7 +2497,7 @@ header .link a ion-icon:hover {
 }
 .deller_sr a .card {
   width: 100%;
-  max-width: 200px;
+  max-width: 180px;
   min-width: 150px;
   margin: 7px;
   background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
@@ -2837,14 +2914,13 @@ header .link a ion-icon:hover {
 }
 .togglee .show ion-icon,
 .togglee .hide ion-icon {
-  background: rgb(255, 255, 255);
+  background: rgba(15, 111, 190, 0.827);
   font-size: 1.5rem;
   padding: 5px;
   cursor: pointer;
-  color: #000;
+  color: #3E5467;
 }
 .togglee .hide ion-icon {
-  background: rgb(235, 235, 235);
   color: rgb(34, 34, 34);
 }
 
@@ -2854,7 +2930,8 @@ header .link a ion-icon:hover {
   width: 20%;
   min-width: 200px;
   padding: 5px;
-  background: rgba(255, 255, 255, 0.995);
+  box-shadow: 4px 4px 16px rgba(138, 155, 189, 0.48), -5px -5px 18px #FFFFFF;
+  background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
 }
 .slider .header {
   min-height: 20%;
@@ -2870,13 +2947,22 @@ header .link a ion-icon:hover {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.slider .header a {
-  text-decoration: none;
-  color: #8F9BB2;
-}
-.slider .header a .title {
+.slider .header .title {
   margin: 5px 0px;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+.slider .header .title a {
+  text-align: center;
+  color: #3E5467;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.slider .header .title .store {
+  text-align: center;
+  font-size: 0.8rem;
+  text-transform: capitalize;
 }
 .slider .box {
   height: 70%;
@@ -2886,40 +2972,50 @@ header .link a ion-icon:hover {
   height: 70%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
 }
 .slider .box ul a {
-  width: 90%;
+  width: 80%;
   text-align: center;
   font-size: 1.2rem;
   margin: 10px 0px;
   text-decoration: none;
   color: #8F9BB2;
-  border-bottom: 1px solid rgba(95, 158, 160, 0);
-  padding: 5px;
+  background: rgba(189, 201, 211, 0.15);
+  padding: 7px 0px;
   transition: 1s;
+  color: #3E5467;
+  font-weight: 900;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider .box ul a i {
+  font-size: 14px;
+  padding: 0px 5px;
 }
 .slider .box ul a:hover {
   width: 100%;
   transition: 0.2s;
-  border-bottom: 1px solid rgba(3, 3, 3, 0.126);
 }
 .slider .footer {
   height: 9%;
 }
 .slider .footer a {
-  width: 100%;
+  width: 80%;
   padding: 7px;
   font-size: 1.2rem;
   margin: 10px 0px;
   text-decoration: none;
-  color: #8F9BB2;
+  margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid rgba(43, 43, 43, 0.166);
+  box-shadow: -3px -3px 5px rgba(255, 255, 255, 0.4), 3px 3px 5px rgba(138, 155, 189, 0.2);
   border-radius: 20px;
+  color: #3E5467;
+  font-weight: bold;
 }
 .slider .footer a ion-icon {
   font-size: 1.5rem;
@@ -3009,12 +3105,12 @@ header .link a ion-icon:hover {
 }
 .cb_order .list .box .title {
   margin: 20px 0px;
-  border-bottom: 1px solid rgb(108, 108, 108);
-  border-top: 1px solid rgb(99, 99, 99);
+  background: rgba(189, 201, 211, 0.15);
+  border-radius: 30px;
 }
 .cb_order .list .box .title h1 {
   text-align: center;
-  color: rgb(69, 69, 69);
+  color: rgb(0, 0, 0);
 }
 .cb_order .list .box .column {
   width: 100%;
@@ -3049,6 +3145,8 @@ header .link a ion-icon:hover {
   color: rgb(107, 107, 107);
   font-weight: 600;
   margin: 2px 0px;
+  text-transform: capitalize;
+  text-align: center;
 }
 .cb_order .list .box .column .row .name span,
 .cb_order .list .box .column .row .item span,
@@ -3057,8 +3155,9 @@ header .link a ion-icon:hover {
 .cb_order .list .box .column .row .total span,
 .cb_order .list .box .column .row .retailer span,
 .cb_order .list .box .column .row .time span {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 100;
+  text-align: center;
 }
 .cb_order .list .box .column .row .name span a,
 .cb_order .list .box .column .row .item span a,
@@ -3070,7 +3169,7 @@ header .link a ion-icon:hover {
   text-decoration: none;
   color: rgb(243, 243, 243);
   padding: 1px 10px;
-  background: rgb(75, 75, 75);
+  background: rgb(28, 28, 28);
   border-radius: 10px;
   font-size: 1rem;
 }
@@ -3283,10 +3382,12 @@ header .link a ion-icon:hover {
           backdrop-filter: blur(10px);
 }
 .landing-page-new .landing-page-header .menu .box {
-  background: rgb(255, 255, 255);
+  background: #EBF3FA;
   padding: 10px;
   display: flex;
   flex-wrap: wrap;
+  box-shadow: 0px -2px 15px -1px rgb(225, 231, 242);
+  border-radius: 20px;
 }
 .landing-page-new .landing-page-header .menu .box a {
   padding: 5px;
@@ -3299,10 +3400,17 @@ header .link a ion-icon:hover {
   height: 100px;
   border-radius: 10px;
   text-decoration: none;
-  color: #323537;
+  color: #53585c;
+  background: rgba(189, 201, 211, 0.1);
 }
 .landing-page-new .landing-page-header .menu .box a ion-icon {
   font-size: 1.4rem;
+}
+.landing-page-new .landing-page-header .menu .box a span {
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
 }
 .landing-page-new .landing-page-header .toggle {
   width: 50px;
@@ -3360,9 +3468,9 @@ header .link a ion-icon:hover {
   left: -5%;
 }
 .landing-page-new .open .slogan .bg-icon:nth-child(3) {
-  top: 30%;
-  width: 200px;
-  left: 93%;
+  top: 52%;
+  width: 98px;
+  left: 95%;
 }
 .landing-page-new .open .slogan .bg-icon:nth-child(4) {
   top: 62%;
@@ -3377,14 +3485,17 @@ header .link a ion-icon:hover {
 }
 .landing-page-new .open .slogan .bg-icon:nth-child(6) {
   top: 44%;
-  left: 15%;
+  width: 46px;
+  left: 5%;
 }
 .landing-page-new .open .slogan .bg-icon:nth-child(7) {
   top: 9%;
   left: 56%;
+  width: 46px;
 }
 .landing-page-new .open .slogan .bg-icon:nth-child(8) {
   top: 42%;
+  display: none;
   left: 8%;
 }
 .landing-page-new .open .slogan .bg-icon:nth-child(9) {
@@ -3451,7 +3562,7 @@ header .link a ion-icon:hover {
   width: 80%;
   max-width: 900px;
   height: 300px;
-  border: 1px solid rgb(223, 219, 231);
+  background: rgba(189, 201, 211, 0.15);
   overflow: hidden;
   align-items: center;
   display: flex;
@@ -3671,6 +3782,7 @@ header .link a ion-icon:hover {
 .landing-page-new .contact form .phone input {
   border: none;
   outline: none;
+  width: 100%;
   background: rgba(0, 0, 0, 0);
 }
 .landing-page-new .contact form .phone input::-moz-placeholder {
@@ -3807,6 +3919,9 @@ header .link a ion-icon:hover {
     top: unset;
     align-items: flex-end;
   }
+  .landing-page-new .landing-page-header .menu .box {
+    width: 100%;
+  }
   .landing-page-new .landing-page-header .toggle .hide,
 .landing-page-new .landing-page-header .toggle .show {
     margin-bottom: 15px;
@@ -3905,7 +4020,20 @@ header .link a ion-icon:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 15px;
+  padding: 2px 15px;
+}
+.rt .box .retailer-header .space {
+  width: 10%;
+}
+.rt .box .retailer-header .search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(189, 201, 211, 0.15);
+  padding: 5px 10px;
+  border-radius: 30px;
+  width: 70%;
+  margin: auto;
 }
 .rt .box .retailer-header .search input {
   height: 30px;
@@ -3913,6 +4041,8 @@ header .link a ion-icon:hover {
   border-radius: 4px;
   outline: none;
   padding: 5px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0);
 }
 .rt .box .retailer-header .cart a {
   margin: 0px 5px;
@@ -3961,6 +4091,7 @@ header .link a ion-icon:hover {
   max-height: 200px;
   -o-object-fit: contain;
      object-fit: contain;
+  border-radius: 10px;
 }
 .rt .box .retailermain {
   width: 100%;
@@ -4362,15 +4493,17 @@ header .link a ion-icon:hover {
 .loadmore {
   width: 90%;
   margin: auto;
+  margin-top: 12px;
   text-align: center;
-  border: 1px solid rgba(155, 155, 155, 0.34);
+  background: rgba(189, 201, 211, 0.15);
   text-transform: capitalize;
-  color: #7f899a;
+  color: #3E5467;
   font-size: 19px;
   font-weight: 600;
   letter-spacing: 1px;
   border-radius: 40px;
   cursor: pointer;
+  padding: 10px 0px;
 }
 
 .contact_box form {

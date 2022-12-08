@@ -43,15 +43,13 @@
             backdrop-filter: blur(10px);
 
             .box {
-                background: rgb(255, 255, 255);
-
-
+                background: #EBF3FA;
                 padding: 10px;
                 display: flex;
                 flex-wrap: wrap;
-
+                box-shadow: 0px -2px 15px -1px rgb(225, 231, 242);
+                border-radius: 20px;
                 a {
-
                     padding: 5px;
                     display: flex;
                     justify-content: center;
@@ -62,13 +60,18 @@
                     height: 100px;
                     border-radius: 10px;
                     text-decoration: none;
-                    color: #323537;
-
+                    color: #53585c;
+                    background: rgba(189, 201, 211, 0.10);
                     ion-icon {
                         font-size: 1.4rem;
                     }
 
-                    span {}
+                    span {
+                        text-transform: capitalize;
+                        letter-spacing: 1px;
+                        font-weight: 500;
+                        font-family: "Montserrat", sans-serif;
+                    }
                 }
             }
         }
@@ -137,16 +140,16 @@
             }
 
             .bg-icon:nth-child(3) {
-                top: 30%;
-                width: 200px;
-                left: 93%;
+                top: 52%;
+                width: 98px;
+                left: 95%;
             }
 
 
             .bg-icon:nth-child(4) {
                 top: 62%;
-    width: 25px;
-    left: 6%;
+                width: 25px;
+                left: 6%;
                 width: 25px;
                 left: 58%;
             }
@@ -158,16 +161,19 @@
 
             .bg-icon:nth-child(6) {
                 top: 44%;
-                left: 15%;
+                width: 46px;
+                left: 5%;
             }
 
             .bg-icon:nth-child(7) {
                 top: 9%;
                 left: 56%;
+                width: 46px;
             }
 
             .bg-icon:nth-child(8) {
                 top: 42%;
+                display: none;
                 left: 8%;
             }
 
@@ -257,7 +263,7 @@
             width: 80%;
             max-width: 900px;
             height: 300px;
-            border: 1px solid rgb(223 219 231);
+            background: rgba(189, 201, 211, 0.15);
             overflow: hidden;
             align-items: center;
             display: flex;
@@ -482,6 +488,7 @@
                 input {
                     border: none;
                     outline: none;
+                    width: 100%;
                     background: rgba(0, 0, 0, 0);
                 }
 
@@ -635,6 +642,7 @@
 
                 .box {
 
+                    width: 100%;
 
                     a {
 

@@ -23,11 +23,11 @@ if (!isset($_SESSION["did"])) {
     <div class="container acc">
         <div class="admin">
             <!-- ------------------ --------- -->
-            <div class="cb cb_order bbb" style="width:100% ;">
+            <div class="cb cb_order bbb" style="width:100%;">
                 <div class="list list_complete">
                     <div class="box">
                         <div class="title">
-                            <h1>SR Sells</h1>
+                            <h1>SR Sells Info</h1>
                         </div>
                         <div class="column">
                             <?php

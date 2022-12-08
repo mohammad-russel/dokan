@@ -398,7 +398,7 @@ if (!isset($_SESSION["aid"])) {
                                     ?>
                                     <div class="buy_info">
                                         <div class="total"><?php echo $full_total ?>৳</div>
-                                        <div class="percent"><?php echo number_format($percent, 1)?>%</div>
+                                        <div class="percent"><?php echo number_format($percent, 1) ?>%</div>
                                     </div>
                                 </div>
                         <?php }

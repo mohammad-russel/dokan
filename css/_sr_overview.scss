@@ -110,14 +110,17 @@
         margin: 20px 0px;
 
         h3 {
-          @include text_color;
+          color: #323537;
           font-size: 16px;
         }
 
         p {
           font-size: 1rem;
           font-weight: 600;
-          color: rgb(72, 162, 198);
+          color: #000000;
+          background: rgba(189, 201, 211, 0.15);
+          border-radius: 30px;
+
         }
 
         .sd {
@@ -137,21 +140,27 @@
       border-radius: 20px;
 
       .name {
-        @include text_color;
+        color: #323537;
+        font-weight: 900;
         padding: 3px 10px;
         margin: 3px 0px;
         border-radius: 5px;
         text-transform: capitalize;
       }
+
       .shop {
         @include text_color;
         padding: 3px 10px;
+        font-weight: 900;
         margin: 3px 0px;
         border-radius: 5px;
         text-transform: capitalize;
       }
+
       .number {
-        background: rgba(131, 218, 170, 0.178);
+        background: rgba(189, 201, 211, 0.15);
+        width: 100%;
+        font-weight: 900;
         padding: 3px 10px;
         border-radius: 5px;
         color: rgb(113, 113, 113);
@@ -159,15 +168,32 @@
       }
 
       .password {
-        background: rgba(218, 164, 131, 0.178);
+        background: rgba(189, 201, 211, 0.15);
+        width: 100%;
         padding: 3px 10px;
+        font-weight: 900;
         border-radius: 5px;
         color: rgb(113, 113, 113);
         margin: 3px 0px;
       }
 
-      .company,.village {
-        background: rgba(104, 104, 104, 0.178);
+      .company,
+      .village {
+        background: rgba(189, 201, 211, 0.15);
+        width: 100%;
+        padding: 3px 10px;
+        font-weight: 900;
+        border-radius: 5px;
+        color: rgb(113, 113, 113);
+
+        margin: 3px 0px;
+      }
+
+      .deller,
+      .area {
+        background: rgba(189, 201, 211, 0.15);
+        width: 100%;
+        font-weight: 900;
         padding: 3px 10px;
         border-radius: 5px;
         color: rgb(113, 113, 113);
@@ -175,17 +201,11 @@
         margin: 3px 0px;
       }
 
-      .deller,.area {
-        background: rgba(218, 208, 131, 0.178);
+      .zila {
+        background: rgba(189, 201, 211, 0.15);
+        width: 100%;
         padding: 3px 10px;
-        border-radius: 5px;
-        color: rgb(113, 113, 113);
-
-        margin: 3px 0px;
-      }
-      .zila{
-        background: rgba(218, 131, 190, 0.178);
-        padding: 3px 10px;
+        font-weight: 900;
         border-radius: 5px;
         color: rgb(113, 113, 113);
 
@@ -197,23 +217,28 @@
       width: 100%;
       max-width: 200px;
       padding: 10px;
-a{
-  text-decoration: none;
-}
+
+      a {
+        text-decoration: none;
+      }
+
       .box {
         @include shadow;
         padding: 15px 10px;
         margin: 20px 0px;
 
         h3 {
-          @include text_color;
+          color: #323537;
+
           font-size: 16px;
         }
 
         p {
           font-size: 1rem;
           font-weight: 600;
-          color: rgb(186, 138, 217);
+          color: #000000;
+          border-radius: 30px;
+          background: rgba(189, 201, 211, 0.15);
         }
       }
     }
@@ -234,6 +259,7 @@ a{
       margin: 10px;
       width: 100%;
       max-width: 150px;
+      padding: 10px 30px;
       @include shadow;
     }
 
@@ -251,11 +277,19 @@ a{
     .price {
       font-weight: 600;
       font-size: 1.3rem;
-      color: rgb(112, 179, 206);
+      color: rgb(11, 11, 11);
+      background: rgba(189, 201, 211, 0.15);
+      width: 100%;
+      text-align: center;
+      border-radius: 30px;
     }
 
     .name {
+      padding: 5px;
       font-size: 1rem;
+      color: rgb(11, 11, 11);
+      text-transform: capitalize;
+      text-align: center;
     }
   }
 }

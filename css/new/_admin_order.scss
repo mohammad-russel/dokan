@@ -62,12 +62,12 @@
 
             .title {
                 margin: 20px 0px;
-                border-bottom: 1px solid rgb(108, 108, 108);
-                border-top: 1px solid rgb(99, 99, 99);
+                background: rgba(189, 201, 211, 0.15);
+                border-radius: 30px;
 
                 h1 {
                     text-align: center;
-                    color: rgb(69, 69, 69);
+                    color: rgb(0, 0, 0);
                 }
             }
 
@@ -103,16 +103,17 @@
                         color: rgb(107, 107, 107);
                         font-weight: 600;
                         margin: 2px 0px;
-
+                        text-transform: capitalize;
+text-align: center;
                         span {
-                            font-size: 1.1rem;
+                            font-size: 1rem;
                             font-weight: 100;
-
+                            text-align: center;
                             a {
                                 text-decoration: none;
                                 color: rgb(243, 243, 243);
                                 padding: 1px 10px;
-                                background: rgb(75, 75, 75);
+                                background: rgb(28, 28, 28);
                                 border-radius: 10px;
                                 font-size: 1rem;
 
@@ -187,10 +188,11 @@
                         .retailer,
                         .time {
                             width: 100%;
-                            span{
-                                a{
+
+                            span {
+                                a {
                                     width: 400px;
-                                    
+
                                 }
                             }
                         }
@@ -210,7 +212,6 @@
                             border-bottom: 1px solid rgb(223, 223, 223);
 
                             span {
-
 
                                 a {}
                             }

@@ -2,20 +2,23 @@
   .head {
     margin: 10px 0px;
     text-align: center;
+
     .searchbox {
       padding: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
+
       #search {
-        padding: 7px;
+        padding: 8px;
         outline: none;
         width: 300px;
         height: 35px;
         border: none;
-        border-bottom-left-radius: 10px;
-        border-top-left-radius: 10px;
+   border-radius: 7px;
+        background: rgba(189, 201, 211, 0.15);
       }
+
       .search_submit {
         border-bottom-right-radius: 10px;
         border-top-right-radius: 10px;
@@ -26,31 +29,42 @@
         color: rgb(86, 86, 86);
         font-weight: 600;
 
-        background: rgb(173, 226, 223);
       }
     }
   }
+
   .retailerbox {
     flex-wrap: wrap;
     display: flex;
     align-items: center;
     justify-content: center;
+
     .create_ac {
-    margin-right: 50px;
+      width: 120px;
+      margin-right: 20px;
+      height: 180px;
       border: 1px solid rgb(255 255 255 / 64%);
       display: flex;
       justify-content: center;
 
       border-radius: 10px;
       align-items: center;
-      background: linear-gradient(
-          312.9deg,
-          rgba(255, 255, 255, 0.3) 4.49%,
-          rgba(233, 240, 247, 0.3) 95.45%
-        ),
-        #e9f0f7;
       box-shadow: -3px -3px 9px rgb(255 255 255 / 90%),
         3px 3px 9px rgb(138 155 189 / 40%);
+
+      span {
+
+        background: rgba(189, 201, 211, 0.15);
+        padding: 10px;
+        font-size: 90px;
+        border-radius: 50%;
+        height: 90px;
+        width:90px ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
       .new {
         cursor: pointer;
         width: 100%;
@@ -59,8 +73,10 @@
         justify-content: center;
         align-items: center;
         font-size: 100px;
-        color: rgb(139, 139, 139);
+        color: #323537;
+
       }
+
       .popup {
         background: rgb(234, 234, 234);
         width: 100%;
@@ -69,15 +85,18 @@
         top: 0%;
         left: 0%;
         position: absolute;
+
         .close {
           background: #ebf3fa;
           cursor: pointer;
           text-align: end;
           padding: 10px;
+
           ion-icon {
             font-size: 30px;
           }
         }
+
         form {
           display: flex;
           justify-content: center;
@@ -85,15 +104,14 @@
           flex-direction: column;
           background: #ebf3fa;
           padding: 20px;
+
           input,
           select {
             outline: none;
             width: 100%;
-            background: linear-gradient(
-                312.9deg,
+            background: linear-gradient(312.9deg,
                 rgba(255, 255, 255, 0.3) 4.49%,
-                rgba(233, 240, 247, 0.3) 95.45%
-              ),
+                rgba(233, 240, 247, 0.3) 95.45%),
               #e9f0f7;
             box-shadow: -3px -3px 9px rgb(255 255 255 / 90%),
               3px 3px 9px rgb(138 155 189 / 40%);
@@ -105,6 +123,7 @@
             height: 50px;
             border-radius: 0.7rem;
           }
+
           .newretinsert {
             background: rgb(29 29 29);
             color: azure;
@@ -115,21 +134,21 @@
         }
       }
     }
+
     a {
       color: rgb(67, 67, 67);
       text-decoration: none;
       margin: 10px;
+
       .card {
         min-width: 100px;
         max-width: 200px;
         padding: 10px;
         border-radius: 10px;
         overflow: hidden;
-        background: linear-gradient(
-            312.9deg,
+        background: linear-gradient(312.9deg,
             rgba(255, 255, 255, 0.3) 4.49%,
-            rgba(233, 240, 247, 0.3) 95.45%
-          ),
+            rgba(233, 240, 247, 0.3) 95.45%),
           #e9f0f7;
         box-shadow: 4px 4px 16px rgb(138 155 189 / 48%), -5px -5px 18px #ffffff;
         border-radius: 10px;
@@ -137,8 +156,10 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+
         .image {
           width: 80%;
+
           img {
             padding: 10px;
             width: 100%;
@@ -147,11 +168,13 @@
             border-radius: 50%;
           }
         }
+
         .name {
           font-weight: 600;
           padding: 5px;
           text-align: center;
         }
+
         .shop {
           border-top: 1px solid gray;
           font-weight: 600;
@@ -159,12 +182,14 @@
           padding: 5px;
         }
       }
+
       .card:nth-child(1) {
         margin-right: 10px;
       }
     }
   }
 }
+
 // -----------------------------
 @media only screen and (max-width: 450px) {
   .sr_retailer_main_box {
@@ -173,24 +198,27 @@
         #search {
           width: 90%;
         }
+
         .search_submit {
           width: 100px;
         }
       }
     }
+
     .retailerbox {
       flex-wrap: wrap;
+
       a {
         .card {
           width: 150px;
+
           .image {
-            img {
-            }
+            img {}
           }
-          .name {
-          }
-          .shop {
-          }
+
+          .name {}
+
+          .shop {}
         }
       }
     }

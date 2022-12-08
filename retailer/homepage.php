@@ -34,6 +34,7 @@ $rid = $_SESSION["rid"];
                 <div class="retailer-header">
                     <div class="space"></div>
                     <div class="search">
+                        <ion-icon name="search-outline"></ion-icon>
                         <input type="search" name="search" id="search" placeholder="Search product">
                     </div>
                     <div class="cart">
@@ -50,9 +51,10 @@ $rid = $_SESSION["rid"];
                     $result = mysqli_query($con, $sql);
                     $row = mysqli_fetch_assoc($result);
                     ?>
-                <img src="../image/ads/<?php echo $row['adss'] ?>" alt="">
+                    <img src="../image/ads/<?php echo $row['adss'] ?>" alt="">
                 </div>
                 <div class="retailermain">
+                    
                 </div>
             </div>
         </div>
