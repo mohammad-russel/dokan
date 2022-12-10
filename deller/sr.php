@@ -15,7 +15,9 @@ $did = ($_SESSION["did"]);
     <?php include "../components/head2.php"; ?>
     <title>Deller SR</title>
 </head>
+<style>
 
+</style>
 <body>
     <div class="container">
         <div class="header">
@@ -36,7 +38,7 @@ $did = ($_SESSION["did"]);
                 while ($row = mysqli_fetch_assoc($result)) {
                 ?>
                     <a href="sr_overview.php?did=<?php echo $row['id'] ?>">
-                        <div class="card">
+                        <div class="card " style="color: #3E5467;">
                             <div class="image">
                                 <img src="../image/sr/<?php echo $row['srpic'] ?>" alt="">
                             </div>
@@ -47,7 +49,7 @@ $did = ($_SESSION["did"]);
                             $result1 = mysqli_query($con, $sql1);
                             $pro = mysqli_num_rows($result1);
                             ?>
-                            <div class="productlist">Product : <span><?php echo $pro ?></span></div>
+                            <div class="productlist">Product  (<span><?php echo $pro ?></span>)</div>
                         </div>
                     </a>
                 <?php } ?>

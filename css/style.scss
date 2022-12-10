@@ -4,7 +4,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
@@ -79,11 +78,11 @@ body {
 }
 
 .container::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
 }
 
 .container::-webkit-scrollbar-thumb {
-  background: rgb(82, 82, 82);
+  background: rgba(86, 91, 95, 0.15);
 }
 
 // -------------------

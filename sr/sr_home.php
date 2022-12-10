@@ -38,7 +38,7 @@ $sr = $_SESSION["sid"];
         </div>
         <div class="srmainbox">
             <a href="sr_complete.php?sr=<?php echo $sr ?>">
-                <div class="box">
+                <div class="box" style="color: #3E5467;">
                     <h3>Total Sell</h3>
                     <?php
                     include "../php/config.php";
@@ -52,8 +52,8 @@ $sr = $_SESSION["sid"];
 
             <a class="dd" href="retailer.php">
                 <div class="box">
-                    <ion-icon name="storefront"></ion-icon>
-                    <h3>Retailer</h1>
+                    <ion-icon name="storefront" style="color: #3E5467;"></ion-icon>
+                    <h3 style="color: #3E5467;">Retailer</h1>
                         <?php
                         $sql1 = "SELECT * FROM retailer WHERE openersr = $sr ";
                         $result1 = mysqli_query($con, $sql1);

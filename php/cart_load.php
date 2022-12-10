@@ -20,17 +20,17 @@ if ($numrow = mysqli_num_rows($result)) {
                     <div class='image'>
                         <img src='../image/product/{$row1['pic']}' >
                     </div>
-                    <div class='name'>{$row1['nam']}</div>
+                    <div class='name'>{$row1['nam']} ({$row['price']}৳)</div>
                     <div class='price'>
-                        <div class='pp'>৳ {$row['price']}</div>
-                        <div class='tp'>৳ {$row['total_price']}</div>
+                    <div class='tpm'> মোট</div>
+                        <div class='tp'> {$row['total_price']}৳</div>
                     </div>
                     <div class='quantity'>
                         <input type='number' name='quantity' id='quantity{$row['id']}' value='{$row['quantity']}'>
                     </div>
                     <div class='btn'>
                         <div class='update update{$row["id"]} '>Update</div>
-                        <div class='delete delete{$row["id"]} '>Delete</div>
+                        <div class='delete delete{$row["id"]} '><ion-icon name='trash-outline'></ion-icon></div>
                     </div>
                 </div>";
             $output .= " <script>
@@ -78,26 +78,26 @@ if ($numrow = mysqli_num_rows($result)) {
         }
     }
 
-    $output .= "<div class='cart'>
+    $output .= "<div class='cart info-cart'>
             <div class='order_click'>";
-            $sql5 = "SELECT * FROM retailer WHERE id = $rid ";
-            $result5 = mysqli_query($con, $sql5);
-            $row5 = mysqli_fetch_assoc($result5);
-            $village = $row5['village'];
-            $sql4 = "SELECT * FROM delivery WHERE village = '$village' ";
-            $result4 = mysqli_query($con, $sql4);
-            $row4 = mysqli_fetch_assoc($result4);
-            $day = $row4['day'];
-            $output .="<div class='info'>
+    $sql5 = "SELECT * FROM retailer WHERE id = $rid ";
+    $result5 = mysqli_query($con, $sql5);
+    $row5 = mysqli_fetch_assoc($result5);
+    $village = $row5['village'];
+    $sql4 = "SELECT * FROM delivery WHERE village = '$village' ";
+    $result4 = mysqli_query($con, $sql4);
+    $row4 = mysqli_fetch_assoc($result4);
+    $day = $row4['day'];
+    $output .= "<div class='info'>
                 আপনার এলাকায় ডেলিভারি দেয়া হবে $day <br>
-                    <span>ITEM :  $numrow </span><br>";
+                    <span>পরিমাণ :  {$numrow} টা </span><br>";
     $rid = $_SESSION['rid'];
     include "../php/config.php";
     $sql = "SELECT SUM(price*quantity) AS total FROM cart WHERE rid = $rid AND status ='cart'";
     $result = mysqli_query($con, $sql);
     $row = mysqli_fetch_assoc($result);
     $total =  $row['total'];
-    $output .=  " <span>Total Cost : ৳ $total </span>
+    $output .=  " <span>মোট খরচ : {$total}৳ </span>
                 </div>
                 <div class='button'>
                 <form action='../php/cart_status_update.php' method='post'>

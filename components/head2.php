@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="../css/style.css">
-<link rel="shortcut icon" type = "image" href="../logo/fav.png">
+<link rel="shortcut icon" type = "image" href="../fav/2.ico">
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 <script src="../js/jquery-3.6.1.min.js"></script>

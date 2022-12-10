@@ -19,6 +19,6 @@ else{
     if($result){
         $_SESSION['day'] = "<span class='alerts'>Successfully Added Data</span>";
     }
-    header("location:../admin/day_insert.php");
+    header("location:../admin/admin_setday.php");
 }
 }

@@ -44,17 +44,22 @@ $rid = $_SESSION["rid"];
                         </a>
                     </div>
                 </div>
-                <div class="ads">
-                    <?php
-                    @include "../php/config.php";
-                    $sql = "SELECT * FROM ads WHERE id = 1";
-                    $result = mysqli_query($con, $sql);
-                    $row = mysqli_fetch_assoc($result);
-                    ?>
-                    <img src="../image/ads/<?php echo $row['adss'] ?>" alt="">
+                <div class="ads notice">
+                    <!-- <?php
+                            @include "../php/config.php";
+                            $sql = "SELECT * FROM ads WHERE id = 1";
+                            $result = mysqli_query($con, $sql);
+                            $row = mysqli_fetch_assoc($result);
+                            ?>
+                    <img src="../image/ads/<?php echo $row['adss'] ?>" alt=""> -->
+                    <div class="lt"></div>
+                    <div class="mid">
+                        <h1>Happy Friday</h1>
+                    </div>
+                    <div class="rt"></div>
                 </div>
                 <div class="retailermain">
-                    
+
                 </div>
             </div>
         </div>

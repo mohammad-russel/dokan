@@ -12,7 +12,9 @@
 
         .show,
         .hide {
-            ion-icon {}
+            ion-icon {
+                background: rgba(189, 201, 211, 0.15);
+            }
         }
     }
 

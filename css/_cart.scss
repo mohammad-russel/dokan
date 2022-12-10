@@ -8,7 +8,7 @@
 
   .cart {
     height: max-content;
-    border: 1px solid rgb(159, 159, 159);
+
     margin: 10px auto;
     border-radius: 3px;
     padding: 5px 10px;
@@ -16,9 +16,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @include shadow;
-    background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
-    box-shadow: 4px 4px 16px rgba(138, 155, 189, 0.48), -5px -5px 18px #FFFFFF;
+    background: rgba(189, 201, 211, 0.15);
+
     border-radius: 10px;
 
     .order_click {
@@ -26,20 +25,23 @@
       display: flex;
       justify-content: space-around;
       align-items: center;
-flex-wrap: wrap;
-padding-bottom: 15px;
+      flex-wrap: wrap;
+      padding-bottom: 15px;
+   
+
       .info {
         margin: 10px;
-        font-weight: 600;
-        @include text_color;
+        font-weight: 900;
+        color: #3E5467;
         letter-spacing: 1px;
-        border-radius: 7px;
-        padding: 7px 10px;
-     
+        border-radius: 20px;
+        padding: 20px 10px;
+background: rgba(189, 201, 211, 0.15);
 
         span {
           font-weight: 600;
-          color: rgb(99, 99, 99);
+          color: #3E5467;
+          font-size: 0.9rem;
           letter-spacing: 1px;
         }
       }
@@ -60,10 +62,10 @@ padding-bottom: 15px;
             border: 1px solid rgb(211, 211, 211);
             text-align: center;
             color: rgb(169, 185, 180);
-            
+
             font-size: 1.2em;
-       @include shadow;
-       outline: none;
+            @include shadow;
+            outline: none;
           }
 
           .order_btn {
@@ -71,10 +73,11 @@ padding-bottom: 15px;
             padding: 4px 15px;
             font-size: 1.2rem;
             text-transform: capitalize;
-            color: rgba(0, 157, 105, 0.844);font-family: 'Montserrat', sans-serif;
-         @include shadow;
-         font-weight: 600;
-            border-radius: 4px;
+            color: rgba(0, 157, 105, 0.583);
+            font-family: 'Montserrat', sans-serif;
+            @include shadow;
+            font-weight: 600;
+            border-radius: 30px;
             cursor: pointer;
           }
         }
@@ -100,17 +103,26 @@ padding-bottom: 15px;
     .name {
       width: 20%;
       padding: 5px;
-      color: gray;
+      color: #3E5467;
+      font-size: 0.8rem;
+      font-weight: bold;
     }
 
     .price {
       width: 20%;
-      color: gray;
       padding: 5px;
+      color: #3E5467;
+      font-size: 0.9rem;
+      font-weight: bold;
 
       .pp {}
 
       .tp {}
+
+      .tpm {
+        font-size: 0.7rem;
+
+      }
     }
 
     .quantity {
@@ -120,9 +132,12 @@ padding-bottom: 15px;
         text-align: center;
         width: 60px;
         padding: 5px;
-        border: 1px solid rgb(221, 221, 221);
-        background: rgba(0, 0, 0, 0);
+        outline: none;
+        border: none;
+        background: #C7D9E7;
         border-radius: 60px;
+        font-weight: 600;
+        color: #3E5467;
       }
     }
 
@@ -135,13 +150,15 @@ padding-bottom: 15px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      @include text_color;
+
 
       .update,
       .delete {
         width: 100%;
-        padding: 4px;
+        padding: 6px 0px;
         margin: 3px;
+        font-weight: 600;
+        text-transform: uppercase;
         border-radius: 5px;
         color: rgb(96, 164, 183);
         cursor: pointer;
@@ -155,5 +172,8 @@ padding-bottom: 15px;
         color: rgb(183, 96, 96);
       }
     }
+  }
+  .info-cart{
+    background: rgba(0, 0, 0, 0);
   }
 }

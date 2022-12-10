@@ -1,7 +1,7 @@
 .deller_sr {
   display: flex;
   justify-content: center;
-
+flex-wrap: wrap;
   a {
     text-decoration: none;
     font-weight: 600;
@@ -36,7 +36,7 @@
 
       .productlist {
         span{
-          color: #83a0d6;
+          color: #3E5467;
 
         }
       }

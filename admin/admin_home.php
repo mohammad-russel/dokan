@@ -225,12 +225,12 @@ if (!isset($_SESSION["aid"])) {
                                                     include "../php/config.php";
                                                     $sql = "SELECT *,SUM(quantity*price) AS total FROM cart WHERE status = 'complete'";
                                                     $result = mysqli_query($con, $sql);
-                                                    if (mysqli_num_rows($result)) {
-                                                        while ($row = mysqli_fetch_assoc($result)) {
+                                                    $row = mysqli_fetch_assoc($result);
+                                                    $ttk = $row['total'];
                                                     ?>
-                                        <p>৳<?php echo $row['total'] ?>/-</p>
-                                <?php }
-                                                    } ?>
+                                <p>৳<?php echo $ttk ?>/-</p>
+                                <?php
+                                ?>
                             </div>
                         </div>
                         <div class="icon">
@@ -378,27 +378,16 @@ if (!isset($_SESSION["aid"])) {
                                     </div>
                                     <?php
                                     @include "../php/config.php";
-                                    $sql21 = "SELECT * FROM cart WHERE `status` = 'complete' AND rid = $rid ";
-                                    $result21 = mysqli_query($con, $sql21);
-                                    $row21 = mysqli_fetch_assoc($result21);
 
-                                    $sql2 = "SELECT SUM(quantity) AS tq FROM cart WHERE `status` = 'complete' AND rid = $rid ";
-                                    $result2 = mysqli_query($con, $sql2);
-                                    $row2 = mysqli_fetch_assoc($result2);
-                                    $t_quantity = $row2['tq'];
-                                    $price = $row21['price'];
-                                    $total_per = $t_quantity * $price;
-
-                                    include "../php/config.php";
-                                    $sql3 = "SELECT *,SUM(quantity*price) AS total FROM cart WHERE status = 'complete'";
-                                    $result3 = mysqli_query($con, $sql3);
-                                    $row3 = mysqli_fetch_assoc($result3);
-                                    $full_total = $row3['total'];
-                                    $percent = $total_per * 100 / $full_total;
+                                    $sql5 = "SELECT *, SUM(total) AS total FROM `order` WHERE `status` = 'complete' AND retailer = $rid ";
+                                    $result5 = mysqli_query($con, $sql5);
+                                    $row5 = mysqli_fetch_assoc($result5);
+                                    $pp = $row5["total"];
+                                    $pc = $pp * 100 / $ttk;
                                     ?>
                                     <div class="buy_info">
-                                        <div class="total"><?php echo $full_total ?>৳</div>
-                                        <div class="percent"><?php echo number_format($percent, 1) ?>%</div>
+                                        <div class="total"><?php echo $row5["total"]; ?>৳</div>
+                                        <div class="percent"><?php echo number_format($pc, 1)  ?>%</div>
                                     </div>
                                 </div>
                         <?php }

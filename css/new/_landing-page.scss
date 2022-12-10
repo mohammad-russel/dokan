@@ -49,6 +49,7 @@
                 flex-wrap: wrap;
                 box-shadow: 0px -2px 15px -1px rgb(225, 231, 242);
                 border-radius: 20px;
+
                 a {
                     padding: 5px;
                     display: flex;
@@ -62,6 +63,7 @@
                     text-decoration: none;
                     color: #53585c;
                     background: rgba(189, 201, 211, 0.10);
+
                     ion-icon {
                         font-size: 1.4rem;
                     }
@@ -221,7 +223,7 @@
                     align-items: center;
                     flex-direction: row-reverse;
                     box-shadow: 3px 3px 5px -1px rgb(184 184 184), -4px -4px 5px 0px white;
-                    color: #53585c;
+                    color: #3E5467;
                     font-weight: bolder;
                     text-transform: uppercase;
                     padding: 8px 15px;
@@ -269,6 +271,23 @@
             display: flex;
             border-radius: 10px;
             margin-top: 50px;
+            position: relative;
+            // .dot {
+            //     z-index: 12px;
+            //     position: absolute;
+
+            //     ion-icon {
+            //         font-size: 3rem;
+            //     }
+            // }
+
+            // .dr {
+            //     right: -20px;
+            // }
+
+            // .dl {
+            //     left: 0;
+            // }
 
             .box {
                 min-width: 100%;
@@ -296,17 +315,21 @@
                     letter-spacing: 1px;
                     font-weight: 300;
                     font-family: 'Raleway', sans-serif;
+                    color: #3E5467;
+
                 }
 
 
                 .icon {
                     width: 100%;
                     margin: 20px 0px;
+                    color: #3E5467;
 
                     text-align: center;
 
                     h1 {
-                        font-size: 3rem;
+                    color: #3E5467;
+                    font-size: 3rem;
 
                     }
 
@@ -381,7 +404,7 @@
         h1 {
             margin: auto;
             text-align: center;
-            color: #323537;
+            color: #3E5467;
             width: max-content;
             width: 100px;
             padding: 5px 0px;
@@ -416,7 +439,8 @@
             h2 {
                 margin: auto;
                 text-align: center;
-                color: #323537;
+                color: #3E5467;
+
                 width: max-content;
                 width: 150px;
                 padding: 5px 0px;
@@ -429,7 +453,10 @@
 
             p {
                 margin: auto;
+                // font-weight: 600;
+                letter-spacing: 0.7px;
                 width: 70%;
+                line-height: 27px;
                 font-size: 1rem;
             }
         }
@@ -538,7 +565,7 @@
                 margin: auto;
                 margin-top: 10px;
                 text-align: center;
-                color: #323537;
+                color: #3E5467;
                 width: max-content;
                 cursor: pointer;
                 width: 110px;
@@ -785,7 +812,10 @@
             .box {
                 h2 {}
 
-                p {}
+                p {
+               text-align: start;
+                width: 98%;
+                }
             }
         }
 

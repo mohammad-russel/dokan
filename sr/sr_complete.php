@@ -19,6 +19,28 @@ $sr = $_SESSION["sid"];
             display: flex;
             flex-direction: column;
         }
+        .name{
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #3E5467;
+
+        }
+        .time{
+            border-top: 1px dashed black;
+            padding: 5px 0px;
+            margin: 5px 0px;
+        }
+        .image{
+            text-align: center;
+        }
+        .card{
+            color: #3E5467;
+
+        }
+        .buttons{
+            color: #3E5467;
+
+        }
     </style>
 </head>
 
@@ -30,9 +52,7 @@ $sr = $_SESSION["sid"];
                     <ion-icon name="arrow-back-outline"></ion-icon>
                 </a>
             </div>
-<style>
-   
-</style>
+
         </div>
         <div class="complete">
             <?php
@@ -41,7 +61,7 @@ $sr = $_SESSION["sid"];
             $result1 = mysqli_query($con, $sql1);
             if ($list = mysqli_num_rows($result1)) {
             ?>
-                <div class="button_complete buttons">Complete <?php echo $list ?></div>
+                <div class="button_complete buttons" style="color: #3E5467;">Complete <?php echo $list ?></div>
                 <div class="box_complete boxs">
                     <div class="box">
                         <?php
@@ -59,7 +79,7 @@ $sr = $_SESSION["sid"];
                                 <div class="price">দামঃ <?php echo $row1['price'] ?></div>
                                 <div class="quantity">পরিমানঃ <?php echo $row1['quantity'] ?></div>
                                 <div class="tp">মোটঃ <?php echo $row1['total'] ?></div>
-                                <div class="name">সময়<br> <?php echo $row1['time'] ?></div>
+                                <div class="name time">সময়<br> <?php echo $row1['time'] ?></div>
 
                             </div>
                         <?php } ?>

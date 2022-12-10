@@ -326,7 +326,8 @@
                 }
 
                 canvas {
-                  border: 1px solid rgb(144, 144, 144);
+                   
+                    border: 1px solid #3E5467 ;
                   margin: auto;
                   border-radius: 4px;
                 }
@@ -342,9 +343,7 @@
                 max-width: 200px;
                 font-size: 20px;
                 color: #f25c6f;
-                border: 1px solid rgba(164, 164, 164, 0.168);
-                background: linear-gradient(315.13deg, rgba(194, 217, 237, 0.3) 5.21%, rgba(255, 255, 255, 0.3) 62.26%), #E9F0F7;
-                box-shadow: 3px 3px 12px rgba(138, 155, 189, 0.4), -3px -3px 15px rgba(255, 255, 255, 0.9);
+              @include shadow ;
 
                 padding: 30px 0px;
                 display: flex;
@@ -357,7 +356,8 @@
 
               button:last-child {
 
-                color: #01927c;
+                color: #3E5467;
+
               }
             }
           }

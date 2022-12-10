@@ -21,17 +21,17 @@ if ($numrow = mysqli_num_rows($result)) {
                     <div class='image'>
                         <img src='../image/product/{$row1['pic']}' >
                     </div>
-                    <div class='name'>{$row1['nam']}</div>
+                    <div class='name'>{$row1['nam']} ({$row['price']}৳)</div>
                     <div class='price'>
-                        <div class='pp'>৳ {$row['price']}</div>
-                        <div class='tp'>৳ {$row['total_price']}</div>
+                    
+                        <div class='tp'> {$row['total_price']}৳</div>
                     </div>
                     <div class='quantity'>
                         <input type='number' name='quantity' id='quantity{$row['id']}' value='{$row['quantity']}'>
                     </div>
                     <div class='btn'>
                         <div class='update update{$row["id"]} '>Update</div>
-                        <div class='delete delete{$row["id"]} '>Delete</div>
+                        <div class='delete delete{$row["id"]} '><ion-icon name='trash-outline'></ion-icon></div>
                     </div>
                 </div>";
             $output .= " <script>
@@ -77,7 +77,7 @@ if ($numrow = mysqli_num_rows($result)) {
         }
     }
 
-    $output .= "<div class='cart'>
+    $output .= "<div class='cart info-cart'>
             <div class='order_click'>";
     $sql5 = "SELECT * FROM retailer WHERE id = $rid ";
     $result5 = mysqli_query($con, $sql5);

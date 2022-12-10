@@ -25,7 +25,7 @@
                             <span>Admin</span>
                         </a> -->
                         <a href="deller/deller_home.php">
-                        <ion-icon name="id-card"></ion-icon>
+                            <ion-icon name="id-card"></ion-icon>
                             <span>Deller</span>
                         </a>
                         <a href="retailer/homepage.php">
@@ -126,62 +126,75 @@
 
                     </div>
                 </div>
-                <div class="box-room">
-                    <div class="box">
-                        <div class="icon">
-                            <ion-icon name="time-outline"></ion-icon>
+                <div class="dsd">
+                    <div class="box-room">
+
+                        <div class="box">
+                            <div class="icon">
+                                <ion-icon name="time-outline"></ion-icon>
+                            </div>
+                            <div class="text">Save more time</div>
                         </div>
-                        <div class="text">Save more time</div>
+                        <div class="box">
+                            <div class="icon">
+                                <h1>৳</h1>
+                            </div>
+                            <div class="text">make more money</div>
+                        </div>
+                        <div class="box">
+                            <div class="icon">
+                                <ion-icon name="wallet-outline"></ion-icon>
+                            </div>
+                            <div class="text">save more money</div>
+                        </div>
                     </div>
-                    <div class="box">
-                        <div class="icon">
-                            <h1>৳</h1>
-                        </div>
-                        <div class="text">make more money</div>
-                    </div>
-                    <div class="box">
-                        <div class="icon">
-                            <ion-icon name="wallet-outline"></ion-icon>
-                        </div>
-                        <div class="text">save more money</div>
+                    <div class="dot">
+                        <div class="dott">.</div>
+                        <div class="dott">.</div>
+                        <div class="dott">.</div>
                     </div>
                 </div>
+
+
+
+
             </section>
             <section class="faqs">
                 <h1>FAQ</h1>
                 <div class="faq">
                     <ul>
                         <li class="box">
-                            <div class="quetion"><span>what is your name?</span> <span>
+                            <div class="quetion"><span>আমি একজন খুচরা বিক্রেতা আমার কি কোনো পরিবহন খরচ দিতে হবে পণ্য নেওয়ার জন্য?</span> <span>
                                     <ion-icon name="chevron-forward-outline"></ion-icon>
                                 </span></div>
-                            <div class="ans">My name Is rasel.My name Is rasel.My name Is rasel.My name Is rasel.My name Is rasel.My name Is rasel.</div>
+                            <div class="ans">না আপনার কাছে পণ্য পৌঁছানোর জন্য Happy কে কোনো মূল্য দিতে হবে না এটি সম্পূর্ন ফ্রি। </div>
                         </li>
                         <li class="box">
-                            <div class="quetion"><span>what is your name?</span> <span>
+                            <div class="quetion"><span>অর্থপ্রদান: আমি কিভাবে ক্রয়ের জন্য অর্থ প্রদান করব?</span> <span>
                                     <ion-icon name="chevron-forward-outline"></ion-icon>
                                 </span></div>
-                            <div class="ans">My name Is rasel.My name Is rasel.My name Is rasel.My name Is rasel.My name Is rasel.My name Is rasel.</div>
+                            <div class="ans">অর্ডারটি আপনার কাছে পৌঁছে দেওয়ার পরে আপনি নগদ অর্থ প্রদান করতে পারেন।
+                                অথবা আপনি bkash, nagad, Upay তে মূল্য প্রদান করতে পারেন।</div>
                         </li>
                         <li class="box">
+                            <div class="quetion"><span>আমি আরো জানতে কার সাথে যোগাযোগ করতে পারি?</span> <span>
+                                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                                </span></div>
+                            <div class="ans">আপনি আমাদের প্রতিনিধির সাথে যোগাযোগ করতে পারেন অথবা আমাদের হট নাম্বারে যোগাযোগ করুন।</div>
+                        </li>
+                        <!-- <li class="box">
                             <div class="quetion"><span>what is your name?</span> <span>
                                     <ion-icon name="chevron-forward-outline"></ion-icon>
                                 </span></div>
                             <div class="ans">My name Is rasel.My name Is rasel.My name Is rasel.My name Is rasel.My name Is rasel.My name Is rasel.</div>
-                        </li>
-                        <li class="box">
-                            <div class="quetion"><span>what is your name?</span> <span>
-                                    <ion-icon name="chevron-forward-outline"></ion-icon>
-                                </span></div>
-                            <div class="ans">My name Is rasel.My name Is rasel.My name Is rasel.My name Is rasel.My name Is rasel.My name Is rasel.</div>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
             </section>
             <section class="about">
                 <div class="box">
                     <h2>About Us</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis at eaque natus nemo a culpa!Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis at eaque natus nemo a culpa!</p>
+                    <p>Happy হল একটি পেশাদার B2B খুচরা লজিস্টিক প্ল্যাটফর্ম। এখানে আমরা আপনাকে আধুনিক প্রযুক্তির মাধ্যমে আপনার ব্যবসার উন্নতি করতে সাহায্য করব। আমরা আপনাকে সর্বোত্তম B2B রিটেল লজিস্টিক সরবরাহ করতে নিবেদিত, নির্ভরযোগ্যতা এবং আধুনিক প্রযুক্তি, সর্বোত্তম পরিষেবা এবং কম খরচে ফোকাস করে থাকি, আমরা এই ওয়েবসাইটের মাধ্যমে আপনার ব্যবসার জন্য B2B খুচরা লজিস্টিকসের জন্য আমাদের আবেগকে সাহায্যকারী হাতে পরিণত করার জন্য কাজ করছি। আমরা আশা করি আপনি আপনার ব্যবসার উন্নতি করতে আমাদের সাথে কাজ করা উপভোগ করবেন।</p>
                 </div>
             </section>
             <section class="contact">
@@ -203,7 +216,7 @@
             </section>
             <section class="footer">
                 <div class="copy">
-                    <span>Copyright © 2022 CodeWithHarry.com</span>
+                    <span>Copyright © 2022 Happybd.online</span>
                 </div>
                 <div class="social">
                     <span>GET IN TOUCH....</span>

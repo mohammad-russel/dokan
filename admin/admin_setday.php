@@ -45,13 +45,13 @@ if (!isset($_SESSION["aid"])) {
                     <form action="../php/day.php" method="post">
                         <input type="text" name="village" id="village" placeholder="Village" required>
                         <select name="day" id="day">
-                            <option value="friday">Friday</option>
-                            <option value="saturday">Saturday</option>
-                            <option value="sunday">Sunday</option>
-                            <option value="monday">Monday</option>
-                            <option value="tuesday">tuesday</option>
-                            <option value="wednesday">Wednesday</option>
-                            <option value="thursday">thursday</option>
+                            <option value="শুক্রবার">শুক্রবার</option>
+                            <option value="শনিবার">শনিবার</option>
+                            <option value="রবিবার">রবিবার</option>
+                            <option value="সোমবার">সোমবার</option>
+                            <option value="মঙ্গলবার">মঙ্গলবার</option>
+                            <option value="বুধবার">বুধবার</option>
+                            <option value="বৃহস্পতিবার">বৃহস্পতিবার</option>
                         </select>
                         <input type="submit" name="add" class="add" value="ADD">
                     </form>

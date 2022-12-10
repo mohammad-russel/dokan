@@ -39,11 +39,11 @@ body {
 }
 
 .container::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
 }
 
 .container::-webkit-scrollbar-thumb {
-  background: rgb(82, 82, 82);
+  background: rgba(86, 91, 95, 0.15);
 }
 
 .lp {
@@ -94,14 +94,14 @@ header .logo h1 a {
 header nav ul a {
   margin: 0px 10px;
   text-decoration: none;
-  color: rgb(59, 59, 59);
+  color: #3E5467;
   font-weight: 600;
   letter-spacing: 1px;
 }
 header .link a {
   margin: 0px 5px;
   text-decoration: none;
-  color: rgb(47, 47, 47);
+  color: #3E5467;
   font-weight: 600;
   letter-spacing: 1px;
   position: relative;
@@ -123,7 +123,7 @@ header .link a .count {
 header .link a ion-icon {
   box-shadow: 3px 3px 6px 0px rgb(189, 189, 189), -3px -3px 6px 0px rgb(255, 255, 255);
   font-size: 25px;
-  color: rgb(84, 84, 84);
+  color: #3E5467;
   padding: 5px;
   transition: all 0.3s;
   border-radius: 50%;
@@ -450,11 +450,11 @@ header .link a ion-icon:hover {
   margin: 10px;
   box-shadow: 3px 3px 10px -1px rgb(223, 223, 223), -4px -4px 10px 0px white;
   flex-direction: column;
-  color: #323537;
+  color: #3E5467;
   font-size: 20px;
 }
 .srmainbox a .box ion-icon {
-  color: #323537;
+  color: #3E5467;
   font-size: 40px;
 }
 .srmainbox a .box a {
@@ -476,17 +476,16 @@ header .link a ion-icon:hover {
   justify-content: center;
 }
 .sr_retailer_main_box .head .searchbox #search {
-  padding: 8px;
+  padding: 8px 15px;
   outline: none;
   width: 300px;
   height: 35px;
   border: none;
   border-radius: 7px;
   background: rgba(189, 201, 211, 0.15);
+  border-radius: 40px;
 }
 .sr_retailer_main_box .head .searchbox .search_submit {
-  border-bottom-right-radius: 10px;
-  border-top-right-radius: 10px;
   width: 100px;
   height: 35px;
   border: none;
@@ -530,7 +529,7 @@ header .link a ion-icon:hover {
   justify-content: center;
   align-items: center;
   font-size: 100px;
-  color: #323537;
+  color: #3E5467;
 }
 .sr_retailer_main_box .retailerbox .create_ac .popup {
   background: rgb(234, 234, 234);
@@ -559,6 +558,8 @@ header .link a ion-icon:hover {
   flex-direction: column;
   background: #ebf3fa;
   padding: 20px;
+  color: #3E5467;
+  font-weight: 600;
 }
 .sr_retailer_main_box .retailerbox .create_ac .popup form input,
 .sr_retailer_main_box .retailerbox .create_ac .popup form select {
@@ -568,15 +569,15 @@ header .link a ion-icon:hover {
   box-shadow: -3px -3px 9px rgba(255, 255, 255, 0.9), 3px 3px 9px rgba(138, 155, 189, 0.4);
   max-width: 350px;
   padding: 10px;
-  color: #8f9bb2;
+  color: #3E5467;
   margin: 12px 6px;
   border: 1px solid rgba(255, 255, 255, 0.5019607843);
   height: 50px;
   border-radius: 0.7rem;
 }
 .sr_retailer_main_box .retailerbox .create_ac .popup form .newretinsert {
-  background: rgb(29, 29, 29);
-  color: azure;
+  background: #3E5467;
+  color: rgb(255, 255, 255);
   font-size: 20px;
   letter-spacing: 1px;
   cursor: pointer;
@@ -599,6 +600,7 @@ header .link a ion-icon:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  text-transform: capitalize;
 }
 .sr_retailer_main_box .retailerbox a .card .image {
   width: 80%;
@@ -614,10 +616,12 @@ header .link a ion-icon:hover {
 .sr_retailer_main_box .retailerbox a .card .name {
   font-weight: 600;
   padding: 5px;
+  color: #3E5467;
   text-align: center;
 }
 .sr_retailer_main_box .retailerbox a .card .shop {
   border-top: 1px solid gray;
+  color: #3E5467;
   font-weight: 600;
   text-align: center;
   padding: 5px;
@@ -1244,13 +1248,13 @@ header .link a ion-icon:hover {
   margin: 20px 0px;
 }
 .sr_overview .info .left .box h3 {
-  color: #323537;
+  color: #3E5467;
   font-size: 16px;
 }
 .sr_overview .info .left .box p {
   font-size: 1rem;
   font-weight: 600;
-  color: #000000;
+  color: #3E5467;
   background: rgba(189, 201, 211, 0.15);
   border-radius: 30px;
 }
@@ -1268,7 +1272,7 @@ header .link a ion-icon:hover {
   border-radius: 20px;
 }
 .sr_overview .info .middle .name {
-  color: #323537;
+  color: #3E5467;
   font-weight: 900;
   padding: 3px 10px;
   margin: 3px 0px;
@@ -1276,7 +1280,7 @@ header .link a ion-icon:hover {
   text-transform: capitalize;
 }
 .sr_overview .info .middle .shop {
-  color: #8F9BB2;
+  color: #3E5467;
   padding: 3px 10px;
   font-weight: 900;
   margin: 3px 0px;
@@ -1348,13 +1352,13 @@ header .link a ion-icon:hover {
   margin: 20px 0px;
 }
 .sr_overview .info .right .box h3 {
-  color: #323537;
+  color: #3E5467;
   font-size: 16px;
 }
 .sr_overview .info .right .box p {
   font-size: 1rem;
   font-weight: 600;
-  color: #000000;
+  color: #3E5467;
   border-radius: 30px;
   background: rgba(189, 201, 211, 0.15);
 }
@@ -1393,7 +1397,7 @@ header .link a ion-icon:hover {
 .sr_overview .product .price {
   font-weight: 600;
   font-size: 1.3rem;
-  color: rgb(11, 11, 11);
+  color: #3E5467;
   background: rgba(189, 201, 211, 0.15);
   width: 100%;
   text-align: center;
@@ -1402,7 +1406,8 @@ header .link a ion-icon:hover {
 .sr_overview .product .name {
   padding: 5px;
   font-size: 1rem;
-  color: rgb(11, 11, 11);
+  color: #3E5467;
+  font-weight: 600;
   text-transform: capitalize;
   text-align: center;
 }
@@ -1443,7 +1448,6 @@ header .link a ion-icon:hover {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  border: 1px solid rgb(159, 159, 159);
   margin: 10px auto;
   border-radius: 3px;
   padding: 5px 10px;
@@ -1451,13 +1455,7 @@ header .link a ion-icon:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
-  box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.9), 4px 4px 10px rgba(138, 155, 189, 0.4);
-  border-radius: 10px;
-  border: 1px solid;
-  border-image-source: linear-gradient(134.47deg, rgba(255, 255, 255, 0.25) 75.67%, #E9F0F7 4.99%);
-  background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
-  box-shadow: 4px 4px 16px rgba(138, 155, 189, 0.48), -5px -5px 18px #FFFFFF;
+  background: rgba(189, 201, 211, 0.15);
   border-radius: 10px;
 }
 .cartbox .cart .order_click {
@@ -1470,15 +1468,17 @@ header .link a ion-icon:hover {
 }
 .cartbox .cart .order_click .info {
   margin: 10px;
-  font-weight: 600;
-  color: #8F9BB2;
+  font-weight: 900;
+  color: #3E5467;
   letter-spacing: 1px;
-  border-radius: 7px;
-  padding: 7px 10px;
+  border-radius: 20px;
+  padding: 20px 10px;
+  background: rgba(189, 201, 211, 0.15);
 }
 .cartbox .cart .order_click .info span {
   font-weight: 600;
-  color: rgb(99, 99, 99);
+  color: #3E5467;
+  font-size: 0.9rem;
   letter-spacing: 1px;
 }
 .cartbox .cart .order_click .button form {
@@ -1509,7 +1509,7 @@ header .link a ion-icon:hover {
   padding: 4px 15px;
   font-size: 1.2rem;
   text-transform: capitalize;
-  color: rgba(0, 157, 105, 0.844);
+  color: rgba(0, 157, 105, 0.583);
   font-family: "Montserrat", sans-serif;
   background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
   box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.9), 4px 4px 10px rgba(138, 155, 189, 0.4);
@@ -1517,7 +1517,7 @@ header .link a ion-icon:hover {
   border: 1px solid;
   border-image-source: linear-gradient(134.47deg, rgba(255, 255, 255, 0.25) 75.67%, #E9F0F7 4.99%);
   font-weight: 600;
-  border-radius: 4px;
+  border-radius: 30px;
   cursor: pointer;
 }
 .cartbox .cart .image {
@@ -1537,12 +1537,19 @@ header .link a ion-icon:hover {
 .cartbox .cart .name {
   width: 20%;
   padding: 5px;
-  color: gray;
+  color: #3E5467;
+  font-size: 0.8rem;
+  font-weight: bold;
 }
 .cartbox .cart .price {
   width: 20%;
-  color: gray;
   padding: 5px;
+  color: #3E5467;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+.cartbox .cart .price .tpm {
+  font-size: 0.7rem;
 }
 .cartbox .cart .quantity {
   width: 20%;
@@ -1551,9 +1558,12 @@ header .link a ion-icon:hover {
   text-align: center;
   width: 60px;
   padding: 5px;
-  border: 1px solid rgb(221, 221, 221);
-  background: rgba(0, 0, 0, 0);
+  outline: none;
+  border: none;
+  background: #C7D9E7;
   border-radius: 60px;
+  font-weight: 600;
+  color: #3E5467;
 }
 .cartbox .cart .btn {
   width: 20%;
@@ -1563,13 +1573,14 @@ header .link a ion-icon:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #8F9BB2;
 }
 .cartbox .cart .btn .update,
 .cartbox .cart .btn .delete {
   width: 100%;
-  padding: 4px;
+  padding: 6px 0px;
   margin: 3px;
+  font-weight: 600;
+  text-transform: uppercase;
   border-radius: 5px;
   color: rgb(96, 164, 183);
   cursor: pointer;
@@ -1585,6 +1596,9 @@ header .link a ion-icon:hover {
 .cartbox .cart .btn .delete {
   color: rgb(183, 96, 96);
 }
+.cartbox .info-cart {
+  background: rgba(0, 0, 0, 0);
+}
 
 .userbox .info {
   text-align: center;
@@ -1599,8 +1613,13 @@ header .link a ion-icon:hover {
 }
 .userbox .info .name {
   font-weight: 600;
-  color: rgb(61, 61, 61);
+  color: #3E5467;
   font-size: 19px;
+}
+.userbox .info .shop {
+  font-size: 0.9rem;
+  color: #3E5467;
+  font-weight: 600;
 }
 .userbox .card {
   width: 100%;
@@ -1610,7 +1629,7 @@ header .link a ion-icon:hover {
 .userbox .card .box {
   width: 100%;
   margin: 10px 10px;
-  color: #8F9BB2;
+  color: #3E5467;
   border-radius: 5px;
   padding: 5px 15px;
   box-shadow: 3px 3px 10px -1px rgb(108, 108, 108);
@@ -1627,6 +1646,11 @@ header .link a ion-icon:hover {
 .userbox .card .box h2 {
   font-size: 16px;
 }
+.userbox .card .box p {
+  color: #3E5467;
+  font-weight: 600;
+  font-size: 0.7rem;
+}
 .userbox .cocb {
   padding: 0px 10px;
 }
@@ -1634,13 +1658,15 @@ header .link a ion-icon:hover {
   width: 100%;
 }
 .userbox .cocb .bo .head {
-  border: 1px solid rgba(155, 155, 155, 0.34);
+  background: rgba(189, 201, 211, 0.15);
   text-transform: capitalize;
-  color: #8F9BB2;
+  color: #3E5467;
   font-size: 19px;
   font-weight: 600;
   letter-spacing: 1px;
   border-radius: 40px;
+  margin: 10px auto;
+  padding: 5px 15px;
 }
 .userbox .cocb .bo .box {
   flex-wrap: wrap;
@@ -1649,33 +1675,38 @@ header .link a ion-icon:hover {
 }
 .userbox .cocb .bo .box .card {
   border-radius: 10px;
-  border: 1px solid rgba(155, 155, 155, 0.202);
+  background: rgba(189, 201, 211, 0.15);
   overflow: hidden;
   width: 100%;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  max-width: 160px;
-  min-width: 140px;
+  max-width: 140px;
   text-align: center;
   letter-spacing: 1px;
   margin: 10px;
   display: flex;
   font-weight: 600;
+  text-transform: capitalize;
   flex-direction: column;
-  justify-content: start;
+  justify-content: end;
+  align-items: center;
 }
 .userbox .cocb .bo .box .card .image {
   width: 100%;
+  height: 180px;
 }
 .userbox .cocb .bo .box .card .image img {
   width: 100%;
-  aspect-ratio: 1/1;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.userbox .cocb .bo .box .card .name, .userbox .cocb .bo .box .card .price, .userbox .cocb .bo .box .card .quantity, .userbox .cocb .bo .box .card .total {
-  color: #8F9BB2;
+.userbox .cocb .bo .box .card .name,
+.userbox .cocb .bo .box .card .price,
+.userbox .cocb .bo .box .card .quantity,
+.userbox .cocb .bo .box .card .total {
+  color: #3E5467;
 }
 .userbox .cocb .bo .box .card .time {
   background: rgb(177, 194, 215);
@@ -2147,7 +2178,7 @@ header .link a ion-icon:hover {
 .d_overview_retailer .order .boxs .cardinfo .complete_pop form #signature-pad div canvas,
 .d_overview_retailer .baki .boxs .cardinfo .complete_pop form #signature-pad div canvas,
 .d_overview_retailer .complete .boxs .cardinfo .complete_pop form #signature-pad div canvas {
-  border: 1px solid rgb(144, 144, 144);
+  border: 1px solid #3E5467;
   margin: auto;
   border-radius: 4px;
 }
@@ -2159,9 +2190,11 @@ header .link a ion-icon:hover {
   max-width: 200px;
   font-size: 20px;
   color: #f25c6f;
-  border: 1px solid rgba(164, 164, 164, 0.168);
-  background: linear-gradient(315.13deg, rgba(194, 217, 237, 0.3) 5.21%, rgba(255, 255, 255, 0.3) 62.26%), #E9F0F7;
-  box-shadow: 3px 3px 12px rgba(138, 155, 189, 0.4), -3px -3px 15px rgba(255, 255, 255, 0.9);
+  background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
+  box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.9), 4px 4px 10px rgba(138, 155, 189, 0.4);
+  border-radius: 10px;
+  border: 1px solid;
+  border-image-source: linear-gradient(134.47deg, rgba(255, 255, 255, 0.25) 75.67%, #E9F0F7 4.99%);
   padding: 30px 0px;
   display: flex;
   justify-content: center;
@@ -2173,7 +2206,7 @@ header .link a ion-icon:hover {
 .d_overview_retailer .order .boxs .cardinfo .complete_pop form .input_box button:last-child,
 .d_overview_retailer .baki .boxs .cardinfo .complete_pop form .input_box button:last-child,
 .d_overview_retailer .complete .boxs .cardinfo .complete_pop form .input_box button:last-child {
-  color: #01927c;
+  color: #3E5467;
 }
 
 .complete {
@@ -2488,6 +2521,7 @@ header .link a ion-icon:hover {
 .deller_sr {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 .deller_sr a {
   text-decoration: none;
@@ -2522,7 +2556,7 @@ header .link a ion-icon:hover {
   text-transform: capitalize;
 }
 .deller_sr a .card .productlist span {
-  color: #83a0d6;
+  color: #3E5467;
 }
 
 .complete_pop,
@@ -2548,8 +2582,12 @@ header .link a ion-icon:hover {
 .baki_pop .close_complete ion-icon,
 .baki_pop .close_baki ion-icon {
   font-size: 30px;
-  color: rgb(239, 239, 239);
-  background: rgb(63, 63, 63);
+  color: #3E5467;
+  background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
+  box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.9), 4px 4px 10px rgba(138, 155, 189, 0.4);
+  border-radius: 10px;
+  border: 1px solid;
+  border-image-source: linear-gradient(134.47deg, rgba(255, 255, 255, 0.25) 75.67%, #E9F0F7 4.99%);
   border-radius: 50%;
   padding: 5px;
 }
@@ -2565,7 +2603,7 @@ header .link a ion-icon:hover {
 }
 .complete_pop form #signature-pad div canvas,
 .baki_pop form #signature-pad div canvas {
-  border: 1px solid black;
+  border: 1px solid #3E5467;
   margin: auto;
 }
 .complete_pop form .input_box button,
@@ -2575,9 +2613,11 @@ header .link a ion-icon:hover {
   max-width: 200px;
   font-size: 20px;
   color: #f25c6f;
-  border: 1px solid rgba(164, 164, 164, 0.168);
-  background: linear-gradient(315.13deg, rgba(194, 217, 237, 0.3) 5.21%, rgba(255, 255, 255, 0.3) 62.26%), #E9F0F7;
-  box-shadow: 3px 3px 12px rgba(138, 155, 189, 0.4), -3px -3px 15px rgba(255, 255, 255, 0.9);
+  background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
+  box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.9), 4px 4px 10px rgba(138, 155, 189, 0.4);
+  border-radius: 10px;
+  border: 1px solid;
+  border-image-source: linear-gradient(134.47deg, rgba(255, 255, 255, 0.25) 75.67%, #E9F0F7 4.99%);
   height: 30px;
   padding: 30px 0px;
   display: flex;
@@ -2589,7 +2629,7 @@ header .link a ion-icon:hover {
 }
 .complete_pop form .input_box button:last-child,
 .baki_pop form .input_box button:last-child {
-  color: #01927c;
+  color: #3E5467;
 }
 
 .o_l {
@@ -2694,6 +2734,10 @@ header .link a ion-icon:hover {
 }
 .admin .toggle {
   display: none;
+}
+.admin .toggle .show ion-icon,
+.admin .toggle .hide ion-icon {
+  background: rgba(189, 201, 211, 0.15);
 }
 .admin .cb {
   padding: 20px;
@@ -2914,16 +2958,13 @@ header .link a ion-icon:hover {
 }
 .togglee .show ion-icon,
 .togglee .hide ion-icon {
-  background: rgba(15, 111, 190, 0.827);
+  box-shadow: 2px 2px 6px rgba(138, 155, 189, 0.3), -2px -2px 12px rgba(255, 255, 255, 0.9);
   font-size: 1.5rem;
   padding: 5px;
   cursor: pointer;
+  border-radius: 50%;
   color: #3E5467;
 }
-.togglee .hide ion-icon {
-  color: rgb(34, 34, 34);
-}
-
 .slider {
   height: 100vh;
   color: #8F9BB2;
@@ -3032,18 +3073,6 @@ header .link a ion-icon:hover {
 .togglee .hide {
     margin: 5px 5px;
   }
-  .togglee .show ion-icon,
-.togglee .hide ion-icon {
-    font-size: 1.5rem;
-    padding: 5px;
-    cursor: pointer;
-    background: linear-gradient(315.13deg, rgba(194, 217, 237, 0.3) 5.21%, rgba(255, 255, 255, 0.3) 62.26%), #E9F0F7;
-    box-shadow: 4px 4px 12px rgba(138, 155, 189, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.9);
-  }
-  .togglee .hide ion-icon {
-    background: rgb(235, 235, 235);
-    color: rgb(34, 34, 34);
-  }
   .slider {
     width: 50%;
     display: none;
@@ -3062,7 +3091,7 @@ header .link a ion-icon:hover {
   margin: auto;
   width: 70%;
   text-align: center;
-  color: rgb(62, 62, 62);
+  color: #3E5467;
 }
 
 .cb_order .order_box {
@@ -3110,17 +3139,13 @@ header .link a ion-icon:hover {
 }
 .cb_order .list .box .title h1 {
   text-align: center;
-  color: rgb(0, 0, 0);
+  color: #3E5467;
 }
 .cb_order .list .box .column {
   width: 100%;
 }
 .cb_order .list .box .column .row {
-  background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
-  box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.9), 4px 4px 10px rgba(138, 155, 189, 0.4);
-  border-radius: 10px;
-  border: 1px solid;
-  border-image-source: linear-gradient(134.47deg, rgba(255, 255, 255, 0.25) 75.67%, #E9F0F7 4.99%);
+  background: rgba(189, 201, 211, 0.15);
   padding: 10px;
   border-radius: 10px;
   display: flex;
@@ -3142,7 +3167,7 @@ header .link a ion-icon:hover {
 .cb_order .list .box .column .row .retailer,
 .cb_order .list .box .column .row .time {
   font-size: 0.8rem;
-  color: rgb(107, 107, 107);
+  color: #3E5467;
   font-weight: 600;
   margin: 2px 0px;
   text-transform: capitalize;
@@ -3169,7 +3194,7 @@ header .link a ion-icon:hover {
   text-decoration: none;
   color: rgb(243, 243, 243);
   padding: 1px 10px;
-  background: rgb(28, 28, 28);
+  background: #3E5467;
   border-radius: 10px;
   font-size: 1rem;
 }
@@ -3333,8 +3358,8 @@ header .link a ion-icon:hover {
 }
 .faq ul li .quetion span ion-icon {
   transition: 0.4s;
-  box-shadow: 0px 0px 5px -1px rgb(151, 151, 151), -1px -1px 5px -1px white;
   padding: 3px;
+  background: rgba(189, 201, 211, 0.15);
   border-radius: 50%;
 }
 .faq ul li .ans {
@@ -3531,7 +3556,7 @@ header .link a ion-icon:hover {
   align-items: center;
   flex-direction: row-reverse;
   box-shadow: 3px 3px 5px -1px rgb(184, 184, 184), -4px -4px 5px 0px white;
-  color: #53585c;
+  color: #3E5467;
   font-weight: bolder;
   text-transform: uppercase;
   padding: 8px 15px;
@@ -3568,6 +3593,7 @@ header .link a ion-icon:hover {
   display: flex;
   border-radius: 10px;
   margin-top: 50px;
+  position: relative;
 }
 .landing-page-new .open .box-room .box {
   min-width: 100%;
@@ -3598,13 +3624,16 @@ header .link a ion-icon:hover {
   letter-spacing: 1px;
   font-weight: 300;
   font-family: "Raleway", sans-serif;
+  color: #3E5467;
 }
 .landing-page-new .open .box-room .box .icon {
   width: 100%;
   margin: 20px 0px;
+  color: #3E5467;
   text-align: center;
 }
 .landing-page-new .open .box-room .box .icon h1 {
+  color: #3E5467;
   font-size: 3rem;
 }
 .landing-page-new .open .box-room .box .icon ion-icon {
@@ -3684,7 +3713,7 @@ header .link a ion-icon:hover {
 .landing-page-new .faqs h1 {
   margin: auto;
   text-align: center;
-  color: #323537;
+  color: #3E5467;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -3715,7 +3744,7 @@ header .link a ion-icon:hover {
 .landing-page-new .about .box h2 {
   margin: auto;
   text-align: center;
-  color: #323537;
+  color: #3E5467;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -3729,7 +3758,9 @@ header .link a ion-icon:hover {
 }
 .landing-page-new .about .box p {
   margin: auto;
+  letter-spacing: 0.7px;
   width: 70%;
+  line-height: 27px;
   font-size: 1rem;
 }
 .landing-page-new .contact {
@@ -3838,7 +3869,7 @@ header .link a ion-icon:hover {
   margin: auto;
   margin-top: 10px;
   text-align: center;
-  color: #323537;
+  color: #3E5467;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -3984,6 +4015,10 @@ header .link a ion-icon:hover {
   .landing-page-new .open .box-room {
     width: 95%;
   }
+  .landing-page-new .about .box p {
+    text-align: start;
+    width: 98%;
+  }
   .landing-page-new .contact {
     height: 100%;
     justify-content: center;
@@ -4009,7 +4044,7 @@ header .link a ion-icon:hover {
      object-fit: cover;
 }
 .rt .box {
-  width: 100%;
+  width: 95%;
   overflow: auto;
 }
 .rt .box .retailer-header {
@@ -4092,6 +4127,14 @@ header .link a ion-icon:hover {
   -o-object-fit: contain;
      object-fit: contain;
   border-radius: 10px;
+}
+.rt .box .notice {
+  border-radius: 10px;
+  border: 1px solid black;
+  height: 20vmax;
+}
+.rt .box .notice .mid h1 {
+  font-size: 7vmin;
 }
 .rt .box .retailermain {
   width: 100%;
@@ -4354,14 +4397,14 @@ header .link a ion-icon:hover {
   font-size: 18px;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
-  color: rgba(0, 0, 0, 0.587);
+  color: #3E5467;
 }
 .fnew .form_new .login_box form p {
   font-size: 10px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   margin-bottom: 10px;
-  color: #8F9BB2;
+  color: #3E5467;
 }
 .fnew .form_new .login_box form input {
   margin: 10px 0px;
@@ -4372,7 +4415,7 @@ header .link a ion-icon:hover {
   font-size: 0.6rem;
   padding-top: 7px;
   padding-bottom: 2px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #8F9BB2;
   font-weight: 600;
 }
@@ -4386,11 +4429,12 @@ header .link a ion-icon:hover {
   color: #8F9BB2;
 }
 .fnew .form_new .login_box form a {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin-bottom: 25px;
   font-size: 9px;
   text-decoration: none;
-  color: #6F84AD;
+  font-weight: 600;
+  color: #5f768a;
   text-align: right;
   margin-top: -10px;
   text-decoration: underline;
@@ -4400,7 +4444,7 @@ header .link a ion-icon:hover {
   display: flex;
   text-align: center;
   width: 100%;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -4422,13 +4466,14 @@ header .link a ion-icon:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #6F84AD;
+  color: #3E5467;
 }
 .fnew .form_new .login_box form .btn_box button .txt {
   margin: 0px 2px;
   font-size: 1.1rem;
   font-weight: 700;
-  color: #9098a7;
+  color: #496073;
+  text-transform: uppercase;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   margin-top: -3px;
 }
@@ -4450,15 +4495,17 @@ header .link a ion-icon:hover {
     width: -moz-max-content;
     width: max-content;
     padding: 7px;
+    margin-top: -200px;
     border-radius: 50%;
-    margin-bottom: 10px;
+    margin-bottom: 80px;
     box-shadow: -3px -3px 10px rgba(255, 255, 255, 0.7), 3px 3px 10px rgba(138, 155, 189, 0.48);
   }
   .fnew .form_new .logo_box img {
     position: relative;
-    top: 7px;
-    width: 50px;
-    height: 50px;
+    top: 8px;
+    left: -2px;
+    width: 80px;
+    height: 80px;
     -o-object-fit: contain;
        object-fit: contain;
   }
@@ -4478,16 +4525,18 @@ header .link a ion-icon:hover {
   }
   .fnew .form_new .login_box form h1 {
     text-align: center;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
+    margin-top: -54px;
     text-transform: uppercase;
     font-weight: 900;
     font-family: Arial, Helvetica, sans-serif;
   }
   .fnew .form_new .login_box form p {
     text-align: center;
+    margin-bottom: 30px;
   }
   .fnew .form_new .login_box form input {
-    padding-left: 5px;
+    padding-top: 25px;
   }
 }
 .loadmore {

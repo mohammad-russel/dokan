@@ -6,7 +6,8 @@
         margin: auto;
         width: 70%;
         text-align: center;
-        color: rgb(62, 62, 62);
+        color: #3E5467;
+
 
     }
 }
@@ -67,7 +68,8 @@
 
                 h1 {
                     text-align: center;
-                    color: rgb(0, 0, 0);
+                    color: #3E5467;
+
                 }
             }
 
@@ -76,7 +78,7 @@
                 width: 100%;
 
                 .row {
-                    @include shadow;
+                    background: rgba(189, 201, 211, 0.15);
                     padding: 10px;
                     border-radius: 10px;
                     display: flex;
@@ -100,20 +102,23 @@
                     .retailer,
                     .time {
                         font-size: 0.8rem;
-                        color: rgb(107, 107, 107);
+                        color: #3E5467;
+
                         font-weight: 600;
                         margin: 2px 0px;
                         text-transform: capitalize;
-text-align: center;
+                        text-align: center;
+
                         span {
                             font-size: 1rem;
                             font-weight: 100;
                             text-align: center;
+
                             a {
                                 text-decoration: none;
                                 color: rgb(243, 243, 243);
                                 padding: 1px 10px;
-                                background: rgb(28, 28, 28);
+                                background: #3E5467;
                                 border-radius: 10px;
                                 font-size: 1rem;
 

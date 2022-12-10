@@ -110,14 +110,16 @@
         margin: 20px 0px;
 
         h3 {
-          color: #323537;
+          color: #3E5467;
+
           font-size: 16px;
         }
 
         p {
           font-size: 1rem;
           font-weight: 600;
-          color: #000000;
+          color: #3E5467;
+
           background: rgba(189, 201, 211, 0.15);
           border-radius: 30px;
 
@@ -140,7 +142,8 @@
       border-radius: 20px;
 
       .name {
-        color: #323537;
+        color: #3E5467;
+
         font-weight: 900;
         padding: 3px 10px;
         margin: 3px 0px;
@@ -149,7 +152,8 @@
       }
 
       .shop {
-        @include text_color;
+        color: #3E5467;
+
         padding: 3px 10px;
         font-weight: 900;
         margin: 3px 0px;
@@ -228,7 +232,8 @@
         margin: 20px 0px;
 
         h3 {
-          color: #323537;
+          color: #3E5467;
+
 
           font-size: 16px;
         }
@@ -236,7 +241,8 @@
         p {
           font-size: 1rem;
           font-weight: 600;
-          color: #000000;
+          color: #3E5467;
+
           border-radius: 30px;
           background: rgba(189, 201, 211, 0.15);
         }
@@ -277,7 +283,8 @@
     .price {
       font-weight: 600;
       font-size: 1.3rem;
-      color: rgb(11, 11, 11);
+      color: #3E5467;
+
       background: rgba(189, 201, 211, 0.15);
       width: 100%;
       text-align: center;
@@ -287,7 +294,9 @@
     .name {
       padding: 5px;
       font-size: 1rem;
-      color: rgb(11, 11, 11);
+      color: #3E5467;
+font-weight: 600;
+
       text-transform: capitalize;
       text-align: center;
     }

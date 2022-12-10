@@ -15,7 +15,7 @@
     }
 
     .box {
-        width: 100%;
+        width: 95%;
         overflow: auto;
 
         .retailer-header {
@@ -41,9 +41,9 @@
                 border-radius: 30px;
                 width: 70%;
                 margin: auto;
-                ion-icon{
 
-                }
+                ion-icon {}
+
                 input {
                     height: 30px;
                     border: none;
@@ -56,7 +56,7 @@
             }
 
             .cart {
-                
+
                 a {
                     margin: 0px 5px;
                     text-decoration: none;
@@ -116,6 +116,22 @@
                 object-fit: contain;
                 border-radius: 10px;
             }
+        }
+
+        .notice {
+            border-radius: 10px;
+            border: 1px solid black;
+            height: 20vmax;
+            .lt {}
+
+            .mid {
+                h1 {
+                    font-size: 7vmin;
+                    
+                }
+            }
+
+            .rt {}
         }
 
         .retailermain {

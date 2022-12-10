@@ -10,18 +10,17 @@
       justify-content: center;
 
       #search {
-        padding: 8px;
+        padding: 8px 15px;
         outline: none;
         width: 300px;
         height: 35px;
         border: none;
-   border-radius: 7px;
+        border-radius: 7px;
         background: rgba(189, 201, 211, 0.15);
+        border-radius: 40px;
       }
 
       .search_submit {
-        border-bottom-right-radius: 10px;
-        border-top-right-radius: 10px;
         width: 100px;
         height: 35px;
         border: none;
@@ -59,7 +58,7 @@
         font-size: 90px;
         border-radius: 50%;
         height: 90px;
-        width:90px ;
+        width: 90px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -73,7 +72,7 @@
         justify-content: center;
         align-items: center;
         font-size: 100px;
-        color: #323537;
+        color: #3E5467;
 
       }
 
@@ -104,7 +103,8 @@
           flex-direction: column;
           background: #ebf3fa;
           padding: 20px;
-
+          color: #3E5467;
+          font-weight: 600;
           input,
           select {
             outline: none;
@@ -117,7 +117,7 @@
               3px 3px 9px rgb(138 155 189 / 40%);
             max-width: 350px;
             padding: 10px;
-            color: #8f9bb2;
+            color: #3E5467;
             margin: 12px 6px;
             border: 1px solid #ffffff80;
             height: 50px;
@@ -125,8 +125,8 @@
           }
 
           .newretinsert {
-            background: rgb(29 29 29);
-            color: azure;
+            background:    #3E5467;
+            color: rgb(255, 255, 255);
             font-size: 20px;
             letter-spacing: 1px;
             cursor: pointer;
@@ -156,6 +156,7 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        text-transform: capitalize;
 
         .image {
           width: 80%;
@@ -172,11 +173,14 @@
         .name {
           font-weight: 600;
           padding: 5px;
+          color: #3E5467;
           text-align: center;
+
         }
 
         .shop {
           border-top: 1px solid gray;
+          color: #3E5467;
           font-weight: 600;
           text-align: center;
           padding: 5px;

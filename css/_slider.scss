@@ -7,12 +7,12 @@
     .show,
     .hide {
         ion-icon {
-            background: rgba(15, 111, 190, 0.827);
+            box-shadow: 2px 2px 6px rgba(138, 155, 189, 0.3), -2px -2px 12px rgba(255, 255, 255, 0.9);
 
             font-size: 1.5rem;
             padding: 5px;
             cursor: pointer;
-          
+          border-radius: 50%;
             color: #3E5467;
 
         }
@@ -20,8 +20,8 @@
 
     .hide {
         ion-icon {
-        
-            color: rgb(34, 34, 34);
+         
+            
         }
     }
 }
@@ -165,19 +165,13 @@ margin: auto;
 
             ion-icon {
 
-                font-size: 1.5rem;
-                padding: 5px;
-                cursor: pointer;
-                background: linear-gradient(315.13deg, rgba(194, 217, 237, 0.3) 5.21%, rgba(255, 255, 255, 0.3) 62.26%), #E9F0F7;
-                box-shadow: 4px 4px 12px rgba(138, 155, 189, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.9);
-
+              
             }
         }
 
         .hide {
             ion-icon {
-                background: rgb(235, 235, 235);
-                color: rgb(34, 34, 34);
+               
             }
         }
     }

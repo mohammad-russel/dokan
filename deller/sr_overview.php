@@ -39,7 +39,7 @@ if (!isset($_SESSION["did"])) {
                         <img style="width:100px ;" src="../image/sr/<?php echo $row['srpic'] ?>" alt="">
                     </div>
                 </div>
-                <div class="info">
+                <div class="info" >
                     <div class="left">
                         <div class="box">
                             <h3>Product</h3>

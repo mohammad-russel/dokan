@@ -5,7 +5,7 @@ $rid = $_SESSION["rid"];
     <div class="logo">
         <h1>
             <a href="homepage.php">
-            <img class="logoh" src="../logo/file.png" alt="">
+            <img class="logoh" src="../logo/file.pn" alt="">
             </a>
         </h1>
     </div>
