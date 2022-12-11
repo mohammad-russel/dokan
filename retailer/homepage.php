@@ -52,11 +52,25 @@ $rid = $_SESSION["rid"];
                             $row = mysqli_fetch_assoc($result);
                             ?>
                     <img src="../image/ads/<?php echo $row['adss'] ?>" alt=""> -->
-                    <div class="lt"></div>
-                    <div class="mid">
-                        <h1>Happy Friday</h1>
+                    <div class="box">
+                        <div class="lt">
+                            <ion-icon name="pricetag-outline"></ion-icon>
+                            <ion-icon name="add-outline"></ion-icon>
+                            <ion-icon name="happy-outline"></ion-icon>
+
+                        </div>
+                        <div class="mid">
+                            <!-- <img src="../svg/Untitled (7).svg" alt=""> -->
+                            <h1>Happy Friday</h1>
+                        </div>
+                        <div class="rt">
+                            <ion-icon name="happy-outline"></ion-icon>
+                            <ion-icon name="remove-outline"></ion-icon>
+
+                            <ion-icon name="cart-outline"></ion-icon>
+                        </div>
                     </div>
-                    <div class="rt"></div>
+
                 </div>
                 <div class="retailermain">
 

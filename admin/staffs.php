@@ -21,7 +21,7 @@ if (!isset($_SESSION["aid"])) {
         <div class="admin">
             <div class="toggle">
                 <div class="show">
-                    <ion-icon name="layers-outline"></ion-icon>
+                <ion-icon name="filter-outline"></ion-icon>
                 </div>
                 <div class="hide">
                     <ion-icon name="close-outline"></ion-icon>
@@ -59,7 +59,7 @@ if (!isset($_SESSION["aid"])) {
                             <?php }
                             } ?>
                             <div class="card more">
-                                <a href="deller.php">More & Add</a>
+                                <a href="deller.php">More</a>
 
                             </div>
                         </div>
@@ -86,7 +86,7 @@ if (!isset($_SESSION["aid"])) {
                             </div>
                             <?php } } ?>
                             <div class="card more">
-                                <a href="sr.php">More & Add</a>
+                                <a href="sr.php">More</a>
 
                             </div>
                         </div>
@@ -112,7 +112,7 @@ if (!isset($_SESSION["aid"])) {
                             </div>
                             <?php } } ?>
                             <div class="card more">
-                                <a href="retailer.php">More & Add</a>
+                                <a href="retailer.php">More </a>
                             </div>
                         </div>
                     </div>

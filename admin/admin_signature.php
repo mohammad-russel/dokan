@@ -21,7 +21,7 @@ if (!isset($_SESSION["aid"])) {
         <div class="admin">
             <div class="toggle">
                 <div class="show">
-                    <ion-icon name="layers-outline"></ion-icon>
+                <ion-icon name="filter-outline"></ion-icon>
                 </div>
                 <div class="hide">
                     <ion-icon name="close-outline"></ion-icon>

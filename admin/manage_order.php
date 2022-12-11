@@ -21,7 +21,7 @@ if (!isset($_SESSION["aid"])) {
         <div class="admin">
             <div class="toggle">
                 <div class="show">
-                    <ion-icon name="layers-outline"></ion-icon>
+                <ion-icon name="filter-outline"></ion-icon>
                 </div>
                 <div class="hide">
                     <ion-icon name="close-outline"></ion-icon>
@@ -39,7 +39,7 @@ if (!isset($_SESSION["aid"])) {
                 <div class="order_box">
                     <div class="box box_order">
                         <div class="text">
-                            <div class="t">Orders</div>
+                            <div class="t">Order Panding</div>
                             <?php
                             include "../php/config.php";
                             $sql = "SELECT * FROM cart WHERE status = 'order'";
@@ -69,7 +69,7 @@ if (!isset($_SESSION["aid"])) {
                     </div>
                     <div class="box box_complete">
                         <div class="text">
-                            <div class="t">Complete</div>
+                            <div class="t">Completed</div>
                             <?php
                             include "../php/config.php";
                             $sql = "SELECT * FROM cart WHERE status = 'complete'";

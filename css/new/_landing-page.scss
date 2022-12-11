@@ -1,6 +1,10 @@
 // @import url('https://fonts.cdnfonts.com/css/gagalin');
 // @import url(//db.onlinewebfonts.com/c/240a7cb10b49b02c94ceddc459d385a9?family=Gagalin);
 // @font-face {font-family: "Gagalin"; src: url("//db.onlinewebfonts.com/t/240a7cb10b49b02c94ceddc459d385a9.eot"); src: url("//db.onlinewebfonts.com/t/240a7cb10b49b02c94ceddc459d385a9.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/240a7cb10b49b02c94ceddc459d385a9.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/240a7cb10b49b02c94ceddc459d385a9.woff") format("woff"), url("//db.onlinewebfonts.com/t/240a7cb10b49b02c94ceddc459d385a9.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/240a7cb10b49b02c94ceddc459d385a9.svg#Gagalin") format("svg"); }
+@font-face {
+    font-family: 'Gagalin', sans-serif;
+    src: url("../Gagalin-Regular.ttf");
+}
 
 .landing-page-new {
 
@@ -259,138 +263,257 @@
             }
         }
 
-        .box-room {
-
-            margin: auto;
-            width: 80%;
-            max-width: 900px;
-            height: 300px;
-            background: rgba(189, 201, 211, 0.15);
-            overflow: hidden;
-            align-items: center;
+        .dsd {
             display: flex;
-            border-radius: 10px;
-            margin-top: 50px;
+            align-items: center;
+            justify-content: center;
             position: relative;
-            // .dot {
-            //     z-index: 12px;
-            //     position: absolute;
 
-            //     ion-icon {
-            //         font-size: 3rem;
-            //     }
-            // }
+            .left {
+                position: relative;
+                width: 5%;
+                display: flex;
+                align-items: center;
 
-            // .dr {
-            //     right: -20px;
-            // }
+                margin-top: 50px;
+                height: 300px;
+                padding: 0px 5px;
+                justify-content: center;
 
-            // .dl {
-            //     left: 0;
-            // }
+                ion-icon {
+                    width: 10px;
+                    height: 10px;
+                    padding: 5px;
+                    @include shadow;
+                }
+            }
 
-            .box {
-                min-width: 100%;
-                height: 90%;
+            .box-room {
+
+                margin: auto;
+                width: 90%;
+
+                height: 300px;
+                background: rgba(189, 201, 211, 0.15);
+                overflow: hidden;
+                align-items: center;
+                display: flex;
+                border-radius: 10px;
+                margin-top: 50px;
+                position: relative;
+                // .dot {
+                //     z-index: 12px;
+                //     position: absolute;
+
+                //     ion-icon {
+                //         font-size: 3rem;
+                //     }
+                // }
+
+                // .dr {
+                //     right: -20px;
+                // }
+
+                // .dl {
+                //     left: 0;
+                // }
+
+                .box {
+                    min-width: 100%;
+                    height: 90%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    border-radius: 10px;
+                    @include text-color;
+                    position: relative;
+                    animation: anime 15s reverse linear infinite;
+                    // animation-iteration-count: infinite;
+
+                    margin: auto;
+
+
+                    // animation: name duration timing-function delay iteration-count direction fill-mode;
+                    .text {
+
+                        width: 100%;
+                        height: 50%;
+                        text-transform: uppercase;
+                        text-align: center;
+                        font-size: 2rem;
+                        letter-spacing: 1px;
+                        font-weight: 300;
+                        font-family: 'Raleway', sans-serif;
+                        color: #3E5467;
+
+                    }
+
+
+                    .icon {
+                        width: 100%;
+                        margin: 20px 0px;
+                        color: #3E5467;
+
+                        text-align: center;
+
+                        h1 {
+                            color: #3E5467;
+                            font-size: 3rem;
+
+                        }
+
+                        ion-icon {
+
+                            font-size: 3rem;
+                        }
+                    }
+
+
+
+                }
+
+                @keyframes anime {
+                    // 0% {
+                    //     right: 0%;
+                    // }
+
+                    // 10% {
+                    //     right: 0%;
+                    // }
+
+                    // 20% {
+                    //     right: 100%;
+                    // }
+
+                    // 30% {
+                    //     right: 100%;
+                    // }
+
+                    // 40% {
+                    //     right: 200%;
+
+                    // }
+
+                    // 50% {
+                    //     right: 200%;
+
+                    // }
+
+                    // 60% {
+                    //     right: 100%;
+
+
+                    // }
+
+                    // 80% {
+                    //     right: 100%;
+
+
+                    // }
+
+                    // 90% {
+                    //     right: 0%;
+                    // }
+
+                    // 100% {
+                    //     right: 0%;
+                    // }
+                    0% {
+                        right: 0%;
+                    }
+
+                    10% {
+                        right: 0%;
+                    }
+
+                    40% {
+                        right: 100%;
+                    }
+
+                    50% {
+                        right: 100%;
+
+                    }
+
+                    70% {
+                        right: 200%;
+                    }
+
+                    80% {
+                        right: 200%;
+
+                    }
+
+                    100% {
+                        right: 300%;
+                    }
+                }
+            }
+
+            .right {
+                position: relative;
+                width: 5%;
+                display: flex;
+                align-items: center;
+
+                margin-top: 50px;
+                height: 300px;
+                padding: 0px 5px;
+                justify-content: center;
+
+                ion-icon {
+                    width: 10px;
+                    height: 10px;
+                    padding: 5px;
+                    @include shadow;
+                }
+            }
+
+            .dot {
+                position: absolute;
+                height: 30px;
+                width: 200px;
+                bottom: -40px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                flex-direction: column;
-                border-radius: 10px;
-                @include text-color;
-                position: relative;
-                animation: anime 15s;
-                animation-iteration-count: infinite;
-                animation-duration: alternate;
-                animation-play-state: running;
-                margin: auto;
 
-                .text {
-
-                    width: 100%;
-                    height: 50%;
-                    text-transform: uppercase;
-                    text-align: center;
-                    font-size: 2rem;
-                    letter-spacing: 1px;
-                    font-weight: 300;
-                    font-family: 'Raleway', sans-serif;
-                    color: #3E5467;
-
+                .dott {
+                    width: 10px;
+                    height: 10px;
+                    @include shadow;
+                    background: rgba(189, 201, 211, 0.254);
+                    border-radius: 50%;
+                    margin: 0px 5px;
+                    // animation: dot 1s linear infinite;
                 }
 
 
-                .icon {
-                    width: 100%;
-                    margin: 20px 0px;
-                    color: #3E5467;
+                // .dott:nth-child(2) {
+                //     background: rgba(0, 0, 0, 0.155);
+                // }
 
-                    text-align: center;
-
-                    h1 {
-                    color: #3E5467;
-                    font-size: 3rem;
-
-                    }
-
-                    ion-icon {
-
-                        font-size: 3rem;
-                    }
-                }
-
-
-
-            }
-
-            @keyframes anime {
-                0% {
-                    right: 0%;
-                }
-
-                10% {
-                    right: 0%;
-                }
-
-                20% {
-                    right: 100%;
-                }
-
-                30% {
-                    right: 100%;
-                }
-
-                40% {
-                    right: 200%;
-
-                }
-
-                50% {
-                    right: 200%;
-
-                }
-
-                60% {
-                    right: 100%;
-
-
-                }
-
-                80% {
-                    right: 100%;
-
-
-                }
-
-                90% {
-                    right: 0%;
-                }
-
-                100% {
-                    right: 0%;
-                }
+                // @keyframes dot {
+                //     0%{
+                //         // .dott:nth-child(1) {
+                //         //     background: rgba(0, 0, 0, 0.883);
+                //         // }
+                //         // .dott:nth-child(2) {
+                //         //     background: rgba(0, 0, 0, 0);
+                //         // }
+                //     }
+                //     40%{
+                //         // .dott:nth-child(2) {
+                //         //     background: rgba(0, 0, 0, 0.155);
+                //         // }
+                //     }
+                //     70%{}
+                //     100%{}
+                // }
             }
         }
+
     }
 
     // -----------FAQ--------------
@@ -782,22 +905,48 @@
                 }
             }
 
-            .box-room {
+            .dsd {
 
-                width: 95%;
+                .box-room {
 
-                .box {
+                    width: 95%;
 
-
-                    .text {}
-
-                    .icon {
+                    .box {
 
 
-                        ion-icon {}
+                        .text {}
+
+                        .icon {
+
+
+                            ion-icon {}
+                        }
                     }
                 }
+
+                .left {
+
+                    display: none;
+
+                    ion-icon {}
+                }
+
+
+                .right {
+
+                    display: none;
+
+
+                    ion-icon {}
+                }
+
+                .dot {
+
+
+                    .dott {}
+                }
             }
+
         }
 
         // -----------FAQ--------------
@@ -813,8 +962,8 @@
                 h2 {}
 
                 p {
-               text-align: start;
-                width: 98%;
+                    text-align: start;
+                    width: 98%;
                 }
             }
         }

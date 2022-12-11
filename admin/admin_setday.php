@@ -21,7 +21,7 @@ if (!isset($_SESSION["aid"])) {
         <div class="admin">
             <div class="toggle">
                 <div class="show">
-                    <ion-icon name="layers-outline"></ion-icon>
+                <ion-icon name="filter-outline"></ion-icon>
                 </div>
                 <div class="hide">
                     <ion-icon name="close-outline"></ion-icon>
@@ -33,7 +33,9 @@ if (!isset($_SESSION["aid"])) {
             <!-- --------------------------- -->
             <div class="cb cb_setday">
 
-            <span class="tity"><h1>Set Days</h1></span>
+                <span class="tity">
+                    <h1>Set Days</h1>
+                </span>
 
                 <div class="daybox">
                     <?php
@@ -43,8 +45,30 @@ if (!isset($_SESSION["aid"])) {
                     }
                     ?>
                     <form action="../php/day.php" method="post">
-                        <input type="text" name="village" id="village" placeholder="Village" required>
-                        <select name="day" id="day">
+                        <select name="upozila" id="upozila" required>
+                            <option value="">উপজেলা</option>
+                            <option value="চারঘাট উপজেলা">চারঘাট উপজেলা</option>
+                            <option value="পুঠিয়া উপজেলা">পুঠিয়া উপজেলা</option>
+                            <option value="বাঘা উপজেলা">বাঘা উপজেলা</option>
+                        </select>
+                        <select name="union" id="union" required>
+                            <option value="">ইউনিয়ন</option>
+                            <option value="ইউসুফপুর">ইউসুফপুর</option>
+                            <option value="শলুয়া">শলুয়া</option>
+                            <option value="সরদহ">সরদহ</option>
+                            <option value="নিমপাড়া">নিমপাড়া</option>
+                            <option value="চারঘাট">চারঘাট</option>
+                            <option value="ভায়ালক্ষীপুর">ভায়ালক্ষীপুর</option>
+                            <option value="ভায়ালক্ষীপুর">বাজুবাঘা </option>
+                            <option value="ভায়ালক্ষীপুর">গড়গড়ি </option>
+                            <option value="ভায়ালক্ষীপুর">পাকুড়িয়া </option>
+                            <option value="ভায়ালক্ষীপুর">মনিগ্রাম </option>
+                            <option value="ভায়ালক্ষীপুর">বাউসা </option>
+                            <option value="ভায়ালক্ষীপুর">চকরাজাপুর </option>
+                            <option value="ভায়ালক্ষীপুর">আড়ানী </option>
+                        </select>
+                        <input type="text" name="village" id="village" placeholder="গ্রামের নাম" required>
+                        <select name="day" id="day" required>
                             <option value="শুক্রবার">শুক্রবার</option>
                             <option value="শনিবার">শনিবার</option>
                             <option value="রবিবার">রবিবার</option>
@@ -57,13 +81,15 @@ if (!isset($_SESSION["aid"])) {
                     </form>
                     <?php
                     include "../php/config.php";
-                    $sql1 = "SELECT * FROM delivery";
+                    $sql1 = "SELECT * FROM delivery ORDER BY `union` DESC";
                     $result1 = mysqli_query($con, $sql1);
                     if (mysqli_num_rows($result1)) {
                     ?>
                         <table>
                             <tr>
                                 <th>No</th>
+                                <th>Upozila</th>
+                                <th>Union</th>
                                 <th>Village</th>
                                 <th>Day</th>
                                 <th>DELETE</th>
@@ -73,6 +99,8 @@ if (!isset($_SESSION["aid"])) {
                             ?>
                                 <tr>
                                     <td><?php echo $row['id'] ?></td>
+                                    <td><?php echo $row['upozila'] ?></td>
+                                    <td><?php echo $row['union'] ?></td>
                                     <td><?php echo $row['village'] ?></td>
                                     <td><?php echo $row['day'] ?></td>
                                     <td><a href="../php/delete_day.php?id=<?php echo $row['id'] ?>">
@@ -92,9 +120,9 @@ if (!isset($_SESSION["aid"])) {
         $(".show").click(function() {
             $(".hide").fadeIn();
             $(".show").slideUp();
-          
+
             $(".slider").slideDown()
-            
+
         })
         $(".hide").click(function() {
             $(".hide").fadeOut();

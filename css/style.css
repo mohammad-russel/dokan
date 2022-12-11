@@ -205,7 +205,7 @@ header .link a ion-icon:hover {
   border-image-source: linear-gradient(134.47deg, rgba(255, 255, 255, 0.25) 75.67%, #E9F0F7 4.99%);
   border-radius: 0.7rem;
   margin: 10px auto;
-  color: #8F9BB2;
+  color: #3E5467;
 }
 .adminproductbox .insert form button {
   cursor: pointer;
@@ -236,17 +236,19 @@ header .link a ion-icon:hover {
 .list .card {
   text-align: center;
   width: 250px;
-  color: rgb(82, 82, 82);
   padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   flex-direction: column;
-  border: 1px solid gray;
+  background: rgba(189, 201, 211, 0.15);
   border-radius: 10px;
   margin: 10px;
+  color: #3E5467;
+  font-weight: 600;
 }
+.list .card .id,
 .list .card .name,
 .list .card .price,
 .list .card .sr,
@@ -256,7 +258,11 @@ header .link a ion-icon:hover {
   margin: 5px;
   border-bottom: 1px solid rgba(128, 128, 128, 0.204);
   width: 100%;
+  color: #3E5467;
   padding: 10px 0px;
+}
+.list .card .name {
+  color: #3E5467;
 }
 .list .card .image img {
   border-radius: 10px;
@@ -279,6 +285,8 @@ header .link a ion-icon:hover {
 .list .card .more .show-more ion-icon {
   cursor: pointer;
   width: 100px;
+  border-radius: 30px;
+  box-shadow: 4px 4px 16px rgba(138, 155, 189, 0.48), -5px -5px 18px #ffffff;
 }
 .list .card .more .box {
   z-index: 1;
@@ -2756,10 +2764,11 @@ header .link a ion-icon:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(31, 0, 98, 0.697);
+  background: rgba(189, 201, 211, 0.15);
   padding: 10px;
   border-radius: 10px;
-  color: aliceblue;
+  color: #3E5467;
+  font-weight: 600;
 }
 .admin .cb .short_box .box .text .title {
   font-size: 0.8rem;
@@ -2777,7 +2786,7 @@ header .link a ion-icon:hover {
   border-radius: 10px;
 }
 .admin .cb .short_box .box .icon span {
-  color: rgb(230, 230, 230);
+  color: #3E5467;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2795,13 +2804,14 @@ header .link a ion-icon:hover {
   margin: 10px;
   width: 60%;
   padding: 8px;
-  background: rgba(137, 0, 91, 0.698);
+  background: rgba(189, 201, 211, 0.15);
   display: flex;
   flex-direction: column;
   border-radius: 10px;
-  color: rgb(224, 224, 224);
+  color: #3E5467;
+  font-weight: 600;
   font-size: 0.8rem;
-  letter-spacing: 1px;
+  letter-spacing: 0.6px;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
@@ -2838,16 +2848,21 @@ header .link a ion-icon:hover {
   align-items: center;
 }
 .admin .cb .pr .product_box .box .statics .boxs {
+  border-radius: 42px;
   width: 90%;
   height: 10px;
   border-radius: 10px;
   margin: 0px 10px;
+  overflow: hidden;
+  background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
+  box-shadow: inset -4px -4px 5px rgba(255, 255, 255, 0.8), inset 4px 4px 5px rgba(138, 155, 189, 0.4);
 }
 .admin .cb .pr .product_box .box .statics .boxs .color {
   height: 100%;
   border-bottom-right-radius: 10px;
   border-top-right-radius: 10px;
-  background: rgb(218, 210, 75);
+  background: linear-gradient(90.14deg, #b0b0b0 0%, #1e1e1e 101.76%);
+  box-shadow: inset -1px -1px 2px rgba(34, 214, 255, 0), inset 2px 2px 2px rgba(225, 10, 245, 0);
 }
 .admin .cb .pr .retailer_box {
   margin: 10px;
@@ -2856,7 +2871,7 @@ header .link a ion-icon:hover {
   display: flex;
   flex-direction: column;
   border-radius: 10px;
-  color: #8F9BB2;
+  color: #3E5467;
 }
 .admin .cb .pr .retailer_box .box {
   display: flex;
@@ -2879,16 +2894,17 @@ header .link a ion-icon:hover {
      object-fit: cover;
 }
 .admin .cb .pr .retailer_box .box .subbox .info {
-  color: #8F9BB2;
+  color: #3E5467;
   margin: 0px 10px;
 }
 .admin .cb .pr .retailer_box .box .subbox .info .name {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 600;
   letter-spacing: 1px;
 }
 .admin .cb .pr .retailer_box .box .subbox .info .shop_name {
   font-size: 0.8rem;
+  font-weight: 600;
 }
 .admin .cb .pr .retailer_box .box .buy_info .total {
   font-size: 0.9rem;
@@ -2911,17 +2927,18 @@ header .link a ion-icon:hover {
     display: block;
     color: rgb(255, 255, 255);
   }
+  .admin .toggle .show,
+.admin .toggle .hide {
+    margin: 5px 5px;
+  }
   .admin .toggle .show ion-icon,
 .admin .toggle .hide ion-icon {
-    background: rgb(255, 255, 255);
+    box-shadow: 2px 2px 6px rgba(138, 155, 189, 0.3), -2px -2px 12px rgba(255, 255, 255, 0.9);
     font-size: 1.5rem;
-    color: black;
     padding: 5px;
     cursor: pointer;
-  }
-  .admin .toggle .hide ion-icon {
-    background: rgb(40, 40, 40);
-    color: rgb(225, 225, 225);
+    border-radius: 50%;
+    color: #3E5467;
   }
   .admin .cb {
     width: 100%;
@@ -3102,24 +3119,24 @@ header .link a ion-icon:hover {
 }
 .cb_order .order_box .box {
   width: 45%;
-  background: rgb(53, 53, 53);
-  margin: 6px;
+  background: rgba(189, 201, 211, 0.15);
+  margin: 10px;
   padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: azure;
+  color: #3E5467;
   border-radius: 10px;
   cursor: pointer;
 }
 .cb_order .order_box .text .t {
   font-size: 0.9rem;
+  font-weight: 600;
 }
 .cb_order .order_box .text .n {
   font-size: 1.5rem;
 }
 .cb_order .order_box .icon {
-  border: 1px solid azure;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3251,11 +3268,12 @@ header .link a ion-icon:hover {
 .cb_staffs .staffs_house .room .title {
   font-size: 1.2rem;
   letter-spacing: 1px;
-  border-bottom: 1px solid rgb(123, 123, 123);
-  border-top: 1px solid rgb(123, 123, 123);
+  background: rgba(189, 201, 211, 0.15);
   margin-bottom: 10px;
-  color: rgb(41, 41, 41);
+  color: #3E5467;
   font-weight: 600;
+  border-radius: 60px;
+  padding: 7px 20px;
 }
 .cb_staffs .staffs_house .room .box {
   display: flex;
@@ -3266,7 +3284,8 @@ header .link a ion-icon:hover {
 .cb_staffs .staffs_house .room .box .card {
   width: 150px;
   height: 300px;
-  margin: 0px 5px;
+  background: rgba(189, 201, 211, 0.15);
+  margin: 5px 5px;
   overflow: hidden;
   border-radius: 10px;
 }
@@ -3274,7 +3293,7 @@ header .link a ion-icon:hover {
   width: 100%;
   height: 100%;
   text-decoration: none;
-  color: rgb(33, 33, 33);
+  color: #3E5467;
 }
 .cb_staffs .staffs_house .room .box .card a .image {
   width: 100%;
@@ -3290,28 +3309,36 @@ header .link a ion-icon:hover {
   font-size: 1.1rem;
   letter-spacing: 0.5px;
   padding: 3px;
-  color: rgb(43, 43, 43);
+  color: #3E5467;
 }
 .cb_staffs .staffs_house .room .box .card a .company {
   padding: 3px;
+  color: #3E5467;
 }
 .cb_staffs .staffs_house .room .box .card a .deller {
   padding: 3px;
+  color: #3E5467;
 }
 .cb_staffs .staffs_house .room .box .card a .shop {
   padding: 3px;
+  color: #3E5467;
 }
 .cb_staffs .staffs_house .room .box .more {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgb(86, 26, 131);
+  background: rgba(189, 201, 211, 0.15);
+  box-shadow: none;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
 }
 .cb_staffs .staffs_house .room .box .more a {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: rgb(255, 255, 255);
+  color: #3E5467;
+  font-weight: 600;
   font-size: 1.2rem;
 }
 
@@ -3372,6 +3399,10 @@ header .link a ion-icon:hover {
   transform: rotate(90deg);
 }
 
+@font-face {
+  font-family: "Gagalin", sans-serif;
+  src: url("../Gagalin-Regular.ttf");
+}
 .landing-page-new .landing-page-header {
   display: flex;
   justify-content: space-between;
@@ -3582,10 +3613,35 @@ header .link a ion-icon:hover {
   justify-content: end;
   align-items: flex-end;
 }
-.landing-page-new .open .box-room {
+.landing-page-new .open .dsd {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.landing-page-new .open .dsd .left {
+  position: relative;
+  width: 5%;
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  height: 300px;
+  padding: 0px 5px;
+  justify-content: center;
+}
+.landing-page-new .open .dsd .left ion-icon {
+  width: 10px;
+  height: 10px;
+  padding: 5px;
+  background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
+  box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.9), 4px 4px 10px rgba(138, 155, 189, 0.4);
+  border-radius: 10px;
+  border: 1px solid;
+  border-image-source: linear-gradient(134.47deg, rgba(255, 255, 255, 0.25) 75.67%, #E9F0F7 4.99%);
+}
+.landing-page-new .open .dsd .box-room {
   margin: auto;
-  width: 80%;
-  max-width: 900px;
+  width: 90%;
   height: 300px;
   background: rgba(189, 201, 211, 0.15);
   overflow: hidden;
@@ -3595,7 +3651,7 @@ header .link a ion-icon:hover {
   margin-top: 50px;
   position: relative;
 }
-.landing-page-new .open .box-room .box {
+.landing-page-new .open .dsd .box-room .box {
   min-width: 100%;
   height: 90%;
   display: flex;
@@ -3605,17 +3661,10 @@ header .link a ion-icon:hover {
   border-radius: 10px;
   color: #8F9BB2;
   position: relative;
-  -webkit-animation: anime 15s;
-          animation: anime 15s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-duration: alternate;
-          animation-duration: alternate;
-  -webkit-animation-play-state: running;
-          animation-play-state: running;
+  animation: anime 15s reverse linear infinite;
   margin: auto;
 }
-.landing-page-new .open .box-room .box .text {
+.landing-page-new .open .dsd .box-room .box .text {
   width: 100%;
   height: 50%;
   text-transform: uppercase;
@@ -3626,17 +3675,17 @@ header .link a ion-icon:hover {
   font-family: "Raleway", sans-serif;
   color: #3E5467;
 }
-.landing-page-new .open .box-room .box .icon {
+.landing-page-new .open .dsd .box-room .box .icon {
   width: 100%;
   margin: 20px 0px;
   color: #3E5467;
   text-align: center;
 }
-.landing-page-new .open .box-room .box .icon h1 {
+.landing-page-new .open .dsd .box-room .box .icon h1 {
   color: #3E5467;
   font-size: 3rem;
 }
-.landing-page-new .open .box-room .box .icon ion-icon {
+.landing-page-new .open .dsd .box-room .box .icon ion-icon {
   font-size: 3rem;
 }
 @-webkit-keyframes anime {
@@ -3646,29 +3695,20 @@ header .link a ion-icon:hover {
   10% {
     right: 0%;
   }
-  20% {
-    right: 100%;
-  }
-  30% {
-    right: 100%;
-  }
   40% {
-    right: 200%;
+    right: 100%;
   }
   50% {
+    right: 100%;
+  }
+  70% {
     right: 200%;
   }
-  60% {
-    right: 100%;
-  }
   80% {
-    right: 100%;
-  }
-  90% {
-    right: 0%;
+    right: 200%;
   }
   100% {
-    right: 0%;
+    right: 300%;
   }
 }
 @keyframes anime {
@@ -3678,30 +3718,62 @@ header .link a ion-icon:hover {
   10% {
     right: 0%;
   }
-  20% {
-    right: 100%;
-  }
-  30% {
-    right: 100%;
-  }
   40% {
-    right: 200%;
+    right: 100%;
   }
   50% {
+    right: 100%;
+  }
+  70% {
     right: 200%;
   }
-  60% {
-    right: 100%;
-  }
   80% {
-    right: 100%;
-  }
-  90% {
-    right: 0%;
+    right: 200%;
   }
   100% {
-    right: 0%;
+    right: 300%;
   }
+}
+.landing-page-new .open .dsd .right {
+  position: relative;
+  width: 5%;
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  height: 300px;
+  padding: 0px 5px;
+  justify-content: center;
+}
+.landing-page-new .open .dsd .right ion-icon {
+  width: 10px;
+  height: 10px;
+  padding: 5px;
+  background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
+  box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.9), 4px 4px 10px rgba(138, 155, 189, 0.4);
+  border-radius: 10px;
+  border: 1px solid;
+  border-image-source: linear-gradient(134.47deg, rgba(255, 255, 255, 0.25) 75.67%, #E9F0F7 4.99%);
+}
+.landing-page-new .open .dsd .dot {
+  position: absolute;
+  height: 30px;
+  width: 200px;
+  bottom: -40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.landing-page-new .open .dsd .dot .dott {
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
+  box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.9), 4px 4px 10px rgba(138, 155, 189, 0.4);
+  border-radius: 10px;
+  border: 1px solid;
+  border-image-source: linear-gradient(134.47deg, rgba(255, 255, 255, 0.25) 75.67%, #E9F0F7 4.99%);
+  background: rgba(189, 201, 211, 0.254);
+  border-radius: 50%;
+  margin: 0px 5px;
 }
 .landing-page-new .faqs {
   margin: 100px 0px;
@@ -4012,8 +4084,14 @@ header .link a ion-icon:hover {
     width: 20px;
     left: 10%;
   }
-  .landing-page-new .open .box-room {
+  .landing-page-new .open .dsd .box-room {
     width: 95%;
+  }
+  .landing-page-new .open .dsd .left {
+    display: none;
+  }
+  .landing-page-new .open .dsd .right {
+    display: none;
   }
   .landing-page-new .about .box p {
     text-align: start;
@@ -4044,7 +4122,7 @@ header .link a ion-icon:hover {
      object-fit: cover;
 }
 .rt .box {
-  width: 95%;
+  width: 100%;
   overflow: auto;
 }
 .rt .box .retailer-header {
@@ -4129,12 +4207,71 @@ header .link a ion-icon:hover {
   border-radius: 10px;
 }
 .rt .box .notice {
-  border-radius: 10px;
-  border: 1px solid black;
-  height: 20vmax;
+  height: 30vmin;
 }
-.rt .box .notice .mid h1 {
+.rt .box .notice .box {
+  border-radius: 10px;
+  background: rgba(189, 201, 211, 0.15);
+  width: 95%;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.rt .box .notice .box .lt {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.rt .box .notice .box .lt ion-icon {
+  opacity: 0.4;
+  font-size: 1.5rem;
+  margin: 5px;
+  transform: rotate(237deg);
+}
+.rt .box .notice .box .mid {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.rt .box .notice .box .mid img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.rt .box .notice .box .mid h1 {
+  color: #323537;
   font-size: 7vmin;
+  font-family: "Gagalin", "Regular";
+  height: 100%;
+  display: flex;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  justify-content: center;
+  align-items: center;
+}
+.rt .box .notice .box .rt {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  justify-content: end;
+  width: 80px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.rt .box .notice .box .rt ion-icon {
+  opacity: 0.4;
+  font-size: 1.5rem;
+  margin: 5px;
+  transform: rotate(237deg);
 }
 .rt .box .retailermain {
   width: 100%;

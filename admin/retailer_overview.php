@@ -33,6 +33,8 @@ if (!isset($_SESSION["aid"])) {
         $query = mysqli_query($con, $sql);
         if (mysqli_num_rows($query)) {
             $row = mysqli_fetch_assoc($query);
+
+           
         ?>
             <div class="sr_overview">
                 <div class="head">
@@ -96,10 +98,16 @@ if (!isset($_SESSION["aid"])) {
                         <div class="shop"><?php echo $row['shopname'] ?></div>
                         <div class="number">Number : <?php echo $row['num'] ?></div>
                         <div class="password">Password : <?php echo $row['pass'] ?></div>
-                        <div class="zila">Zila : <?php echo $row['zila'] ?></div>
-                        <div class="village">Village : <?php echo $row['village'] ?></div>
+                        <?php
+                         $village1 = $row['village'];
+                         $sql3 = "SELECT * FROM delivery WHERE id = $village1";
+                         $result3 = mysqli_query($con, $sql3);
+                         $row3 = mysqli_fetch_assoc($result3);
+                        ?>
+                        <div class="zila">Upozila : <?php echo $row3['upozila'] ?></div>
+                        <div class="zila">Union : <?php echo $row3['union'] ?></div>
+                        <div class="village">Village : <?php echo $row3['village'] ?></div>
                         <div class="area">area : <?php echo $row['area'] ?></div>
-
                     </div>
                     <div class="right">
                         <div class="box">

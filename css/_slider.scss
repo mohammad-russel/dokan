@@ -12,17 +12,14 @@
             font-size: 1.5rem;
             padding: 5px;
             cursor: pointer;
-          border-radius: 50%;
+            border-radius: 50%;
             color: #3E5467;
 
         }
     }
 
     .hide {
-        ion-icon {
-         
-            
-        }
+        ion-icon {}
     }
 }
 
@@ -130,7 +127,7 @@
             font-size: 1.2rem;
             margin: 10px 0px;
             text-decoration: none;
-margin: auto;
+            margin: auto;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -163,16 +160,11 @@ margin: auto;
         .hide {
             margin: 5px 5px;
 
-            ion-icon {
-
-              
-            }
+            ion-icon {}
         }
 
         .hide {
-            ion-icon {
-               
-            }
+            ion-icon {}
         }
     }
 

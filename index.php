@@ -127,6 +127,9 @@
                     </div>
                 </div>
                 <div class="dsd">
+                    <div class="left">
+                        <ion-icon name="chevron-back-outline"></ion-icon>
+                    </div>
                     <div class="box-room">
 
                         <div class="box">
@@ -147,14 +150,64 @@
                             </div>
                             <div class="text">save more money</div>
                         </div>
+                        <div class="box">
+                            <div class="icon">
+                                <ion-icon name="time-outline"></ion-icon>
+                            </div>
+                            <div class="text">Save more time</div>
+                        </div>
                     </div>
+                    <div class="right">
+                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                    </div>
+
                     <div class="dot">
-                        <div class="dott">.</div>
-                        <div class="dott">.</div>
-                        <div class="dott">.</div>
+                        <div class="dott da"></div>
+                        <div class="dott db"></div>
+                        <div class="dott dc"></div>
                     </div>
                 </div>
+                <script>
+                    $(document).ready(function() {
+                        // setInterval(() => {
+                        //     setTimeout(() => {
+                        //         $(".da").css("background", "red")
+                        //         $(".dc").css("background", "transparent")
+                        //         $(".db").css("background", "transparent")
+                        //     }, 6000);
+                        //     setTimeout(() => {
+                        //         $(".db").css("background", "red")
+                        //         $(".da").css("background", "transparent")
+                        //         $(".dc").css("background", "transparent")
+                        //     }, 2000);
+                        //     setTimeout(() => {
+                        //         $(".dc").css("background", "red")
+                        //         $(".db").css("background", "transparent")
+                        //         $(".da").css("background", "transparent")
+                        //     }, 4000);
+                        // }, 1000);
+                        function a() {
+                            $(".da").css("background", "red")
+                        }
 
+                        function b() {
+                            $(".dd").css("background", "red")
+                        }
+
+                        function c() {
+                            $(".dc").css("background", "red")
+                        }
+                        // var aa = $("box").css("right", "70%");
+
+
+                        if (aw) {
+                            alert("34")
+                        }
+
+
+
+                    })
+                </script>
 
 
 

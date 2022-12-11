@@ -21,13 +21,13 @@
 
         .box {
             width: 45%;
-            background: rgb(53, 53, 53);
-            margin: 6px;
+            background: rgba(189, 201, 211, 0.15);
+            margin: 10px;
             padding: 10px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            color: azure;
+            color: #3E5467;
             border-radius: 10px;
             cursor: pointer;
         }
@@ -35,6 +35,7 @@
         .text {
             .t {
                 font-size: 0.9rem;
+                font-weight: 600;
             }
 
             .n {
@@ -44,7 +45,7 @@
         }
 
         .icon {
-            border: 1px solid azure;
+            
             display: flex;
             justify-content: center;
             align-items: center;

@@ -53,11 +53,7 @@ $srid = ($_SESSION["sid"]);
                             <input type="hidden" name="sr" id="sr" value="<?php echo $srid ?>">
                             <input type="number" name="number" id="number" placeholder="number" required>
                             <input type="text" name="password" id="password" placeholder="password" required>
-                            <select name="zila" id="zila">
-                                <option value="">Zila</option>
-                                <option value="madaripur">madaripur</option>
-                                <option value="ronipur">ronipur</option>
-                            </select>
+                           
                             <select name="village" id="village">
                                 <option value="">Village</option>
                                 <?php
@@ -67,7 +63,7 @@ $srid = ($_SESSION["sid"]);
                                 if (mysqli_num_rows($result2)) {
                                     while ($row2 = mysqli_fetch_assoc($result2)) {
                                 ?>
-                                        <option value="<?php echo $row2['village'] ?>"><?php echo $row2['village'] ?></option>
+                                        <option value="<?php echo $row2['id'] ?>"> <?php echo $row2['union'] ?> - <?php echo $row2['village'] ?></option>
                                 <?php }
                                 } ?>
                             </select>

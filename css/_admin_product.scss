@@ -58,7 +58,8 @@
         @include shadow;
         border-radius: .7rem;
         margin: 10px auto;
-        @include text-color;
+        color: #3E5467;
+
 
         option {}
       }
@@ -94,17 +95,18 @@
   .card {
     text-align: center;
     width: 250px;
-    color: rgb(82, 82, 82);
     padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     flex-direction: column;
-    border: 1px solid gray;
+    background: rgba(189, 201, 211, 0.15);
     border-radius: 10px;
     margin: 10px;
-
+    color: #3E5467;
+    font-weight: 600;
+.id,
     .name,
     .price,
     .sr,
@@ -114,10 +116,14 @@
       margin: 5px;
       border-bottom: 1px solid rgba(128, 128, 128, 0.204);
       width: 100%;
-      padding: 10px 0px;
+    color: #3E5467;
+    padding: 10px 0px;
     }
 
-    .name {}
+    .name {
+    color: #3E5467;
+
+    }
 
     .image {
       img {
@@ -153,6 +159,8 @@
         ion-icon {
           cursor: pointer;
           width: 100px;
+          border-radius: 30px;
+          box-shadow: 4px 4px 16px rgb(138 155 189 / 48%), -5px -5px 18px #ffffff;
         }
       }
 
