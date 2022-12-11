@@ -84,7 +84,7 @@ if ($numrow = mysqli_num_rows($result)) {
     $result5 = mysqli_query($con, $sql5);
     $row5 = mysqli_fetch_assoc($result5);
     $village = $row5['village'];
-    $sql4 = "SELECT * FROM delivery WHERE village = '$village' ";
+    $sql4 = "SELECT * FROM delivery WHERE id = '$village' ";
     $result4 = mysqli_query($con, $sql4);
     $row4 = mysqli_fetch_assoc($result4);
     $day = $row4['day'];

@@ -10,11 +10,12 @@ include "config.php";
 // $deller =  mysqli_real_escape_string($con, $_POST['deller']);
 // $srnn = "sr_" . $company . "_" . $name;
 
-$rpic =  $_FILES['pic']['name'];
-$rtmp = $_FILES['pic']['tmp_name'];
-$sql = "UPDATE ads SET adss = '$rpic' WHERE id = 1 ";
+$ads =  $_POST['ads'];
+// $rpic =  $_FILES['pic']['name'];
+// $rtmp = $_FILES['pic']['tmp_name'];
+$sql = "UPDATE ads SET adss = '$ads' ";
 
-move_uploaded_file($rtmp,  "../image/ads/" . $rpic);
+// move_uploaded_file($rtmp,  "../image/ads/" . $rpic);
 
 $result = mysqli_query($con, $sql);
 header("location:../admin/admin_other.php");

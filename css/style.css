@@ -4248,7 +4248,7 @@ header .link a ion-icon:hover {
 .rt .box .notice .box .mid h1 {
   color: #323537;
   font-size: 7vmin;
-  font-family: "Gagalin", "Regular";
+  font-family: "Gagalin";
   height: 100%;
   display: flex;
   letter-spacing: 6px;
@@ -4439,48 +4439,36 @@ header .link a ion-icon:hover {
   background: rgb(255, 255, 255);
 }
 
-.box_other {
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.box_other .now {
-  padding: 5px;
-  width: 100%;
-  max-width: 300px;
+.qwe {
   text-align: center;
-  height: 200px;
+  padding: 30px 30px;
+  font-size: 2rem;
+  font-family: "Gagalin";
 }
-.box_other .now img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-.box_other .new {
-  margin: 10px 0px;
-  padding: 5px;
-  width: 100%;
-  max-width: 300px;
-}
-.box_other .new form {
+
+.bl {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  padding: 30px 20px;
+  background: rgba(0, 0, 0, 0.015);
+  max-width: 400px;
+  margin: auto;
 }
-.box_other .new form input {
-  padding: 10px;
-  margin: 10px 0px;
+.bl input {
   width: 100%;
-  font-size: 1.2rem;
-  box-shadow: 5px 5px 10px -1px rgb(195, 202, 202), -5px -5px 10px 1px rgb(255, 255, 255);
-  background: rgba(0, 0, 0, 0);
+  margin: 7px 0px;
+  outline: none;
+  border-radius: 10px;
   border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  font-size: 1.3rem;
+  padding: 10px;
+}
+.bl .up {
+  background: rgba(0, 0, 0, 0.087);
+  font-weight: 600;
+  color: #081518;
 }
 
 .fnew {

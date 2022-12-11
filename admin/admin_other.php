@@ -21,7 +21,7 @@ if (!isset($_SESSION["aid"])) {
         <div class="admin">
             <div class="toggle">
                 <div class="show">
-                <ion-icon name="filter-outline"></ion-icon>
+                    <ion-icon name="filter-outline"></ion-icon>
                 </div>
                 <div class="hide">
                     <ion-icon name="close-outline"></ion-icon>
@@ -52,9 +52,18 @@ if (!isset($_SESSION["aid"])) {
                         </form>
                     </div>
                 </div> -->
-                <form action="../php/update_ads.php" method="post">
+                <?php
+                @include "../php/config.php";
+                $sql = "SELECT * FROM ads ";
+                $result = mysqli_query($con, $sql);
+                $row = mysqli_fetch_assoc($result);
+                ?>
+                <div class="now qwe">
+                <?php echo $row['adss'] ?>
+                </div>
+                <form class="bl" action="../php/update_ads.php" method="post">
                     <input type="text" name="ads" class="ads" placeholder="Write..." id="ads">
-                    <input type="submit" name="update" value="Update">
+                    <input type="submit" class="up" name="update" value="Update">
                 </form>
             </div>
         </div>

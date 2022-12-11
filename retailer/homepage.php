@@ -61,7 +61,15 @@ $rid = $_SESSION["rid"];
                         </div>
                         <div class="mid">
                             <!-- <img src="../svg/Untitled (7).svg" alt=""> -->
-                            <h1>Happy Friday</h1>
+                            <?php
+                            @include "../php/config.php";
+                            $sql = "SELECT * FROM ads ";
+                            $result = mysqli_query($con, $sql);
+                            $row = mysqli_fetch_assoc($result);
+                            ?>
+                            <h1>
+                                <?php echo $row['adss'] ?>
+                            </h1>
                         </div>
                         <div class="rt">
                             <ion-icon name="happy-outline"></ion-icon>

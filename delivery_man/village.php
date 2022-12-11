@@ -35,7 +35,7 @@ if (!isset($_SESSION["delid"])) {
             $result = mysqli_query($con, $sql);
             if (mysqli_num_rows($result)) {
                 while ($row = mysqli_fetch_assoc($result)) { ?>
-                    <a href="retailer.php?village=<?php echo $row['village'] ?>" class="day"><?php echo $row['village'] ?></a>
+                    <a href="retailer.php?village=<?php echo $row['id'] ?>" class="day"><?php echo $row['village'] ?></a>
             <?php
                 }
             }
