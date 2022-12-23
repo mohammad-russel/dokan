@@ -2,12 +2,12 @@
 session_start();
 $rid = $_SESSION["rid"];
 include "config.php";
-$limit = 20;
+$limit = 15;
 $start = $_POST['page'];
 $sql = "SELECT * FROM product LIMIT $start,$limit";
 $result = mysqli_query($con, $sql);
 if (mysqli_num_rows($result)) { ?>
-    <div class="productroom">
+   
         <?php while ($row = mysqli_fetch_assoc($result)) {
             $srnum = $row['sr'];
             $sql3 = "SELECT * FROM sr WHERE srnum = '$srnum'";
@@ -67,7 +67,7 @@ if (mysqli_num_rows($result)) { ?>
         <?php
 
         } ?>
-    </div>
+   
     <div class="loadmore more">Load More</div>
 <?php
 

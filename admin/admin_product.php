@@ -110,7 +110,7 @@ if (!isset($_SESSION["aid"])) {
                                 <?php }
                                 } ?>
                             </select>
-                            <input type="number" name="price" id="price" placeholder="Price" required>
+                            <input type="number" step="any" name="price" id="price" placeholder="Price" required>
                             <!-- <input type="number" name="stock" id="stock" placeholder="Stock" required> -->
                             <input type="text" name="discription" id="discription" placeholder="Discription" required>
                             <button class="addproduct" name="addproduct" id="addproduct">ADD</button>

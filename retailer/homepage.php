@@ -81,7 +81,8 @@ $rid = $_SESSION["rid"];
 
                 </div>
                 <div class="retailermain">
-
+                <div class="productroom">
+                </div>
                 </div>
             </div>
         </div>
@@ -104,14 +105,14 @@ $rid = $_SESSION["rid"];
                 success: function(data) {
 
                     $(".more").remove();
-                    $(".retailermain").append(data);
+                    $(".productroom").append(data);
 
                 }
             })
         }
         load();
         $(document).on("click", ".loadmore", function() {
-            page += 20;
+            page += 15;
             load();
         })
 
