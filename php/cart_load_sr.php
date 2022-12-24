@@ -103,7 +103,7 @@ if ($numrow = mysqli_num_rows($result)) {
                 <input type='hidden' name='status' id='status' value='order'>
                 <input type='hidden' name='rid' id='rid' value='$rid'>
                 <input type='hidden' name='sid' id='sid' value='$sid'>
-                <input type='number' name='discount' id='discount' value= '0' >
+                <input type='number' step='any' name='discount' id='discount' value= '0' >
                 <input type='submit'class='order_btn' name='order' value='order'>
             </form>
                 </div>

@@ -19,9 +19,10 @@ $rid = $_SESSION["rid"];
 <body>
     <div class="container">
         <?php include "../components/header.php" ?>
-   
-        <div class="shopmain">
 
+        <div class="shopmain">
+            <div class="productroom">
+            </div>
         </div>
     </div>
 </body>
@@ -38,13 +39,13 @@ $rid = $_SESSION["rid"];
                 },
                 success: function(data) {
                     $(".more").remove();
-                    $(".shopmain").append(data);
+                    $(".productroom").append(data);
                 }
             })
         }
         load();
         // ---------------------------------
-      
+
         // -----------------------------------
         $(document).on("click", ".loadmore", function() {
             page += 20;
