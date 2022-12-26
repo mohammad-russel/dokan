@@ -49,24 +49,24 @@ $srid = ($_SESSION["sid"]);
                             <input type="text" name="name" id="name" placeholder="Name" required>
                             <label for="rname">Shop Pic</label>
                             <input type="file" name="spic" id="spic">
-                            <input type="text" name="shop" id="shop" placeholder="shop" required>
+                            <input type="text" name="shop" id="shop" placeholder="shop name" required>
                             <input type="hidden" name="sr" id="sr" value="<?php echo $srid ?>">
-                            <input type="number" name="number" id="number" placeholder="number" required>
+                            <input type="number" name="number" id="number" placeholder=" phone number" required>
                             <input type="text" name="password" id="password" placeholder="password" required>
                             <select name="zila" id="zila">
-                                <option value=''>--SelecT Zila--</option>
+                                <option value=''>--SelecT Upazila--</option>
                             </select>
                             <!-- <select name="root" id="root">
                                 <option value=''>--Select Zila First--</option>
                             </select> -->
                             <select name="union" id="union">
-                                <option value=''>--Select zila First--</option>
+                                <option value=''>--Select Union --</option>
                             </select>
                             <select name="hat" id="hat">
-                                <option value=''>--Select Union First--</option>
+                                <option value=''>--Select Hat --</option>
                             </select>
                             <select name="village" id="village">
-                                <option value=''>--Select Hat First--</option>
+                                <option value=''>--Select Village--</option>
                             </select>
 
                             <input type="text" name="area" id="area" placeholder="area" required>

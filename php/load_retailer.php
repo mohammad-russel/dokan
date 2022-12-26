@@ -1,7 +1,7 @@
 
 <?php
                 include "../php/config.php";
-                $sql = "SELECT * FROM retailer";
+                $sql = "SELECT * FROM retailer ORDER BY id DESC LIMIT 10 ";
                 $result = mysqli_query($con, $sql);
                 if (mysqli_num_rows($result)) {
                     while ($row = mysqli_fetch_assoc($result)) {

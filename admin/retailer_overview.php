@@ -122,13 +122,24 @@ if (!isset($_SESSION["aid"])) {
                         // -------------------union---
                         $sql12 = "SELECT * FROM `union` WHERE id = $union";
                         $result12 = mysqli_query($con, $sql12);
-                        $row12 = mysqli_fetch_assoc($result12);
-                        $union12 = $row12['uni_nam'];
+                        if(mysqli_num_rows($result12)){
+                            $row12 = mysqli_fetch_assoc($result12);
+                            $union12 = $row12['uni_nam'];
+                        }
+                        else{
+                            $union12 = "no boy";
+                        }
                         // -------------------hat---
                         $sql13 = "SELECT * FROM hat WHERE id = $hat";
                         $result13 = mysqli_query($con, $sql13);
-                        $row13 = mysqli_fetch_assoc($result13);
-                        $hat13 = $row13['hat_nam'];
+                        if(mysqli_num_rows($result13)){
+                            $row13 = mysqli_fetch_assoc($result13);
+                            $hat13 = $row13['hat_nam'];
+                           
+                        }
+                        else{
+                            $hat13 = "no boy";
+                        }
                         // -------------------village---
                         $sql14 = "SELECT * FROM vllage WHERE id = $village";
                         $result14 = mysqli_query($con, $sql14);
