@@ -34,7 +34,7 @@ if (!isset($_SESSION["aid"])) {
         if (mysqli_num_rows($query)) {
             $row = mysqli_fetch_assoc($query);
 
-           
+
         ?>
             <div class="sr_overview">
                 <div class="head">
@@ -99,15 +99,50 @@ if (!isset($_SESSION["aid"])) {
                         <div class="number">Number : <?php echo $row['num'] ?></div>
                         <div class="password">Password : <?php echo $row['pass'] ?></div>
                         <?php
-                         $village1 = $row['village'];
-                         $sql3 = "SELECT * FROM delivery WHERE id = $village1";
-                         $result3 = mysqli_query($con, $sql3);
-                         $row3 = mysqli_fetch_assoc($result3);
+                        //  $village1 = $row['village'];
+                        //  $sql3 = "SELECT * FROM delivery WHERE id = $village1";
+                        //  $result3 = mysqli_query($con, $sql3);
+                        //  $row3 = mysqli_fetch_assoc($result3);
+                        $zila = $row['zila'];
+                        $root = $row['root'];
+                        $union = $row['union'];
+                        $hat = $row['hat'];
+                        $village = $row['village'];
+                        $area = $row['area'];
+                        // -------------------upozila---
+                        $sql1 = "SELECT * FROM upozila WHERE id = $zila";
+                        $result1 = mysqli_query($con, $sql1);
+                        $row1 = mysqli_fetch_assoc($result1);
+                        $zila1 = $row1['upozila_nam'];
+                        // -------------------root---
+                        // $sql11 = "SELECT * FROM `root` WHERE id = $root";
+                        // $result11 = mysqli_query($con, $sql11);
+                        // $row11 = mysqli_fetch_assoc($result11);
+                        // $root11 = $row11['root'];
+                        // -------------------union---
+                        $sql12 = "SELECT * FROM `union` WHERE id = $union";
+                        $result12 = mysqli_query($con, $sql12);
+                        $row12 = mysqli_fetch_assoc($result12);
+                        $union12 = $row12['uni_nam'];
+                        // -------------------hat---
+                        $sql13 = "SELECT * FROM hat WHERE id = $hat";
+                        $result13 = mysqli_query($con, $sql13);
+                        $row13 = mysqli_fetch_assoc($result13);
+                        $hat13 = $row13['hat_nam'];
+                        // -------------------village---
+                        $sql14 = "SELECT * FROM vllage WHERE id = $village";
+                        $result14 = mysqli_query($con, $sql14);
+                        $row14 = mysqli_fetch_assoc($result14);
+                        $village14 = $row14['vill_nam'];
+
+
                         ?>
-                        <div class="zila">Upozila : <?php echo $row3['upozila'] ?></div>
-                        <div class="zila">Union : <?php echo $row3['union'] ?></div>
-                        <div class="village">Village : <?php echo $row3['village'] ?></div>
-                        <div class="area">area : <?php echo $row['area'] ?></div>
+                        <div class="village">Upozila : <?php echo $zila1 ?></div>
+                        <!-- <div class="village">root : <?php echo $root11 ?></div> -->
+                        <div class="village">union : <?php echo $union12 ?></div>
+                        <div class="village">hat : <?php echo $hat13 ?></div>
+                        <div class="village">village : <?php echo $village14 ?></div>
+                        <div class="village">area : <?php echo $area ?></div>
                     </div>
                     <div class="right">
                         <div class="box">

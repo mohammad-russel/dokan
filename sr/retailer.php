@@ -53,20 +53,22 @@ $srid = ($_SESSION["sid"]);
                             <input type="hidden" name="sr" id="sr" value="<?php echo $srid ?>">
                             <input type="number" name="number" id="number" placeholder="number" required>
                             <input type="text" name="password" id="password" placeholder="password" required>
-                           
-                            <select name="village" id="village">
-                                <option value="">Village</option>
-                                <?php
-                                include "../php/config.php";
-                                $sql2 = "SELECT * FROM delivery";
-                                $result2 = mysqli_query($con, $sql2);
-                                if (mysqli_num_rows($result2)) {
-                                    while ($row2 = mysqli_fetch_assoc($result2)) {
-                                ?>
-                                        <option value="<?php echo $row2['id'] ?>"> <?php echo $row2['union'] ?> - <?php echo $row2['village'] ?></option>
-                                <?php }
-                                } ?>
+                            <select name="zila" id="zila">
+                                <option value=''>--SelecT Zila--</option>
                             </select>
+                            <!-- <select name="root" id="root">
+                                <option value=''>--Select Zila First--</option>
+                            </select> -->
+                            <select name="union" id="union">
+                                <option value=''>--Select zila First--</option>
+                            </select>
+                            <select name="hat" id="hat">
+                                <option value=''>--Select Union First--</option>
+                            </select>
+                            <select name="village" id="village">
+                                <option value=''>--Select Hat First--</option>
+                            </select>
+
                             <input type="text" name="area" id="area" placeholder="area" required>
                             <input type="submit" name="add" class="newretinsert" value="ADD">
                         </form>
@@ -111,6 +113,78 @@ $srid = ($_SESSION["sid"]);
 
                     $(".retailerbox").html(data);
                 }
+            })
+        })
+        // ------------------
+
+        $(document).ready(function() {
+            $.ajax({
+                url: "../php/day/select/zila_show.php",
+                type: "post",
+                success: function(data) {
+                    $("#zila").html(data)
+                }
+            })
+
+            // ----------------post-------------------
+            // -------------zila post -------------
+            $("#zila").on("change", function() {
+                var zila = $("#zila").val();
+                $.ajax({
+                    url: "../php/day/select/zila_post.php",
+                    type: "post",
+                    data: {
+                        zila: zila
+                    },
+                    success: function(data) {
+                        $("#union").html(data)
+                    }
+                })
+            })
+            // -----------------root---------------
+            // $("#root").on("change", function() {
+            //     var root = $("#root").val();
+            //     $.ajax({
+            //         url: "../php/day/select/root_post.php",
+            //         type: "post",
+            //         data: {
+            //             root: root
+            //         },
+            //         success: function(data) {
+            //             $("#union").html(data)
+
+            //         }
+            //     })
+            // })
+            // -------------union post -------------
+            $("#union").on("change", function() {
+                var union = $("#union").val();
+                $.ajax({
+                    url: "../php/day/select/union_post.php",
+                    type: "post",
+                    data: {
+                        union: union
+                    },
+                    success: function(data) {
+                        $("#hat").html(data)
+
+                    }
+                })
+            })
+            // -------------hat post -------------
+            $("#union").on("change", function() {
+                var union = $("#union").val();
+                $.ajax({
+                    url: "../php/day/select/hat_post.php",
+                    type: "post",
+                    data: {
+                        union: union
+                    },
+                    success: function(data) {
+                        $("#village").html(data)
+
+                    }
+                })
             })
         })
     })
