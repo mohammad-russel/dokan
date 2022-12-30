@@ -3399,10 +3399,6 @@ header .link a ion-icon:hover {
   transform: rotate(90deg);
 }
 
-@font-face {
-  font-family: "Gagalin", sans-serif;
-  src: url("../Gagalin-Regular.ttf");
-}
 .landing-page-new .landing-page-header {
   display: flex;
   justify-content: space-between;
@@ -3586,7 +3582,8 @@ header .link a ion-icon:hover {
   justify-content: center;
   align-items: center;
   flex-direction: row-reverse;
-  box-shadow: 3px 3px 5px -1px rgb(184, 184, 184), -4px -4px 5px 0px white;
+  background: linear-gradient(299.86deg, rgba(255, 255, 255, 0.3) 28.45%, rgba(233, 240, 247, 0.3) 95.64%), #E9F0F7;
+  box-shadow: 4px 4px 16px rgba(138, 155, 189, 0.48), -5px -5px 18px #FFFFFF, inset -7px -7px 18px rgba(138, 155, 189, 0.1), inset 7px 7px 18px rgba(255, 255, 255, 0.5);
   color: #3E5467;
   font-weight: bolder;
   text-transform: uppercase;
