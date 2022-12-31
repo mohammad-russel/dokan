@@ -83,12 +83,12 @@ if ($numrow = mysqli_num_rows($result)) {
     $sql5 = "SELECT * FROM retailer WHERE id = $rid ";
     $result5 = mysqli_query($con, $sql5);
     $row5 = mysqli_fetch_assoc($result5);
-    $root = $row5['root'];
-    $sql11 = "SELECT * FROM `root` WHERE id = $root";
+    $union = $row5['union'];
+    $sql11 = "SELECT * FROM `union` WHERE id = $union";
     $result11 = mysqli_query($con, $sql11);
     $row11 = mysqli_fetch_assoc($result11);
-    $root11 = $row11['root'];
-    $sql4 = "SELECT * FROM delivery WHERE roo = '$root11' ";
+    $union11 = $row11['uni_nam'];
+    $sql4 = "SELECT * FROM delivery WHERE uni = '$union11' ";
     $result4 = mysqli_query($con, $sql4);
     $row4 = mysqli_fetch_assoc($result4);
     $day = $row4['day'];

@@ -74,7 +74,6 @@ $srid = ($_SESSION["sid"]);
                         </form>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
@@ -91,16 +90,24 @@ $srid = ($_SESSION["sid"]);
         $(".close").click(function() {
             $(".popup").fadeOut();
         })
-        $.ajax({
-            url: "../php/load_retailer.php",
-            type: "POST",
-            success: function(data) {
-                if (data) {
-                    $(".retailerbox").append(data);
-                }
-            }
-        })
+        var page = 0;
 
+        function loadd() {
+            $.ajax({
+                url: "../php/load_retailer.php",
+                type: "POST",
+                data: {
+                    page: page
+                },
+                success: function(data) {
+                    if (data) {
+                        $(".more").remove();
+                        $(".retailerbox").append(data);
+                    }
+                }
+            })
+        }
+        loadd()
         $("#search").on("keyup", function() {
             var search = $(this).val();
             $.ajax({
@@ -187,6 +194,13 @@ $srid = ($_SESSION["sid"]);
                 })
             })
         })
+        // -----------------
+        $(document).on("click", ".loadmore", function() {
+            page += 5;
+            loadd();
+        })
+
+
     })
 </script>
 
