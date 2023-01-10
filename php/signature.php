@@ -4,7 +4,7 @@ include "config.php";
 $sig = $_POST['sig'];
 $st = $_POST['st'];
 $rid = $_POST['rid'];
-$discount = $_POST['discount'];
+$discount = $_POST['discount1'];
 $item = $_POST['item'];
 $time = $_POST['time'];
 $products = $_POST['products'];

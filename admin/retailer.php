@@ -32,24 +32,7 @@ if (!isset($_SESSION["aid"])) {
             </div>
         </div> -->
         <div class="adminsrbox">
-            <?php
-            include "../php/config.php";
-            $sql = "SELECT * FROM retailer";
-            $result = mysqli_query($con, $sql);
-            if (mysqli_num_rows($result)) {
-                while ($row = mysqli_fetch_assoc($result)) {
-            ?>
-                    <a href="retailer_overview.php?retailer=<?php echo $row['id'] ?>">
-                        <div class="card">
-                            <div class="image">
-                                <img src="../image/retailer/<?php echo $row['retailerpic'] ?>" alt="">
-                            </div>
-                            <div class="name"><?php echo $row['nam'] ?></div>
-                            <div class="shop number"><?php echo $row['num'] ?></div>
-                        </div>
-                    </a>
-            <?php }
-            } ?>
+
         </div>
     </div>
 
@@ -66,6 +49,30 @@ if (!isset($_SESSION["aid"])) {
         $(".close").click(function() {
             $(".popup").fadeOut();
         })
+        // ----------------
+
+        $(document).on("click", ".loadmore", function() {
+            page += 5;
+            loadd();
+        })
+        var page = 0;
+
+        function loadd() {
+            $.ajax({
+                url: "../php/admin_retailer_load.php",
+                type: "POST",
+                data: {
+                    page: page
+                },
+                success: function(data) {
+                    if (data) {
+                        $(".more").remove();
+                        $(".adminsrbox").append(data);
+                    }
+                }
+            })
+        }
+        loadd()
     })
 </script>
 

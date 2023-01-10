@@ -42,9 +42,9 @@ if (!isset($_SESSION["delid"])) {
     $row2 = mysqli_fetch_assoc($result1);
 
     $sub_total = $row['total'] - $row2['discount'];
-   
+
     ?>
-    <div class="container" >
+    <div class="container">
         <!-- __________________ -->
 
         <div class="baki_pop">

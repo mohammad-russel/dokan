@@ -223,10 +223,10 @@ if (!isset($_SESSION["aid"])) {
                             <div class="title">Total Earning</div>
                             <div class="number"> <?php
                                                     include "../php/config.php";
-                                                    $sql = "SELECT *,SUM(quantity*price) AS total FROM cart WHERE status = 'complete'";
+                                                    $sql = "SELECT *,SUM(total) AS totall FROM `order`";
                                                     $result = mysqli_query($con, $sql);
                                                     $row = mysqli_fetch_assoc($result);
-                                                    $ttk = $row['total'];
+                                                    $ttk = $row['totall'];
                                                     ?>
                                 <p>৳<?php echo $ttk ?>/-</p>
                                 <?php
@@ -241,11 +241,11 @@ if (!isset($_SESSION["aid"])) {
                     </div>
                     <div class="box">
                         <div class="text">
-                            <div class="title">Baki</div>
+                            <div class="title">Discount</div>
                             <div class="number">
                                 <?php
                                 include "../php/config.php";
-                                $sql = "SELECT *,SUM(quantity*price) AS total FROM cart WHERE status = 'baki'";
+                                $sql = "SELECT *,SUM(discount) AS total FROM `order` ";
                                 $result = mysqli_query($con, $sql);
                                 if (mysqli_num_rows($result)) {
                                     while ($row = mysqli_fetch_assoc($result)) {
@@ -354,7 +354,7 @@ if (!isset($_SESSION["aid"])) {
                     <div class="retailer_box">
                         <?php
                         @include "../php/config.php";
-                        $sql = "SELECT DISTINCT rid FROM cart WHERE `status` = 'complete' ";
+                        $sql = "SELECT DISTINCT retailer FROM `order` WHERE `status` = 'complete' ";
                         $result = mysqli_query($con, $sql);
                         if (mysqli_num_rows($result)) {
                             while ($row = mysqli_fetch_assoc($result)) {
@@ -364,7 +364,7 @@ if (!isset($_SESSION["aid"])) {
                                         <div class="image">
                                             <?php
                                             @include "../php/config.php";
-                                            $rid = $row['rid'];
+                                            $rid = $row['retailer'];
                                             $sql1 = "SELECT * FROM retailer WHERE id = $rid ";
                                             $result1 = mysqli_query($con, $sql1);
                                             $row1 = mysqli_fetch_assoc($result1);

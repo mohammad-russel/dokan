@@ -4,7 +4,7 @@ if (isset($_POST['zila'])) {
     $zila = $_POST['zila'];
     $sql = "SELECT * FROM `union` WHERE upo = $zila ";
     $result = mysqli_query($con, $sql);
-$output = "<option value='No Union'>--Select union--</option>";
+$output = "<option value='No Union'>--ইউনিয়ন নির্বাচন করুন--</option>";
     while ($row = mysqli_fetch_assoc($result)) {
         $output .= "<option value='{$row['id']}'>{$row['uni_nam']}</option>";
     }

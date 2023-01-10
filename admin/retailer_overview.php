@@ -44,12 +44,28 @@ if (!isset($_SESSION["aid"])) {
                             <div class="close">
                                 <ion-icon name="close-outline"></ion-icon>
                             </div>
+                            <?php
+                            $rr = $row['retailerpic'];
+                            ?>
                             <form action="../php/update_retailer.php" method="post" enctype="multipart/form-data">
+                                <!-- <img src="../image/retailer/<?php echo $row['retailerpic'] ?>" alt=""> -->
+                                <input type="file" name="pic" id="pic" value="<?php echo $row['retailerpic'] ?>">
                                 <input type="hidden" name="id" id="id" value="<?php echo $row['id'] ?>">
                                 <input type="text" name="name" id="name" placeholder="Name" value="<?php echo $row['nam'] ?>">
                                 <input type="text" name="shop" id="shop" placeholder="Shop Name" value="<?php echo $row['shopname'] ?>">
                                 <input type="number" name="number" id="number" placeholder="Number" value="<?php echo $row['num'] ?>">
                                 <input type="text" name="area" id="area" placeholder="area" value="<?php echo $row['area'] ?>">
+                                <select name="hat" id="hat">
+                                    <option value="<?php echo $row['hat'] ?>">বর্তমান হাট</option>
+                                    <?php
+                                    $union3 = $row['union'];
+                                    $sql3 = "SELECT * FROM hat WHERE `uni` = $union3";
+                                    $query3 = mysqli_query($con, $sql3);
+                                    while ($row3 = mysqli_fetch_assoc($query3)) {
+                                    ?>
+                                        <option value="<?php echo $row3['id'] ?>"><?php echo $row3['hat_nam'] ?></option>
+                                    <?php } ?>
+                                </select>
                                 <input type="submit" name="update" class="newretinsert" value="UPDATE">
                             </form>
                         </div>
@@ -122,22 +138,19 @@ if (!isset($_SESSION["aid"])) {
                         // -------------------union---
                         $sql12 = "SELECT * FROM `union` WHERE id = $union";
                         $result12 = mysqli_query($con, $sql12);
-                        if(mysqli_num_rows($result12)){
+                        if (mysqli_num_rows($result12)) {
                             $row12 = mysqli_fetch_assoc($result12);
                             $union12 = $row12['uni_nam'];
-                        }
-                        else{
+                        } else {
                             $union12 = "no boy";
                         }
                         // -------------------hat---
                         $sql13 = "SELECT * FROM hat WHERE id = $hat";
                         $result13 = mysqli_query($con, $sql13);
-                        if(mysqli_num_rows($result13)){
+                        if (mysqli_num_rows($result13)) {
                             $row13 = mysqli_fetch_assoc($result13);
                             $hat13 = $row13['hat_nam'];
-                           
-                        }
-                        else{
+                        } else {
                             $hat13 = "no boy";
                         }
                         // -------------------village---

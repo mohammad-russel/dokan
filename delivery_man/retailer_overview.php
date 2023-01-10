@@ -70,7 +70,7 @@ if (!isset($_SESSION["delid"])) {
                                     <div class="quantity">পরিমানঃ <?php echo $row1['quantity'] ?></div>
                                     <div class="tp">মোটঃ <?php echo $row1['total'] ?></div>
                                     <div class="btn">
-                                      <div class="bt cancel<?php echo $row1['id'] ?>">Cancel</div>
+                                        <div class="bt cancel<?php echo $row1['id'] ?>">Cancel</div>
                                     </div>
                                     <?php
                                     date_default_timezone_set('Asia/Dhaka');
@@ -180,7 +180,7 @@ if (!isset($_SESSION["delid"])) {
                                             <!-- -------------------- -->
                                             <input type="hidden" name="st" id="st" value="<?php echo $sub_total ?>">
                                             <input type="hidden" name="rid" id="rid" value="<?php echo $rid ?>">
-                                            <input type="hidden" name="discount" id="discount" value="<?php echo $row2['discount'] ?>">
+                                            <input type="hidden" name="discount1" id="discount1" value="<?php echo $row2['discount'] ?>">
                                             <input type="hidden" name="item" id="item" value="<?php echo $list40 ?>">
                                             <input type="hidden" name="products" id="products" value="<?php
 
@@ -205,7 +205,7 @@ if (!isset($_SESSION["delid"])) {
                                     </div>
                                 </form>
                             </div>
-                            
+
                         </div>
                         <script>
                             $(document).ready(function() {

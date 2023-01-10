@@ -29,7 +29,7 @@
         font-weight: 600;
 
       }
-    }
+    }                       
   }
 
   .retailerbox {
@@ -93,6 +93,8 @@
 
           ion-icon {
             font-size: 30px;
+    background: #0000000f;
+    border-radius: 50%;
           }
         }
 
@@ -182,6 +184,7 @@
           border-top: 1px solid gray;
           color: #3E5467;
           font-weight: 600;
+          font-size: 12px; 
           text-align: center;
           padding: 5px;
         }
@@ -214,7 +217,7 @@
 
       a {
         .card {
-          width: 150px;
+          width: 120px;
 
           .image {
             img {}

@@ -34,8 +34,8 @@ if (!isset($_SESSION["delid"])) {
             if (mysqli_num_rows($result)) {
                 while ($row = mysqli_fetch_assoc($result)) {
                     $rid = $row['rid'];
-                    $village = $_GET['village'];
-                    $sql1 = "SELECT * FROM retailer WHERE id = $rid AND village = '$village'";
+                    $union = $_GET['union'];
+                    $sql1 = "SELECT * FROM retailer WHERE id = $rid AND `union` = $union ";
                     $result1 = mysqli_query($con, $sql1);
                     if (mysqli_num_rows($result1)) {
                         while ($row1 = mysqli_fetch_assoc($result1)) { ?>

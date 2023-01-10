@@ -19,27 +19,55 @@ $sr = $_SESSION["sid"];
             display: flex;
             flex-direction: column;
         }
-        .name{
+
+        .name {
             font-size: 0.9rem;
             font-weight: 600;
             color: #3E5467;
 
         }
-        .time{
+
+        .time {
             border-top: 1px dashed black;
             padding: 5px 0px;
             margin: 5px 0px;
         }
-        .image{
+
+        .image {
             text-align: center;
         }
-        .card{
+
+        .card {
             color: #3E5467;
 
         }
-        .buttons{
+
+        .buttons {
             color: #3E5467;
 
+        }
+
+        /* ------------------------------------- */
+        .cardinf {
+            margin: auto;
+            width: 50%;
+            padding: 15px;
+            border: 1px solid gray;
+            border-radius: 10px;
+            margin-top: 20px;
+            color: gray;
+        }
+
+        /* .left {} */
+
+        .item {
+            margin: 10px 5px;
+            font-weight: 700;
+        }
+
+        .ff {
+            font-weight: 700;
+            margin: 10px 5px;
         }
     </style>
 </head>
@@ -55,64 +83,67 @@ $sr = $_SESSION["sid"];
 
         </div>
         <div class="complete">
-            <?php
-            include '../php/config.php';
-            $sql1 = "SELECT *, quantity*price AS total FROM cart WHERE status = 'complete' AND sr= $sr ";
-            $result1 = mysqli_query($con, $sql1);
-            if ($list = mysqli_num_rows($result1)) {
-            ?>
-                <div class="button_complete buttons" style="color: #3E5467;">Complete <?php echo $list ?></div>
-                <div class="box_complete boxs">
-                    <div class="box">
-                        <?php
-                        while ($row1 = mysqli_fetch_assoc($result1)) {
-                            $pid = $row1['pid'];
-                            $sql2 = "SELECT * FROM product WHERE id = $pid ";
-                            $result2 = mysqli_query($con, $sql2);
-                            $row2 = mysqli_fetch_assoc($result2);
-                        ?>
-                            <div class="card">
-                                <div class="image">
-                                    <img src="../image/product/<?php echo $row2['pic'] ?>" alt="">
-                                </div>
-                                <div class="name"><?php echo $row2['nam'] ?></div>
-                                <div class="price">দামঃ <?php echo $row1['price'] ?></div>
-                                <div class="quantity">পরিমানঃ <?php echo $row1['quantity'] ?></div>
-                                <div class="tp">মোটঃ <?php echo $row1['total'] ?></div>
-                                <div class="name time">সময়<br> <?php echo $row1['time'] ?></div>
 
-                            </div>
-                        <?php } ?>
-                    </div>
-                    <div class="cardinfo">
-                        <?php
-                        include '../php/config.php';
-                        $sql1 = "SELECT *, SUM(quantity*price) AS total FROM cart WHERE status = 'complete' AND sr = $sr ";
-                        $result1 = mysqli_query($con, $sql1);
-                        $row = mysqli_fetch_assoc($result1);
+            <div class="button_complete buttons" style="color: #3E5467;">Complete <?php echo $list ?></div>
+            <div class="box_complete boxs">
+                <input type="hidden" name="sr" id="sr" value="<?php echo $sr ?>">
+                <div class="box">
 
-                        // ----------
-                        $sql1 = "SELECT *, quantity*price AS total FROM cart WHERE status = 'complete' AND  sr = $sr  ";
-                        $result1 = mysqli_query($con, $sql1);
-                        $list4 = mysqli_num_rows($result1);
-                        //   ---------
-                        $sql1 = "SELECT DISTINCT discount FROM cart WHERE status = 'complete' AND  sr = $sr ";
-                        $result1 = mysqli_query($con, $sql1);
-                        $row2 = mysqli_fetch_assoc($result1);
+                </div>
 
+                <div class="cardinf">
+                    <?php
+                    include '../php/config.php';
+                    $sql1 = "SELECT *, SUM(quantity*price) AS total FROM cart WHERE status = 'complete' AND sr = $sr ";
+                    $result1 = mysqli_query($con, $sql1);
+                    $row = mysqli_fetch_assoc($result1);
 
+                    // ----------
+                    $sql1 = "SELECT *, quantity*price AS total FROM cart WHERE status = 'complete' AND  sr = $sr  ";
+                    $result1 = mysqli_query($con, $sql1);
+                    $list4 = mysqli_num_rows($result1);
+                    //   ---------
+                    $sql1 = "SELECT DISTINCT discount FROM cart WHERE status = 'complete' AND  sr = $sr ";
+                    $result1 = mysqli_query($con, $sql1);
+                    $row2 = mysqli_fetch_assoc($result1);
 
-                        ?>
-                        <div class="left">
-                            <div class="item">ITEM : <?php echo $list4 ?></div>
-                            <div class="ff">FULL PRICE : ৳<?php echo $row['total'] ?></div>
-                        </div>
+                    ?>
+                    <div class="left">
+                        <div class="item">ITEM : <?php echo $list4 ?></div>
+                        <div class="ff">FULL PRICE : ৳<?php echo $row['total'] ?></div>
                     </div>
                 </div>
-            <?php } ?>
+            </div>
+
         </div>
     </div>
 
 </body>
+<script>
+    $(document).ready(function() {
+        var sr = $("#sr").val()
+        var page = 0;
+
+        function load() {
+            $.ajax({
+                url: "../php/sr_complete_load.php",
+                type: "POST",
+                data: {
+                    sr: sr,
+                    page: page
+                },
+                success: function(data) {
+                    $(".more").remove();
+                    $(".box").append(data);
+                }
+            })
+        }
+        load();
+        $(document).on("click", ".loadmore", function() {
+            page += 1;
+            load();
+        })
+    })
+</script>
 
 </html>

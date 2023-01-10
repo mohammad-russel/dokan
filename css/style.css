@@ -558,6 +558,8 @@ header .link a ion-icon:hover {
 }
 .sr_retailer_main_box .retailerbox .create_ac .popup .close ion-icon {
   font-size: 30px;
+  background: rgba(0, 0, 0, 0.0588235294);
+  border-radius: 50%;
 }
 .sr_retailer_main_box .retailerbox .create_ac .popup form {
   display: flex;
@@ -631,6 +633,7 @@ header .link a ion-icon:hover {
   border-top: 1px solid gray;
   color: #3E5467;
   font-weight: 600;
+  font-size: 12px;
   text-align: center;
   padding: 5px;
 }
@@ -649,7 +652,7 @@ header .link a ion-icon:hover {
     flex-wrap: wrap;
   }
   .sr_retailer_main_box .retailerbox a .card {
-    width: 150px;
+    width: 120px;
   }
 }
 .sr_product,

@@ -1,10 +1,8 @@
 <?php
-
 include "../php/config.php";
-$search = $_POST['search'];
-// $limit = 5;
-// $start = $_POST['page'];
-$sql = "SELECT * FROM retailer WHERE nam LIKE '%{$search}%'  ";
+// $village = $_POST['village'];
+$hat = $_POST['hat'];
+$sql = "SELECT * FROM retailer WHERE  hat = $hat ORDER BY id DESC";
 $result = mysqli_query($con, $sql);
 if (mysqli_num_rows($result)) {
     while ($row = mysqli_fetch_assoc($result)) {
@@ -18,6 +16,7 @@ if (mysqli_num_rows($result)) {
                 <div class="shop"><?php echo $row['shopname'] ?></div>
             </div>
         </a>
-<?php } ?>
-
+    <?php } ?>
+<!-- 
+    <div class="loadmore more">Load More</div> -->
 <?php } ?>

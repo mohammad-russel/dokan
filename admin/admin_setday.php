@@ -58,7 +58,7 @@ if (!isset($_SESSION["aid"])) {
                                 <?php
                                 while ($row = mysqli_fetch_assoc($result)) {
                                 ?>
-                                    <option value="<?php echo $row['uni_nam'] ?>"><?php echo $row['uni_nam'] ?></option>
+                                    <option value="<?php echo $row['id'] ?>"><?php echo $row['uni_nam'] ?></option>
                                 <?php }
                                 ?>
                             </select>
@@ -92,7 +92,14 @@ if (!isset($_SESSION["aid"])) {
                             while ($row = mysqli_fetch_assoc($result1)) {
                             ?>
                                 <tr>
-                                    <td><?php echo $row['uni'] ?></td>
+                                    <?php
+                                    $uni_id =  $row['uni'];
+                                    include "../php/config.php";
+                                    $sql11 = "SELECT * FROM `union` WHERE id = $uni_id ";
+                                    $result11 = mysqli_query($con, $sql11);
+                                    $row11 = mysqli_fetch_assoc($result11)
+                                    ?>
+                                    <td><?php echo $row11['uni_nam'] ?></td>
                                     <td><?php echo $row['day'] ?></td>
                                     <td><a href="../php/delete_day.php?id=<?php echo $row['id'] ?>">
                                             <ion-icon name="close-circle-outline"></ion-icon>
@@ -107,17 +114,17 @@ if (!isset($_SESSION["aid"])) {
 </body>
 <script>
     $(document).ready(function() {
-    //     function load_uni_op() {
-    //         $.ajax({
-    //             url: "../php/day/php/union_option.php",
-    //             type: "post",
-    //             success: function(data) {
-    //                 $("#uni_option").html(data)
-    //             }
-    //         })
-    //     }
+        //     function load_uni_op() {
+        //         $.ajax({
+        //             url: "../php/day/php/union_option.php",
+        //             type: "post",
+        //             success: function(data) {
+        //                 $("#uni_option").html(data)
+        //             }
+        //         })
+        //     }
 
-    //     load_uni_op();
+        //     load_uni_op();
         // --------
         $(".hide").hide();
         $(".show").click(function() {
