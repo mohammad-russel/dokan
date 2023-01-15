@@ -75,7 +75,7 @@ body {
 
 .container {
   width: 100%;
-  max-width: 1400px;
+  // max-width: 1900px;
   margin: auto;
   height: 100%;
   overflow-x: hidden;
@@ -206,4 +206,9 @@ body {
       max-width: 200px;
     }
   }
+}
+
+
+ion-icon{
+  color: #3E5467;
 }

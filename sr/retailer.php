@@ -47,7 +47,8 @@ $srid = ($_SESSION["sid"]);
         <div class="header">
             <div class="back">
                 <a href="sr_home.php">
-                    <ion-icon name="arrow-back-outline"></ion-icon>
+                    <ion-icon style="color: #3E5467;background: linear-gradient(315.13deg, rgba(194, 217, 237, 0.3) 5.21%, rgba(255, 255, 255, 0.3) 62.26%), #E9F0F7;
+box-shadow: 4px 4px 12px rgba(138, 155, 189, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.9); "  name="arrow-back-outline"></ion-icon>
                 </a>
             </div>
         </div>

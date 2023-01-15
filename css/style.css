@@ -32,7 +32,6 @@ body {
 
 .container {
   width: 100%;
-  max-width: 1400px;
   margin: auto;
   height: 100%;
   overflow-x: hidden;
@@ -3412,7 +3411,6 @@ header .link a ion-icon:hover {
   height: 40px;
   z-index: 1;
   position: fixed;
-  max-width: 1200px;
 }
 .landing-page-new .landing-page-header .logo {
   padding: 10px;
@@ -3455,7 +3453,7 @@ header .link a ion-icon:hover {
   height: 100px;
   border-radius: 10px;
   text-decoration: none;
-  color: #53585c;
+  color: #3E5467;
   background: rgba(189, 201, 211, 0.1);
 }
 .landing-page-new .landing-page-header .menu .box a ion-icon {
@@ -3480,13 +3478,13 @@ header .link a ion-icon:hover {
   width: -moz-max-content;
   width: max-content;
   aspect-ratio: 1/1;
-  font-size: 20px;
+  font-size: 16px;
   cursor: pointer;
   margin-top: 15px;
 }
 .landing-page-new .landing-page-header .toggle .hide ion-icon,
 .landing-page-new .landing-page-header .toggle .show ion-icon {
-  color: #323537;
+  color: #3E5467;
   padding: 5px;
   border-radius: 50%;
   box-shadow: 5px 5px 5px -1px rgb(219, 219, 219), -2px -2px 5px 1px white;
@@ -3595,7 +3593,7 @@ header .link a ion-icon:hover {
   font-family: "Montserrat", sans-serif;
 }
 .landing-page-new .open .slogan .box .menu-btn ion-icon {
-  color: #323537;
+  color: #3E5467;
   margin: 0px 5px;
 }
 .landing-page-new .open .slogan .vactor {
@@ -3659,7 +3657,7 @@ header .link a ion-icon:hover {
   align-items: center;
   flex-direction: column;
   border-radius: 10px;
-  color: #8F9BB2;
+  color: #3E5467;
   position: relative;
   animation: anime 15s reverse linear infinite;
   margin: auto;
@@ -3793,7 +3791,8 @@ header .link a ion-icon:hover {
   padding: 5px 0px;
   border-radius: 20px;
   margin-bottom: 30px;
-  box-shadow: 5px 5px 5px -1px rgb(219, 219, 219), -2px -2px 5px 1px white;
+  background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
+  box-shadow: -3px -3px 10px rgba(255, 255, 255, 0.7), 3px 3px 10px rgba(138, 155, 189, 0.48);
   font-family: "Montserrat", sans-serif;
   font-weight: 900;
 }
@@ -3824,7 +3823,8 @@ header .link a ion-icon:hover {
   padding: 5px 0px;
   border-radius: 20px;
   margin-bottom: 30px;
-  box-shadow: 5px 5px 5px -1px rgb(219, 219, 219), -2px -2px 5px 1px white;
+  background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
+  box-shadow: -3px -3px 10px rgba(255, 255, 255, 0.7), 3px 3px 10px rgba(138, 155, 189, 0.48);
   font-family: "Montserrat", sans-serif;
   font-weight: 900;
 }
@@ -3855,8 +3855,8 @@ header .link a ion-icon:hover {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
-  box-shadow: -3px -3px 10px rgba(255, 255, 255, 0.7), 3px 3px 10px rgba(138, 155, 189, 0.48);
+  background: linear-gradient(299.86deg, rgba(255, 255, 255, 0.3) 28.45%, rgba(233, 240, 247, 0.3) 95.64%), #E9F0F7;
+  box-shadow: 4px 4px 16px rgba(138, 155, 189, 0.48), -5px -5px 18px #FFFFFF, inset -7px -7px 18px rgba(138, 155, 189, 0.1), inset 7px 7px 18px rgba(255, 255, 255, 0.5);
   border-radius: 20px;
 }
 .landing-page-new .contact form h1 {
@@ -3987,7 +3987,8 @@ header .link a ion-icon:hover {
 }
 .landing-page-new .footer .social .icon a {
   margin: 0px 5px;
-  box-shadow: 5px 5px 5px -1px rgb(219, 219, 219), -2px -2px 5px 1px white;
+  background: linear-gradient(315.13deg, rgba(194, 217, 237, 0.3) 5.21%, rgba(255, 255, 255, 0.3) 62.26%), #E9F0F7;
+  box-shadow: 4px 4px 12px rgba(138, 155, 189, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.9);
   padding: 7px;
   display: flex;
   justify-content: center;
@@ -3999,13 +4000,13 @@ header .link a ion-icon:hover {
   font-size: 15px;
 }
 .landing-page-new .footer .social .icon a:nth-child(1) {
-  color: #0099ff;
+  color: #1877f2;
 }
 .landing-page-new .footer .social .icon a:nth-child(2) {
-  color: #1d8ad2;
+  color: #1a98e8;
 }
 .landing-page-new .footer .social .icon a:nth-child(3) {
-  color: #d62d2d;
+  color: #CB1F27;
 }
 
 @media only screen and (max-width: 600px) {
@@ -4093,8 +4094,15 @@ header .link a ion-icon:hover {
   .landing-page-new .open .dsd .right {
     display: none;
   }
+  .landing-page-new .faqs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 10px;
+    font-weight: 400;
+  }
   .landing-page-new .about .box p {
-    text-align: start;
+    text-align: center;
     width: 98%;
   }
   .landing-page-new .contact {
@@ -4103,6 +4111,10 @@ header .link a ion-icon:hover {
   }
   .landing-page-new .contact form {
     padding: 20px 20px;
+    width: 90%;
+    height: 285px;
+    background: linear-gradient(299.86deg, rgba(255, 255, 255, 0.3) 28.45%, rgba(233, 240, 247, 0.3) 95.64%), #E9F0F7;
+    box-shadow: 4px 4px 16px rgba(138, 155, 189, 0.48), -5px -5px 18px #FFFFFF, inset -7px -7px 18px rgba(138, 155, 189, 0.1), inset 7px 7px 18px rgba(255, 255, 255, 0.5);
   }
   .landing-page-new .footer {
     height: 200px;
@@ -4700,4 +4712,8 @@ header .link a ion-icon:hover {
   padding: 5px;
   width: 100%;
   max-width: 200px;
+}
+
+ion-icon {
+  color: #3E5467;
 }/*# sourceMappingURL=style.css.map */

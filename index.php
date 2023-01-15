@@ -47,7 +47,7 @@
                         <ion-icon class="icon" name="close-outline"></ion-icon>
                     </div>
                     <div class="show">
-                        <ion-icon name="grid"></ion-icon>
+                  <ion-icon name="arrow-redo"></ion-icon>
                     </div>
                 </div>
             </div>
@@ -93,7 +93,7 @@
                         </div>
                         <div class="menu-btn">
                             Start
-                            <ion-icon name="grid"></ion-icon>
+                            <ion-icon name="arrow-redo-circle-outline"></ion-icon>
                         </div>
                     </div>
 

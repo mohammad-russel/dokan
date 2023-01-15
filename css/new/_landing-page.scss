@@ -17,7 +17,7 @@
         height: 40px;
         z-index: 1;
         position: fixed;
-        max-width: 1200px;
+        // max-width: 1200px;
 
 
         .logo {
@@ -62,7 +62,8 @@
                     height: 100px;
                     border-radius: 10px;
                     text-decoration: none;
-                    color: #53585c;
+                    color: #3E5467;
+
                     background: rgba(189, 201, 211, 0.10);
 
                     ion-icon {
@@ -91,12 +92,12 @@
             .show {
                 width: max-content;
                 aspect-ratio: 1/1;
-                font-size: 20px;
+                font-size: 16px;
                 cursor: pointer;
                 margin-top: 15px;
 
                 ion-icon {
-                    color: #323537;
+                    color: #3E5467;
                     padding: 5px;
                     border-radius: 50%;
                     box-shadow: 5px 5px 5px -1px rgb(219 219 219), -2px -2px 5px 1px white;
@@ -233,8 +234,7 @@
                     font-family: "Montserrat", sans-serif;
 
                     ion-icon {
-                        color: #323537;
-
+                        color: #3E5467;
                         margin: 0px 5px;
                     }
                 }
@@ -324,7 +324,7 @@
                     align-items: center;
                     flex-direction: column;
                     border-radius: 10px;
-                    @include text-color;
+                    color: #3E5467;
                     position: relative;
                     animation: anime 15s reverse linear infinite;
                     // animation-iteration-count: infinite;
@@ -531,8 +531,8 @@
             padding: 5px 0px;
             border-radius: 20px;
             margin-bottom: 30px;
-            box-shadow: 5px 5px 5px -1px rgb(219, 219, 219), -2px -2px 5px 1px white;
-            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
+            box-shadow: -3px -3px 10px rgba(255, 255, 255, 0.7), 3px 3px 10px rgba(138, 155, 189, 0.48); font-family: 'Montserrat', sans-serif;
             font-weight: 900;
         }
 
@@ -567,8 +567,8 @@
                 padding: 5px 0px;
                 border-radius: 20px;
                 margin-bottom: 30px;
-                box-shadow: 5px 5px 5px -1px rgb(219, 219, 219), -2px -2px 5px 1px white;
-                font-family: 'Montserrat', sans-serif;
+                background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
+                box-shadow: -3px -3px 10px rgba(255, 255, 255, 0.7), 3px 3px 10px rgba(138, 155, 189, 0.48);  font-family: 'Montserrat', sans-serif;
                 font-weight: 900;
             }
 
@@ -578,6 +578,7 @@
                 letter-spacing: 0.7px;
                 width: 70%;
                 line-height: 27px;
+
                 font-size: 1rem;
             }
         }
@@ -604,8 +605,8 @@
             width: 100%;
             max-width: 600px;
             height: max-content;
-            background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #E9F0F7;
-            box-shadow: -3px -3px 10px rgba(255, 255, 255, 0.7), 3px 3px 10px rgba(138, 155, 189, 0.48);
+            background: linear-gradient(299.86deg, rgba(255, 255, 255, 0.3) 28.45%, rgba(233, 240, 247, 0.3) 95.64%), #E9F0F7;
+            box-shadow: 4px 4px 16px rgba(138, 155, 189, 0.48), -5px -5px 18px #FFFFFF, inset -7px -7px 18px rgba(138, 155, 189, 0.1), inset 7px 7px 18px rgba(255, 255, 255, 0.5);
             border-radius: 20px;
 
             h1 {
@@ -738,8 +739,9 @@
 
                 a {
                     margin: 0px 5px;
-                    box-shadow: 5px 5px 5px -1px rgb(219 219 219), -2px -2px 5px 1px white;
-                    padding: 7px;
+                   
+                    background: linear-gradient(315.13deg, rgba(194, 217, 237, 0.3) 5.21%, rgba(255, 255, 255, 0.3) 62.26%), #E9F0F7;
+                    box-shadow: 4px 4px 12px rgba(138, 155, 189, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.9); padding: 7px;
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -752,15 +754,15 @@
                 }
 
                 a:nth-child(1) {
-                    color: #0099ff;
+                    color: #1877f2;
                 }
 
                 a:nth-child(2) {
-                    color: #1d8ad2;
+                    color: #1a98e8;
                 }
 
                 a:nth-child(3) {
-                    color: #d62d2d;
+                    color: #CB1F27;
                 }
             }
         }
@@ -950,6 +952,11 @@
         // -----------FAQ--------------
         .faqs {
 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0px 10px;
+            font-weight: 400;
 
             h1 {}
         }
@@ -960,7 +967,7 @@
                 h2 {}
 
                 p {
-                    text-align: start;
+                    text-align: center;
                     width: 98%;
                 }
             }
@@ -973,7 +980,10 @@
 
             form {
                 padding: 20px 20px;
-
+                width: 90%;
+                height: 285px;
+                background: linear-gradient(299.86deg, rgba(255, 255, 255, 0.3) 28.45%, rgba(233, 240, 247, 0.3) 95.64%), #E9F0F7;
+                box-shadow: 4px 4px 16px rgba(138, 155, 189, 0.48), -5px -5px 18px #FFFFFF, inset -7px -7px 18px rgba(138, 155, 189, 0.1), inset 7px 7px 18px rgba(255, 255, 255, 0.5);
 
                 h1 {}
 
@@ -1027,7 +1037,9 @@
                     a {
 
 
-                        i {}
+                        i {
+
+                        }
                     }
                 }
             }
