@@ -20,4 +20,6 @@ if (file_exists($nama_file)) {
 
 $sql = "UPDATE cart SET status = 'complete' WHERE rid = $rid  AND status = 'order'";
 $result = mysqli_query($con, $sql);
+$sql3 = "UPDATE pro SET status = 'yes' WHERE rid = $rid ";
+$result3 = mysqli_query($con, $sql3);
 header("location:../delivery_man/retailer_overview.php?rid=$rid");

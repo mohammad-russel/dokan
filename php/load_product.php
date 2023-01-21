@@ -25,6 +25,11 @@ if (mysqli_num_rows($result)) { ?>
             <div class="name"><?php echo $row['nam'] ?></div>
             <div class="price">৳ <?php echo $row['price'] ?></div>
             <div class="btn">
+                <?
+
+                ?>
+              
+                <!-- -------------------------------- -->
                 <input type="hidden" name="rid" id="rid<?php echo $row['id'] ?>" value="<?php echo $rid ?>">
                 <input type="hidden" name="pid" id="pid<?php echo $row['id'] ?>" value="<?php echo $row['id'] ?>">
                 <input type="hidden" name="pp" id="pp<?php echo $row['id'] ?>" value="<?php echo $row['price'] ?>">
@@ -46,6 +51,9 @@ if (mysqli_num_rows($result)) { ?>
                     var time = $("#time<?php echo $row['id'] ?>").val()
                     var status = $("#status<?php echo $row['id'] ?>").val()
                     var quantity = $("#quantity<?php echo $row['id'] ?>").val()
+
+                    var sr = $("#sr<?php echo $row['id'] ?>").val()
+
                     $.ajax({
                         url: "../php/add_cart.php",
                         type: "POST",
@@ -56,7 +64,8 @@ if (mysqli_num_rows($result)) { ?>
                             sid: sid,
                             time: time,
                             status: status,
-                            quantity: quantity
+                            quantity: quantity,
+                          
                         },
                         success: function(data) {
                             $('#quantity<?php echo $row['id'] ?>').val('')

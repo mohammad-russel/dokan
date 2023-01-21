@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 2060px;
+  margin: auto;
+  background: #F7F8FA;
+}
+
+// ------------------
+@mixin icon-color {
+  color: #C3CAD9;
+}
+@mixin text-color {
+  color: #6B7A99;
+}
+// -------------header-------------
+@import "deller";
