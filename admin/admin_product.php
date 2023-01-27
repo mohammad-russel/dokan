@@ -110,6 +110,19 @@ if (!isset($_SESSION["aid"])) {
                                 <?php }
                                 } ?>
                             </select>
+                            <select name="deller" id="deller">
+                                <option value="NO deller">No deller</option>
+                                <?php
+                                include "../php/config.php";
+                                $sql2 = "SELECT * FROM deller";
+                                $result2 = mysqli_query($con, $sql2);
+                                if (mysqli_num_rows($result2)) {
+                                    while ($row2 = mysqli_fetch_assoc($result2)) {
+                                ?>
+                                        <option value="<?php echo $row2['delnum'] ?>"><?php echo $row2['delnum'] ?></option>
+                                <?php }
+                                } ?>
+                            </select>
                             <input type="number" step="any" name="price" id="price" placeholder="Price" required>
                             <!-- <input type="number" name="stock" id="stock" placeholder="Stock" required> -->
                             <input type="text" name="discription" id="discription" placeholder="Discription" required>

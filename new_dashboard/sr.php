@@ -1,9 +1,9 @@
 <?php
 session_start();
-if (!isset($_SESSION["did"])) {
+if (!isset($_SESSION["sid"])) {
     header("location:login.php");
 }
-$did = $_SESSION["did"];
+$sid = $_SESSION["sid"];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,10 +20,10 @@ $did = $_SESSION["did"];
     <div class="container deller_cont">
         <?php
         @include "../php/config.php";
-        $sql = "SELECT * FROM deller WHERE id = $did";
+        $sql = "SELECT * FROM sr WHERE id = $sid";
         $result = mysqli_query($con, $sql);
         $row = $result->fetch_assoc();
-        $delnum = $row['delnum'];
+        $srnum = $row['srnum'];
         // echo $delnum;
         ?>
         <div class="box">
@@ -59,7 +59,7 @@ $did = $_SESSION["did"];
                 <div class="div4">
                     <div class="btns">
                         <div class="profile">
-                            <img src="../image/deller/<?php echo $row['deller_pic'] ?>" alt="">
+                            <img src="../image/sr/<?php echo $row['srpic'] ?>" alt="">
                             <span><?php echo $row['nam'] ?></span>
                         </div>
                         <div class="notify">
@@ -77,7 +77,7 @@ $did = $_SESSION["did"];
                     <div class="head">
                         <div class="extra"></div>
                         <div class="image">
-                            <img src="../image/deller/<?php echo $row['deller_pic'] ?>" alt="">
+                            <img src="../image/sr/<?php echo $row['srpic'] ?>" alt="">
                         </div>
                         <div class="name"><?php echo $row['nam'] ?></div>
                         <div class="number"><?php echo $row['num'] ?></div>
@@ -179,7 +179,7 @@ $did = $_SESSION["did"];
                         </div>
                         <div class="short_box">
                             <?php
-                            $sql1 = "SELECT SUM(price*quantity) as total FROM `cart` WHERE deller = $did AND `status`= 'complete'";
+                            $sql1 = "SELECT SUM(price*quantity) as total FROM `cart` WHERE sr = $sid AND `status`= 'complete'";
                             $result1 = mysqli_query($con, $sql1);
                             $row1 = mysqli_fetch_assoc($result1);
                             $total = $row1['total'];
@@ -187,19 +187,19 @@ $did = $_SESSION["did"];
                             date_default_timezone_set("Asia/dhaka");
                             $todate = date("ymd");
                             // echo $todate;
-                            $sql2 = "SELECT SUM(price*quantity) as toto FROM `cart` WHERE deller = $did AND `ymd` = $todate AND `status`= 'complete' ";
+                            $sql2 = "SELECT SUM(price*quantity) as toto FROM `cart` WHERE sr = $sid AND `ymd` = $todate AND `status`= 'complete' ";
                             $result2 = mysqli_query($con, $sql2);
                             $row2 = mysqli_fetch_assoc($result2);
                             $today = $row2['toto'];
                             // ----------------
 
-                            $sql3 = "SELECT COUNT(id) as count FROM `cart` WHERE deller = $did AND `status`= 'order'";
+                            $sql3 = "SELECT COUNT(id) as count FROM `cart` WHERE sr = $sid AND `status`= 'order'";
                             $result3 = mysqli_query($con, $sql3);
                             $row3 = mysqli_fetch_assoc($result3);
                             $pending = $row3['count'];
                             // ----------------
 
-                            $sql4 = "SELECT COUNT(id) AS pcount FROM `product` WHERE deller = '$delnum' ";
+                            $sql4 = "SELECT COUNT(id) AS pcount FROM `product` WHERE sr = '$srnum' ";
                             $result4 = mysqli_query($con, $sql4);
                             $row4 = mysqli_fetch_assoc($result4);
                             $product = $row4['pcount'];
@@ -365,7 +365,7 @@ $did = $_SESSION["did"];
                             </script>
                         </div>
                         <div class="sr_uni">
-                            <div class="sr">
+                            <!-- <div class="sr">
                                 <div class="sr_head">SR ধারা সবচেয়ে বেশি বিক্রি</div>
                                 <div class="sr_box">
                                     <div class="image">
@@ -384,40 +384,102 @@ $did = $_SESSION["did"];
                                     </div>
                                 </div>
 
-                            </div>
+                            </div> -->
                             <div class="union">
                                 <div class="union_head">ইউনিয়ন দ্বারা ট্রাফিক</div>
-                                <div class="statistics">
-                                    <div class="visual">
-                                        <canvas id="myChart2"></canvas>
+                                <?php
+                                $sql = "SELECT DISTINCT rid FROM cart ORDER BY rid DESC";
+                                $result = mysqli_query($con, $sql);
+                                if (mysqli_num_rows($result)) {
+                                ?>
+                                
+                                    <div class="statistics">
+                                        <div class="visual">
+                                            <canvas id="myChart2"></canvas>
+                                            <script>
+                                                
+                                                var xValues = ["Italy", "France", "Spain", "USA", "Argentina", "sapahar", "2342"];
+                                                var yValues = [23,432,34,343,234,234];
+                                                var barColors = [
+                                                    "#b91d47",
+                                                    "#00aba9",
+                                                    "#2b5797",
+                                                    "#e8c3b9",
+                                                    "#1e7145",
+                                                    "blue",
+                                                    "yellow"
+                                                ];
+
+                                                new Chart("myChart2", {
+                                                    type: "doughnut",
+                                                    data: {
+                                                        labels: xValues,
+                                                        datasets: [{
+                                                            backgroundColor: barColors,
+                                                            data: yValues
+                                                        }]
+                                                    },
+                                                    options: {
+                                                        title: {
+                                                            display: false,
+                                                            text: "World Wide Wine Production 2018"
+                                                        },
+                                                        legend: {
+                                                            display: false
+                                                        }
+                                                    }
+                                                });
+                                            </script>
+                                        </div>
+
+                                        <div class="texts">
+                                            <?php
+                                            while ($row = mysqli_fetch_assoc($result)) {
+                                                $rid = $row['rid'];
+                                                $sql1 = "SELECT `rid`, COUNT(rid) AS count FROM cart WHERE rid = $rid order by count ASC";
+                                                $result1 = mysqli_query($con, $sql1);
+                                                $row1 = mysqli_fetch_assoc($result1);
+                                                $count = $row1['count'];
+
+                                                $sql2 = "SELECT * FROM retailer WHERE id = $rid ";
+                                                $result2 = mysqli_query($con, $sql2);
+                                                $row2 = mysqli_fetch_assoc($result2);
+                                                $unid = $row2['union'];
+
+                                                $sql3 = "SELECT * FROM `union` WHERE id = $unid ";
+                                                $result3 = mysqli_query($con, $sql3);
+                                                $row3 = mysqli_fetch_assoc($result3);
+                                                $union = $row3['uni_nam'];
+
+                                                $sql4 = "SELECT COUNT(rid) AS total_count FROM cart ";
+                                                $result4 = mysqli_query($con, $sql4);
+                                                $row4 = mysqli_fetch_assoc($result4);
+                                                // $union = $row4['uni_nam'];
+                                                $total_count = $row4['total_count'];
+
+                                                // echo $total_count;
+                                                // echo "<br>";
+                                                // echo $count;
+                                                // echo "<br>";
+                                                $percent = $count * 100 / $total_count;
+                                                // echo number_format($percent, 1) 
+
+                                            ?>
+                                                <div class="text_box">
+                                                    <div class="union">
+                                                        <i class="fa-solid fa-circle"></i>
+                                                        <?php echo $union ?>
+                                                    </div>
+                                                    <div class="percent">
+                                                        <span><?php  echo number_format($percent, 1)  ?>%</span>
+                                                    </div>
+                                                </div>
+                                            <?php
+                                            }
+                                            ?>
+                                        </div>
                                     </div>
-                                    <div class="texts">
-                                        <div class="text_box">
-                                            <div class="union">
-                                                <i class="fa-solid fa-circle"></i>ইউসুফপুর
-                                            </div>
-                                            <div class="percent">
-                                                <span>23.4%</span>
-                                            </div>
-                                        </div>
-                                        <div class="text_box">
-                                            <div class="union">
-                                                <i class="fa-solid fa-circle"></i>ইউসুফপুর
-                                            </div>
-                                            <div class="percent">
-                                                <span>23.4%</span>
-                                            </div>
-                                        </div>
-                                        <div class="text_box">
-                                            <div class="union">
-                                                <i class="fa-solid fa-circle"></i>ইউসুফপুর
-                                            </div>
-                                            <div class="percent">
-                                                <span>23.4%</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <?php } ?>
                                 <div class="growth ">
                                     <div class="grow" style="color: #00ae6e;text-align:right;font-size:12px">
                                         12.4% <i class="fa-solid fa-arrow-trend-up"></i>
@@ -431,73 +493,7 @@ $did = $_SESSION["did"];
         </div>
     </div>
 </body>
-<script>
-    var xValues = [1, 2, 3, 4, 5, 6, 7];
 
-    new Chart("myChart", {
-        type: "line",
-        data: {
-            labels: xValues,
-            datasets: [{
-                data: [1060, 1070, 9110, 1330, 2210, 7830, 2478],
-                borderColor: "#1c5ddf",
-                fill: true
-            }, {
-                data: [16300, 1700, 4000, 5000, 6000, 7000, 3233],
-                borderColor: "#8d9bb7",
-                fill: false
-            }]
-        },
-        options: {
-            scales: {
-                y: {
-                    grid: {
-                        display: false,
-                        drawBorder: false, // <-- this removes y-axis line
-                        lineWidth: 0.5,
-                    }
-                }
-            },
-
-            legend: {
-                display: false
-            }
-        }
-    });
-</script>
-<script>
-    var xValues = ["Italy", "France", "Spain", "USA", "Argentina", "sapahar", "2342"];
-    var yValues = [55, 49, 44, 24, 15, 43, 45];
-    var barColors = [
-        "#b91d47",
-        "#00aba9",
-        "#2b5797",
-        "#e8c3b9",
-        "#1e7145",
-        "blue",
-        "yellow"
-    ];
-
-    new Chart("myChart2", {
-        type: "doughnut",
-        data: {
-            labels: xValues,
-            datasets: [{
-                backgroundColor: barColors,
-                data: yValues
-            }]
-        },
-        options: {
-            title: {
-                display: false,
-                text: "World Wide Wine Production 2018"
-            },
-            legend: {
-                display: false
-            }
-        }
-    });
-</script>
 <script>
     $(document).ready(function() {
         $(".side_box").toggleClass("css_head")
