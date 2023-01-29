@@ -387,105 +387,105 @@ $sid = $_SESSION["sid"];
                             </div> -->
                             <div class="union">
                                 <div class="union_head">ইউনিয়ন দ্বারা ট্রাফিক</div>
-                                <?php
-                                $sql = "SELECT DISTINCT rid FROM cart ORDER BY rid DESC";
-                                $result = mysqli_query($con, $sql);
-                                if (mysqli_num_rows($result)) {
-                                ?>
-                                
-                                    <div class="statistics">
-                                        <div class="visual">
-                                            <canvas id="myChart2"></canvas>
-                                            <script>
-                                                
-                                                var xValues = ["Italy", "France", "Spain", "USA", "Argentina", "sapahar", "2342"];
-                                                var yValues = [23,432,34,343,234,234];
-                                                var barColors = [
-                                                    "#b91d47",
-                                                    "#00aba9",
-                                                    "#2b5797",
-                                                    "#e8c3b9",
-                                                    "#1e7145",
-                                                    "blue",
-                                                    "yellow"
-                                                ];
 
-                                                new Chart("myChart2", {
-                                                    type: "doughnut",
-                                                    data: {
-                                                        labels: xValues,
-                                                        datasets: [{
-                                                            backgroundColor: barColors,
-                                                            data: yValues
-                                                        }]
-                                                    },
-                                                    options: {
-                                                        title: {
-                                                            display: false,
-                                                            text: "World Wide Wine Production 2018"
-                                                        },
-                                                        legend: {
-                                                            display: false
-                                                        }
-                                                    }
-                                                });
-                                            </script>
-                                        </div>
+                                <div class="statistics">
+                                    <?php
 
-                                        <div class="texts">
-                                            <?php
-                                            while ($row = mysqli_fetch_assoc($result)) {
-                                                $rid = $row['rid'];
-                                                $sql1 = "SELECT `rid`, COUNT(rid) AS count FROM cart WHERE rid = $rid order by count ASC";
+
+                                    ?>
+                                    <div class="visual">
+                                        <canvas id="myChart2"></canvas>
+                                        <?php
+                                        $sqlv = "SELECT COUNT(uni_nam) AS count, uni_nam FROM cart JOIN retailer ON cart.rid = retailer.id JOIN `union` ON retailer.union = union.id WHERE `status` = 'complete' GROUP BY uni_nam ORDER BY count DESC LIMIT 5";
+                                        $resultv = mysqli_query($con, $sqlv);
+                                        if (mysqli_num_rows($resultv)) {
+                                            $chart_data = array();
+                                            $chart_labels = array();
+                                            while ($rowv = mysqli_fetch_assoc($resultv)) {
+                                                $sql1 = "SELECT COUNT(id) AS count FROM cart WHERE `status` = 'complete'";
                                                 $result1 = mysqli_query($con, $sql1);
-                                                $row1 = mysqli_fetch_assoc($result1);
-                                                $count = $row1['count'];
-
-                                                $sql2 = "SELECT * FROM retailer WHERE id = $rid ";
-                                                $result2 = mysqli_query($con, $sql2);
-                                                $row2 = mysqli_fetch_assoc($result2);
-                                                $unid = $row2['union'];
-
-                                                $sql3 = "SELECT * FROM `union` WHERE id = $unid ";
-                                                $result3 = mysqli_query($con, $sql3);
-                                                $row3 = mysqli_fetch_assoc($result3);
-                                                $union = $row3['uni_nam'];
-
-                                                $sql4 = "SELECT COUNT(rid) AS total_count FROM cart ";
-                                                $result4 = mysqli_query($con, $sql4);
-                                                $row4 = mysqli_fetch_assoc($result4);
-                                                // $union = $row4['uni_nam'];
-                                                $total_count = $row4['total_count'];
-
-                                                // echo $total_count;
-                                                // echo "<br>";
-                                                // echo $count;
-                                                // echo "<br>";
-                                                $percent = $count * 100 / $total_count;
-                                                // echo number_format($percent, 1) 
-
-                                            ?>
-                                                <div class="text_box">
-                                                    <div class="union">
-                                                        <i class="fa-solid fa-circle"></i>
-                                                        <?php echo $union ?>
-                                                    </div>
-                                                    <div class="percent">
-                                                        <span><?php  echo number_format($percent, 1)  ?>%</span>
-                                                    </div>
-                                                </div>
-                                            <?php
+                                                $row = mysqli_fetch_assoc($result1);
+                                                $uni_name = $rowv['uni_nam'];
+                                                $count =  $rowv['count'];
+                                                $total_cart = $row['count'];
+                                                $percent = $count * 100 / $total_cart;
+                                                $chart_data[] =  number_format($percent, 1);
+                                                $chart_labels[] = $uni_name;
                                             }
-                                            ?>
-                                        </div>
+                                        }
+                                        ?>
+
+                                        <script>
+                                            var xValues = <?php echo json_encode($chart_labels); ?>;
+                                            var yValues = <?php echo json_encode($chart_data); ?>;
+                                            var barColors = [
+                                                "#b91d47",
+                                                "#00aba9",
+                                                "#2b5797",
+                                                "#e8c3b9",
+                                                "#1e7145",
+                                                "blue",
+                                                "yellow"
+                                            ];
+
+                                            var labels = xValues;
+                                            var data = yValues;
+
+                                            new Chart("myChart2", {
+                                                type: "doughnut",
+                                                data: {
+                                                    labels: labels,
+                                                    datasets: [{
+                                                        backgroundColor: barColors,
+                                                        data: data
+                                                    }]
+                                                },
+                                                options: {
+                                                    title: {
+                                                        display: false,
+                                                        text: "World Wide Wine Production 2018"
+                                                    },
+                                                    legend: {
+                                                        display: false
+                                                    }
+                                                }
+                                            });
+                                        </script>
                                     </div>
-                                <?php } ?>
+
+                                    <div class="texts">
+                                        <?php
+                                        $sqlv = "SELECT COUNT(uni_nam) AS count, uni_nam FROM cart JOIN retailer ON cart.rid = retailer.id JOIN `union` ON retailer.union = union.id WHERE `status` = 'complete' GROUP BY uni_nam ORDER BY count DESC LIMIT 5";
+                                        $resultv = mysqli_query($con, $sqlv);
+                                        while ($rowv = mysqli_fetch_assoc($resultv)) {
+                                            $sql = "SELECT COUNT(id) AS count FROM cart WHERE `status` = 'complete'";
+                                            $result = mysqli_query($con, $sql);
+                                            $row = mysqli_fetch_assoc($result);
+                                            $uni_name = $rowv['uni_nam'];
+                                            $count =  $rowv['count'];
+                                            $total_cart = $row['count'];
+                                            $percent = $count * 100 / $total_cart;
+                                        ?>
+                                            <div class="text_box">
+                                                <div class="union">
+                                                    <i class="fa-solid fa-circle uni_dot"></i>
+                                                    <?php echo $uni_name ?>
+                                                </div>
+                                                <div class="percent">
+                                                    <span><?php echo number_format($percent, 1)  ?>%</span>
+                                                </div>
+                                            </div>
+                                        <?php } ?>
+                                    </div>
+                                </div>
+
                                 <div class="growth ">
                                     <div class="grow" style="color: #00ae6e;text-align:right;font-size:12px">
                                         12.4% <i class="fa-solid fa-arrow-trend-up"></i>
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -517,3 +517,18 @@ $sid = $_SESSION["sid"];
 </script>
 
 </html>
+
+<?php
+
+// $sqlb = "SELECT COUNT(`union`) AS count , `union` FROM retailer GROUP BY `union` ORDER BY count DESC";
+// $resultb = mysqli_query($con, $sqlb);
+// while ($rowb = mysqli_fetch_assoc($resultb)) {
+//     echo $rowb['count'] . " = " . $rowb['union']."<br>";
+// }
+// $sqlb = "SELECT `union` FROM retailer GROUP BY `union` ORDER BY `union` DESC";
+// $resultb = mysqli_query($con,$sqlb);
+// while($row = mysqli_fetch_assoc($resultb)){
+//     echo $row['union']."<br>";
+// }
+
+?>

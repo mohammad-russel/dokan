@@ -394,7 +394,8 @@ $did = $_SESSION["did"];
                                     <div class="texts">
                                         <div class="text_box">
                                             <div class="union">
-                                                <i class="fa-solid fa-circle"></i>ইউসুফপুর
+                                                <i class="fa-solid fa-circle uni_dot"></i>
+                                                ইউসুফপুর
                                             </div>
                                             <div class="percent">
                                                 <span>23.4%</span>
@@ -402,7 +403,8 @@ $did = $_SESSION["did"];
                                         </div>
                                         <div class="text_box">
                                             <div class="union">
-                                                <i class="fa-solid fa-circle"></i>ইউসুফপুর
+                                                <i class="fa-solid fa-circle uni_dot"></i>
+                                                ইউসুফপুর
                                             </div>
                                             <div class="percent">
                                                 <span>23.4%</span>
@@ -410,7 +412,8 @@ $did = $_SESSION["did"];
                                         </div>
                                         <div class="text_box">
                                             <div class="union">
-                                                <i class="fa-solid fa-circle"></i>ইউসুফপুর
+                                                <i class="fa-solid fa-circle uni_dot"></i>
+                                                ইউসুফপুর
                                             </div>
                                             <div class="percent">
                                                 <span>23.4%</span>

@@ -579,7 +579,6 @@
                                         align-items: center;
                                         justify-content: space-between;
 
-                                        //  border: 1px solid black;
                                         .union {
                                             display: flex;
                                             align-items: center;
@@ -588,7 +587,7 @@
                                             i {
                                                 margin: 0px 5px;
                                                 font-size: 10px;
-                                                color: red;
+                                                color: rgb(35, 35, 35);
                                             }
                                         }
 
@@ -607,6 +606,7 @@
 
 }
 
+
 // --------------------retailer-------------
 .retailer_shorts {
     width: 100%;
@@ -620,7 +620,7 @@
             border-radius: 10px;
             width: 100%;
             background: rgb(255, 255, 255);
-            margin:30px 10px;
+            margin: 30px 10px;
             aspect-ratio: 4/1;
             display: flex;
             flex-direction: column;
@@ -685,12 +685,12 @@
             .text {
                 margin: 10px 0px;
                 color: rgba(195, 202, 217, 1);
-                
+
                 font-size: 12px;
             }
 
             .num {
-            color: rgba(125, 143, 179, 1);
+                color: rgba(125, 143, 179, 1);
                 font-size: 20px;
             }
         }
