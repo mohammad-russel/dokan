@@ -9,7 +9,7 @@ $result = mysqli_query($con, $sql);
 $row = mysqli_fetch_assoc($result);
 $_SESSION["sid"] = $row['id'];
 if (mysqli_num_rows($result) > 0) {
-    header("location:../sr/sr_home.php");
+    header("location:../new_dashboard/sr.php");
 } else {
     header("location:../sr/login.php");
 }

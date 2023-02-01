@@ -8,9 +8,14 @@ $pp =  $_POST['pp'];
 $time = $_POST['time'];
 $status = $_POST['status'];
 $quantity = $_POST['quantity'];
+$year = $_POST['year'];
+$month = $_POST['month'];
+$day = $_POST['day'];
+$ymd = $_POST['ymd'];
+$deller = $_POST['deller'];
 $total = $quantity * $pp;
 
-$sql = "INSERT INTO cart(rid,pid,price,quantity,`time`,`status`,sr) VALUES ($rid,$pid,$pp,$quantity,'$time','$status',$sid)";
+$sql = "INSERT INTO cart(rid,pid,price,quantity,`time`,`status`,sr,deller,`year`,`month`,`day`,`ymd`) VALUES ($rid,$pid,$pp,$quantity,'$time','$status',$sid ,$deller,$year,$month,$day,$ymd)";
 $result = mysqli_query($con, $sql);
 
 $sql4 = "SELECT MAX(id) AS cid FROM cart ";

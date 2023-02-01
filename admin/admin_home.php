@@ -223,7 +223,7 @@ if (!isset($_SESSION["aid"])) {
                             <div class="title">Total Earning</div>
                             <div class="number"> <?php
                                                     include "../php/config.php";
-                                                    $sql = "SELECT *,SUM(total) AS totall FROM `order`";
+                                                    $sql = "SELECT *,SUM(total) AS totall FROM `pro`";
                                                     $result = mysqli_query($con, $sql);
                                                     $row = mysqli_fetch_assoc($result);
                                                     $ttk = $row['totall'];
@@ -354,7 +354,7 @@ if (!isset($_SESSION["aid"])) {
                     <div class="retailer_box">
                         <?php
                         @include "../php/config.php";
-                        $sql = "SELECT DISTINCT rid FROM pro  ORDER BY total DESC LIMIT 5";
+                        $sql = "SELECT rid, SUM(total) AS tot  FROM pro GROUP BY rid ORDER BY tot DESC LIMIT 5";
                         $result = mysqli_query($con, $sql);
                         // $sql = "SELECT DISTINCT retailer FROM `order` WHERE `status` = 'complete' ";
                         // $result = mysqli_query($con, $sql);
@@ -381,14 +381,14 @@ if (!isset($_SESSION["aid"])) {
                                     <?php
                                     @include "../php/config.php";
 
-                                    $sql5 = "SELECT * FROM pro WHERE rid = $rid ";
+                                    $sql5 = "SELECT *, SUM(total) AS tot FROM pro WHERE rid = $rid ";
                                     $result5 = mysqli_query($con, $sql5);
                                     $row5 = mysqli_fetch_assoc($result5);
-                                    $pp = $row5["total"];
+                                    $pp = $row5["tot"];
                                     $pc = $pp * 100 / $ttk;
                                     ?>
                                     <div class="buy_info">
-                                        <div class="total"><?php echo $row5["total"]; ?>৳</div>
+                                        <div class="total"><?php echo $row5["tot"]; ?>৳</div>
                                         <div class="percent"><?php echo number_format($pc, 1)  ?>%</div>
                                     </div>
                                 </div>

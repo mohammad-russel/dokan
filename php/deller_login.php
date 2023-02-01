@@ -9,7 +9,7 @@ $result = mysqli_query($con, $sql);
 $row = mysqli_fetch_assoc($result);
 $_SESSION["did"] = $row['id'];
 if (mysqli_num_rows($result) > 0) {
-    header("location:../deller/deller_home.php");
+    header("location:../new_dashboard/deller.php");
 } else {
     header("location:../deller/login.php");
 }

@@ -503,19 +503,8 @@
 .deller_cont .box .contant .main_box .box .sr_uni .union .statistics .texts .text_box .union i {
   margin: 0px 5px;
   font-size: 10px;
+  color: rgb(35, 35, 35);
 }
-.text_box .union i:nth-child(1) {
-  color: rgb(224, 245, 0);
-}
-
-.text_box .union i:nth-child(2) {
-  color: rgb(232, 91, 239);
-}
-
-.text_box .union i:nth-child(3) {
-  color: rgb(3, 162, 48);
-}
-
 .retailer_shorts {
   width: 100%;
   display: flex;

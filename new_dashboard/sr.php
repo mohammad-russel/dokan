@@ -1,9 +1,11 @@
 <?php
 session_start();
 if (!isset($_SESSION["sid"])) {
-    header("location:login.php");
+    header("location:../sr/login.php");
 }
 $sid = $_SESSION["sid"];
+date_default_timezone_set("Asia/dhaka");
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +14,7 @@ $sid = $_SESSION["sid"];
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deller Dashboard</title>
+    <title>Sr Dashboard</title>
     <?php @include "components/head.php"; ?>
 </head>
 
@@ -83,7 +85,7 @@ $sid = $_SESSION["sid"];
                         <div class="number"><?php echo $row['num'] ?></div>
                     </div>
                     <div class="link_box">
-                        <a href="" class="a1">
+                        <a href="sr.php" class="a1">
                             <div class="box">
                                 <div class="icon">
                                     <i class="fa-solid fa-chalkboard-user"></i>
@@ -91,15 +93,15 @@ $sid = $_SESSION["sid"];
                                 <span>Dashboard</span>
                             </div>
                         </a>
-                        <a href="">
+                        <a href="../sr/retailer.php">
                             <div class="box">
                                 <div class="icon">
                                     <i class="fa-solid fa-user-group"></i>
                                 </div>
-                                <span>SR</span>
+                                <span>Retailers</span>
                             </div>
                         </a>
-                        <a href="">
+                        <a href="sr.php">
                             <div class="box">
                                 <div class="icon">
                                     <i class="fa-solid fa-map-location-dot"></i>
@@ -107,7 +109,7 @@ $sid = $_SESSION["sid"];
                                 <span>Sell by union</span>
                             </div>
                         </a>
-                        <a href="">
+                        <a href="../sr/sr_complete.php">
                             <div class="box">
                                 <div class="icon">
                                     <i class="fa-solid fa-bag-shopping"></i>
@@ -115,7 +117,7 @@ $sid = $_SESSION["sid"];
                                 <span>Product</span>
                             </div>
                         </a>
-                        <a href="" class="a5">
+                        <a href="sr.php" class="a5">
                             <div class="box">
                                 <div class="icon">
                                     <i class="fa-solid fa-cubes-stacked"></i>
@@ -123,7 +125,7 @@ $sid = $_SESSION["sid"];
                                 <span>Stock</span>
                             </div>
                         </a>
-                        <a href="" class="a6">
+                        <a href="../sr/sr_complete.php" class="a6">
                             <div class="box">
                                 <div class="icon">
                                     <i class="fa-solid fa-arrow-trend-up"></i>
@@ -133,7 +135,7 @@ $sid = $_SESSION["sid"];
                         </a>
                     </div>
                     <div class="foot">
-                        <a href="../php/deller_logout.php">
+                        <a href="../php/sr_logout.php">
                             <div class="icon">
                                 <i class="fa-solid fa-arrow-right-from-bracket"></i>
                             </div>
@@ -190,7 +192,7 @@ $sid = $_SESSION["sid"];
                             $sql2 = "SELECT SUM(price*quantity) as toto FROM `cart` WHERE sr = $sid AND `ymd` = $todate AND `status`= 'complete' ";
                             $result2 = mysqli_query($con, $sql2);
                             $row2 = mysqli_fetch_assoc($result2);
-                            $today = $row2['toto'];
+                            $tday = $row2['toto'];
                             // ----------------
 
                             $sql3 = "SELECT COUNT(id) as count FROM `cart` WHERE sr = $sid AND `status`= 'order'";
@@ -219,9 +221,47 @@ $sid = $_SESSION["sid"];
 
                                 <div class="number">৳<?php echo $total ?></div>
                                 <div class="growth">
-                                    <div class="grow" style="color: #00ae6e;">
-                                        12.4% <i class="fa-solid fa-arrow-trend-up"></i>
-                                    </div>
+                                    <?php
+                                    $today = date('ymd', strtotime('-0 days'));
+                                    $today1 = date('ymd', strtotime('-1 days'));
+                                    $today7 = date('ymd', strtotime('-6 days'));
+                                    $today30 = date('ymd', strtotime('-29 days'));
+                                    // ------------------
+                                    $sql1 = "SELECT *, SUM(price*quantity) AS aa FROM cart WHERE ymd <= $today AND ymd >= $today7  AND sr = $sid AND `status` = 'complete' ";
+                                    $result1 = mysqli_query($con, $sql1);
+                                    $row7 = mysqli_fetch_assoc($result1);
+                                    // ----------------
+                                    $sql2 = "SELECT *, SUM(price*quantity) AS aa FROM cart WHERE ymd = $today1 AND sr = $sid  AND `status` = 'complete'";
+                                    $result2 = mysqli_query($con, $sql2);
+                                    $row2 = mysqli_fetch_assoc($result2);
+                                    // ----------------------
+                                    $sql3 = "SELECT *, SUM(price*quantity) AS aa FROM cart WHERE ymd = $today AND  sr = $sid  AND `status` = 'complete'";
+                                    $result3 = mysqli_query($con, $sql3);
+                                    $row3 = mysqli_fetch_assoc($result3);
+                                    // -----------------
+                                    $td = $row3['aa'];
+                                    $yd = $row2['aa'];
+                                    $day7 = $row7['aa'];
+                                    // ----------
+                                    if ($td > $yd) {
+                                        $up = $td * 100 / $yd;
+                                        $a = $up - 100;
+                                    ?>
+                                        <div class="grow" style="color: #00ae6e;text-align:right;font-size:12px">
+                                            <?php echo  number_format($a, 1)  ?>% <i class="fa-solid fa-arrow-trend-up"></i>
+                                        </div>
+                                    <?php
+                                    } elseif ($td < $yd) {
+                                        $down = $td * 100 / $yd;
+                                        $a = 100 - $down;
+                                    ?>
+                                        <div class="grow" style="color: red;text-align:right;font-size:12px">
+                                            <?php echo  number_format($a, 1)  ?>% <i class="fa-solid fa-arrow-trend-down"></i>
+                                        </div>
+                                    <?php
+                                    }
+                                    ?>
+
                                 </div>
                             </div>
                             <div class="short">
@@ -233,11 +273,49 @@ $sid = $_SESSION["sid"];
 
                                     </select>
                                 </div>
-                                <div class="number">৳<?php echo $today ?></div>
+                                <div class="number">৳<?php echo $tday ?></div>
                                 <div class="growth">
-                                    <div class="grow" style="color: red;">
-                                        12.4% <i class="fa-solid fa-arrow-trend-down"></i>
-                                    </div>
+                                    <?php
+                                    $today = date('ymd', strtotime('-0 days'));
+                                    $today1 = date('ymd', strtotime('-1 days'));
+                                    $today7 = date('ymd', strtotime('-6 days'));
+                                    $today30 = date('ymd', strtotime('-29 days'));
+                                    // ------------------
+                                    $sql1 = "SELECT *, SUM(price*quantity) AS aa FROM cart WHERE ymd <= $today AND ymd >= $today7  AND sr = $sid AND `status` = 'complete' ";
+                                    $result1 = mysqli_query($con, $sql1);
+                                    $row7 = mysqli_fetch_assoc($result1);
+                                    // ----------------
+                                    $sql2 = "SELECT *, SUM(price*quantity) AS aa FROM cart WHERE ymd = $today1 AND sr = $sid  AND `status` = 'complete'";
+                                    $result2 = mysqli_query($con, $sql2);
+                                    $row2 = mysqli_fetch_assoc($result2);
+                                    // ----------------------
+                                    $sql3 = "SELECT *, SUM(price*quantity) AS aa FROM cart WHERE ymd = $today AND  sr = $sid  AND `status` = 'complete'";
+                                    $result3 = mysqli_query($con, $sql3);
+                                    $row3 = mysqli_fetch_assoc($result3);
+                                    // -----------------
+                                    $td = $row3['aa'];
+                                    $yd = $row2['aa'];
+                                    $day7 = $row7['aa'];
+                                    // ----------
+                                    if ($td > $yd) {
+                                        $up = $td * 100 / $yd;
+                                        $a = $up - 100;
+                                    ?>
+                                        <div class="grow" style="color: #00ae6e;text-align:right;font-size:12px">
+                                            <?php echo  number_format($a, 1)  ?>% <i class="fa-solid fa-arrow-trend-up"></i>
+                                        </div>
+                                    <?php
+                                    } elseif ($td < $yd) {
+                                        $down = $td * 100 / $yd;
+                                        $a = 100 - $down;
+                                    ?>
+                                        <div class="grow" style="color: red;text-align:right;font-size:12px">
+                                            <?php echo  number_format($a, 1)  ?>% <i class="fa-solid fa-arrow-trend-down"></i>
+                                        </div>
+                                    <?php
+                                    }
+                                    ?>
+
                                 </div>
                             </div>
                             <div class="short">
@@ -249,62 +327,11 @@ $sid = $_SESSION["sid"];
                                 <div class="number"><?php echo $product ?></div>
                             </div>
                         </div>
-                        <!-- <?php
-                                @include "../php/config.php";
-                                $sql = "SELECT * FROM cart ORDER BY id DESC";
-                                $result = mysqli_query($con, $sql);
-                                $cart = array();
-                                while ($row = $result->fetch_assoc()) {
-                                    $cart[$row['id']] = $row['price'];
-                                }
-
-                                $sql2 = "SELECT MAX(id) AS `top` FROM cart ";
-                                $result2 = mysqli_query($con, $sql2);
-                                $row2 = $result2->fetch_assoc();
-                                $top = $row2['top'];
-                                $last = $top - 6;
-                                for ($i = $last; $i <= $top; $i++) {
-                                    if (array_key_exists($i, $cart)) {
-
-                                ?>
-                                            <input type="text" name="id" id="id" value="<?php echo $i ?>">
-                                            <br>
-                                        <?php
-                                    } else {
-
-                                        ?>
-                                            <input type="text" name="id" id="id" value="<?php echo $i ?>">
-                                            <br>
-                                    <?php
-                                    }
-                                }
-                                // -------------------
-                                    ?>
-                                    <br>
-                                    <?php
-                                    for ($i = $last; $i <= $top; $i++) {
-                                        if (array_key_exists($i, $cart)) {
-                                            // echo "<h1> {$cart[$i]}</h1>";
-                                    ?>
-                                            <input type="text" name="tk" id="tk" value="<?php echo $cart[$i] ?>">
-                                            <br>
-                                        <?php
-                                        } else {
-                                            // echo "<h1> 0</h1>";
-                                        ?>
-                                            <input type="text" name="tk" id="tk" value="0">
-                                            <br>
-                                    <?php
-                                        }
-                                    }
-                                    ?>
-                                    <input type="text" name="id" id="id" value="345"> -->
-
                         <div class="statics_box">
                             <div class="header">
                                 <div class="text">ব্যবসার পর্যবেক্ষণ</div>
                                 <div class="dates">
-                                    <div class="year">jan 2023 <i class="fa-regular fa-calendar"></i></div>
+                                    <div class="year"><?php echo date("M Y") ?> <i class="fa-regular fa-calendar"></i></div>
                                     <select name="based" id="based">
                                         <option value="week">
                                             <span>This Week</span>
@@ -327,36 +354,77 @@ $sid = $_SESSION["sid"];
                                     </select>
                                 </div>
                             </div>
-                            <canvas id="myChart" height="80px"></canvas>
-                            <script>
-                                var id = $("#id").val()
+                            <?php
+                            include "../php/config.php";
+                            $sql = "SELECT `ymd`, SUM(price * quantity) as total_bill FROM cart WHERE `status` = 'complete' AND `sr` = $sid AND `ymd` >= DATE_SUB(CURRENT_DATE(), INTERVAL 7 DAY) GROUP BY ymd ORDER BY `ymd` DESC";
+                            $result = mysqli_query($con, $sql);
 
-                                var xValues = [id, 2, 3, 4, 5, 6, 7];
-                                new Chart("myChart", {
+                            $dateRange = new DatePeriod(
+                                new DateTime("-6 days"),
+                                new DateInterval("P1D"),
+                                new DateTime("now")
+                            );
+                            $dates = array();
+                            foreach ($dateRange as $date) {
+                                $dates[] = $date->format("ymd");
+                            }
+
+                            $chartData = array();
+                            while ($row = $result->fetch_assoc()) {
+                                $chartData[$row['ymd']] = array(
+                                    'day' => $row['ymd'],
+                                    'total_bill' => $row['total_bill']
+                                );
+                            }
+
+                            foreach ($dates as $date) {
+                                if (!array_key_exists($date, $chartData)) {
+                                    $chartData[$date] = array(
+                                        'day' => $date,
+                                        'total_bill' => 0
+                                    );
+                                }
+                            }
+
+                            ksort($chartData);
+                            $chartData = array_values($chartData);
+                            // echo json_encode($chartData);
+                            ?>
+                            <canvas id="myChart3" height="80px"></canvas>
+                            <script>
+                                var chartData1 = <?php echo json_encode($chartData); ?>;
+                                var labels1 = chartData1.map(function(e1) {
+                                    return e1.day;
+                                });
+                                var data1 = chartData1.map(function(e1) {
+                                    return e1.total_bill;
+                                });
+
+                                // var xValues = [id, 2, 3, 4, 5, 6, 7];
+                                new Chart("myChart3", {
                                     type: "line",
                                     data: {
-                                        labels: xValues,
+                                        labels: [1, 2, 3, 4, 5, 6, 7],
                                         datasets: [{
-                                            data: [1060, 1070, 9110, 1330, 2210, 7830, 2478],
+                                            data: data1,
                                             borderColor: "#1c5ddf",
                                             fill: true
-                                        }, {
-                                            data: [16300, 1700, 4000, 5000, 6000, 7000, 3233],
-                                            borderColor: "#8d9bb7",
-                                            fill: false
                                         }]
                                     },
                                     options: {
                                         scales: {
+                                            x: {
+                                                grid: {
+                                                    display: false,
+                                                }
+                                            },
                                             y: {
                                                 grid: {
                                                     display: false,
-                                                    drawBorder: false, // <-- this removes y-axis line
-                                                    lineWidth: 0.5,
+                                                    drawBorder: false,
                                                 }
                                             }
                                         },
-
                                         legend: {
                                             display: false
                                         }
@@ -396,13 +464,13 @@ $sid = $_SESSION["sid"];
                                     <div class="visual">
                                         <canvas id="myChart2"></canvas>
                                         <?php
-                                        $sqlv = "SELECT COUNT(uni_nam) AS count, uni_nam FROM cart JOIN retailer ON cart.rid = retailer.id JOIN `union` ON retailer.union = union.id WHERE `status` = 'complete' GROUP BY uni_nam ORDER BY count DESC LIMIT 5";
+                                        $sqlv = "SELECT COUNT(uni_nam) AS count, uni_nam FROM cart JOIN retailer ON cart.rid = retailer.id JOIN `union` ON retailer.union = union.id WHERE `status` = 'complete' AND sr = $sid GROUP BY uni_nam ORDER BY count DESC LIMIT 5";
                                         $resultv = mysqli_query($con, $sqlv);
                                         if (mysqli_num_rows($resultv)) {
                                             $chart_data = array();
                                             $chart_labels = array();
                                             while ($rowv = mysqli_fetch_assoc($resultv)) {
-                                                $sql1 = "SELECT COUNT(id) AS count FROM cart WHERE `status` = 'complete'";
+                                                $sql1 = "SELECT COUNT(id) AS count FROM cart WHERE `status` = 'complete' AND sr = $sid ";
                                                 $result1 = mysqli_query($con, $sql1);
                                                 $row = mysqli_fetch_assoc($result1);
                                                 $uni_name = $rowv['uni_nam'];
@@ -455,10 +523,10 @@ $sid = $_SESSION["sid"];
 
                                     <div class="texts">
                                         <?php
-                                        $sqlv = "SELECT COUNT(uni_nam) AS count, uni_nam FROM cart JOIN retailer ON cart.rid = retailer.id JOIN `union` ON retailer.union = union.id WHERE `status` = 'complete' GROUP BY uni_nam ORDER BY count DESC LIMIT 5";
+                                        $sqlv = "SELECT COUNT(uni_nam) AS count, uni_nam FROM cart JOIN retailer ON cart.rid = retailer.id JOIN `union` ON retailer.union = union.id WHERE `status` = 'complete' AND sr = $sid GROUP BY uni_nam ORDER BY count DESC LIMIT 5";
                                         $resultv = mysqli_query($con, $sqlv);
                                         while ($rowv = mysqli_fetch_assoc($resultv)) {
-                                            $sql = "SELECT COUNT(id) AS count FROM cart WHERE `status` = 'complete'";
+                                            $sql = "SELECT COUNT(id) AS count FROM cart WHERE `status` = 'complete' AND sr = $sid ";
                                             $result = mysqli_query($con, $sql);
                                             $row = mysqli_fetch_assoc($result);
                                             $uni_name = $rowv['uni_nam'];
@@ -479,10 +547,48 @@ $sid = $_SESSION["sid"];
                                     </div>
                                 </div>
 
-                                <div class="growth ">
-                                    <div class="grow" style="color: #00ae6e;text-align:right;font-size:12px">
-                                        12.4% <i class="fa-solid fa-arrow-trend-up"></i>
-                                    </div>
+                                <div class="growth">
+                                    <?php
+                                    $today = date('ymd', strtotime('-0 days'));
+                                    $today1 = date('ymd', strtotime('-1 days'));
+                                    $today7 = date('ymd', strtotime('-6 days'));
+                                    $today30 = date('ymd', strtotime('-29 days'));
+                                    // ------------------
+                                    $sql1 = "SELECT *, SUM(price*quantity) AS aa FROM cart WHERE ymd <= $today AND ymd >= $today7  AND sr = $sid AND `status` = 'complete' ";
+                                    $result1 = mysqli_query($con, $sql1);
+                                    $row7 = mysqli_fetch_assoc($result1);
+                                    // ----------------
+                                    $sql2 = "SELECT *, SUM(price*quantity) AS aa FROM cart WHERE ymd = $today1 AND sr = $sid  AND `status` = 'complete'";
+                                    $result2 = mysqli_query($con, $sql2);
+                                    $row2 = mysqli_fetch_assoc($result2);
+                                    // ----------------------
+                                    $sql3 = "SELECT *, SUM(price*quantity) AS aa FROM cart WHERE ymd = $today AND  sr = $sid  AND `status` = 'complete'";
+                                    $result3 = mysqli_query($con, $sql3);
+                                    $row3 = mysqli_fetch_assoc($result3);
+                                    // -----------------
+                                    $td = $row3['aa'];
+                                    $yd = $row2['aa'];
+                                    $day7 = $row7['aa'];
+                                    // ----------
+                                    if ($td > $yd) {
+                                        $up = $td * 100 / $yd;
+                                        $a = $up - 100;
+                                    ?>
+                                        <div class="grow" style="color: #00ae6e;text-align:right;font-size:12px">
+                                            <?php echo  number_format($a, 1)  ?>% <i class="fa-solid fa-arrow-trend-up"></i>
+                                        </div>
+                                    <?php
+                                    } elseif ($td < $yd) {
+                                        $down = $td * 100 / $yd;
+                                        $a = 100 - $down;
+                                    ?>
+                                        <div class="grow" style="color: red;text-align:right;font-size:12px">
+                                            <?php echo  number_format($a, 1)  ?>% <i class="fa-solid fa-arrow-trend-down"></i>
+                                        </div>
+                                    <?php
+                                    }
+                                    ?>
+
                                 </div>
                             </div>
 

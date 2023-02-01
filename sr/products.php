@@ -40,14 +40,14 @@ $rid = $_GET['rid'];
             <div class="back">
                 <a href="retailer.php">
                     <ion-icon style="color: #3E5467; background: linear-gradient(315.13deg, rgba(194, 217, 237, 0.3) 5.21%, rgba(255, 255, 255, 0.3) 62.26%), #E9F0F7;
-box-shadow: 4px 4px 12px rgba(138, 155, 189, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.9);"  name="arrow-back-outline"></ion-icon>
+box-shadow: 4px 4px 12px rgba(138, 155, 189, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.9);" name="arrow-back-outline"></ion-icon>
                 </a>
             </div>
             <div class="back">
-                <a  href="cart.php?rid=<?php echo $rid ?>">
-                    <span  class="count"></span>
+                <a href="cart.php?rid=<?php echo $rid ?>">
+                    <span class="count"></span>
                     <ion-icon style="color: #3E5467; background: linear-gradient(315.13deg, rgba(194, 217, 237, 0.3) 5.21%, rgba(255, 255, 255, 0.3) 62.26%), #E9F0F7;
-box-shadow: 4px 4px 12px rgba(138, 155, 189, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.9);"  name="cart-outline"></ion-icon>
+box-shadow: 4px 4px 12px rgba(138, 155, 189, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.9);" name="cart-outline"></ion-icon>
                 </a>
             </div>
         </div>
@@ -73,52 +73,79 @@ box-shadow: 4px 4px 12px rgba(138, 155, 189, 0.3), -5px -5px 15px rgba(255, 255,
                         <?php
                         date_default_timezone_set('Asia/Dhaka');
                         $time = date("Y.m.d || h.i.s");
+                        $year = date("y");
+                        $month = date("m");
+                        $day = date("d");
+                        $ymd = date("ymd");
                         ?>
-                        <div class="name"><?php echo $row['nam'] ?></div>
-                        <div class="price">৳ <?php echo $row['price'] ?></div>
-                        <div class="btn">
-                            <input type="hidden" name="rid" id="rid<?php echo $row['id'] ?>" value="<?php echo $rid ?>">
-                            <input type="hidden" name="pid" id="pid<?php echo $row['id'] ?>" value="<?php echo $row['id'] ?>">
-                            <input type="hidden" name="sid" id="sid<?php echo $row['id'] ?>" value="<?php echo $id ?>">
-                            <input type="hidden" name="pp" id="pp<?php echo $row['id'] ?>" value="<?php echo $row['price'] ?>">
-                            <input type="hidden" name="time" id="time<?php echo $row['id'] ?>" value="<?php echo $time ?>">
-                            <input type="hidden" name="status" id="status<?php echo $row['id'] ?>" value="cart">
-                            <input type="number" name="quantity" id="quantity<?php echo $row['id'] ?>" value="1">
-                            <button class="addcart addcart<?php echo $row['id'] ?>" name="add"><ion-icon name="add-outline"></ion-icon></button>
-                        </div>
-                        <script>
-                            $(".addcart<?php echo $row['id'] ?>").click(function() {
-                                var rid = $("#rid<?php echo $row['id'] ?>").val()
-                                var pid = $("#pid<?php echo $row['id'] ?>").val()
-                                var sid = $("#sid<?php echo $row['id'] ?>").val()
-                                var pp = $("#pp<?php echo $row['id'] ?>").val()
-                                var time = $("#time<?php echo $row['id'] ?>").val()
-                                var status = $("#status<?php echo $row['id'] ?>").val()
-                                var quantity = $("#quantity<?php echo $row['id'] ?>").val()
-                                $.ajax({
-                                    url: "../php/add_cart_sr.php",
-                                    type: "POST",
-                                    data: {
-                                        rid: rid,
-                                        pid: pid,
-                                        sid: sid,
-                                        pp: pp,
-                                        time: time,
-                                        status: status,
-                                        quantity: quantity
-                                    },
-                                    success: function(data) {
-                                        $('#quantity<?php echo $row['id'] ?>').val('')
-                                    }
-                                })
-                            })
-                        </script>
-                    </div>
+                     
+                            <!-- --------- -->
+                            <div class="name"><?php echo $row['nam'] ?></div>
+                            <div class="price">৳ <?php echo $row['price'] ?></div>
+                            <div class="btn">
+                                <?
 
-            <?php  }
+                                ?>
+                                <input type="hidden" name="rid" id="rid<?php echo $row['id'] ?>" value="<?php echo $rid ?>">
+                                <input type="hidden" name="pid" id="pid<?php echo $row['id'] ?>" value="<?php echo $row['id'] ?>">
+                                <input type="hidden" name="sid" id="sid<?php echo $row['id'] ?>" value="<?php echo $id ?>">
+                                <input type="hidden" name="deller" id="deller<?php echo $row['id'] ?>" value="<?php echo $row1['deller'] ?>">
+                                <input type="hidden" name="pp" id="pp<?php echo $row['id'] ?>" value="<?php echo $row['price'] ?>">
+                                <input type="hidden" name="time" id="time<?php echo $row['id'] ?>" value="<?php echo $time ?>">
+                                <input type="hidden" name="status" id="status<?php echo $row['id'] ?>" value="cart">
+                                <input type="number" name="quantity" id="quantity<?php echo $row['id'] ?>" value="1">
+                                <!-- ----------------------------- -->
+                                <input type="hidden" name="year" id="year<?php echo $row['id'] ?>" value="<?php echo $year ?>">
+                                <input type="hidden" name="month" id="month<?php echo $row['id'] ?>" value="<?php echo $month ?>">
+                                <input type="hidden" name="day" id="day<?php echo $row['id'] ?>" value="<?php echo $day ?>">
+                                <input type="hidden" name="ymd" id="ymd<?php echo $row['id'] ?>" value="<?php echo $ymd ?>">
+
+                                <!-- ----------------------------------- -->
+                                <button class="addcart addcart<?php echo $row['id'] ?>" name="add"><ion-icon name="add-outline"></ion-icon></button>
+                            </div>
+                            <script>
+                                $(".addcart<?php echo $row['id'] ?>").click(function() {
+                                    var rid = $("#rid<?php echo $row['id'] ?>").val()
+                                    var pid = $("#pid<?php echo $row['id'] ?>").val()
+                                    var sid = $("#sid<?php echo $row['id'] ?>").val()
+                                    var pp = $("#pp<?php echo $row['id'] ?>").val()
+                                    var time = $("#time<?php echo $row['id'] ?>").val()
+                                    var status = $("#status<?php echo $row['id'] ?>").val()
+                                    var quantity = $("#quantity<?php echo $row['id'] ?>").val()
+                                    var year = $("#year<?php echo $row['id'] ?>").val()
+                                    var month = $("#month<?php echo $row['id'] ?>").val()
+                                    var day = $("#day<?php echo $row['id'] ?>").val()
+                                    var ymd = $("#ymd<?php echo $row['id'] ?>").val()
+                                    var deller = $("#deller<?php echo $row['id'] ?>").val()
+                                    $.ajax({
+                                        url: "../php/add_cart_sr.php",
+                                        type: "POST",
+                                        data: {
+                                            rid: rid,
+                                            pid: pid,
+                                            sid: sid,
+                                            pp: pp,
+                                            time: time,
+                                            status: status,
+                                            quantity: quantity,
+                                            year: year,
+                                            month: month,
+                                            day: day,
+                                            ymd: ymd,
+                                            deller: deller
+                                        },
+                                        success: function(data) {
+                                            $('#quantity<?php echo $row['id'] ?>').val('')
+                                        }
+                                    })
+                                })
+                            </script>
+                        </div>
+
+                <?php  }
             } ?>
+                    </div>
         </div>
-    </div>
 
 </body>
 <script>
