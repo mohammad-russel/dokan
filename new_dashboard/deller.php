@@ -245,22 +245,28 @@ date_default_timezone_set("Asia/dhaka");
                                     // -----------------
                                     $td = $row3['aa'];
                                     $yd = $row2['aa'];
-                                    $day7 = $row7['aa'];
-                                    // ----------
-                                    if ($td > $yd) {
-                                        $up = $td * 100 / $yd;
-                                        $a = $up - 100;
+
+                                    if ($yd != 0) {
+                                        if ($td > $yd) {
+                                            $up = $td * 100 / $yd;
+                                            $a = $up - 100;
                                     ?>
-                                        <div class="grow" style="color: #00ae6e;">
-                                            <?php echo  number_format($a, 1)  ?>% <i class="fa-solid fa-arrow-trend-up"></i>
-                                        </div>
-                                    <?php
-                                    } elseif ($td < $yd) {
-                                        $down = $td * 100 / $yd;
-                                        $a = 100 - $down;
-                                    ?>
-                                        <div class="grow" style="color: red;">
-                                            <?php echo  number_format($a, 1)  ?>% <i class="fa-solid fa-arrow-trend-down"></i>
+                                            <div class="grow" style="color: #00ae6e;text-align:right;font-size:12px">
+                                                <?php echo  number_format($a, 1)  ?>% <i class="fa-solid fa-arrow-trend-up"></i>
+                                            </div>
+                                        <?php
+                                        } elseif ($td < $yd) {
+                                            $down = $td * 100 / $yd;
+                                            $a = 100 - $down;
+                                        ?>
+                                            <div class="grow" style="color: red;text-align:right;font-size:12px">
+                                                <?php echo  number_format($a, 1)  ?>% <i class="fa-solid fa-arrow-trend-down"></i>
+                                            </div>
+                                        <?php
+                                        }
+                                    } else { ?>
+                                        <div class="grow" style="color: #00ae6e;text-align:right;font-size:12px">
+                                            <?php echo $td ?>% <i class="fa-solid fa-arrow-trend-up"></i>
                                         </div>
                                     <?php
                                     }
@@ -299,22 +305,28 @@ date_default_timezone_set("Asia/dhaka");
                                     // -----------------
                                     $td = $row3['aa'];
                                     $yd = $row2['aa'];
-                                    $day7 = $row7['aa'];
-                                    // ----------
-                                    if ($td > $yd) {
-                                        $up = $td * 100 / $yd;
-                                        $a = $up - 100;
+
+                                    if ($yd != 0) {
+                                        if ($td > $yd) {
+                                            $up = $td * 100 / $yd;
+                                            $a = $up - 100;
                                     ?>
-                                        <div class="grow" style="color: #00ae6e;">
-                                            <?php echo  number_format($a, 1)  ?>% <i class="fa-solid fa-arrow-trend-up"></i>
-                                        </div>
-                                    <?php
-                                    } elseif ($td < $yd) {
-                                        $down = $td * 100 / $yd;
-                                        $a = 100 - $down;
-                                    ?>
-                                        <div class="grow" style="color: red;">
-                                            <?php echo  number_format($a, 1)  ?>% <i class="fa-solid fa-arrow-trend-down"></i>
+                                            <div class="grow" style="color: #00ae6e;text-align:right;font-size:12px">
+                                                <?php echo  number_format($a, 1)  ?>% <i class="fa-solid fa-arrow-trend-up"></i>
+                                            </div>
+                                        <?php
+                                        } elseif ($td < $yd) {
+                                            $down = $td * 100 / $yd;
+                                            $a = 100 - $down;
+                                        ?>
+                                            <div class="grow" style="color: red;text-align:right;font-size:12px">
+                                                <?php echo  number_format($a, 1)  ?>% <i class="fa-solid fa-arrow-trend-down"></i>
+                                            </div>
+                                        <?php
+                                        }
+                                    } else { ?>
+                                        <div class="grow" style="color: #00ae6e;text-align:right;font-size:12px">
+                                            <?php echo $td ?>% <i class="fa-solid fa-arrow-trend-up"></i>
                                         </div>
                                     <?php
                                     }
@@ -582,22 +594,28 @@ date_default_timezone_set("Asia/dhaka");
                                     // -----------------
                                     $td = $row3['aa'];
                                     $yd = $row2['aa'];
-                                    $day7 = $row7['aa'];
-                                    // ----------
-                                    if ($td > $yd) {
-                                        $up = $td * 100 / $yd;
-                                        $a = $up - 100;
+
+                                    if ($yd != 0) {
+                                        if ($td > $yd) {
+                                            $up = $td * 100 / $yd;
+                                            $a = $up - 100;
                                     ?>
+                                            <div class="grow" style="color: #00ae6e;text-align:right;font-size:12px">
+                                                <?php echo  number_format($a, 1)  ?>% <i class="fa-solid fa-arrow-trend-up"></i>
+                                            </div>
+                                        <?php
+                                        } elseif ($td < $yd) {
+                                            $down = $td * 100 / $yd;
+                                            $a = 100 - $down;
+                                        ?>
+                                            <div class="grow" style="color: red;text-align:right;font-size:12px">
+                                                <?php echo  number_format($a, 1)  ?>% <i class="fa-solid fa-arrow-trend-down"></i>
+                                            </div>
+                                        <?php
+                                        }
+                                    } else { ?>
                                         <div class="grow" style="color: #00ae6e;text-align:right;font-size:12px">
-                                            <?php echo  number_format($a, 1)  ?>% <i class="fa-solid fa-arrow-trend-up"></i>
-                                        </div>
-                                    <?php
-                                    } elseif ($td < $yd) {
-                                        $down = $td * 100 / $yd;
-                                        $a = 100 - $down;
-                                    ?>
-                                        <div class="grow" style="color: red;text-align:right;font-size:12px">
-                                            <?php echo  number_format($a, 1)  ?>% <i class="fa-solid fa-arrow-trend-down"></i>
+                                            <?php echo $td ?>% <i class="fa-solid fa-arrow-trend-up"></i>
                                         </div>
                                     <?php
                                     }

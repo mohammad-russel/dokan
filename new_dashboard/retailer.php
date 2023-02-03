@@ -24,9 +24,8 @@ date_default_timezone_set("Asia/dhaka");
         @include "../php/config.php";
         $sql = "SELECT * FROM retailer WHERE id = $rid ";
         $result = mysqli_query($con, $sql);
-        if (mysqli_num_rows($result)) {
+        if (mysqli_num_rows($result)> 0)  {
             $row = mysqli_fetch_assoc($result);
-
         ?>
             <div class="box">
                 <div class="header">
@@ -225,27 +224,33 @@ date_default_timezone_set("Asia/dhaka");
                                                 // -----------------
                                                 $td = $row3['aa'];
                                                 $yd = $row2['aa'];
-                                                $day7 = $row7['aa'];
-                                                // ----------
-                                                if ($td > $yd) {
+                                                
+                                                if ($yd != 0) {
+                                                  if ($td > $yd) {
                                                     $up = $td * 100 / $yd;
                                                     $a = $up - 100;
-                                                ?>
+                                                  ?>
                                                     <div class="grow" style="color: #00ae6e;text-align:right;font-size:12px">
-                                                        <?php echo  number_format($a, 1)  ?>% <i class="fa-solid fa-arrow-trend-up"></i>
+                                                      <?php echo  number_format($a, 1)  ?>% <i class="fa-solid fa-arrow-trend-up"></i>
                                                     </div>
-                                                <?php
-                                                } elseif ($td < $yd) {
+                                                  <?php
+                                                  } elseif ($td < $yd) {
                                                     $down = $td * 100 / $yd;
                                                     $a = 100 - $down;
-                                                ?>
+                                                  ?>
                                                     <div class="grow" style="color: red;text-align:right;font-size:12px">
-                                                        <?php echo  number_format($a, 1)  ?>% <i class="fa-solid fa-arrow-trend-down"></i>
+                                                      <?php echo  number_format($a, 1)  ?>% <i class="fa-solid fa-arrow-trend-down"></i>
                                                     </div>
-                                                <?php
+                                                  <?php
+                                                  }
+                                                } else { ?>
+                                                    <div class="grow" style="color: #00ae6e;text-align:right;font-size:12px">
+                                                      <?php echo $td ?>% <i class="fa-solid fa-arrow-trend-up"></i>
+                                                    </div>
+                                                    <?php
                                                 }
                                                 ?>
-
+                                                
                                             </div>
                                         </div>
                                     </div>
@@ -290,24 +295,30 @@ date_default_timezone_set("Asia/dhaka");
                                                 // -----------------
                                                 $td = $row3['aa'];
                                                 $yd = $row2['aa'];
-                                                $day7 = $row7['aa'];
-                                                // ----------
-                                                if ($td > $yd) {
+                                                
+                                                if ($yd != 0) {
+                                                  if ($td > $yd) {
                                                     $up = $td * 100 / $yd;
                                                     $a = $up - 100;
-                                                ?>
+                                                  ?>
                                                     <div class="grow" style="color: #00ae6e;text-align:right;font-size:12px">
-                                                        <?php echo  number_format($a, 1)  ?>% <i class="fa-solid fa-arrow-trend-up"></i>
+                                                      <?php echo  number_format($a, 1)  ?>% <i class="fa-solid fa-arrow-trend-up"></i>
                                                     </div>
-                                                <?php
-                                                } elseif ($td < $yd) {
+                                                  <?php
+                                                  } elseif ($td < $yd) {
                                                     $down = $td * 100 / $yd;
                                                     $a = 100 - $down;
-                                                ?>
+                                                  ?>
                                                     <div class="grow" style="color: red;text-align:right;font-size:12px">
-                                                        <?php echo  number_format($a, 1)  ?>% <i class="fa-solid fa-arrow-trend-down"></i>
+                                                      <?php echo  number_format($a, 1)  ?>% <i class="fa-solid fa-arrow-trend-down"></i>
                                                     </div>
-                                                <?php
+                                                  <?php
+                                                  }
+                                                } else { ?>
+                                                    <div class="grow" style="color: #00ae6e;text-align:right;font-size:12px">
+                                                      <?php echo $td ?>% <i class="fa-solid fa-arrow-trend-up"></i>
+                                                    </div>
+                                                    <?php
                                                 }
                                                 ?>
 
@@ -439,44 +450,44 @@ date_default_timezone_set("Asia/dhaka");
                                     </div>
                                 </div>
                                 <?php
-                                include "../php/config.php";
-                                $sql = "SELECT `ymd`, SUM(price * quantity) as total_bill FROM cart WHERE `status` = 'complete' AND rid = $rid AND `ymd` >= DATE_SUB(CURRENT_DATE(), INTERVAL 7 DAY) GROUP BY ymd ORDER BY `ymd` DESC";
-                                $result = mysqli_query($con, $sql);
+                            include "../php/config.php";
+                            $sql = "SELECT `ymd`, SUM(price * quantity) as total_bill FROM cart WHERE `status` = 'complete' AND rid = $rid AND `ymd` >= DATE_SUB(CURRENT_DATE(), INTERVAL 7 DAY) GROUP BY ymd ORDER BY `ymd` DESC";
+                            $result = mysqli_query($con, $sql);
 
-                                // Create an array of dates for the last 7 days
-                                $dateRange = new DatePeriod(
-                                    new DateTime("-6 days"),
-                                    new DateInterval("P1D"),
-                                    new DateTime("now")
+                            // Create an array of dates for the last 7 days
+                            $dateRange = new DatePeriod(
+                                new DateTime("-6 days"),
+                                new DateInterval("P1D"),
+                                new DateTime("now")
+                            );
+                            $dates = array();
+                            foreach ($dateRange as $date) {
+                                $dates[] = $date->format("ymd");
+                            }
+
+                            // Create the chart data array
+                            $chartData = array();
+                            while ($row = $result->fetch_assoc()) {
+                                $chartData[$row['ymd']] = array(
+                                    'day' => $row['ymd'],
+                                    'total_bill' => $row['total_bill']
                                 );
-                                $dates = array();
-                                foreach ($dateRange as $date) {
-                                    $dates[] = $date->format("ymd");
-                                }
+                            }
 
-                                // Create the chart data array
-                                $chartData = array();
-                                while ($row = $result->fetch_assoc()) {
-                                    $chartData[$row['ymd']] = array(
-                                        'day' => $row['ymd'],
-                                        'total_bill' => $row['total_bill']
+                            // Add elements for missing dates with a value of 0
+                            foreach ($dates as $date) {
+                                if (!array_key_exists($date, $chartData)) {
+                                    $chartData[$date] = array(
+                                        'day' => $date,
+                                        'total_bill' => 0
                                     );
                                 }
+                            }
 
-                                // Add elements for missing dates with a value of 0
-                                foreach ($dates as $date) {
-                                    if (!array_key_exists($date, $chartData)) {
-                                        $chartData[$date] = array(
-                                            'day' => $date,
-                                            'total_bill' => 0
-                                        );
-                                    }
-                                }
-
-                                ksort($chartData);
-                                $chartData = array_values($chartData);
-                                // echo json_encode($chartData);
-                                ?>
+                            ksort($chartData);
+                            $chartData = array_values($chartData);
+                            // echo json_encode($chartData);
+                            ?>
                                 <canvas id="myChart3" height="80px"></canvas>
                                 <script>
                                     var chartData1 = <?php echo json_encode($chartData); ?>;
