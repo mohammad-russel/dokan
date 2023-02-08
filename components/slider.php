@@ -1,5 +1,5 @@
 <div class="header">
-    <a href="../index.php"><img src="../logo/perfect.png" alt=""></a>
+    <a href=".."><img src="../logo/perfect.png" alt=""></a>
     <span class="title"><a href="#">ADMIN</a></span>
 </div>
 <div class="box">

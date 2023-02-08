@@ -24,7 +24,7 @@ date_default_timezone_set("Asia/dhaka");
         @include "../php/config.php";
         $sql = "SELECT * FROM retailer WHERE id = $rid ";
         $result = mysqli_query($con, $sql);
-        if (mysqli_num_rows($result)> 0)  {
+        if (mysqli_num_rows($result) > 0) {
             $row = mysqli_fetch_assoc($result);
         ?>
             <div class="box">
@@ -224,33 +224,33 @@ date_default_timezone_set("Asia/dhaka");
                                                 // -----------------
                                                 $td = $row3['aa'];
                                                 $yd = $row2['aa'];
-                                                
+
                                                 if ($yd != 0) {
-                                                  if ($td > $yd) {
-                                                    $up = $td * 100 / $yd;
-                                                    $a = $up - 100;
-                                                  ?>
-                                                    <div class="grow" style="color: #00ae6e;text-align:right;font-size:12px">
-                                                      <?php echo  number_format($a, 1)  ?>% <i class="fa-solid fa-arrow-trend-up"></i>
-                                                    </div>
-                                                  <?php
-                                                  } elseif ($td < $yd) {
-                                                    $down = $td * 100 / $yd;
-                                                    $a = 100 - $down;
-                                                  ?>
-                                                    <div class="grow" style="color: red;text-align:right;font-size:12px">
-                                                      <?php echo  number_format($a, 1)  ?>% <i class="fa-solid fa-arrow-trend-down"></i>
-                                                    </div>
-                                                  <?php
-                                                  }
+                                                    if ($td > $yd) {
+                                                        $up = $td * 100 / $yd;
+                                                        $a = $up - 100;
+                                                ?>
+                                                        <div class="grow" style="color: #00ae6e;text-align:right;font-size:12px">
+                                                            <?php echo  number_format($a, 1)  ?>% <i class="fa-solid fa-arrow-trend-up"></i>
+                                                        </div>
+                                                    <?php
+                                                    } elseif ($td < $yd) {
+                                                        $down = $td * 100 / $yd;
+                                                        $a = 100 - $down;
+                                                    ?>
+                                                        <div class="grow" style="color: red;text-align:right;font-size:12px">
+                                                            <?php echo  number_format($a, 1)  ?>% <i class="fa-solid fa-arrow-trend-down"></i>
+                                                        </div>
+                                                    <?php
+                                                    }
                                                 } else { ?>
                                                     <div class="grow" style="color: #00ae6e;text-align:right;font-size:12px">
-                                                      <?php echo $td ?>% <i class="fa-solid fa-arrow-trend-up"></i>
+                                                        <?php echo $td ?>% <i class="fa-solid fa-arrow-trend-up"></i>
                                                     </div>
-                                                    <?php
+                                                <?php
                                                 }
                                                 ?>
-                                                
+
                                             </div>
                                         </div>
                                     </div>
@@ -295,30 +295,30 @@ date_default_timezone_set("Asia/dhaka");
                                                 // -----------------
                                                 $td = $row3['aa'];
                                                 $yd = $row2['aa'];
-                                                
+
                                                 if ($yd != 0) {
-                                                  if ($td > $yd) {
-                                                    $up = $td * 100 / $yd;
-                                                    $a = $up - 100;
-                                                  ?>
-                                                    <div class="grow" style="color: #00ae6e;text-align:right;font-size:12px">
-                                                      <?php echo  number_format($a, 1)  ?>% <i class="fa-solid fa-arrow-trend-up"></i>
-                                                    </div>
-                                                  <?php
-                                                  } elseif ($td < $yd) {
-                                                    $down = $td * 100 / $yd;
-                                                    $a = 100 - $down;
-                                                  ?>
-                                                    <div class="grow" style="color: red;text-align:right;font-size:12px">
-                                                      <?php echo  number_format($a, 1)  ?>% <i class="fa-solid fa-arrow-trend-down"></i>
-                                                    </div>
-                                                  <?php
-                                                  }
+                                                    if ($td > $yd) {
+                                                        $up = $td * 100 / $yd;
+                                                        $a = $up - 100;
+                                                ?>
+                                                        <div class="grow" style="color: #00ae6e;text-align:right;font-size:12px">
+                                                            <?php echo  number_format($a, 1)  ?>% <i class="fa-solid fa-arrow-trend-up"></i>
+                                                        </div>
+                                                    <?php
+                                                    } elseif ($td < $yd) {
+                                                        $down = $td * 100 / $yd;
+                                                        $a = 100 - $down;
+                                                    ?>
+                                                        <div class="grow" style="color: red;text-align:right;font-size:12px">
+                                                            <?php echo  number_format($a, 1)  ?>% <i class="fa-solid fa-arrow-trend-down"></i>
+                                                        </div>
+                                                    <?php
+                                                    }
                                                 } else { ?>
                                                     <div class="grow" style="color: #00ae6e;text-align:right;font-size:12px">
-                                                      <?php echo $td ?>% <i class="fa-solid fa-arrow-trend-up"></i>
+                                                        <?php echo $td ?>% <i class="fa-solid fa-arrow-trend-up"></i>
                                                     </div>
-                                                    <?php
+                                                <?php
                                                 }
                                                 ?>
 
@@ -450,44 +450,44 @@ date_default_timezone_set("Asia/dhaka");
                                     </div>
                                 </div>
                                 <?php
-                            include "../php/config.php";
-                            $sql = "SELECT `ymd`, SUM(price * quantity) as total_bill FROM cart WHERE `status` = 'complete' AND rid = $rid AND `ymd` >= DATE_SUB(CURRENT_DATE(), INTERVAL 7 DAY) GROUP BY ymd ORDER BY `ymd` DESC";
-                            $result = mysqli_query($con, $sql);
+                                include "../php/config.php";
+                                $sql = "SELECT `ymd`, SUM(price * quantity) as total_bill FROM cart WHERE `status` = 'complete' AND rid = $rid AND `ymd` >= DATE_SUB(CURRENT_DATE(), INTERVAL 7 DAY) GROUP BY ymd ORDER BY `ymd` DESC";
+                                $result = mysqli_query($con, $sql);
 
-                            // Create an array of dates for the last 7 days
-                            $dateRange = new DatePeriod(
-                                new DateTime("-6 days"),
-                                new DateInterval("P1D"),
-                                new DateTime("now")
-                            );
-                            $dates = array();
-                            foreach ($dateRange as $date) {
-                                $dates[] = $date->format("ymd");
-                            }
-
-                            // Create the chart data array
-                            $chartData = array();
-                            while ($row = $result->fetch_assoc()) {
-                                $chartData[$row['ymd']] = array(
-                                    'day' => $row['ymd'],
-                                    'total_bill' => $row['total_bill']
+                                // Create an array of dates for the last 7 days
+                                $dateRange = new DatePeriod(
+                                    new DateTime("-7 days"),
+                                    new DateInterval("P1D"),
+                                    new DateTime("now")
                                 );
-                            }
+                                $dates = array();
+                                foreach ($dateRange as $date) {
+                                    $dates[] = $date->format("ymd");
+                                }
 
-                            // Add elements for missing dates with a value of 0
-                            foreach ($dates as $date) {
-                                if (!array_key_exists($date, $chartData)) {
-                                    $chartData[$date] = array(
-                                        'day' => $date,
-                                        'total_bill' => 0
+                                // Create the chart data array
+                                $chartData = array();
+                                while ($row = $result->fetch_assoc()) {
+                                    $chartData[$row['ymd']] = array(
+                                        'day' => $row['ymd'],
+                                        'total_bill' => $row['total_bill']
                                     );
                                 }
-                            }
 
-                            ksort($chartData);
-                            $chartData = array_values($chartData);
-                            // echo json_encode($chartData);
-                            ?>
+                                // Add elements for missing dates with a value of 0
+                                foreach ($dates as $date) {
+                                    if (!array_key_exists($date, $chartData)) {
+                                        $chartData[$date] = array(
+                                            'day' => $date,
+                                            'total_bill' => 0
+                                        );
+                                    }
+                                }
+
+                                ksort($chartData);
+                                $chartData = array_values($chartData);
+                                // echo json_encode($chartData);
+                                ?>
                                 <canvas id="myChart3" height="80px"></canvas>
                                 <script>
                                     var chartData1 = <?php echo json_encode($chartData); ?>;
@@ -497,15 +497,24 @@ date_default_timezone_set("Asia/dhaka");
                                     var data1 = chartData1.map(function(e1) {
                                         return e1.total_bill;
                                     });
+                                    var chart1 = document.getElementById('myChart3').getContext('2d');
+                                    var gradient = chart1.createLinearGradient(0, 0, 0, 450);
+
+                                    gradient.addColorStop(0.1, 'rgba(0, 122, 255, 0.18)');
+                                    gradient.addColorStop(0.9, 'rgba(255, 255, 255, 0)');
 
                                     // var xValues = [id, 2, 3, 4, 5, 6, 7];
                                     new Chart("myChart3", {
                                         type: "line",
                                         data: {
-                                            labels: [1, 2, 3, 4, 5, 6, 7],
+                                            labels: [0, 1, 2, 3, 4, 5, 6, 7],
                                             datasets: [{
                                                 data: data1,
-                                                borderColor: "#1c5ddf",
+                                                borderColor: "#007aff",
+                                                backgroundColor: gradient,
+                                                pointBackgroundColor: 'white',
+                                                borderWidth: 1,
+                                                borderColor: '#007aff',
                                                 fill: true
                                             }]
                                         },

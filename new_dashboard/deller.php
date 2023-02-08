@@ -4,7 +4,7 @@ if (!isset($_SESSION["did"])) {
     header("location:../deller/login.php");
 }
 $did = $_SESSION["did"];
-date_default_timezone_set("Asia/dhaka");
+// date_default_timezone_set("Asia/dhaka");
 
 ?>
 <!DOCTYPE html>
@@ -109,7 +109,7 @@ date_default_timezone_set("Asia/dhaka");
                                 <span>Sell by union</span>
                             </div>
                         </a>
-                        <a href="../deller/deller_see_pro.php">
+                        <a href="deller.php">
                             <div class="box">
                                 <div class="icon">
                                     <i class="fa-solid fa-bag-shopping"></i>
@@ -144,10 +144,6 @@ date_default_timezone_set("Asia/dhaka");
                     </div>
                 </div>
                 <div class="main_box">
-
-
-
-
                     <div class="box">
                         <div class="head">
                             <div class="sec_box">
@@ -377,7 +373,7 @@ date_default_timezone_set("Asia/dhaka");
 
                             // Create an array of dates for the last 7 days
                             $dateRange = new DatePeriod(
-                                new DateTime("-6 days"),
+                                new DateTime("-7 days"),
                                 new DateInterval("P1D"),
                                 new DateTime("now")
                             );
@@ -418,15 +414,24 @@ date_default_timezone_set("Asia/dhaka");
                                 var data1 = chartData1.map(function(e1) {
                                     return e1.total_bill;
                                 });
+                                var chart1 = document.getElementById('myChart3').getContext('2d');
+                                  var gradient = chart1.createLinearGradient(0, 0, 0, 450);
 
+                                gradient.addColorStop(0.1, 'rgba(0, 122, 255, 0.18)');
+                                gradient.addColorStop(0.9, 'rgba(255, 255, 255, 0)');
+                                
                                 // var xValues = [id, 2, 3, 4, 5, 6, 7];
                                 new Chart("myChart3", {
                                     type: "line",
                                     data: {
-                                        labels: [1, 2, 3, 4, 5, 6, 7],
+                                        labels: [0,1, 2, 3, 4, 5, 6, 7],
                                         datasets: [{
                                             data: data1,
-                                            borderColor: "#1c5ddf",
+                                            borderColor: "#007aff",
+                                            backgroundColor: gradient,
+                                            pointBackgroundColor: 'white',
+                                            borderWidth: 1,
+                                            borderColor: '#007aff',
                                             fill: true
                                         }]
                                     },
@@ -514,13 +519,12 @@ date_default_timezone_set("Asia/dhaka");
                                             var xValues = <?php echo json_encode($chart_labels); ?>;
                                             var yValues = <?php echo json_encode($chart_data); ?>;
                                             var barColors = [
-                                                "#b91d47",
-                                                "#00aba9",
-                                                "#2b5797",
-                                                "#e8c3b9",
-                                                "#1e7145",
-                                                "blue",
-                                                "yellow"
+                                                "rgba(0, 122, 255, 0.53)",
+                                                "rgba(41, 204, 57, 0.46)",
+                                                "rgba(80, 81, 133, 0.67);",
+                                                "#rgba(0, 0, 0, 0.26);",
+                                                "#FF7979",
+                                              
                                             ];
 
                                             var labels = xValues;

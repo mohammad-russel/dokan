@@ -46,7 +46,7 @@ if (!isset($_SESSION["did"])) {
                                         $result1 = mysqli_query($con, $sql1);
                                         $row1 = mysqli_fetch_assoc($result1);
                                         ?>
-                                      
+
                                         <div class="name">
                                             <?php echo $row1['nam'] ?> <br> Price : <span><?php echo $row1['price'] ?></span>
                                         </div>

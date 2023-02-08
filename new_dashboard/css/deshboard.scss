@@ -7,6 +7,10 @@
   font-family: 'Roboto', sans-serif;
 }
 
+body {
+  background: #F7F8FA;
+}
+
 .container {
   width: 100%;
   max-width: 2060px;
@@ -18,8 +22,10 @@
 @mixin icon-color {
   color: #C3CAD9;
 }
+
 @mixin text-color {
   color: #6B7A99;
 }
+
 // -------------header-------------
 @import "deller";

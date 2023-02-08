@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (isset($_SESSION["did"])) {
-    header("location:../new_dashboard/deller.php");
+    header("location:../new_dashboard/home/deller.php");
 }
 ?>
 <!DOCTYPE html>

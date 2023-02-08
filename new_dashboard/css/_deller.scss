@@ -68,7 +68,7 @@
                     justify-content: center;
                     align-items: center;
                     padding: 10px 25px;
-                    border-radius: 10px;
+                    border-radius: 50px;
                     box-shadow: 0px 6px 6px -10px black;
 
                     .icon {
@@ -344,6 +344,7 @@
                             height: 30px;
                             justify-content: center;
                             align-items: center;
+                            margin-bottom: 20px;
 
                             .icon {
                                 margin: 0px 10px;
@@ -493,12 +494,13 @@
 
                         .sr {
                             padding: 10px;
-                            border: 1px solid rgb(230, 230, 230);
+                            // border: 1px solid rgb(230, 230, 230);
                             text-align: center;
                             height: max-content;
                             border-radius: 10px;
                             width: 100%;
                             max-width: 400px;
+                            background: #ffffff;
 
                             .sr_head {
                                 font-size: 13px;
@@ -534,7 +536,7 @@
                                         height: 100%;
                                         width: 50%;
                                         border-radius: 30px;
-                                        background: rgb(0, 70, 144);
+                                        background: #007aff;
                                     }
                                 }
                             }
@@ -702,10 +704,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
-
         .pro_box {
+            background: #ffffff;
 
-            border: 1px solid rgb(223, 223, 223);
+            // border: 1px solid rgb(223, 223, 223);
             width: 100%;
             padding: 10px;
             border-radius: 10px;

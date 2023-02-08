@@ -346,11 +346,11 @@ header .link a ion-icon:hover {
     margin: 10px;
   }
   .list .card .name,
-.list .card .price,
-.list .card .sr,
-.list .card .date,
-.list .card .company,
-.list .card .category {
+  .list .card .price,
+  .list .card .sr,
+  .list .card .date,
+  .list .card .company,
+  .list .card .category {
     margin: 5px;
     border-bottom: 1px solid rgba(128, 128, 128, 0.204);
     width: 100%;
@@ -542,7 +542,6 @@ header .link a ion-icon:hover {
   background: rgb(234, 234, 234);
   width: 100%;
   margin: auto;
-  height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
   top: 0%;
@@ -774,7 +773,6 @@ header .link a ion-icon:hover {
 }
 
 .form {
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   margin: 50px auto;
@@ -817,10 +815,6 @@ header .link a ion-icon:hover {
   border-bottom: 1px solid #e0e1e1;
 }
 .form .login_form input::-moz-placeholder {
-  font-size: 0.6rem;
-  color: #a0adb9;
-}
-.form .login_form input:-ms-input-placeholder {
   font-size: 0.6rem;
   color: #a0adb9;
 }
@@ -879,7 +873,6 @@ header .link a ion-icon:hover {
   position: relative;
   opacity: 0.7;
   width: 25%;
-  height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
 }
@@ -927,7 +920,6 @@ header .link a ion-icon:hover {
   }
   .svg svg {
     width: 70%;
-    height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
   }
@@ -996,7 +988,6 @@ header .link a ion-icon:hover {
   background: #EBF3FA;
   width: 100%;
   margin: auto;
-  height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
   top: 0%;
@@ -1172,7 +1163,6 @@ header .link a ion-icon:hover {
   background: #EBF3FA;
   width: 100%;
   margin: auto;
-  height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
   top: 0%;
@@ -1455,7 +1445,6 @@ header .link a ion-icon:hover {
   flex-direction: column;
 }
 .cartbox .cart {
-  height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
   margin: 10px auto;
@@ -1688,7 +1677,6 @@ header .link a ion-icon:hover {
   background: rgba(189, 201, 211, 0.15);
   overflow: hidden;
   width: 100%;
-  height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
   max-width: 140px;
@@ -2660,7 +2648,6 @@ header .link a ion-icon:hover {
 .o_l .card .signature {
   width: 30%;
   padding: 10px;
-  height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
   color: #8F9BB2;
@@ -2687,7 +2674,6 @@ header .link a ion-icon:hover {
   border-image-source: linear-gradient(134.47deg, rgba(255, 255, 255, 0.25) 75.67%, #E9F0F7 4.99%);
   margin: 10px;
   padding: 10px 15px;
-  height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
   color: #8F9BB2;
@@ -2729,8 +2715,8 @@ header .link a ion-icon:hover {
     flex-direction: column;
   }
   .o_l .card .box,
-.o_l .card .product,
-.o_l .card .signature {
+  .o_l .card .product,
+  .o_l .card .signature {
     width: 100%;
   }
 }
@@ -2814,7 +2800,6 @@ header .link a ion-icon:hover {
   font-weight: 600;
   font-size: 0.8rem;
   letter-spacing: 0.6px;
-  height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
 }
@@ -2930,11 +2915,11 @@ header .link a ion-icon:hover {
     color: rgb(255, 255, 255);
   }
   .admin .toggle .show,
-.admin .toggle .hide {
+  .admin .toggle .hide {
     margin: 5px 5px;
   }
   .admin .toggle .show ion-icon,
-.admin .toggle .hide ion-icon {
+  .admin .toggle .hide ion-icon {
     box-shadow: 2px 2px 6px rgba(138, 155, 189, 0.3), -2px -2px 12px rgba(255, 255, 255, 0.9);
     font-size: 1.5rem;
     padding: 5px;
@@ -3089,7 +3074,7 @@ header .link a ion-icon:hover {
     position: fixed;
   }
   .togglee .show,
-.togglee .hide {
+  .togglee .hide {
     margin: 5px 5px;
   }
   .slider {
@@ -3234,29 +3219,29 @@ header .link a ion-icon:hover {
     text-align: center;
   }
   .cb_order .list .box .column .row .image,
-.cb_order .list .box .column .row .name,
-.cb_order .list .box .column .row .quantity,
-.cb_order .list .box .column .row .total,
-.cb_order .list .box .column .row .retailer,
-.cb_order .list .box .column .row .time {
+  .cb_order .list .box .column .row .name,
+  .cb_order .list .box .column .row .quantity,
+  .cb_order .list .box .column .row .total,
+  .cb_order .list .box .column .row .retailer,
+  .cb_order .list .box .column .row .time {
     width: 100%;
   }
   .cb_order .list .box .column .row .image span a,
-.cb_order .list .box .column .row .name span a,
-.cb_order .list .box .column .row .quantity span a,
-.cb_order .list .box .column .row .total span a,
-.cb_order .list .box .column .row .retailer span a,
-.cb_order .list .box .column .row .time span a {
+  .cb_order .list .box .column .row .name span a,
+  .cb_order .list .box .column .row .quantity span a,
+  .cb_order .list .box .column .row .total span a,
+  .cb_order .list .box .column .row .retailer span a,
+  .cb_order .list .box .column .row .time span a {
     width: 400px;
   }
   .cb_order .list .box .column .row .image {
     text-align: center;
   }
   .cb_order .list .box .column .row .name,
-.cb_order .list .box .column .row .quantity,
-.cb_order .list .box .column .row .total,
-.cb_order .list .box .column .row .retailer,
-.cb_order .list .box .column .row .time {
+  .cb_order .list .box .column .row .quantity,
+  .cb_order .list .box .column .row .total,
+  .cb_order .list .box .column .row .retailer,
+  .cb_order .list .box .column .row .time {
     border-bottom: 1px solid rgb(223, 223, 223);
   }
 }
@@ -3474,7 +3459,6 @@ header .link a ion-icon:hover {
 }
 .landing-page-new .landing-page-header .toggle .hide,
 .landing-page-new .landing-page-header .toggle .show {
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   aspect-ratio: 1/1;
@@ -3686,29 +3670,6 @@ header .link a ion-icon:hover {
 .landing-page-new .open .dsd .box-room .box .icon ion-icon {
   font-size: 3rem;
 }
-@-webkit-keyframes anime {
-  0% {
-    right: 0%;
-  }
-  10% {
-    right: 0%;
-  }
-  40% {
-    right: 100%;
-  }
-  50% {
-    right: 100%;
-  }
-  70% {
-    right: 200%;
-  }
-  80% {
-    right: 200%;
-  }
-  100% {
-    right: 300%;
-  }
-}
 @keyframes anime {
   0% {
     right: 0%;
@@ -3784,7 +3745,6 @@ header .link a ion-icon:hover {
   margin: auto;
   text-align: center;
   color: #3E5467;
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   width: 100px;
@@ -3816,7 +3776,6 @@ header .link a ion-icon:hover {
   margin: auto;
   text-align: center;
   color: #3E5467;
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   width: 150px;
@@ -3852,7 +3811,6 @@ header .link a ion-icon:hover {
   align-items: center;
   width: 100%;
   max-width: 600px;
-  height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
   background: linear-gradient(299.86deg, rgba(255, 255, 255, 0.3) 28.45%, rgba(233, 240, 247, 0.3) 95.64%), #E9F0F7;
@@ -3892,10 +3850,6 @@ header .link a ion-icon:hover {
   font-size: 11px;
   color: #8F9BB2;
 }
-.landing-page-new .contact form .phone input:-ms-input-placeholder {
-  font-size: 11px;
-  color: #8F9BB2;
-}
 .landing-page-new .contact form .phone input::placeholder {
   font-size: 11px;
   color: #8F9BB2;
@@ -3929,10 +3883,6 @@ header .link a ion-icon:hover {
   font-size: 11px;
   color: #8F9BB2;
 }
-.landing-page-new .contact form .massage textarea:-ms-input-placeholder {
-  font-size: 11px;
-  color: #8F9BB2;
-}
 .landing-page-new .contact form .massage textarea::placeholder {
   font-size: 11px;
   color: #8F9BB2;
@@ -3942,7 +3892,6 @@ header .link a ion-icon:hover {
   margin-top: 10px;
   text-align: center;
   color: #3E5467;
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   cursor: pointer;
@@ -4027,7 +3976,7 @@ header .link a ion-icon:hover {
     width: 100%;
   }
   .landing-page-new .landing-page-header .toggle .hide,
-.landing-page-new .landing-page-header .toggle .show {
+  .landing-page-new .landing-page-header .toggle .show {
     margin-bottom: 15px;
   }
   .landing-page-new .open .slogan {
@@ -4305,7 +4254,6 @@ header .link a ion-icon:hover {
 }
 .pro-popup .box-more {
   width: 200px;
-  height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
   padding: 30px 10px;
@@ -4559,9 +4507,6 @@ header .link a ion-icon:hover {
 .fnew .form_new .login_box form input::-moz-placeholder {
   color: #8F9BB2;
 }
-.fnew .form_new .login_box form input:-ms-input-placeholder {
-  color: #8F9BB2;
-}
 .fnew .form_new .login_box form input::placeholder {
   color: #8F9BB2;
 }
@@ -4618,17 +4563,14 @@ header .link a ion-icon:hover {
 @media only screen and (max-width: 550px) {
   .fnew .form_new {
     flex-direction: column;
-    height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
     box-shadow: none;
   }
   .fnew .form_new .logo_box {
     border: none;
-    height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
-    width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
     padding: 7px;

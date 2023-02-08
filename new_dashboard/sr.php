@@ -4,7 +4,15 @@ if (!isset($_SESSION["sid"])) {
     header("location:../sr/login.php");
 }
 $sid = $_SESSION["sid"];
-date_default_timezone_set("Asia/dhaka");
+
+?>
+<?php
+
+if (!isset($_SESSION["did"])) {
+    header("location:../deller/login.php");
+}
+$did = $_SESSION["did"];
+// date_default_timezone_set("Asia/dhaka");
 
 ?>
 <!DOCTYPE html>
@@ -22,6 +30,7 @@ date_default_timezone_set("Asia/dhaka");
     <div class="container deller_cont">
         <?php
         @include "../php/config.php";
+        date_default_timezone_set("Asia/dhaka");
         $sql = "SELECT * FROM sr WHERE id = $sid";
         $result = mysqli_query($con, $sql);
         $row = $result->fetch_assoc();
@@ -368,11 +377,12 @@ date_default_timezone_set("Asia/dhaka");
                             </div>
                             <?php
                             include "../php/config.php";
-                            $sql = "SELECT `ymd`, SUM(price * quantity) as total_bill FROM cart WHERE `status` = 'complete' AND `sr` = $sid AND `ymd` >= DATE_SUB(CURRENT_DATE(), INTERVAL 7 DAY) GROUP BY ymd ORDER BY `ymd` DESC";
+                            $sql = "SELECT `ymd`, SUM(price * quantity) as total_bill FROM cart WHERE `status` = 'complete' AND sr = $sid AND `ymd` >= DATE_SUB(CURRENT_DATE(), INTERVAL 7 DAY) GROUP BY ymd ORDER BY `ymd` DESC";
                             $result = mysqli_query($con, $sql);
 
+                            // Create an array of dates for the last 7 days
                             $dateRange = new DatePeriod(
-                                new DateTime("-6 days"),
+                                new DateTime("-7 days"),
                                 new DateInterval("P1D"),
                                 new DateTime("now")
                             );
@@ -381,6 +391,7 @@ date_default_timezone_set("Asia/dhaka");
                                 $dates[] = $date->format("ymd");
                             }
 
+                            // Create the chart data array
                             $chartData = array();
                             while ($row = $result->fetch_assoc()) {
                                 $chartData[$row['ymd']] = array(
@@ -389,6 +400,7 @@ date_default_timezone_set("Asia/dhaka");
                                 );
                             }
 
+                            // Add elements for missing dates with a value of 0
                             foreach ($dates as $date) {
                                 if (!array_key_exists($date, $chartData)) {
                                     $chartData[$date] = array(
@@ -411,15 +423,24 @@ date_default_timezone_set("Asia/dhaka");
                                 var data1 = chartData1.map(function(e1) {
                                     return e1.total_bill;
                                 });
+                                var chart1 = document.getElementById('myChart3').getContext('2d');
+                                var gradient = chart1.createLinearGradient(0, 0, 0, 450);
+
+                                gradient.addColorStop(0.1, 'rgba(0, 122, 255, 0.18)');
+                                gradient.addColorStop(0.9, 'rgba(255, 255, 255, 0)');
 
                                 // var xValues = [id, 2, 3, 4, 5, 6, 7];
                                 new Chart("myChart3", {
                                     type: "line",
                                     data: {
-                                        labels: [1, 2, 3, 4, 5, 6, 7],
+                                        labels: [0, 1, 2, 3, 4, 5, 6, 7],
                                         datasets: [{
                                             data: data1,
-                                            borderColor: "#1c5ddf",
+                                            borderColor: "#007aff",
+                                            backgroundColor: gradient,
+                                            pointBackgroundColor: 'white',
+                                            borderWidth: 1,
+                                            borderColor: '#007aff',
                                             fill: true
                                         }]
                                     },

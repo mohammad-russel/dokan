@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (isset($_SESSION["rid"])) {
-    header("location:homepage.php");
+    header("location:../new_dashboard/home/retailer.php");
 }
 ?>
 <!DOCTYPE html>

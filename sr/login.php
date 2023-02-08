@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (isset($_SESSION["sid"])) {
-    header("location:../new_dashboard/sr.php");
+    header("location:../new_dashboard/home/sr.php");
 }
 ?>
 <!DOCTYPE html>
