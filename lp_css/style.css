@@ -474,8 +474,7 @@ html {
   align-items: center;
 }
 .container .box .sec2 .sec_box .room .box .full_text .ft {
-  width: 100%;
-  max-width: 500px;
+  width: 90%;
   background: rgba(255, 255, 255, 0.7411764706);
   padding: 20px;
   position: relative;
