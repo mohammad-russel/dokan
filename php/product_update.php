@@ -8,7 +8,8 @@ if (isset($_POST['addproduct'])) {
     $company = $con->real_escape_string($_POST['company']);
     $price = $con->real_escape_string($_POST['price']);
     $discription = $con->real_escape_string($_POST['discription']);
-    $sql = "UPDATE product SET nam='$name',category='$category',sr='$sr',company='$company',discription='$discription',price=$price WHERE id=$id";
+    $stock = $con->real_escape_string($_POST['stock']);
+    $sql = "UPDATE product SET nam='$name',category='$category',sr='$sr',company='$company',discription='$discription',price=$price, stock = $stock WHERE id=$id";
     $query = mysqli_query($con, $sql);
 }
 

@@ -112,7 +112,7 @@ $rid = $_SESSION["rid"];
         }
         load();
         $(document).on("click", ".loadmore", function() {
-            page += 5;
+            page += 20;
             load();
         })
 

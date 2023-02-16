@@ -9,9 +9,9 @@ $result = mysqli_query($con, $sql);
 $row = mysqli_fetch_assoc($result);
 $_SESSION["rid"] = $row['id'];
 if (mysqli_num_rows($result) > 0) {
-    header("location:../new_dashboard/retailer.php");
+    header("location:../new_dashboard/home/retailer.php");
 } else {
-    header("location:../retailer/login.php");
+    header("location:../login/retailer.php");
 }
 }
 ?>

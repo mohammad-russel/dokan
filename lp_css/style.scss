@@ -110,7 +110,7 @@
                           display: flex;
                           align-items: center;
 
-                          a {
+                          .a {
                               text-decoration: none;
                               display: flex;
                               align-items: center;
@@ -158,9 +158,52 @@
                               display: flex;
                               justify-content: center;
                               align-items: center;
+                              position: relative;
 
                               span {
                                   font-size: 15px;
+                              }
+
+                              .extra_link {
+                                  background: #00000008;
+                                  position: absolute;
+                                  top: 40px;
+                                  right: 0;
+                                  padding: 10px;
+                                  width: 200px;
+                                  border-radius: 10px;
+
+                                  .head_text {
+                                      text-align: center;
+                                      margin: 10px 0px;
+                                  }
+
+                                  a {
+                                      text-decoration: none;
+
+                                      .link {
+                                          display: flex;
+                                          justify-content: center;
+                                          align-items: center;
+                                          padding: 10px 20px;
+                                          margin: 15px 5px;
+                                          font-size: 12px;
+                                          border-radius: 50px;
+                                          transition: 0.2s;
+                                          color: #007AFF;
+                                          background: #ffffffac;
+
+                                          &:hover {
+                                              background: #007AFF;
+                                              color: #ffffff;
+                                          }
+
+                                          span {
+                                              margin: 0px 5px;
+                                              font-size: 18px;
+                                          }
+                                      }
+                                  }
                               }
                           }
                       }
@@ -517,6 +560,42 @@
                                   padding: 4px;
                               }
                           }
+
+                          .full_text {
+                              position: fixed;
+                              top: 0;
+                              left: 0;
+                              background: #00000075;
+                              width: 100%;
+                              backdrop-filter: blur(10px);
+                              height: 100%;
+                              display: flex;
+                              justify-content: center;
+                              align-items: center;
+
+                              .ft {
+                                  width: 100%;
+                                  max-width: 500px;
+                                  background: #ffffffbd;
+                                  padding: 20px;
+                                  position: relative;
+                                  border-radius: 20px;
+
+                                  .head_i {
+                                      position: absolute;
+                                      top: -17px;
+                                      right: -17px;
+
+                                      span {
+                                          background: #ffffff;
+                                          border-radius: 50%;
+                                          padding: 5px;
+                                      }
+                                  }
+
+                                  .p {}
+                              }
+                          }
                       }
                   }
               }
@@ -683,13 +762,14 @@
                               padding: 9px;
                               border-radius: 10px;
                               background: rgba(240, 240, 240, 0.586);
+
                               span {
                                   font-size: 16px;
                               }
 
                               textarea {
                                   resize: none;
-                                  background: #00000000;
+                                  background: #d4464600;
                                   width: 100%;
                                   border: none;
                                   outline: none;

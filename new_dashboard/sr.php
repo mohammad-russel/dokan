@@ -1,17 +1,17 @@
 <?php
 session_start();
 if (!isset($_SESSION["sid"])) {
-    header("location:../sr/login.php");
+    header("location:../login/sr.php");
 }
 $sid = $_SESSION["sid"];
 
 ?>
 <?php
 
-if (!isset($_SESSION["did"])) {
-    header("location:../deller/login.php");
-}
-$did = $_SESSION["did"];
+// if (!isset($_SESSION["did"])) {
+//     header("location:../deller/login.php");
+// }
+// $did = $_SESSION["did"];
 // date_default_timezone_set("Asia/dhaka");
 
 ?>
@@ -217,18 +217,57 @@ $did = $_SESSION["did"];
 
                             ?>
                             <div class="short">
-                                <div class="text">
-                                    <span>মোট বিক্রি</span>
-                                    <select name="sell" id="sell">
-                                        <option value="">
-                                        </option>
-                                        <option value="week">এই সাপ্তাহে</option>
-                                        <option value="month">এই মাসে</option>
+                                <div class="text" <span>মোট ক্রয়</span>
+                                    <?php
+                                    $today = date('ymd', strtotime('-0 days'));
+                                    $today7 = date('ymd', strtotime('-6 days'));
+                                    $today30 = date('ymd', strtotime('-29 days'));
+                                    $today365 = date('ymd', strtotime('-364 days'));
+                                    $unlimited = date('ymd', strtotime('-998 days'));
+                                    ?>
+                                    <select name="mot" id="mot">
+                                        <option value="<?php echo $unlimited ?>"></option>
+                                        <option value="<?php echo $today7 ?>">Week</option>
+                                        <option value="<?php echo $today30 ?>">Month</option>
+                                        <option value="<?php echo $today365 ?>">Year</option>
                                     </select>
                                 </div>
+                                <div class="number">
+                                    <div class="num2">
+                                        <?php
+                                        $sql1 = "SELECT *, SUM(price*quantity) as total FROM `cart` WHERE `status` = 'complete' AND sr = $sid ";
+                                        $result1 = mysqli_query($con, $sql1);
+                                        if (mysqli_num_rows($result1) > 0) {
+                                            $row1 = mysqli_fetch_assoc($result1);
+                                        ?>
+                                            <span>৳<?php echo $row1['total'] ?></span>
+                                        <?php } else { ?>
+                                            <span>৳ 0</span>
+                                        <?php } ?>
+                                    </div>
+                                    <script>
+                                        $(document).ready(function() {
+                                            $("#mot").change(function() {
+                                                var mot = $(this).val();
+                                                var sid = <?php echo $sid ?>;
+                                                var today = <?php echo $today ?>;
+                                                $.ajax({
+                                                    url: "../sell/total_sell.php",
+                                                    type: "POST",
+                                                    data: {
+                                                        mot: mot,
+                                                        sid: sid,
+                                                        today: today
+                                                    },
+                                                    success: function(data) {
+                                                        $(".num2").html(data);
+                                                    }
+                                                })
+                                            })
+                                        })
+                                    </script>
 
-
-                                <div class="number">৳<?php echo $total ?></div>
+                                </div>
                                 <div class="growth">
                                     <?php
                                     $today = date('ymd', strtotime('-0 days'));
@@ -281,14 +320,61 @@ $did = $_SESSION["did"];
                             </div>
                             <div class="short">
                                 <div class="text">
-                                    <span>আজকের বিক্রি</span>
-                                    <select name="sell" id="sell">
-                                        <option value=""></option>
-                                        <option value="">গতকালের বিক্রি</option>
-
+                                    <span>আজকে</span>
+                                    <?php
+                                    date_default_timezone_set("Asia/dhaka");
+                                    $day0 = date('ymd', strtotime('-0 days'));
+                                    $day1 = date('ymd', strtotime('-1 days'));
+                                    $day2 = date('ymd', strtotime('-2 days'));
+                                    $day3 = date('ymd', strtotime('-3 days'));
+                                    $day4 = date('ymd', strtotime('-4 days'));
+                                    $day5 = date('ymd', strtotime('-5 days'));
+                                    $day6 = date('ymd', strtotime('-6 days'));
+                                    ?>
+                                    <select name="mot1" id="mot1">
+                                        <option value="<?php echo $day0 ?>"></option>
+                                        <option value="<?php echo $day1 ?>">গতকাল</option>
+                                        <option value="<?php echo $day2 ?>">পরশু</option>
+                                        <option value="<?php echo $day3 ?>">৪র্থ দিন</option>
+                                        <option value="<?php echo $day4 ?>">৫ম দিন</option>
+                                        <option value="<?php echo $day5 ?>">৬ঠ দিন</option>
+                                        <option value="<?php echo $day6 ?>">৭ম দিন</option>
                                     </select>
                                 </div>
-                                <div class="number">৳<?php echo $tday ?></div>
+                                <div class=" number">
+                                    <div class="num1">
+                                        <?php
+                                        $sql11 = "SELECT *, SUM(price*quantity) as total FROM `cart` WHERE ymd = $day0 AND `status` = 'complete' AND sr = $sid ";
+                                        $result11 = mysqli_query($con, $sql11);
+                                        if (mysqli_num_rows($result11) > 0) {
+                                            $row11 = mysqli_fetch_assoc($result11);
+                                        ?>
+                                            <span>৳<?php echo $row11['total'] ?></span>
+                                        <?php } else { ?>
+                                            <span>৳ 0</span>
+                                        <?php } ?>
+                                    </div>
+                                    <script>
+                                        $(document).ready(function() {
+                                            $("#mot1").change(function() {
+                                                var mot = $(this).val();
+                                                var sid = <?php echo $sid ?>;
+                                                $.ajax({
+                                                    url: "../sell/sell.php",
+                                                    type: "POST",
+                                                    data: {
+                                                        mot: mot,
+                                                        sid: sid
+                                                    },
+                                                    success: function(data) {
+                                                        $(".num1").html(data);
+                                                    }
+                                                })
+                                            })
+                                        })
+                                    </script>
+
+                                </div>
                                 <div class="growth">
                                     <?php
                                     $today = date('ymd', strtotime('-0 days'));
@@ -375,95 +461,98 @@ $did = $_SESSION["did"];
                                     </select>
                                 </div>
                             </div>
-                            <?php
-                            include "../php/config.php";
-                            $sql = "SELECT `ymd`, SUM(price * quantity) as total_bill FROM cart WHERE `status` = 'complete' AND sr = $sid AND `ymd` >= DATE_SUB(CURRENT_DATE(), INTERVAL 7 DAY) GROUP BY ymd ORDER BY `ymd` DESC";
-                            $result = mysqli_query($con, $sql);
+                            <div class="stack_room">
+                                <?php
+                                include "../php/config.php";
+                                $sql = "SELECT `ymd`, SUM(price * quantity) as total_bill FROM cart WHERE `status` = 'complete' AND sr = $sid AND `ymd` >= DATE_SUB(CURRENT_DATE(), INTERVAL 7 DAY) GROUP BY ymd ORDER BY `ymd` DESC";
+                                $result = mysqli_query($con, $sql);
 
-                            // Create an array of dates for the last 7 days
-                            $dateRange = new DatePeriod(
-                                new DateTime("-7 days"),
-                                new DateInterval("P1D"),
-                                new DateTime("now")
-                            );
-                            $dates = array();
-                            foreach ($dateRange as $date) {
-                                $dates[] = $date->format("ymd");
-                            }
-
-                            // Create the chart data array
-                            $chartData = array();
-                            while ($row = $result->fetch_assoc()) {
-                                $chartData[$row['ymd']] = array(
-                                    'day' => $row['ymd'],
-                                    'total_bill' => $row['total_bill']
+                                // Create an array of dates for the last 7 days
+                                $dateRange = new DatePeriod(
+                                    new DateTime("-7 days"),
+                                    new DateInterval("P1D"),
+                                    new DateTime("now")
                                 );
-                            }
+                                $dates = array();
+                                foreach ($dateRange as $date) {
+                                    $dates[] = $date->format("ymd");
+                                }
 
-                            // Add elements for missing dates with a value of 0
-                            foreach ($dates as $date) {
-                                if (!array_key_exists($date, $chartData)) {
-                                    $chartData[$date] = array(
-                                        'day' => $date,
-                                        'total_bill' => 0
+                                // Create the chart data array
+                                $chartData = array();
+                                while ($row = $result->fetch_assoc()) {
+                                    $chartData[$row['ymd']] = array(
+                                        'day' => $row['ymd'],
+                                        'total_bill' => $row['total_bill']
                                     );
                                 }
-                            }
 
-                            ksort($chartData);
-                            $chartData = array_values($chartData);
-                            // echo json_encode($chartData);
-                            ?>
-                            <canvas id="myChart3" height="80px"></canvas>
-                            <script>
-                                var chartData1 = <?php echo json_encode($chartData); ?>;
-                                var labels1 = chartData1.map(function(e1) {
-                                    return e1.day;
-                                });
-                                var data1 = chartData1.map(function(e1) {
-                                    return e1.total_bill;
-                                });
-                                var chart1 = document.getElementById('myChart3').getContext('2d');
-                                var gradient = chart1.createLinearGradient(0, 0, 0, 450);
+                                // Add elements for missing dates with a value of 0
+                                foreach ($dates as $date) {
+                                    if (!array_key_exists($date, $chartData)) {
+                                        $chartData[$date] = array(
+                                            'day' => $date,
+                                            'total_bill' => 0
+                                        );
+                                    }
+                                }
 
-                                gradient.addColorStop(0.1, 'rgba(0, 122, 255, 0.18)');
-                                gradient.addColorStop(0.9, 'rgba(255, 255, 255, 0)');
+                                ksort($chartData);
+                                $chartData = array_values($chartData);
+                                // echo json_encode($chartData);
+                                ?>
+                                <canvas id="myChart3" height="80px"></canvas>
+                                <script>
+                                    var chartData1 = <?php echo json_encode($chartData); ?>;
+                                    var labels1 = chartData1.map(function(e1) {
+                                        return e1.day;
+                                    });
+                                    var data1 = chartData1.map(function(e1) {
+                                        return e1.total_bill;
+                                    });
+                                    var chart1 = document.getElementById('myChart3').getContext('2d');
+                                    var gradient = chart1.createLinearGradient(0, 0, 0, 450);
 
-                                // var xValues = [id, 2, 3, 4, 5, 6, 7];
-                                new Chart("myChart3", {
-                                    type: "line",
-                                    data: {
-                                        labels: [0, 1, 2, 3, 4, 5, 6, 7],
-                                        datasets: [{
-                                            data: data1,
-                                            borderColor: "#007aff",
-                                            backgroundColor: gradient,
-                                            pointBackgroundColor: 'white',
-                                            borderWidth: 1,
-                                            borderColor: '#007aff',
-                                            fill: true
-                                        }]
-                                    },
-                                    options: {
-                                        scales: {
-                                            x: {
-                                                grid: {
-                                                    display: false,
+                                    gradient.addColorStop(0.1, 'rgba(0, 122, 255, 0.18)');
+                                    gradient.addColorStop(0.9, 'rgba(255, 255, 255, 0)');
+
+                                    // var xValues = [id, 2, 3, 4, 5, 6, 7];
+                                    new Chart("myChart3", {
+                                        type: "line",
+                                        data: {
+                                            labels: [0, 1, 2, 3, 4, 5, 6, 7],
+                                            datasets: [{
+                                                data: data1,
+                                                borderColor: "#007aff",
+                                                backgroundColor: gradient,
+                                                pointBackgroundColor: 'white',
+                                                borderWidth: 1,
+                                                borderColor: '#007aff',
+                                                fill: true
+                                            }]
+                                        },
+                                        options: {
+                                            scales: {
+                                                x: {
+                                                    grid: {
+                                                        display: false,
+                                                    }
+                                                },
+                                                y: {
+                                                    grid: {
+                                                        display: false,
+                                                        drawBorder: false,
+                                                    }
                                                 }
                                             },
-                                            y: {
-                                                grid: {
-                                                    display: false,
-                                                    drawBorder: false,
-                                                }
+                                            legend: {
+                                                display: false
                                             }
-                                        },
-                                        legend: {
-                                            display: false
                                         }
-                                    }
-                                });
-                            </script>
+                                    });
+                                </script>
+                            </div>
+
                         </div>
                         <div class="sr_uni">
                             <!-- <div class="sr">
@@ -657,6 +746,22 @@ $did = $_SESSION["did"];
         })
         $(".tb2").click(function() {
             $(".side_box").toggle()
+        })
+        // =========================
+        $("#based").change(function() {
+            var data = $("#based").val();
+
+            $.ajax({
+                url: "../statastics/sr.php",
+                type: "POST",
+                data: {
+                    data: data,
+
+                },
+                success: function(data) {
+                    $(".stack_room").html(data);
+                }
+            })
         })
     })
 </script>

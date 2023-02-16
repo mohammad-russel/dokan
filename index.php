@@ -30,31 +30,31 @@
                 <div class="righta">
                     <nav>
                         <ul>
-                            <a href="deller/login.php">
+                            <a href="login/deller.php" class="a">
                                 <span class="material-symbols-outlined">
                                     account_circle
                                 </span>
                                 ডিলার
                             </a>
-                            <a href="retailer/login.php">
+                            <a href="login/retailer.php" class="a">
                                 <span class="material-symbols-outlined">
                                     store
                                 </span>
                                 দোকানদার
                             </a>
-                            <a href="sr/login.php">
+                            <a href="login/sr.php" class="a">
                                 <span class="material-symbols-outlined">
                                     group
                                 </span>
                                 বিক্রয় প্রতিনিধি
                             </a>
-                            <a href="delivery_man/login.php">
+                            <a href="login/dm.php" class="a">
                                 <span class="material-symbols-outlined">
                                     local_shipping
                                 </span>
                                 সরবরাহকারী
                             </a>
-                            <div class="more">
+                            <div class="more morea">
                                 <span class="material-symbols-outlined" style="color:red;">
                                     fiber_manual_record
                                 </span>
@@ -64,6 +64,25 @@
                                 <span class="material-symbols-outlined" style="color:green;">
                                     fiber_manual_record
                                 </span>
+                                <div class="extra_link">
+                                    <div class="head_text">Select</div>
+                                    <a href="#">
+                                        <div class="link">
+                                            <span class="material-symbols-outlined">
+                                                apartment
+                                            </span>
+                                            কোম্পানি
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="link">
+                                            <span class="material-symbols-outlined">
+                                                tune
+                                            </span>
+                                            কোম্পানি
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
                         </ul>
                     </nav>
@@ -100,7 +119,7 @@
                                     <div class="next">
                                         <div class="head">আপনার শিল্প নির্বাচন করুন !</div>
                                         <div class="nbox">
-                                            <a href="retailer/login.php">
+                                            <a href="login/retailer.php">
                                                 <div class="card">
                                                     <div class="icon">
                                                         <span class="material-symbols-outlined">
@@ -110,7 +129,7 @@
                                                     <div class="name">দোকানদার</div>
                                                 </div>
                                             </a>
-                                            <a href="sr/login.php">
+                                            <a href="login/sr.php">
                                                 <div class="card">
                                                     <div class="icon">
                                                         <span class="material-symbols-outlined">
@@ -120,7 +139,7 @@
                                                     <div class="name">বিক্রয় প্রতিনিধি</div>
                                                 </div>
                                             </a>
-                                            <a href="delivery_man/login.php">
+                                            <a href="login/dm.php">
                                                 <div class="card">
                                                     <div class="icon">
                                                         <span class="material-symbols-outlined">
@@ -138,7 +157,7 @@
                                     <div class="pre">
                                         <div class="head">আপনার শিল্প নির্বাচন করুন !</div>
                                         <div class="nbox">
-                                            <a href="deller/login.php">
+                                            <a href="login/deller.php">
                                                 <div class="card">
                                                     <div class="icon">
                                                         <span class="material-symbols-outlined">
@@ -182,7 +201,7 @@
                     </div>
                     <div class="right">
                         <div class="r_box">
-                            <img src="logo/222.png" alt="">
+                            <img src="logo/Dashboard.svg" alt="">
                         </div>
                     </div>
                 </div>
@@ -225,6 +244,9 @@
                                 <p>আমরা সমস্ত নেতৃস্থানীয় ব্র্যান্ড
                                     প্রোডাক্ট নিয়ে কাজ করি. আপনার
                                     দোকানের তাকগুলির জন্য আমরা
+                                    অত্যাধুনিক সোর্সিং আমরা সমস্ত নেতৃস্থানীয় ব্র্যান্ড
+                                    প্রোডাক্ট নিয়ে কাজ করি. আপনার
+                                    দোকানের তাকগুলির জন্য আমরা
                                     অত্যাধুনিক সোর্সিং <a href="">আরো</a>
                                 </p>
                             </div>
@@ -232,6 +254,24 @@
                                 <span class="material-symbols-outlined">
                                     arrow_forward_ios
                                 </span> আরো জানুন
+                            </div>
+                            <div class="full_text">
+                                <div class="ft">
+                                    <div class="head_i">
+                                        <span class="material-symbols-outlined">
+                                            close
+                                        </span>
+                                    </div>
+                                    <div class="p">
+                                        আমরা সমস্ত নেতৃস্থানীয় ব্র্যান্ড
+                                        প্রোডাক্ট নিয়ে কাজ করি. আপনার
+                                        দোকানের তাকগুলির জন্য আমরা
+                                        অত্যাধুনিক সোর্সিং আমরা সমস্ত নেতৃস্থানীয় ব্র্যান্ড
+                                        প্রোডাক্ট নিয়ে কাজ করি. আপনার
+                                        দোকানের তাকগুলির জন্য আমরা
+                                        অত্যাধুনিক সোর্সিং
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="box">
@@ -266,6 +306,24 @@
                                     arrow_forward_ios
                                 </span> আরো জানুন
                             </div>
+                            <div class="full_text">
+                                <div class="ft">
+                                    <div class="head_i">
+                                        <span class="material-symbols-outlined">
+                                            close
+                                        </span>
+                                    </div>
+                                    <div class="p">
+                                        আমরা সমস্ত নেতৃস্থানীয় ব্র্যান্ড
+                                        প্রোডাক্ট নিয়ে কাজ করি. আপনার
+                                        দোকানের তাকগুলির জন্য আমরা
+                                        অত্যাধুনিক সোর্সিং আমরা সমস্ত নেতৃস্থানীয় ব্র্যান্ড
+                                        প্রোডাক্ট নিয়ে কাজ করি. আপনার
+                                        দোকানের তাকগুলির জন্য আমরা
+                                        অত্যাধুনিক সোর্সিং
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="box">
                             <div class="more">
@@ -298,6 +356,24 @@
                                 <span class="material-symbols-outlined">
                                     arrow_forward_ios
                                 </span> আরো জানুন
+                            </div>
+                            <div class="full_text">
+                                <div class="ft">
+                                    <div class="head_i">
+                                        <span class="material-symbols-outlined">
+                                            close
+                                        </span>
+                                    </div>
+                                    <div class="p">
+                                        আমরা সমস্ত নেতৃস্থানীয় ব্র্যান্ড
+                                        প্রোডাক্ট নিয়ে কাজ করি. আপনার
+                                        দোকানের তাকগুলির জন্য আমরা
+                                        অত্যাধুনিক সোর্সিং আমরা সমস্ত নেতৃস্থানীয় ব্র্যান্ড
+                                        প্রোডাক্ট নিয়ে কাজ করি. আপনার
+                                        দোকানের তাকগুলির জন্য আমরা
+                                        অত্যাধুনিক সোর্সিং
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="box">
@@ -332,6 +408,24 @@
                                     arrow_forward_ios
                                 </span> আরো জানুন
                             </div>
+                            <div class="full_text">
+                                <div class="ft">
+                                    <div class="head_i">
+                                        <span class="material-symbols-outlined">
+                                            close
+                                        </span>
+                                    </div>
+                                    <div class="p">
+                                        আমরা সমস্ত নেতৃস্থানীয় ব্র্যান্ড
+                                        প্রোডাক্ট নিয়ে কাজ করি. আপনার
+                                        দোকানের তাকগুলির জন্য আমরা
+                                        অত্যাধুনিক সোর্সিং আমরা সমস্ত নেতৃস্থানীয় ব্র্যান্ড
+                                        প্রোডাক্ট নিয়ে কাজ করি. আপনার
+                                        দোকানের তাকগুলির জন্য আমরা
+                                        অত্যাধুনিক সোর্সিং
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="box">
                             <div class="more">
@@ -364,6 +458,24 @@
                                 <span class="material-symbols-outlined">
                                     arrow_forward_ios
                                 </span> আরো জানুন
+                            </div>
+                            <div class="full_text">
+                                <div class="ft">
+                                    <div class="head_i">
+                                        <span class="material-symbols-outlined">
+                                            close
+                                        </span>
+                                    </div>
+                                    <div class="p">
+                                        আমরা সমস্ত নেতৃস্থানীয় ব্র্যান্ড
+                                        প্রোডাক্ট নিয়ে কাজ করি. আপনার
+                                        দোকানের তাকগুলির জন্য আমরা
+                                        অত্যাধুনিক সোর্সিং আমরা সমস্ত নেতৃস্থানীয় ব্র্যান্ড
+                                        প্রোডাক্ট নিয়ে কাজ করি. আপনার
+                                        দোকানের তাকগুলির জন্য আমরা
+                                        অত্যাধুনিক সোর্সিং
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -532,6 +644,8 @@
         $(".ctext").hide();
         $(".pre").hide();
         $(".popup_box").hide();
+        $(".extra_link").hide();
+        $(".full_text").hide();
 
         // -----------------------
         $("chead").children("span").addClass("faq_icon_rotate_before");
@@ -540,7 +654,7 @@
             $(this).children("span").toggleClass("faq_icon_rotate_after");
         })
         // ---------------------
-        $(".btn, .more").click(function() {
+        $(".btn").click(function() {
             $(".popup_box").fadeIn();
         })
         $(".close_btn").click(function() {
@@ -555,8 +669,15 @@
             $(".next").slideDown()
         })
         // -------------------------
-
-
+        $(".morea").click(function() {
+            $(".extra_link").fadeToggle();
+        })
+        $(".aro").click(function() {
+            $(this).closest(".box").children(".full_text").fadeToggle();
+        })
+        $(".head_i").click(function() {
+            $(".full_text").fadeOut();
+        })
     })
 </script>
 

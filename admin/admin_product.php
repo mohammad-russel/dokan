@@ -3,6 +3,7 @@ session_start();
 if (!isset($_SESSION["aid"])) {
     header("location:login.php");
 }
+date_default_timezone_set('Asia/Dhaka');
 
 ?>
 <!DOCTYPE html>
@@ -21,7 +22,7 @@ if (!isset($_SESSION["aid"])) {
         <div class="admin">
             <div class="toggle">
                 <div class="show">
-                <ion-icon name="filter-outline"></ion-icon>
+                    <ion-icon name="filter-outline"></ion-icon>
                 </div>
                 <div class="hide">
                     <ion-icon name="close-outline"></ion-icon>
@@ -34,41 +35,6 @@ if (!isset($_SESSION["aid"])) {
 
 
             <div class="cb cb_product">
-                <!-- <div class="product">
-                    <div class="add_box">
-                        <button class="add_product">ADD NEW <span>+</span></button>
-                        <div class="name">Rasel khan</div>
-                        <div class="add_popup">
-                            <form action="../php/insertproduct.php" method="POST" enctype="multipart/form-data">
-                                <?php
-                                date_default_timezone_set('Asia/Dhaka');
-                                $time = date("Y/m/d || h/i/s");
-                                ?>
-                                <input type="hidden" id="time" name="time" value="<?php echo $time ?>">
-                                <label for="name">Product Name</label>
-                                <input type="text" id="name" name="name" required><br>
-                                <label for="pic">Product Image</label>
-                                <input type="file" id="pic" name="pic" required><br>
-                                <label for="comapany">Company :</label>
-                                <select id="company" name="company">
-                                    <option value="pran">pran</option>
-                                </select><br>
-                                <label for="sr">SR :</label>
-                                <select id="sr" name="sr">
-                                    <option value="rasel">SR_Rasel_pran</option>
-                                </select><br>
-                                <label for="company">Company Name</label>
-                                <input type="text" id="company" name="company" required><br>
-                                <label for="price">Product Price</label>
-                                <input type="number" id="price" name="price" required><br>
-                                <label for="discription">Product Discription</label>
-                                <input type="text" id="discription" name="discription" required><br>
-                                <button class="addproduct" name="addproduct" id="addproduct">ADD</button>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="list"></div>
-                </div> -->
                 <div class="adminproductbox">
                     <?php
                     date_default_timezone_set('Asia/Dhaka');
@@ -124,7 +90,7 @@ if (!isset($_SESSION["aid"])) {
                                 } ?>
                             </select>
                             <input type="number" step="any" name="price" id="price" placeholder="Price" required>
-                            <!-- <input type="number" name="stock" id="stock" placeholder="Stock" required> -->
+                            <input type="number" name="stock" id="stock" placeholder="Stock" required>
                             <input type="text" name="discription" id="discription" placeholder="Discription" required>
                             <button class="addproduct" name="addproduct" id="addproduct">ADD</button>
                         </form>
@@ -149,7 +115,7 @@ if (!isset($_SESSION["aid"])) {
                                     <div class="sr"> SR : <?php echo $row['sr']; ?></div>
                                     <div class="company">Company : <?php echo $row['company']; ?></div>
                                     <div class="category">Category : <?php echo $row['category']; ?></div>
-                                    <!-- <div class="date stock">Stock : <?php echo $row['stock']; ?></div> -->
+                                    <div class="date stock">Stock : <?php echo $row['stock']; ?></div>
                                     <div class="more">
                                         <div class="show-more  show<?php echo $row['id']; ?>">
                                             <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
@@ -167,6 +133,9 @@ if (!isset($_SESSION["aid"])) {
                                                 </div>
                                                 <div class="delete">
                                                     <a href="../php/deleteproduct.php?id=<?php echo $row['id']; ?>">Delete</a>
+                                                </div>
+                                                <div class="delete">
+                                                    <a href="stockadd.php?id=<?php echo $row['id']; ?>">Stock Add</a>
                                                 </div>
                                             </div>
 

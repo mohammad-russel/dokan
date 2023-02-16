@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION["did"])) {
-    header("location:../deller/login.php");
+    header("location:../../login/deller.php");
 }
 $did = $_SESSION["did"];
 date_default_timezone_set("Asia/dhaka");

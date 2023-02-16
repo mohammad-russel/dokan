@@ -18,23 +18,42 @@ if (isset($_SESSION["did"])) {
 <body>
 
     <div class="container fnew">
+        <div class="head_login">
+            <h2>স্বাগতম !</h2>
+            <p>
+                আপনাকে happy-র পক্ষ থেকে স্বাগত জানাই. আপনি আপনার পাসওয়ার্ড এর জন্য একটি ভালো পাসওয়ার্ড ব্যাবহার করুন, যদি করে থাকেন তাহলে ভালো ভাবে সংরক্ষণ করুন কারণ পাসওয়ার্ড সতর্কতা ফিশিং আক্রমণ থেকে রক্ষা করতে সাহায্য করে।
+                আর যে কোনো সমস্যাই happy-র সাথে যোগাযোগ করুন ।
+            </p>
+        </div>
         <div class="form_new">
             <div class="logo_box">
                 <img src="../logo/file.png" alt="">
             </div>
             <div class="login_box">
                 <form action="../php/deller_login.php" method="post">
-                    <h1>Deller Login</h1>
-                    <p>Enter your phone number & password</p>
-                    <input type="number" name="number" id="number" placeholder="Number" required>
-                    <input type="password" name="password" id="password" placeholder="Password" required>
+                    <h1>ডিলার প্রবেশ পথ</h1>
+                    <p>আপনার ফোন নম্বর এবং পাসওয়ার্ড দিন</p>
+                    <div class="input">
+                        <span class="material-symbols-outlined">
+                            phone_in_talk
+                        </span>
+                        <input type="number" name="number" id="number" placeholder="মোবাইল নম্বর" required>
+                    </div>
+                    <div class="input">
+                        <span class="material-symbols-outlined">
+                            mail
+                        </span>
+                        <input type="password" name="password" id="password" placeholder="পাসওয়ার্ড" required>
+                    </div>
                     <a href="">
                         Forget Password?
                     </a>
                     <div class="btn_box">
                         <button type="submit" id="login" name="login">
-                            <ion-icon name="lock-open-outline"></ion-icon>
-                            <span class="txt">Login</span>
+                            <span class="material-symbols-outlined">
+                                arrow_right_alt
+                            </span>
+                            <span class="txt">প্রবেশ করুন</span>
                         </button>
                     </div>
 

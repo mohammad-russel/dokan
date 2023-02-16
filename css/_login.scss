@@ -1,9 +1,9 @@
+
 .log {
   height: 90vh;
 }
 
 .form {
-
   width: max-content;
   margin: 50px auto;
   border-image-source: linear-gradient(314.02deg,
@@ -16,9 +16,10 @@
       rgba(255, 255, 255, 0.3) 4.49%,
       rgba(233, 240, 247, 0.3) 95.45%),
     #e9f0f7;
-  box-shadow: -4px -4px 10px rgb(255 255 255 / 90%),
-    4px 4px 10px rgb(138 155 189 / 40%);
+  // box-shadow: -4px -4px 10px rgb(255 255 255 / 90%),
+  //   4px 4px 10px rgb(138 155 189 / 40%);
   height: 60%;
+  background: #000;
 
   .lt {
 
@@ -74,19 +75,20 @@
     }
 
     .btn {
-      
+
       display: flex;
       justify-content: center;
       align-items: center;
-      padding:0px 15px;
+      padding: 0px 15px;
       cursor: pointer;
       background: linear-gradient(312.9deg, rgba(255, 255, 255, 0.3) 4.49%, rgba(233, 240, 247, 0.3) 95.45%), #e9f0f7;
       color: #8F9BB2;
       border-image-source: linear-gradient(314.02deg, #d6e5f2 4.59%, rgba(255, 255, 255, 0.3) 74.18%);
-      box-shadow: -4px -4px 10px rgb(255 255 255 / 90%), 4px 4px 10px rgb(190 196 208 / 40%);
+      // box-shadow: -4px -4px 10px rgb(255 255 255 / 90%), 4px 4px 10px rgb(190 196 208 / 40%);
       margin: 10px 0px;
       border-radius: 0.7rem;
-height: 30px;
+      height: 30px;
+
       &:hover {
         // background: linear-gradient(312.9deg,
         //     rgba(255, 255, 255, 0.3) 4.49%,
@@ -107,7 +109,7 @@ height: 30px;
         border: none;
         cursor: pointer;
         font-weight: 600;
-      
+
         &:hover {
           // background: linear-gradient(312.9deg,
           //     rgba(255, 255, 255, 0.3) 4.49%,
@@ -115,7 +117,7 @@ height: 30px;
           //   #e9f0f7;
           // box-shadow: inset -4px -4px 10px rgb(255 255 255 / 90%),
           //   inset 4px 4px 10px rgb(138 155 189 / 30%);
-  
+
           color: rgb(72, 72, 72);
           font-weight: 600;
         }

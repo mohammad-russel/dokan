@@ -9,8 +9,8 @@ $result = mysqli_query($con, $sql);
 $row = mysqli_fetch_assoc($result);
 $_SESSION["sid"] = $row['id'];
 if (mysqli_num_rows($result) > 0) {
-    header("location:../new_dashboard/sr.php");
+    header("location:../new_dashboard/home/sr.php");
 } else {
-    header("location:../sr/login.php");
+    header("location:../login/sr.php");
 }
 }

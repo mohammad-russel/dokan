@@ -2,7 +2,7 @@
 session_start();
 $rid = $_SESSION["rid"];
 include "config.php";
-$limit = 5;
+$limit = 20;
 $start = $_POST['page'];
 $sql = "SELECT * FROM product LIMIT $start,$limit";
 $result = mysqli_query($con, $sql);

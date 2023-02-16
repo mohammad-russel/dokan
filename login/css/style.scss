@@ -1,0 +1,328 @@
+*{
+    margin: 0;
+    padding: 0;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+}
+.body{
+    background: #EBF3FA;
+    height: 100vh;
+    overflow-x: hidden;
+}
+.container{
+    width: 100%;
+  // max-width: 1900px;
+  margin: auto;
+  height: 100%;
+  overflow-x: hidden;
+}
+.fnew {
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    font-family: 'Open Sans', sans-serif;
+    flex-direction: column;
+    background: rgba(239, 239, 239, 0.86);
+height: 100vh;
+    .head_login {
+        padding: 10px 30px;
+        margin: 50px 0px;
+        width: 100%;
+        max-width: 1000px;
+        text-align: center;
+
+        // padding-top:200px ;
+        h2 {
+            margin: 10px 0px;
+            // background: #000;
+            color: #6B7A99;
+            font-size: 40px;
+        }
+
+        p {
+            color: #7D8FB3;
+            font-size: 11px;
+        }
+    }
+
+    .form_new {
+
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        max-width: 621.2px;
+        padding: 30px;
+        border-radius: 20px;
+        align-items: center;
+        height: 100%;
+        max-height: 392.62px;
+        // box-shadow: 4px 4px 16px rgba(138, 155, 189, 0.48), -5px -5px 18px #FFFFFF;
+        // background: rgba(255, 255, 255, 0.86);
+        background: rgba(255, 255, 255, 0.86);
+        backdrop-filter: blur(87.125px);
+        /* Note: backdrop-filter has minimal browser support */
+
+        border-radius: 6.97px;
+
+        .logo_box {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-right: 1px solid rgb(206, 206, 206);
+            height: 200px;
+
+            img {
+                width: 140px;
+            }
+
+            .pc {}
+
+            .phn {
+                display: none;
+            }
+        }
+
+        .login_box {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            height: 100%;
+
+            form {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                padding-left: 50px;
+                height: 70%;
+
+                h1 {
+                    font-size: 18px;
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: bold;
+                    color: #6B7A99;
+
+
+                }
+
+                p {
+                    font-size: 10px;
+                    font-family: 'Montserrat', sans-serif;
+
+                    font-weight: 500;
+                    margin-top: 3px;
+                    margin-bottom: 10px;
+                    color: #6B7A99;
+
+
+
+                }
+
+                .input {
+                    // background: #000;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    margin: 10px 0px;
+                    border: none;
+                    border-bottom: 1px solid rgb(230 230 230);
+
+                    width: 100%;
+
+                    padding-top: 7px;
+                    padding-bottom: 2px;
+
+
+                    span {
+                        font-size: 15px;
+                        margin: 0px 5px;
+                        color: #3D9AFE;
+                    }
+
+                    input {
+                        border: none;
+                        font-family: 'Montserrat', sans-serif;
+                        color: #8F9BB2;
+                        font-weight: 600;
+                        font-size: 11px;
+                        outline: none;
+                        width: 100%;
+                    }
+
+                    input::placeholder {
+                        color: #8F9BB2;
+                    }
+                }
+
+
+                a {
+                    font-family: 'Montserrat', sans-serif;
+
+
+                    margin-bottom: 25px;
+                    font-size: 9px;
+                    text-decoration: none;
+                    font-weight: 500;
+                    color: #007AFF;
+
+                    text-align: right;
+                    margin-top: -10px;
+                    text-decoration: underline;
+                }
+
+                .btn_box {
+                    margin-top: 10px;
+                    display: flex;
+                    text-align: center;
+                    width: 100%;
+                    font-family: 'Montserrat', sans-serif;
+
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    button {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        cursor: pointer;
+                        padding: 5px 20px;
+                        color: #007AFF;
+                        background: #F3F5F8;
+                        border: 2px solid #F3F5F8;
+                        border-radius: 20px;
+                        transition: 0.2s;
+
+                        &:hover {
+                            background: #007AFF;
+                            color: #ffffff;
+                        }
+
+                        span {}
+
+                        .txt {
+
+                            margin: 0px 2px;
+                            font-size: 13px;
+                            font-weight: 700;
+                            text-transform: uppercase;
+                            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                            margin-top: -3px;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+
+// -------------------------
+
+@media only screen and (max-width: 550px) {
+    .fnew {
+        margin: auto;
+        width: 90%;
+
+        .head_login {
+
+            h2 {}
+
+            p {
+                display: none;
+            }
+        }
+
+        .form_new {
+            flex-direction: column;
+            height: max-content;
+            box-shadow: none;
+
+            .logo_box {
+                border: none;
+                height: max-content;
+                width: max-content;
+                padding: 7px;
+                margin-top: -200px;
+                border-radius: 50%;
+                margin-bottom: 80px;
+                box-shadow: -3px -3px 10px rgba(255, 255, 255, 0.7),
+                    3px 3px 10px rgba(138, 155, 189, 0.48);
+                display: none;
+
+                img {
+                    position: relative;
+                    top: 8px;
+                    left: -2px;
+                    width: 80px;
+                    height: 80px;
+                    object-fit: contain;
+                }
+
+                .pc {
+                    display: none;
+                }
+
+                .phn {
+                    display: block;
+                }
+            }
+
+            .login_box {
+                width: 100%;
+                padding: 100px 0px;
+
+                form {
+
+                    padding: 0px;
+                    margin: auto;
+                    max-width: 300px;
+
+                    h1 {
+                        text-align: center;
+                        margin-bottom: 4px;
+                        margin-top: -54px;
+                        text-transform: uppercase;
+                        font-weight: 900;
+                        font-family: Arial, Helvetica, sans-serif;
+
+                    }
+
+                    p {
+                        text-align: center;
+                        margin-bottom: 30px;
+
+                    }
+
+                    .input {
+
+                        span {}
+
+                        input {}
+
+                        input::placeholder {}
+                    }
+
+
+                    a {}
+
+                    .btn_box {
+
+                        button {
+
+                            ion-icon {}
+
+                            .txt {}
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}

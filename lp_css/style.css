@@ -57,7 +57,7 @@ html {
   display: flex;
   align-items: center;
 }
-.container .box header .righta nav ul a {
+.container .box header .righta nav ul .a {
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -73,14 +73,14 @@ html {
   font-size: 0.7rem;
   font-family: "Poppins", sans-serif;
 }
-.container .box header .righta nav ul a span {
+.container .box header .righta nav ul .a span {
   padding: 0px 8px;
 }
-.container .box header .righta nav ul a:hover {
+.container .box header .righta nav ul .a:hover {
   color: aliceblue;
   background: #007AFF;
 }
-.container .box header .righta nav ul a::before {
+.container .box header .righta nav ul .a::before {
   content: "";
   position: absolute;
   width: 0%;
@@ -90,7 +90,7 @@ html {
   left: 25%;
   border-bottom: 1px solid #007AFF;
 }
-.container .box header .righta nav ul a:hover::before {
+.container .box header .righta nav ul .a:hover::before {
   width: 60%;
 }
 .container .box header .righta nav ul .more {
@@ -99,9 +99,46 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 .container .box header .righta nav ul .more span {
   font-size: 15px;
+}
+.container .box header .righta nav ul .more .extra_link {
+  background: rgba(0, 0, 0, 0.031372549);
+  position: absolute;
+  top: 40px;
+  right: 0;
+  padding: 10px;
+  width: 200px;
+  border-radius: 10px;
+}
+.container .box header .righta nav ul .more .extra_link .head_text {
+  text-align: center;
+  margin: 10px 0px;
+}
+.container .box header .righta nav ul .more .extra_link a {
+  text-decoration: none;
+}
+.container .box header .righta nav ul .more .extra_link a .link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  margin: 15px 5px;
+  font-size: 12px;
+  border-radius: 50px;
+  transition: 0.2s;
+  color: #007AFF;
+  background: rgba(255, 255, 255, 0.6745098039);
+}
+.container .box header .righta nav ul .more .extra_link a .link:hover {
+  background: #007AFF;
+  color: #ffffff;
+}
+.container .box header .righta nav ul .more .extra_link a .link span {
+  margin: 0px 5px;
+  font-size: 18px;
 }
 .container .box header .righta .talk_a {
   text-decoration: none;
@@ -423,6 +460,37 @@ html {
   font-weight: 600;
   padding: 4px;
 }
+.container .box .sec2 .sec_box .room .box .full_text {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4588235294);
+  width: 100%;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .box .sec2 .sec_box .room .box .full_text .ft {
+  width: 100%;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.7411764706);
+  padding: 20px;
+  position: relative;
+  border-radius: 20px;
+}
+.container .box .sec2 .sec_box .room .box .full_text .ft .head_i {
+  position: absolute;
+  top: -17px;
+  right: -17px;
+}
+.container .box .sec2 .sec_box .room .box .full_text .ft .head_i span {
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 5px;
+}
 .container .box .sec3 {
   width: 100%;
 }
@@ -598,7 +666,7 @@ html {
 }
 .container .box .sec4 .sec_box .form_box form .msg textarea {
   resize: none;
-  background: rgba(0, 0, 0, 0);
+  background: rgba(212, 70, 70, 0);
   width: 100%;
   border: none;
   outline: none;

@@ -77,7 +77,7 @@ if ($numrow = mysqli_num_rows($result)) {
                 </script>";
         }
     }
- 
+
     $output .= "<div class='cart info-cart'>
             <div class='order_click'>";
     $sql5 = "SELECT * FROM retailer WHERE id = $rid ";

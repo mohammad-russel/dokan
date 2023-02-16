@@ -35,3 +35,13 @@ $full_total = $cur_total + $total;
 
 $sql2 = "UPDATE pro SET total = $full_total WHERE pid = $pid";
 $result2 = mysqli_query($con, $sql2);
+
+// ================
+
+$sql11 = "SELECT * FROM product WHERE id = $pid ";
+$query11 = mysqli_query($con, $sql11);
+$row1 = mysqli_fetch_assoc($query11);
+$current_stock = $row1['stock'];
+$us = $current_stock - $quantity;
+$sql12 = "UPDATE product SET stock = $us WHERE id=$pid";
+$query12 = mysqli_query($con, $sql12);

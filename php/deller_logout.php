@@ -1,4 +1,4 @@
 <?php
 session_start();
 unset($_SESSION["did"]);
-header("location:../deller/login.php");
+header("location:../login/deller.php");

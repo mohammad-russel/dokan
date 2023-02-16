@@ -53,6 +53,7 @@ if (!isset($_SESSION["aid"])) {
                     <input type="text" name="company" id="company" placeholder="Company Name" value="<?php echo $row['company'] ?>">
                     <input type="text" name="sr" id="sr" placeholder="SR Name" value="<?php echo $row['sr'] ?>">
                     <input type="number" name="price" id="price" placeholder="Price" value="<?php echo $row['price'] ?>">
+                    <input type="number" name="stock" id="stock" placeholder="Stock" value="<?php echo $row['stock'] ?>">
                     <input type="text" name="discription" id="discription" placeholder="Discription" value="<?php echo $row['discription'] ?>">
                     <button class="addproduct" name="addproduct" id="addproduct">Update</button>
                 </form>

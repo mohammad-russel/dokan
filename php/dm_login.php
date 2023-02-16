@@ -11,7 +11,7 @@ $_SESSION["delid"] = $row['id'];
 if (mysqli_num_rows($result) > 0) {
     header("location:../delivery_man/d_home.php");
 } else {
-    header("location:../delivery_man/login.php");
+    header("location:../login/dm.php");
 }
 }
 ?>

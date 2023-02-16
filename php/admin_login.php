@@ -11,7 +11,7 @@ $_SESSION["aid"] = $row['id'];
 if (mysqli_num_rows($result) > 0) {
     header("location:../admin/admin_home.php");
 } else {
-    header("location:../admin/login.php");
+    header("location:../login/admin.php");
 }
 }
 ?>

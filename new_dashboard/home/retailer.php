@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION["rid"])) {
-    header("location:../deller/login.php");
+    header("location:../../login/retailer.php");
 }
 $rid = $_SESSION["rid"];
 date_default_timezone_set("Asia/dhaka");
@@ -146,7 +146,7 @@ date_default_timezone_set("Asia/dhaka");
                         arrow_back
                     </span>
                 </a>
-                <a href="../../php/deller_logout.php">
+                <a href="../../php/retailer_logout.php">
                     <span class="material-symbols-outlined">
                         logout
                     </span>
