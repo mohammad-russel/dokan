@@ -8,10 +8,28 @@ $result = mysqli_query($con, $sql);
 if ($numrow = mysqli_num_rows($result)) {
 
     $output = "<div class='cartbox'>";
-
+    $output .= " <div class='cart'>
+    <div class='image'>
+      পন্যের ছবি
+    </div>
+    <div class='name'>নাম</div>
+    <div class='quantity'>
+SR Price
+    </div>
+    <div class='price'>
+    <div class='tpm'> মোট</div>
+    
+    </div>
+    <div class='quantity'>
+পরিমান
+    </div>
+    <div class='btn'>
+        <div class='dw'>Update Or Delete</div>
+    </div>
+</div>";
     while ($row = mysqli_fetch_assoc($result)) {
         $pid = $row['pid'];
-      
+
 
         $sql1 = "SELECT * FROM product WHERE id = $pid ";
         $result1 = mysqli_query($con, $sql1);
@@ -22,6 +40,9 @@ if ($numrow = mysqli_num_rows($result)) {
                         <img src='../image/product/{$row1['pic']}' >
                     </div>
                     <div class='name'>{$row1['nam']} ({$row['price']}৳)</div>
+                    <div class='quantity dis'>
+                    <input type='number' name='discount' id='discount{$row['id']}' value='{$row['discount']}'>
+                </div>
                     <div class='price'>
                     
                         <div class='tp'> {$row['total_price']}৳</div>
@@ -43,21 +64,29 @@ if ($numrow = mysqli_num_rows($result)) {
                         $('.update{$row['id']}').show();
                         $('.delete{$row['id']}').hide();
                     })
+                    $('#discount{$row['id']}').click(function() {
+                        $('.update{$row['id']}').show();
+                        $('.delete{$row['id']}').hide();
+                    })
                     $('.update{$row['id']}').click(function() {
                         var cid ={$row['id']};
                         var qua = $('#quantity{$row['id']}').val();
+                        var discount = $('#discount{$row['id']}').val();
                         $.ajax({
                             url: '../php/cart_update.php',
                             type: 'POST',
                             data: {
                                 cid: cid,
-                                qua: qua
+                                qua: qua,
+                                discount: discount
                             },
-                            success: function(data) {}
-                        })
-                        load()
+                            success: function(data) {
+                                  load()
                         $('.delete{$row['id']}').show();
                         $('.update{$row['id']}').hide();
+                            }
+                        })
+                      
                     })
 
                     $('.delete{$row['id']}').click(function() {
@@ -94,7 +123,7 @@ if ($numrow = mysqli_num_rows($result)) {
     $output .= "<div class='info'>
                 আপনার এলাকায় ডেলিভারি দেয়া হবে $day <br>
                     <span>ITEM :  $numrow </span><br>";
-    
+
     include "../php/config.php";
     $sql = "SELECT SUM(price*quantity) AS total FROM cart WHERE rid = $rid AND sr = $sid AND status ='cart' ";
     $result = mysqli_query($con, $sql);
@@ -107,12 +136,13 @@ if ($numrow = mysqli_num_rows($result)) {
                 <input type='hidden' name='status' id='status' value='order'>
                 <input type='hidden' name='rid' id='rid' value='$rid'>
                 <input type='hidden' name='sid' id='sid' value='$sid'>
-                <input type='number' step='any' name='discount' id='discount' value= '0' >
                 <input type='submit'class='order_btn' name='order' value='order'>
-            </form>
+                </form>
                 </div>
-            </div>
-        </div>";
+                </div>
+                </div>";
     $output .= "</div>";
     echo  $output;
 }
+
+// <input type='number' step='any' name='discount' id='discount' value= '0' >

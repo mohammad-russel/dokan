@@ -29,6 +29,9 @@ html {
   justify-content: space-between;
   align-items: center;
   padding: 40px 10px;
+  width: 100%;
+  max-width: 1900px;
+  margin: auto;
 }
 .container .box header .logo {
   width: 20%;
@@ -411,7 +414,7 @@ html {
   background: rgba(55, 125, 255, 0.09);
   padding: 17px;
   font-size: 2.5rem;
-  color: hsl(214deg, 100%, 56%);
+  color: hsl(214, 100%, 56%);
   border-radius: 50%;
   margin-left: 10px;
 }

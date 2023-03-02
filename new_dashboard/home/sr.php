@@ -14,6 +14,7 @@ date_default_timezone_set("Asia/dhaka");
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,600,1,200" />
+    <link rel="shortcut icon" type="image" href="../../logo/file3.jpg">
     <title>SR</title>
     <style>
         * {
@@ -118,11 +119,12 @@ date_default_timezone_set("Asia/dhaka");
 
         .text {}
 
-        @media only screen and (max-width: 600px){
-            .link_box{
+        @media only screen and (max-width: 600px) {
+            .link_box {
                 flex-direction: column;
             }
-            .box{
+
+            .box {
                 margin: 20px 0px;
             }
         }
@@ -134,7 +136,7 @@ date_default_timezone_set("Asia/dhaka");
         <?php
         @include "../../php/config.php";
         $sql = "SELECT * FROM sr WHERE id = $sid";
-        $result = mysqli_query($con,$sql);
+        $result = mysqli_query($con, $sql);
         $row = mysqli_fetch_assoc($result);
 
         ?>

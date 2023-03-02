@@ -94,6 +94,7 @@ box-shadow: 4px 4px 12px rgba(138, 155, 189, 0.3), -5px -5px 15px rgba(255, 255,
                                 <input type="hidden" name="time" id="time<?php echo $row['id'] ?>" value="<?php echo $time ?>">
                                 <input type="hidden" name="status" id="status<?php echo $row['id'] ?>" value="cart">
                                 <input type="number" name="quantity" id="quantity<?php echo $row['id'] ?>" value="1">
+                                <input type="hidden" name="discount" id="discount<?php echo $row['id'] ?>" value="0">
                                 <!-- ----------------------------- -->
                                 <input type="hidden" name="year" id="year<?php echo $row['id'] ?>" value="<?php echo $year ?>">
                                 <input type="hidden" name="month" id="month<?php echo $row['id'] ?>" value="<?php echo $month ?>">
@@ -112,6 +113,7 @@ box-shadow: 4px 4px 12px rgba(138, 155, 189, 0.3), -5px -5px 15px rgba(255, 255,
                                     var time = $("#time<?php echo $row['id'] ?>").val()
                                     var status = $("#status<?php echo $row['id'] ?>").val()
                                     var quantity = $("#quantity<?php echo $row['id'] ?>").val()
+                                    var discount = $("#discount<?php echo $row['id'] ?>").val()
                                     var year = $("#year<?php echo $row['id'] ?>").val()
                                     var month = $("#month<?php echo $row['id'] ?>").val()
                                     var day = $("#day<?php echo $row['id'] ?>").val()
@@ -128,6 +130,7 @@ box-shadow: 4px 4px 12px rgba(138, 155, 189, 0.3), -5px -5px 15px rgba(255, 255,
                                             time: time,
                                             status: status,
                                             quantity: quantity,
+                                            discount: discount,
                                             year: year,
                                             month: month,
                                             day: day,

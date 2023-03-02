@@ -14,6 +14,7 @@ date_default_timezone_set("Asia/dhaka");
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,600,1,200" />
+    <link rel="shortcut icon" type="image" href="../../logo/file3.jpg">
     <title>Deller</title>
     <style>
         * {

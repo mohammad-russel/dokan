@@ -8,7 +8,25 @@ $result = mysqli_query($con, $sql);
 if ($numrow = mysqli_num_rows($result)) {
 
     $output = "<div class='cartbox'>";
+    $output .= " <div class='cart'>
+    <div class='image'>
+      পন্যের ছবি
+    </div>
+    <div class='name'>name</div>
+    <div class='quantity'>
 
+    </div>
+    <div class='price'>
+    <div class='tpm'> মোট</div>
+    
+    </div>
+    <div class='quantity'>
+Quantity
+    </div>
+    <div class='btn'>
+        <div class='dw'>Update Or Delete</div>
+    </div>
+</div>";
     while ($row = mysqli_fetch_assoc($result)) {
         $pid = $row['pid'];
         include '../php/config.php';
@@ -21,6 +39,9 @@ if ($numrow = mysqli_num_rows($result)) {
                         <img src='../image/product/{$row1['pic']}' >
                     </div>
                     <div class='name'>{$row1['nam']} ({$row['price']}৳)</div>
+                    <div class='quantity'>
+                    <input type='hidden' name='discount' id='discount{$row['id']}' value='{$row['discount']}'>
+                </div>
                     <div class='price'>
                     <div class='tpm'> মোট</div>
                         <div class='tp'> {$row['total_price']}৳</div>
@@ -45,12 +66,14 @@ if ($numrow = mysqli_num_rows($result)) {
                     $('.update{$row['id']}').click(function() {
                         var cid ={$row['id']};
                         var qua = $('#quantity{$row['id']}').val();
+                        var discount = $('#discount{$row['id']}').val();
                         $.ajax({
                             url: '../php/cart_update.php',
                             type: 'POST',
                             data: {
                                 cid: cid,
-                                qua: qua
+                                qua: qua,
+                                discount: discount,
                             },
                             success: function(data) {
                                
